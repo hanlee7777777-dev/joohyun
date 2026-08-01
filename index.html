@@ -41,11 +41,12 @@ html,body{overflow-x:hidden}
   [id^="subPage"] .nav{max-width:100%!important;}
   .top,.bottom,.subFoot3,[id^="subPage"] .nav{display:none!important;}
 }
-body{margin:0;background:#DCE3EA;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;color:#0b1e33;}
+body{margin:0;background:#fff0f6;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Segoe UI",Arial,sans-serif;color:#0b1e33;}
 
 img{max-width:100%;display:block;}
 a{-webkit-tap-highlight-color:transparent}
-.mobile{max-width:430px;margin:0 auto;background:#DCE3EA;min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px}
+[id^="subPage"] .back,[id^="subPage"] .back:visited,[id^="subPage"] .back:active,[id^="subPage"] .back:focus,[id^="subPage"] .back:hover{color:#c2185b!important;-webkit-tap-highlight-color:transparent!important;}
+.mobile{max-width:430px;margin:0 auto;background:#fff0f6;min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px}
 @media (orientation:landscape) and (max-width:1023px){.mobile{max-width:100%!important;box-shadow:none;}}
 .top{position:sticky;top:0;z-index:50;height:62px;background:#ec4899;backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #e4ebf3}
 .logo{display:flex;align-items:center;gap:8px}
@@ -1540,9 +1541,10 @@ html,body{
   color:#5F6B7A!important;
 }
 .bottom{
-  background:rgba(214,221,229,.97)!important;
-  border-top:1px solid rgba(15,35,60,.12)!important;
-  box-shadow:0 -6px 16px rgba(6,26,51,.06)!important;
+  background:rgba(255,225,240,.97)!important;
+  border:none!important;
+  border-top:1px solid #ec4899!important;
+  box-shadow:none!important;
 }
 .bottom a{
   height:52px!important;
@@ -2595,7 +2597,7 @@ section.simpleSteps .sub{
 #subPage2 .nav .wrap,#subPage3 .nav .wrap,#subPage4 .nav .wrap,#subPage5 .nav .wrap,#subPage6 .nav .wrap,#subPage16 .nav .wrap{display:flex;align-items:center;height:56px}
 #subPage2 .back,#subPage3 .back,#subPage4 .back,#subPage5 .back,#subPage6 .back,#subPage16 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:17px;font-weight:600}
 #subPage2 .back .arw,#subPage3 .back .arw,#subPage4 .back .arw,#subPage5 .back .arw,#subPage6 .back .arw,#subPage16 .back .arw{font-size:20px;line-height:1}
-#subPage2 .hero,#subPage3 .hero,#subPage4 .hero,#subPage5 .hero,#subPage6 .hero,#subPage16 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:visible;padding:34px 0 30px;border-bottom:none;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage2 .hero,#subPage3 .hero,#subPage4 .hero,#subPage5 .hero,#subPage6 .hero,#subPage16 .hero{background:#ec4899;color:#fff;position:relative;overflow:visible;padding:34px 0 30px;border-bottom:none;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage2 .hero .eyebrow,#subPage3 .hero .eyebrow,#subPage4 .hero .eyebrow,#subPage5 .hero .eyebrow,#subPage6 .hero .eyebrow,#subPage16 .hero .eyebrow{display:none!important}
 #subPage2 .hero h1,#subPage3 .hero h1,#subPage4 .hero h1,#subPage5 .hero h1,#subPage6 .hero h1,#subPage16 .hero h1{margin:0 0 10px;font-size:20px;line-height:1.34;font-weight:750!important;letter-spacing:-1px;color:#eef2f8;text-shadow:none!important}
 #subPage2 .hero .sub,#subPage3 .hero .sub,#subPage4 .hero .sub,#subPage5 .hero .sub,#subPage6 .hero .sub,#subPage16 .hero .sub{margin:0;color:#c3d0e2;font-size:18px;font-weight:700!important;max-width:92%}
@@ -2614,12 +2616,12 @@ section.simpleSteps .sub{
 #subPage2 .closing .q,#subPage3 .closing .q,#subPage4 .closing .q,#subPage5 .closing .q,#subPage6 .closing .q,#subPage16 .closing .q{margin:14px 0 10px;font-size:20px;font-weight:700;color:#1a2436;letter-spacing:-.5px}
 #subPage2 .closing p,#subPage3 .closing p,#subPage4 .closing p,#subPage5 .closing p,#subPage6 .closing p,#subPage16 .closing p{margin:0 auto;max-width:92%;color:#5a6577;font-size:17px;font-weight:400}
 #subPage2 .closing .sign,#subPage3 .closing .sign,#subPage4 .closing .sign,#subPage5 .closing .sign,#subPage6 .closing .sign,#subPage16 .closing .sign{margin-top:20px;font-size:12px;font-weight:800;letter-spacing:4px;color:#b08d4d;text-transform:uppercase}
-.subFoot3{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:100%!important;max-width:430px;background:rgba(214,221,229,.97)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:7px!important;padding:9px 9px calc(10px + env(safe-area-inset-bottom))!important;border-top:1px solid rgba(15,35,60,.12)!important;box-shadow:0 -6px 16px rgba(6,26,51,.06)!important;text-align:center!important;margin:0!important;z-index:10001!important;}
+.subFoot3{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:100%!important;max-width:430px;background:rgba(255,225,240,.97)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:7px!important;padding:9px 9px calc(10px + env(safe-area-inset-bottom))!important;border:none!important;border-top:1px solid #ec4899!important;box-shadow:none!important;text-align:center!important;margin:0!important;z-index:10001!important;}
 @media (orientation:landscape) and (max-width:1023px){.subFoot3{display:none!important;}}
 .subFoot3 a{height:55px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;font-weight:600!important;font-size:16px!important;letter-spacing:-.2px!important;white-space:nowrap!important;padding:0 8px!important;transition:none!important;}
 .subFoot3 .sTel{background:#ec4899!important;color:#fff!important;animation:bTelGlow 1.6s ease-in-out infinite!important;transform:none!important;}
 .subFoot3 .sKakao{background:#f7c600!important;color:#111!important;border:1.5px solid #d9a800!important;animation:bKakaoGlow 1.6s ease-in-out infinite!important;transform:none!important;}
-.subFoot3 .sBlog{background:#05a63b!important;color:#fff!important;animation:bBlogGlow 1.6s ease-in-out infinite!important;transform:none!important;}
+.subFoot3 .sBlog{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)!important;color:#fff!important;animation:bBlogGlow 1.6s ease-in-out infinite!important;transform:none!important;}
 @media(max-width:370px){.subFoot3 a{font-size:16px!important;}}
 #subPage,#subPage2,#subPage3,#subPage4,#subPage5,#subPage6,#subPage7,#subPage8,#subPage9,#subPage10,#subPage11,#subPage12,#subPage13,#subPage14,#subPage15{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important;}
 #subPage.open{display:block}
@@ -2667,14 +2669,14 @@ body.subOpen main.mobile{display:none}
 #subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
 #subPage .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage main{padding:7px 0 20px}
 #subPage .sect{margin-top:40px}
 #subPage .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -2758,14 +2760,14 @@ body.subOpen main.mobile{display:none}
 #subPage7 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage7 .back:hover{color:var(--sub-ink)}
 #subPage7 .back .arw{font-size:20px;line-height:1}
-#subPage7 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage7 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage7 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage7 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage7 .hero .wrap{position:relative}
 #subPage7 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage7 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage7 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage7 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage7 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage7 main{padding:7px 0 20px}
 #subPage7 .sect{margin-top:40px}
 #subPage7 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -2876,14 +2878,14 @@ body.subOpen main.mobile{display:none}
 #subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
 #subPage .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage main{padding:7px 0 20px}
 #subPage .sect{margin-top:40px}
 #subPage .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -2967,14 +2969,14 @@ body.subOpen main.mobile{display:none}
 #subPage8 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage8 .back:hover{color:var(--sub-ink)}
 #subPage8 .back .arw{font-size:20px;line-height:1}
-#subPage8 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage8 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage8 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage8 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage8 .hero .wrap{position:relative}
 #subPage8 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage8 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage8 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage8 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage8 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage8 main{padding:7px 0 20px}
 #subPage8 .sect{margin-top:40px}
 #subPage8 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3081,14 +3083,14 @@ body.subOpen main.mobile{display:none}
 #subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
 #subPage .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage main{padding:7px 0 20px}
 #subPage .sect{margin-top:40px}
 #subPage .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3172,14 +3174,14 @@ body.subOpen main.mobile{display:none}
 #subPage9 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage9 .back:hover{color:var(--sub-ink)}
 #subPage9 .back .arw{font-size:20px;line-height:1}
-#subPage9 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage9 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage9 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage9 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage9 .hero .wrap{position:relative}
 #subPage9 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage9 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage9 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage9 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage9 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage9 main{padding:7px 0 20px}
 #subPage9 .sect{margin-top:40px}
 #subPage9 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3275,14 +3277,14 @@ body.subOpen main.mobile{display:none}
 #subPage11 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage11 .back:hover{color:var(--sub-ink)}
 #subPage11 .back .arw{font-size:20px;line-height:1}
-#subPage11 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage11 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage11 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage11 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage11 .hero .wrap{position:relative}
 #subPage11 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage11 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage11 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage11 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage11 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage11 main{padding:7px 0 20px}
 #subPage11 .sect{margin-top:40px}
 #subPage11 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3373,14 +3375,14 @@ body.subOpen main.mobile{display:none}
 #subPage14 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage14 .back:hover{color:var(--sub-ink)}
 #subPage14 .back .arw{font-size:20px;line-height:1}
-#subPage14 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage14 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage14 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage14 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage14 .hero .wrap{position:relative}
 #subPage14 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage14 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage14 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage14 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage14 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage14 main{padding:7px 0 20px}
 #subPage14 .sect{margin-top:40px}
 #subPage14 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3473,14 +3475,14 @@ body.subOpen main.mobile{display:none}
 #subPage13 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage13 .back:hover{color:var(--sub-ink)}
 #subPage13 .back .arw{font-size:20px;line-height:1}
-#subPage13 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage13 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage13 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage13 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage13 .hero .wrap{position:relative}
 #subPage13 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage13 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage13 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage13 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage13 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage13 main{padding:7px 0 20px}
 #subPage13 .sect{margin-top:40px}
 #subPage13 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3572,14 +3574,14 @@ body.subOpen main.mobile{display:none}
 #subPage12 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage12 .back:hover{color:var(--sub-ink)}
 #subPage12 .back .arw{font-size:20px;line-height:1}
-#subPage12 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage12 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage12 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage12 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage12 .hero .wrap{position:relative}
 #subPage12 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage12 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage12 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage12 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage12 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage12 main{padding:7px 0 20px}
 #subPage12 .sect{margin-top:40px}
 @keyframes kgTitleFloat12{
@@ -3722,14 +3724,14 @@ body.subOpen main.mobile{display:none}
 #subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
 #subPage .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage main{padding:7px 0 20px}
 #subPage .sect{margin-top:40px}
 #subPage .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -3814,14 +3816,14 @@ body.subOpen main.mobile{display:none}
 #subPage10 .back,#subPage15 .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
 #subPage10 .back:hover,#subPage15 .back:hover{color:var(--sub-ink)}
 #subPage10 .back .arw,#subPage15 .back .arw{font-size:20px;line-height:1}
-#subPage10 .hero,#subPage15 .hero{background:linear-gradient(168deg,#9d174d 0%,#c2185b 60%,#ec4899 100%);color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage10 .hero,#subPage15 .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage10 .hero::after,#subPage15 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage10 .hero::before,#subPage15 .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage10 .hero .wrap,#subPage15 .hero .wrap{position:relative}
 #subPage10 .hero .eyebrow,#subPage15 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--sub-gold-line);text-transform:uppercase;margin-bottom:20px}
 #subPage10 .hero .eyebrow::before,#subPage15 .hero .eyebrow::before{content:"";width:22px;height:1px;background:var(--sub-gold-line)}
 #subPage10 .hero h1,#subPage15 .hero h1{margin:0 0 16px;font-size:30px;line-height:1.34;font-weight:800;letter-spacing:-1px}
-#subPage10 .hero .sub,#subPage15 .hero .sub{margin:0;color:#e3ecf7;font-size:18px;font-weight:400;max-width:92%}
+#subPage10 .hero .sub,#subPage15 .hero .sub{margin:0;color:#ffffff;font-size:18px;font-weight:400;max-width:92%}
 #subPage10 main{padding:7px 0 20px}
 #subPage10 .sect,#subPage15 .sect{margin-top:40px}
 #subPage10 .sect-h,#subPage15 .sect-h{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding:0 2px}
@@ -4396,7 +4398,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 
 
@@ -4504,7 +4506,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -4620,7 +4622,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -4736,7 +4738,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -4852,7 +4854,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -4955,7 +4957,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5091,7 +5093,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5224,7 +5226,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5350,7 +5352,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5493,7 +5495,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5609,7 +5611,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5723,7 +5725,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5840,7 +5842,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -5941,7 +5943,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01062382335">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sR7HCqEi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
@@ -6047,7 +6049,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <div class="subFoot3">
   <a class="sTel" href="tel:01050687232">전화 상담</a>
   <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-  <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+  <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
 </div>
 
 <div id="equipLightbox" onclick="closeEquipLightbox()">
@@ -6173,7 +6175,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
-    <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
+    <a class="sBlog" href="https://www.instagram.com/" target="_blank">인스타그램</a>
   </div>
 </div>
 
