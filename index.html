@@ -67,7 +67,7 @@ section.hero:after{display:none!important;content:none!important}
 .hero h1{font-size:48px;letter-spacing:-2.4px;line-height:1.04;margin:24px 0 14px;font-weight:1000;text-shadow:0 4px 14px rgba(0,0,0,.45)}
 .hero h1 span{display:block;color:#4ec0ff}
 .hero .slogan{font-size:24px;font-weight:1000;line-height:1.25;margin:0 0 12px;letter-spacing:-1.2px}
-.hero .desc{font-size:15px;line-height:1.6;color:#eaf4ff;margin:0 0 20px;font-weight:750}
+.hero .desc{font-size:15.5px;line-height:1.6;color:#eaf4ff;margin:0 0 20px;font-weight:750}
 .heroBtns{display:grid;gap:10px;margin-top:18px;position:relative;z-index:2}
 .heroBtns a{height:56px;border-radius:14px;text-decoration:none;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:18px}
 .heroBtns .primary{background:#fff;color:#082243}
@@ -776,6 +776,19 @@ background:linear-gradient(135deg,#184f8d,#2f73c0)!important;
 section.hero{
   background-position:left 60px top -50px!important;
   background-size:170% auto!important;
+  position:relative;
+  z-index:2;
+}
+section.hero::before{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-10px;
+  height:40px;
+  background:linear-gradient(to bottom, rgba(236,72,153,.35) 0%, rgba(236,72,153,0) 100%);
+  pointer-events:none;
+  z-index:-1;
 }
 section.hero:after{
   display:none!important;
@@ -4010,7 +4023,7 @@ body.subOpen main.mobile{display:none}
 <section class="hero">
   <div class="heroTopLine">자연스러운 볼륨,</div>
   <div class="slogan"><span class="sloganGold">제이주현 붙임머리</span></div>
-  <p class="desc">서울 전지역 · 경기 일부지역 무료출장<br>사진 한 장만 보내주시면 복원 가능 여부와 예상 비용을 안내해 드립니다.</p>
+  <p class="desc">좋은 결과는 타협하지 않는 기술에서 시작됩니다. 최상의 재료와 섬세한 시술로 가장 자연스럽고 아름다운 스타일을 선사하며, 늘 믿고 찾아주시는 마음에 최선의 결과로 보답하겠습니다.</p>
 </section>
 <div style="height:0.5px;background:linear-gradient(90deg,transparent,#c9a862,transparent);box-shadow:0 3px 6px -1px rgba(0,0,0,.25);margin:0 auto;max-width:430px;"></div>
 
@@ -4022,7 +4035,7 @@ body.subOpen main.mobile{display:none}
     <div class="runningDogWrap">
       <div class="carTrailWrap">
         <svg class="carTrailSvg" viewBox="0 0 300 14" preserveAspectRatio="none">
-          <path pathLength="100" d="M4,7 L26,6.3 L48,7.4 L70,6.6 L92,7.2 L114,6.4 L136,7.3 L158,6.5 L180,7.1 L202,6.3 L224,7.4 L246,6.6 L268,7.2 L296,6.8" stroke="#c9a862" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path pathLength="100" d="M0,7 L22,6.3 L44,7.4 L66,6.6 L88,7.2 L110,6.4 L132,7.3 L154,6.5 L176,7.1 L198,6.3 L220,7.4 L242,6.6 L264,7.2 L286,6.4 L300,6.8" stroke="#c2185b" stroke-width="1.6" fill="none" stroke-linecap="round"/>
         </svg>
         <div class="carLetterRow"><span class="carLetter carLetter1">J</span><span class="carLetter carLetter2">.</span><span class="carLetter carLetter3">J</span><span class="carLetter carLetter4">O</span><span class="carLetter carLetter5">O</span><span class="carLetter carLetter6">H</span><span class="carLetter carLetter7">Y</span><span class="carLetter carLetter8">U</span><span class="carLetter carLetter9">N</span><span class="carLetter carLetter10">&nbsp;</span><span class="carLetter carLetter11">H</span><span class="carLetter carLetter12">A</span><span class="carLetter carLetter13">I</span><span class="carLetter carLetter14">R</span></div>
       </div>
@@ -4145,7 +4158,7 @@ body.subOpen main.mobile{display:none}
   </div>
 </section>
 
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:25px 20px 15px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:25px 20px 15px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
 
 <nav class="bottom">
   <a class="bTel" href="tel:01050687232">전화 상담</a>
@@ -4379,7 +4392,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -4486,7 +4499,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -4602,7 +4615,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -4718,7 +4731,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -4834,7 +4847,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -4937,7 +4950,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -5074,7 +5087,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5207,7 +5220,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5333,7 +5346,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5476,7 +5489,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5592,7 +5605,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5706,7 +5719,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5823,7 +5836,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -5923,7 +5936,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
   </div>
 
-  <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+  <p style="text-align:center;color:#ec4899;font-size:12px;padding:40px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01062382335">전화 상담</a>
@@ -6029,7 +6042,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </main>
 
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
 
 <div class="subFoot3">
   <a class="sTel" href="tel:01050687232">전화 상담</a>
@@ -6156,7 +6169,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   </div>
 </main>
-<p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
+<p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
@@ -6633,15 +6646,15 @@ document.addEventListener('click', function(e){
   50%{opacity:1;}
 }
 
-.runningDogWrap{position:relative;height:34px;margin-top:55px;overflow:visible;}.runningDogWrap::after{content:"";position:absolute;left:-24px;right:-24px;bottom:-120px;width:auto;height:26px;background:linear-gradient(to bottom, rgba(0,0,0,.07) 0%, rgba(0,0,0,0) 100%);pointer-events:none;}
+.runningDogWrap{position:relative;height:34px;margin-top:55px;overflow:visible;}.runningDogWrap::after{content:"";position:absolute;left:-24px;right:-24px;bottom:-120px;width:auto;height:26px;background:linear-gradient(to bottom, rgba(236,72,153,.15) 0%, rgba(236,72,153,0) 100%);pointer-events:none;}
 .carTrailSvg{position:absolute;left:0;bottom:4px;width:100%;height:14px;overflow:visible;}
-.carTrailWrap{position:absolute;left:50%;bottom:0;transform:translateX(-50%);white-space:nowrap;}
-.carTrailSvg path{stroke-dasharray:100;stroke-dashoffset:100;animation:trailDraw 17s linear infinite;}
+.carTrailWrap{position:absolute;left:0;bottom:0;width:100%;white-space:nowrap;}
+.carTrailSvg path{stroke-dasharray:100;stroke-dashoffset:100;animation:trailDraw 24s linear infinite;}
 @keyframes trailDraw{0%,22%{stroke-dashoffset:100;}53%,100%{stroke-dashoffset:0;}}
 .carTrailSvg path{
   stroke-dasharray:100;
   stroke-dashoffset:100;
-  animation:roadTrail 17s linear infinite;
+  animation:roadTrail 24s linear infinite;
   opacity:.55;
 }
 @keyframes roadTrail{
@@ -6655,7 +6668,7 @@ document.addEventListener('click', function(e){
   left:-15%;
   top:0;
   font-size:26px;
-  animation:dogRun 17s linear infinite;
+  animation:dogRun 24s linear infinite;
   display:inline-block;
 }
 @keyframes dogRun{
@@ -6666,79 +6679,79 @@ document.addEventListener('click', function(e){
 }
 
 .carLetter{position:static;display:inline-block;font-size:18px;font-weight:800;color:#c2185b;letter-spacing:2px;opacity:0;white-space:nowrap;}
-.carLetterRow{position:relative;padding-bottom:10px;white-space:nowrap;display:block;}
-.carLetter1{animation:letterFade1 17s linear infinite;}
+.carLetterRow{position:relative;padding-bottom:10px;white-space:nowrap;display:block;text-align:center;}
+.carLetter1{animation:letterFade1 24s linear infinite;}
 @keyframes letterFade1{0%,22.00%{opacity:0;}23.00%,100%{opacity:1;}}
-.carLetter2{animation:letterFade2 17s linear infinite;}
+.carLetter2{animation:letterFade2 24s linear infinite;}
 @keyframes letterFade2{0%,24.38%{opacity:0;}25.38%,100%{opacity:1;}}
-.carLetter3{animation:letterFade3 17s linear infinite;}
+.carLetter3{animation:letterFade3 24s linear infinite;}
 @keyframes letterFade3{0%,26.77%{opacity:0;}27.77%,100%{opacity:1;}}
-.carLetter4{animation:letterFade4 17s linear infinite;}
+.carLetter4{animation:letterFade4 24s linear infinite;}
 @keyframes letterFade4{0%,29.15%{opacity:0;}30.15%,100%{opacity:1;}}
-.carLetter5{animation:letterFade5 17s linear infinite;}
+.carLetter5{animation:letterFade5 24s linear infinite;}
 @keyframes letterFade5{0%,31.54%{opacity:0;}32.54%,100%{opacity:1;}}
-.carLetter6{animation:letterFade6 17s linear infinite;}
+.carLetter6{animation:letterFade6 24s linear infinite;}
 @keyframes letterFade6{0%,33.92%{opacity:0;}34.92%,100%{opacity:1;}}
-.carLetter7{animation:letterFade7 17s linear infinite;}
+.carLetter7{animation:letterFade7 24s linear infinite;}
 @keyframes letterFade7{0%,36.31%{opacity:0;}37.31%,100%{opacity:1;}}
-.carLetter8{animation:letterFade8 17s linear infinite;}
+.carLetter8{animation:letterFade8 24s linear infinite;}
 @keyframes letterFade8{0%,38.69%{opacity:0;}39.69%,100%{opacity:1;}}
-.carLetter9{animation:letterFade9 17s linear infinite;}
+.carLetter9{animation:letterFade9 24s linear infinite;}
 @keyframes letterFade9{0%,41.08%{opacity:0;}42.08%,100%{opacity:1;}}
-.carLetter10{animation:letterFade10 17s linear infinite;}
+.carLetter10{animation:letterFade10 24s linear infinite;}
 @keyframes letterFade10{0%,43.46%{opacity:0;}44.46%,100%{opacity:1;}}
-.carLetter11{animation:letterFade11 17s linear infinite;}
+.carLetter11{animation:letterFade11 24s linear infinite;}
 @keyframes letterFade11{0%,45.85%{opacity:0;}46.85%,100%{opacity:1;}}
-.carLetter12{animation:letterFade12 17s linear infinite;}
+.carLetter12{animation:letterFade12 24s linear infinite;}
 @keyframes letterFade12{0%,48.23%{opacity:0;}49.23%,100%{opacity:1;}}
-.carLetter13{animation:letterFade13 17s linear infinite;}
+.carLetter13{animation:letterFade13 24s linear infinite;}
 @keyframes letterFade13{0%,50.62%{opacity:0;}51.62%,100%{opacity:1;}}
-.carLetter14{animation:letterFade14 17s linear infinite;}
+.carLetter14{animation:letterFade14 24s linear infinite;}
 @keyframes letterFade14{0%,53.00%{opacity:0;}54.00%,100%{opacity:1;}}
 .wLetter{position:static;font-size:17px;font-weight:800;color:#c2185b;letter-spacing:0;opacity:0;white-space:nowrap;}
-.wLetter1{animation:wLetterFade1 17s linear infinite;}
+.wLetter1{animation:wLetterFade1 24s linear infinite;}
 @keyframes wLetterFade1{0%,10.00%{opacity:0;}11.00%,100%{opacity:1;}}
-.wLetter2{animation:wLetterFade2 17s linear infinite;}
+.wLetter2{animation:wLetterFade2 24s linear infinite;}
 @keyframes wLetterFade2{0%,12.62%{opacity:0;}13.62%,100%{opacity:1;}}
-.wLetter3{animation:wLetterFade3 17s linear infinite;}
+.wLetter3{animation:wLetterFade3 24s linear infinite;}
 @keyframes wLetterFade3{0%,15.24%{opacity:0;}16.24%,100%{opacity:1;}}
-.wLetter4{animation:wLetterFade4 17s linear infinite;}
+.wLetter4{animation:wLetterFade4 24s linear infinite;}
 @keyframes wLetterFade4{0%,17.86%{opacity:0;}18.86%,100%{opacity:1;}}
-.wLetter5{animation:wLetterFade5 17s linear infinite;}
+.wLetter5{animation:wLetterFade5 24s linear infinite;}
 @keyframes wLetterFade5{0%,20.48%{opacity:0;}21.48%,100%{opacity:1;}}
-.wLetter6{animation:wLetterFade6 17s linear infinite;}
+.wLetter6{animation:wLetterFade6 24s linear infinite;}
 @keyframes wLetterFade6{0%,23.10%{opacity:0;}24.10%,100%{opacity:1;}}
-.wLetter7{animation:wLetterFade7 17s linear infinite;}
+.wLetter7{animation:wLetterFade7 24s linear infinite;}
 @keyframes wLetterFade7{0%,25.71%{opacity:0;}26.71%,100%{opacity:1;}}
-.wLetter8{animation:wLetterFade8 17s linear infinite;}
+.wLetter8{animation:wLetterFade8 24s linear infinite;}
 @keyframes wLetterFade8{0%,28.33%{opacity:0;}29.33%,100%{opacity:1;}}
-.wLetter9{animation:wLetterFade9 17s linear infinite;}
+.wLetter9{animation:wLetterFade9 24s linear infinite;}
 @keyframes wLetterFade9{0%,30.95%{opacity:0;}31.95%,100%{opacity:1;}}
-.wLetter10{animation:wLetterFade10 17s linear infinite;}
+.wLetter10{animation:wLetterFade10 24s linear infinite;}
 @keyframes wLetterFade10{0%,33.57%{opacity:0;}34.57%,100%{opacity:1;}}
-.wLetter11{animation:wLetterFade11 17s linear infinite;}
+.wLetter11{animation:wLetterFade11 24s linear infinite;}
 @keyframes wLetterFade11{0%,36.19%{opacity:0;}37.19%,100%{opacity:1;}}
-.wLetter12{animation:wLetterFade12 17s linear infinite;}
+.wLetter12{animation:wLetterFade12 24s linear infinite;}
 @keyframes wLetterFade12{0%,38.81%{opacity:0;}39.81%,100%{opacity:1;}}
-.wLetter13{animation:wLetterFade13 17s linear infinite;}
+.wLetter13{animation:wLetterFade13 24s linear infinite;}
 @keyframes wLetterFade13{0%,41.43%{opacity:0;}42.43%,100%{opacity:1;}}
-.wLetter14{animation:wLetterFade14 17s linear infinite;}
+.wLetter14{animation:wLetterFade14 24s linear infinite;}
 @keyframes wLetterFade14{0%,44.05%{opacity:0;}45.05%,100%{opacity:1;}}
-.wLetter15{animation:wLetterFade15 17s linear infinite;}
+.wLetter15{animation:wLetterFade15 24s linear infinite;}
 @keyframes wLetterFade15{0%,46.67%{opacity:0;}47.67%,100%{opacity:1;}}
-.wLetter16{animation:wLetterFade16 17s linear infinite;}
+.wLetter16{animation:wLetterFade16 24s linear infinite;}
 @keyframes wLetterFade16{0%,49.29%{opacity:0;}50.29%,100%{opacity:1;}}
-.wLetter17{animation:wLetterFade17 17s linear infinite;}
+.wLetter17{animation:wLetterFade17 24s linear infinite;}
 @keyframes wLetterFade17{0%,51.90%{opacity:0;}52.90%,100%{opacity:1;}}
-.wLetter18{animation:wLetterFade18 17s linear infinite;}
+.wLetter18{animation:wLetterFade18 24s linear infinite;}
 @keyframes wLetterFade18{0%,54.52%{opacity:0;}55.52%,100%{opacity:1;}}
-.wLetter19{animation:wLetterFade19 17s linear infinite;}
+.wLetter19{animation:wLetterFade19 24s linear infinite;}
 @keyframes wLetterFade19{0%,57.14%{opacity:0;}58.14%,100%{opacity:1;}}
-.wLetter20{animation:wLetterFade20 17s linear infinite;}
+.wLetter20{animation:wLetterFade20 24s linear infinite;}
 @keyframes wLetterFade20{0%,59.76%{opacity:0;}60.76%,100%{opacity:1;}}
-.wLetter21{animation:wLetterFade21 17s linear infinite;}
+.wLetter21{animation:wLetterFade21 24s linear infinite;}
 @keyframes wLetterFade21{0%,62.38%{opacity:0;}63.38%,100%{opacity:1;}}
-.wLetter22{animation:wLetterFade22 17s linear infinite;}
+.wLetter22{animation:wLetterFade22 24s linear infinite;}
 @keyframes wLetterFade22{0%,65.00%{opacity:0;}66.00%,100%{opacity:1;}}
 .warrantyTrailWrap{position:relative;min-height:30px;margin-top:30px;overflow:visible;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px;row-gap:4px;}
 }
