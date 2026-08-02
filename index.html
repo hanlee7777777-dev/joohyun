@@ -46,6 +46,7 @@ body{margin:0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,"N
 img{max-width:100%;display:block;}
 a{-webkit-tap-highlight-color:transparent}
 [id^="subPage"] .back,[id^="subPage"] .back:visited,[id^="subPage"] .back:active,[id^="subPage"] .back:focus,[id^="subPage"] .back:hover{color:#c2185b!important;-webkit-tap-highlight-color:transparent!important;}
+#subPage .back,#subPage .back:visited,#subPage .back:active,#subPage .back:focus,#subPage .back:hover{color:#0d4d26!important;}
 .mobile{max-width:430px;margin:0 auto;background:#ffffff;min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.16);padding-bottom:82px}
 @media (orientation:landscape) and (max-width:1023px){.mobile{max-width:100%!important;box-shadow:none;}}
 .top{position:sticky;top:0;z-index:50;height:62px;background:#ec4899;backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #e4ebf3}
@@ -2483,6 +2484,7 @@ section.simpleSteps .sub{
 .qBoxSub .qBtn.qBtnPink .qLine1,.qBoxSub .qBtn.qBtnPink .qLine2{animation:none!important;color:#ec4899!important;}
 
 .qBoxSub .qBtn.qBtnPink{border:1.5px solid #ec4899!important;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%)!important;box-shadow:0 6px 16px rgba(236,72,153,.24)!important;}
+.qBoxSub .qBtn.qBtnGreen{border:1.5px solid #22a55e!important;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%)!important;box-shadow:0 6px 16px rgba(34,165,94,.24)!important;}
 .welcomeWrap{margin:28px 4px 4px;padding:11px 20px 60px;position:relative;text-align:center;}
 .welcomeWrap::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:44px;height:1px;background:linear-gradient(90deg,transparent,#c9a862,transparent);}
 .welcomeQMark{display:block;font-size:42px;font-weight:800;color:#b08d4d;line-height:1;margin-bottom:2px;font-family:Georgia,serif;opacity:.85;}
@@ -2509,6 +2511,8 @@ section.simpleSteps .sub{
 .qBtn.qBtnGold{border:1.5px solid #ec4899;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);box-shadow:0 6px 16px rgba(236,72,153,.24);animation:qBtnColorShiftRev 10s ease-in-out infinite;}
 .qBtn.qBtnGold .qLine1,.qBtn.qBtnGold .qLine2{color:#ec4899;animation:qBtnTextShiftRev 10s ease-in-out infinite;}
 .qBtn.qBtnPink{border:1.5px solid #ec4899;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);box-shadow:0 6px 16px rgba(236,72,153,.24);}
+.qBtn.qBtnGreen{border:1.5px solid #22a55e;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%);box-shadow:0 6px 16px rgba(34,165,94,.24);}
+.qBtn.qBtnGreen .qLine1{color:#0d4d26!important;-webkit-text-fill-color:#0d4d26!important;}
 .qBtn.qBtnPink .qLine1,.qBtn.qBtnPink .qLine2{color:#ec4899;}
 .qBtn.qBtnPink[data-open],.qBtn.qBtnPink[data-jump]{animation:qBtnPinkBlink 10s ease-in-out infinite;}
 .qBoxSub .qBtn.qBtnPink[data-open],.qBoxSub .qBtn.qBtnPink[data-jump]{animation:qBtnPinkBlink 10s ease-in-out infinite!important;}
@@ -2667,12 +2671,12 @@ body.subOpen main.mobile{display:none}
 #subPage.open,#subPage2.open{display:block!important;}
 #subPage .wrap{max-width:600px;margin:0 auto;padding:0 22px}
 #subPage a{color:inherit}
-#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);border-bottom:1px solid #ec4899;box-shadow:0 2px 8px rgba(236,72,153,.20)}
+#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%);border-bottom:1px solid #22a55e;box-shadow:0 2px 8px rgba(34,165,94,.20)}
 #subPage .nav .wrap{display:flex;align-items:center;height:56px}
-#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#0d4d26;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#0f5c30;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
@@ -2713,8 +2717,8 @@ body.subOpen main.mobile{display:none}
 #subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 #subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:28px;height:1px;background:var(--sub-gold-line);opacity:.6}
 #subPage .foot{margin-top:34px;text-align:center}
-#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#ec4899;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(236,72,153,.24)}
-#subPage .foot a:hover{background:#c2185b;box-shadow:0 12px 28px rgba(236,72,153,.32)}
+#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#0f5c30;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(15,92,48,.28)}
+#subPage .foot a:hover{background:#0d4d26;box-shadow:0 12px 28px rgba(15,92,48,.36)}
 
 /* emphasis rebalance: calm the rate stat, spotlight the real benefits */
 #subPage .rate{
@@ -2987,12 +2991,12 @@ body.subOpen main.mobile{display:none}
 #subPage.open,#subPage2.open{display:block!important;}
 #subPage .wrap{max-width:600px;margin:0 auto;padding:0 22px}
 #subPage a{color:inherit}
-#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);border-bottom:1px solid #ec4899;box-shadow:0 2px 8px rgba(236,72,153,.20)}
+#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%);border-bottom:1px solid #22a55e;box-shadow:0 2px 8px rgba(34,165,94,.20)}
 #subPage .nav .wrap{display:flex;align-items:center;height:56px}
-#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#0d4d26;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#0f5c30;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
@@ -3033,8 +3037,8 @@ body.subOpen main.mobile{display:none}
 #subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 #subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:28px;height:1px;background:var(--sub-gold-line);opacity:.6}
 #subPage .foot{margin-top:34px;text-align:center}
-#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#ec4899;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(236,72,153,.24)}
-#subPage .foot a:hover{background:#c2185b;box-shadow:0 12px 28px rgba(236,72,153,.32)}
+#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#0f5c30;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(15,92,48,.28)}
+#subPage .foot a:hover{background:#0d4d26;box-shadow:0 12px 28px rgba(15,92,48,.36)}
 
 /* emphasis rebalance: calm the rate stat, spotlight the real benefits */
 #subPage .rate{
@@ -3193,12 +3197,12 @@ body.subOpen main.mobile{display:none}
 #subPage.open,#subPage2.open{display:block!important;}
 #subPage .wrap{max-width:600px;margin:0 auto;padding:0 22px}
 #subPage a{color:inherit}
-#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);border-bottom:1px solid #ec4899;box-shadow:0 2px 8px rgba(236,72,153,.20)}
+#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%);border-bottom:1px solid #22a55e;box-shadow:0 2px 8px rgba(34,165,94,.20)}
 #subPage .nav .wrap{display:flex;align-items:center;height:56px}
-#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#0d4d26;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#0f5c30;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
@@ -3239,8 +3243,8 @@ body.subOpen main.mobile{display:none}
 #subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 #subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:28px;height:1px;background:var(--sub-gold-line);opacity:.6}
 #subPage .foot{margin-top:34px;text-align:center}
-#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#ec4899;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(236,72,153,.24)}
-#subPage .foot a:hover{background:#c2185b;box-shadow:0 12px 28px rgba(236,72,153,.32)}
+#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#0f5c30;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(15,92,48,.28)}
+#subPage .foot a:hover{background:#0d4d26;box-shadow:0 12px 28px rgba(15,92,48,.36)}
 
 /* emphasis rebalance: calm the rate stat, spotlight the real benefits */
 #subPage .rate{
@@ -3842,12 +3846,12 @@ body.subOpen main.mobile{display:none}
 #subPage.open,#subPage2.open{display:block!important;}
 #subPage .wrap{max-width:600px;margin:0 auto;padding:0 22px}
 #subPage a{color:inherit}
-#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#ffe9f5 0%,#ffcce2 100%);border-bottom:1px solid #ec4899;box-shadow:0 2px 8px rgba(236,72,153,.20)}
+#subPage .nav{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:9000;background:linear-gradient(135deg,#eafff2 0%,#c9f5da 100%);border-bottom:1px solid #22a55e;box-shadow:0 2px 8px rgba(34,165,94,.20)}
 #subPage .nav .wrap{display:flex;align-items:center;height:56px}
-#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#c2185b;font-size:18px;font-weight:600}
+#subPage .back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#0d4d26;font-size:18px;font-weight:600}
 #subPage .back:hover{color:var(--sub-ink)}
 #subPage .back .arw{font-size:20px;line-height:1}
-#subPage .hero{background:#ec4899;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
+#subPage .hero{background:#0f5c30;color:#fff;position:relative;overflow:hidden;padding:36px 0 32px;box-shadow:0 6px 12px -8px rgba(0,0,0,.15);margin-top:56px}
 #subPage .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,98,.55),transparent)}
 #subPage .hero::before{content:"";position:absolute;top:-45%;right:-25%;width:80%;height:190%;background:radial-gradient(closest-side,rgba(201,168,98,.20),transparent);opacity:.9}
 #subPage .hero .wrap{position:relative}
@@ -3888,8 +3892,8 @@ body.subOpen main.mobile{display:none}
 #subPage .closing .sign{margin-top:22px;font-size:12px;font-weight:800;letter-spacing:4px;color:var(--sub-gold);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 #subPage .closing .sign::before, #subPage .closing .sign::after{content:"";width:28px;height:1px;background:var(--sub-gold-line);opacity:.6}
 #subPage .foot{margin-top:34px;text-align:center}
-#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#ec4899;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(236,72,153,.24)}
-#subPage .foot a:hover{background:#c2185b;box-shadow:0 12px 28px rgba(236,72,153,.32)}
+#subPage .foot a{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:13px;background:#0f5c30;color:#fff;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:-.2px;transition:background .25s,box-shadow .25s;box-shadow:0 8px 22px rgba(15,92,48,.28)}
+#subPage .foot a:hover{background:#0d4d26;box-shadow:0 12px 28px rgba(15,92,48,.36)}
 
 /* emphasis rebalance: calm the rate stat, spotlight the real benefits */
 #subPage .rate{
@@ -4204,13 +4208,13 @@ body.subOpen main.mobile{display:none}
     <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-open="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-open="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-open="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-open="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-open="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-open="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-open="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-open="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-open="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
     </div>
   </div>
 </section>
@@ -4284,9 +4288,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 
-<div id="subPage" aria-hidden="true" style="display:none;position:relative;z-index:1;min-height:100vh;background:#fff0f6;color:#1a2436;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;line-height:1.62;">
+<div id="subPage" aria-hidden="true" style="display:none;position:relative;z-index:1;min-height:100vh;background:#eafff2;color:#1a2436;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;line-height:1.62;">
 <nav class="nav">
-  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">자주 묻는 질문 BEST Q&A 03</a></div>
+  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">공지사항 꼭 읽어주세요!</a></div>
 </nav>
 
 <header class="hero" data-home="1">
@@ -4298,157 +4302,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
-    <section class="sect">
-      <div class="sect-h"><span class="idx">01</span><span class="t">붙임머리 할 때 숱을 꼭 쳐야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>경계선이 보이지 않도록 질감 처리를 합니다</h2>
-        <p>붙임머리 시술을 할 때는 기존 모발과의 경계선이 보이지 않도록, 모발 끝부분만 가볍게 쳐내는 느낌으로 질감 처리를 합니다. <b>층이 있는 무거운 머리 상태에서 붙임머리를 하시면 이어지는 부분에서 경계선이 보이고 부자연스러울 수 있기 때문에</b>(흔히 "붙임머리 티가 난다"고 하죠), 시술 전에 반드시 질감 처리를 하시길 권해드립니다. 매번 커트하는 것이 아니라, 한 번 가볍게 다듬으신 후에는 다시 무겁게 자르실 필요가 없어요. 이후 리터치나 재시술 시에도 커트할 일이 계속 줄어듭니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">02</span><span class="t">붙임머리를 하면서 머리를 기르고 싶은데 가능한가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>네, 티 나지 않게 기르실 수 있어요</h2>
-        <p>앞서 말씀드렸듯 붙임머리를 하실 때는 끝머리 질감 처리를 하기 때문에, 처음에는 오히려 숱이 많아 보일 수 있습니다. 간혹 머리를 기르려고 붙임머리를 했는데 오히려 숱이 늘어나서 짧게 잘랐다고 아쉬워하시는 분들도 계세요. <b>사람 머리카락은 한 달에 약 1~1.5cm씩 자라기 때문에, 붙임머리를 2~3개월 유지하신 후 제거하시면 기장 변화가 자연스럽게 나타납니다.</b> 중간에 길이가 늘어도 티나지 않게, 처음 질감 처리했던 상태를 유지하며 꾸준히 리터치를 받으시거나 새로 붙임머리를 하실 분들은 매번 질감만 살짝 다듬으시면 됩니다. 그렇게 관리하시면 중간에 끊김 없이 고비를 잘 넘기고 예쁘게 기르실 수 있습니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">03</span><span class="t">숱 추가가 뭐예요? 꼭 해야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>완성도를 위해 필요한 경우가 많습니다</h2>
-        <p>한 팩(80가닥/1set) 기준으로 전체적인 완성이 어려운 경우, 숱 추가(볼륨 추가)가 필요합니다. <b>숱 추가는 머리숱이 많은 경우뿐 아니라, 모발 기장이 짧을수록·손상 정도가 심할수록·실제 기장과 원하시는 기장의 단차가 클수록 더 많은 양이 들어갑니다.</b> 단발 기장이신 분들도 대부분 숱 추가가 필요합니다. 숱 추가 양은 개인차가 있어 미리 정해진 금액이 아니라, 시술 전 개개인의 상태를 보고 먼저 예상 금액을 안내드리며 시술 후 실제 들어간 양에 따라 정확한 가격이 책정됩니다. 간혹 숱 추가 금액을 미리 물으시는 분들이 계신데, 금액은 양에 따라 달라지기 때문에 평균치는 있지만 개별로 정확히 예측하긴 어렵습니다. 가격표에 평균 숱 추가 금액이 함께 안내되어 있으니 참고해 주세요.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">04</span><span class="t">매직을 꼭 해야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>파마·곱슬기·C컬이 있으시면 미리 매직을 권해드려요</h2>
-        <p>저희는 파마나 곱슬기, C컬이 있으신 경우 반드시 미리 매직 스트레이트를 하시길 추천해 드리고 있습니다. <b>매직 스트레이트를 권해드리는 이유는 곱슬기나 컬을 따로 관리하지 않아도 자연스럽게 유지될 수 있도록, 편안한 관리를 도와드리기 위해서입니다.</b> 짧은 모발은 볼륨감이 있어야 예뻐 보이기 때문에, 대부분 짧은 기장의 고객님들은 모발 끝에 힘이나 볼륨감을 가지고 계세요. 그런 상태에서 붙임머리를 하시면 긴 머리로 완성한 후에도 짧은 모발이 목 뒤쪽으로 삐져나오거나 모자 밑으로 삐죽삐죽 튀어나올 수 있습니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>뿌리 부분은 남기고, 끝부분만 하셔도 충분해요</h2>
-        <p>붙임머리로 자연스럽게 볼륨과 숱이 채워지기 때문에, 매직을 하실 때 뿌리 부분 5~6cm 정도는 남기고 끝부분만 하셔도 충분해서 부담이 크지 않습니다. <b>붙임머리 후에는 자연스러운 볼륨감이 더해지기 때문에, 오히려 미리 매직을 해두신 것을 만족스러워하시는 분들이 많습니다.</b> 붙임머리 모발도 끝에 C컬이 생기기 때문에 ★반드시 일자 매직을 진행해 드립니다. 매직 역시 붙임머리를 할 때마다 매번 해야 하는 것이 아니라, 처음 한 번만 해두시면 이후에는 리터치만 받으시면 됩니다.</p>
-      </div>
-      <div class="item caution">
-        <span class="cap"><span class="dot"></span>참고</span>
-        <h2>손상모(탈색모)라서 매직이 어려운 경우</h2>
-        <p>손상모(탈색모) 상태라서 매직이 어려우신 분들도 계신데, 그런 경우 상태에 맞춰 시술은 가능하지만 이후 매번 고데기 손질을 직접 해주셔야 합니다. <b>이 부분을 감안하시고 시술받으시는 분들도 계시지만, 관리 부담이 있을 수 있어 크게 추천해 드리지는 않습니다.</b></p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">05</span><span class="t">매직하고 바로 머리 붙여도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>뿌리를 남기고 처리하시면 당일 시술도 가능해요</h2>
-        <p>매직 스트레이트를 하실 때 뿌리 5~6cm 이상은 남기고 약 처리를 하시면, <b>당일에도 붙임머리 시술이 가능합니다.</b> 뿌리까지 전체를 매직하신 경우에는 모발이 약해질 수 있어 최소 3일 후에 시술을 받으실 수 있어요. 강한 천연 곱슬머리나 곱슬기 있는 웨이브를 푸신 경우에는 뿌리 쪽은 제외하고 끝부분만 매직하시길 권해드립니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">06</span><span class="t">붙임머리 하고 머리 묶을 수 있나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>네, 묶으실 수 있습니다!</h2>
-        <p>단, 시술 전 기존 모발 기장이 자유롭게 묶이는 기장이라면 붙인 후에도 제약 없이 묶으실 수 있습니다. <b>원래 기장이 짧아서 묶었을 때 흘러내리는 기장이라면, 붙인 후에는 이전보다는 덜 흘러내리지만 짧은 머리가 사이사이로 내려올 수 있어 실핀으로 고정해 주시면 됩니다.</b> 높이 묶는 경우도 마찬가지로, 기존에 높이 묶이던 기장이면 붙인 후에도 가능하고, 흘러내리던 기장이라면 붙임머리 이후에도 짧은 머리가 사이로 흘러내릴 수 있어요(핀으로 고정하시면 돼요!).</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">07</span><span class="t">붙임머리를 하면 두상이 커 보이지 않을까요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>1mm 슬림 땋기로 두상을 고려해 시술합니다</h2>
-        <p>저희 제이바비 붙임머리는 이음 부분이 1mm 정도로 얇은 슬림 땋기 붙임머리로 시술해 드리며, <b>오랜 헤어 경험의 노하우를 붙임머리에 접목해 개개인의 두상 모양을 고려하여 시술해 드리기 때문에 두상이 커 보이지 않습니다.</b> 단, 기존 모발의 뜨는 볼륨감은 미리 깨끗하게 매직하고 오셔야 합니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">08</span><span class="t">시술 초반에 한 가닥이 떨어졌어요. 계속 빠지는 건가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>본드 없이 땋아서 고정하는 방식입니다</h2>
-        <p>땋기 붙임머리는 접착력이 강한 본드나 금속 등의 이음 물질을 사용하지 않고, <b>오로지 하나하나 땋아서 고무실로 묶어 고정하는 방식입니다.</b> 오히려 녹는 본드보다 더 튼튼하게 유지되지만, 수작업으로 일일이 땋다 보니 간혹 한두 가닥이 빠지는 경우도 있습니다. 관리 상태에 따라서도 차이가 있어, 한 달 사이 5~6가닥이 빠지는 분도 있고 수개월 동안 한 가닥도 안 빠지는 경우도 있어요. 일주일 만에 한 가닥이 떨어졌다고 계속 빠지는 것은 아니니 안심하세요.</p>
-        <ul class="qaList">
-          <li>떨어진 가닥은 한 달 최대 5가닥씩, 2개월간 총 2회 무상 AS</li>
-          <li>버리지 말고 보관하셨다가 예약 후 가져오시면 다시 붙여드려요</li>
-          <li>관리를 소홀히 하면 이음 부분이 약해질 수 있어 100% 완전 건조는 꼭 지켜주세요</li>
-        </ul>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">09</span><span class="t">땋은 부분에 하얀 점 같은 게 보여요. 비듬인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>비듬이 아니라 자연스럽게 빠진 모발의 모근이에요</h2>
-        <p>사람의 모발은 모주기에 따라 하루 80~100가닥 정도가 자연스럽게 빠집니다. 평소에는 샴푸나 빗질을 할 때 함께 빠져나가지만, <b>붙임머리를 유지하시는 동안에는 빠지는 양은 같아도 수개월간 땋은 채로 묶여 있어 빠진 모발의 모근(하얀 뿌리 부분)이 눈에 보이게 되는 것입니다.</b> 제거하시거나 리터치 받으실 때 땋은 부분만 풀어서 빗질해 드리면 자연스럽게 다 탈락됩니다. 비정상적인 탈모나 비듬, 각질이 아니니 걱정하지 않으셔도 됩니다. 간혹 윗부분이나 헤어라인 쪽에서 눈에 띄면 뽑지 마시고, 눈썹가위 등으로 하얀 뿌리 부분만 살짝 잘라주세요. 습관적으로 뽑으시면 땋은 부분의 모량이 줄어 헐거워지면서 피스가 빠질 수 있어요. 이미 빠진 머리이니 잘라주셔도 전혀 상관없습니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">10</span><span class="t">붙임머리를 하면 탈모가 오지 않을까요?</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>1mm 슬림 땋기만 전문으로 진행합니다</h2>
-        <p>붙임머리는 종류가 다양합니다. 제이바비 붙임머리는 실리콘이나 링 붙임머리처럼 무겁고 부착력이 강한 방식은 취급하지 않으며, <b>붙임머리의 단점을 최소화한 "1mm 슬림 땋기" 시술만 전문적으로 진행합니다.</b> 가장 가볍고 안전하며 튼튼한 방식이라 탈모나 알레르기 등의 부작용 걱정 없이 세심하게 시술해 드립니다. 모발이식, 증모 시술, 탈모 이후 시술받으신 분들도 만족도가 높은 방식이니 안심하고 방문해 주세요 :)</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>제거 시 많이 빠지는 것도 정상적인 현상이에요</h2>
-        <p>모주기에 따라 정상적으로 빠진 머리들이 수개월 동안 땋은 채로 매달려 있다가, <b>제거할 때 한 번에 빠지는 것처럼 보일 수 있습니다.</b> 예를 들어 3개월을 유지하셨다면, 하루 50가닥씩만 매달렸다고 해도 50가닥×90일 = 4,500가닥, 거의 5,000가닥에 가까운 모발이 한 번에 떨어지는 셈이라 그 양에 놀라실 수 있지만 자연스러운 현상이니 걱정하지 않으셔도 됩니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">11</span><span class="t">붙임머리에 염색(탈색)·파마를 해도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>1호 피스를 제외하면 염색이 가능해요</h2>
-        <p>1호(어두운 검정) 피스를 제외하고는 염색 시술이 가능합니다. <b>특수 컬러 피스의 경우 탈색 2~3회와 염색 과정을 거치면서 모발에 손상도가 생길 수 있습니다.</b> 다만 펌이나 재염색 시에는 모발 손상, 엉킴, 탈락 등의 우려가 있어 권장해 드리지 않으며, 그 결과에 대해서는 책임지지 않으니 참고 부탁드립니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">12</span><span class="t">한 피스는 몇 가닥인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>한 피스(1팩) 기준 총 160가닥입니다</h2>
-        <p>한 피스는 80가닥(1set) 기준, 총 160가닥입니다. 간혹 200가닥으로 문의하시는 분들이 계신데, <b>가닥 개수만 다를 뿐 한 피스의 총량은 100g으로 동일합니다.</b> 쉽게 말해 160가닥인 피스가 한 가닥에 더 많은 모발이 달려 있다고 생각하시면 됩니다. 피스 자체로는 차이가 있지만, 숱 추가가 개수 단위로 들어갈 때는 같은 10가닥이라도 총량으로 보면 숱이 더 풍성해집니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">13</span><span class="t">붙임머리 유지기간은 어느 정도인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>평균 2~3개월, 리터치는 3개월 안에 추천드려요</h2>
-        <p>유지 기간은 평균 2~3개월입니다! 시술 후 시간이 지나면 머리카락이 자라는 속도에 따라 땋은 부분도 함께 내려오게 되는데, <b>자라난 빈 모발 부분에서 지저분해지고 생활하시면서 불편함이 생길 수 있어요.</b> 개인 관리에 따라 리터치 없이 6개월 이상 유지하시는 분들도 간혹 계십니다. 하지만 두피 건강을 위해 3개월 안에는 리터치 받으시는 걸 추천해 드립니다! 피스 자체는 관리에 따라 1년 정도 재사용이 가능합니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">14</span><span class="t">리터치, 궁금한 것 모음</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>리터치는 뭔가요?</h2>
-        <p>시간이 지나 머리카락이 자라면 시술 부위도 자연스럽게 아래로 내려옵니다. <b>리터치는 전체를 제거한 후, 처음 시술했을 때의 위치로 다시 올려 땋는 시술입니다.</b> 간혹 길이 변화를 원하시는 분들은 한 단씩 제거하고 다시 땋아드리기 때문에, 원하시는 길이 그대로 유지해 드립니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>리터치 시기는 어떻게 느낄 수 있나요?</h2>
-        <p>샴푸하거나 모발 손질하실 때 새로 자란 모발이 손가락에 걸리며 불편하시거나, <b>떨어진 모근들이 지저분하게 보이기 시작할 때쯤 오시면 됩니다.</b> 평균적으로 2~3개월 전후이며, 모발이 자라는 속도에 따라 개인차가 있습니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 3</span>
-        <h2>리터치는 몇 번 할 수 있나요?</h2>
-        <p>보통 1~3번 정도는 무난하게 진행하십니다. 3번 이상도 가능하며, 처음 시술하신 모발로 1년까지 재사용하시는 분들도 계세요. <b>다만 리터치 특성상 고데기 사용이 잦고 피스 자체에서 모발이 빠지기도 하기 때문에, 오래 사용하시면 모발 손상이나 숱 감소가 있을 수 있어 적정 시기에는 새 모발로 교체하시길 추천드립니다.</b></p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 4</span>
-        <h2>리터치 비용은 얼마인가요?</h2>
-        <p>리터치는 기존에 사용하셨던 모발을 다시 재사용함을 전제로 하며, <b>처음 시술하셨던 정상가에서 50% 할인이 적용됩니다(제거비 별도).</b></p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">15</span><span class="t">셀프 제거도 가능한가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>가능하지만, 샵 방문을 가장 추천드려요</h2>
-        <p>제거하실 때 시간이나 거리상 방문이 어려우신 경우, 셀프 제거도 가능합니다. 방법은 유튜브 제이바비 채널을 참고해 주시거나 방문하셨을 때 문의해 주세요. <b>단, 가위질이 필요하기 때문에 도움을 받으실 분이 있어야 하며, 본인의 모발이 함께 잘리지 않도록 주의하셔야 합니다.</b> 한 손으로 땋인 부분을 잡고, 다른 손으로 가위로 묶음 부분만 잘라주시면 쉽게 제거하실 수 있습니다. 가장 안전한 방법은 역시 샵에 방문하셔서 제거하시는 것입니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">16</span><span class="t">샴푸는 서서 감아도 되나요? 매일 감아도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>일주일 정도만 서서 감아주세요</h2>
-        <p>샴푸는 평소처럼 숙여서 감으셔도 됩니다. 다만 시술 후 일주일 정도는 땋은 부분이 바짝 당겨져 있어 숙여서 감으시면 당길 수 있으니, <b>이 기간에는 서서 감으시고 이후에는 숙여서 감으셔도 무관합니다.</b> 매일 머리를 감으셔도 유지 기간에는 전혀 영향이 없으며, 단단히 땋아 시술했기 때문에 평소처럼 샴푸하시면 됩니다.</p>
-      </div>
-    </section>
-    <div class="closing">
+<div class="closing">
       <div class="q-mark">"</div>
       <p class="q">궁금한 점은 언제든 편하게 물어봐 주세요.</p>
       <p>시술 전후 관리 방법까지 꼼꼼하게 안내해 드리겠습니다.</p>
@@ -4464,8 +4318,8 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
@@ -4561,13 +4415,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -4668,13 +4522,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -4775,13 +4629,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -4882,13 +4736,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -4976,13 +4830,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -5058,13 +4912,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
@@ -5081,7 +4935,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <div id="subPage8" aria-hidden="true" style="display:none;position:relative;z-index:1;min-height:100vh;background:#fff0f6;color:#1a2436;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;line-height:1.62;">
 <nav class="nav">
-  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">자주 묻는 질문 BEST Q&A 02</a></div>
+  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">예비 페이지</a></div>
 </nav>
 
 <header class="hero" data-home="1">
@@ -5093,157 +4947,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
-    <section class="sect">
-      <div class="sect-h"><span class="idx">01</span><span class="t">붙임머리 할 때 숱을 꼭 쳐야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>경계선이 보이지 않도록 질감 처리를 합니다</h2>
-        <p>붙임머리 시술을 할 때는 기존 모발과의 경계선이 보이지 않도록, 모발 끝부분만 가볍게 쳐내는 느낌으로 질감 처리를 합니다. <b>층이 있는 무거운 머리 상태에서 붙임머리를 하시면 이어지는 부분에서 경계선이 보이고 부자연스러울 수 있기 때문에</b>(흔히 "붙임머리 티가 난다"고 하죠), 시술 전에 반드시 질감 처리를 하시길 권해드립니다. 매번 커트하는 것이 아니라, 한 번 가볍게 다듬으신 후에는 다시 무겁게 자르실 필요가 없어요. 이후 리터치나 재시술 시에도 커트할 일이 계속 줄어듭니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">02</span><span class="t">붙임머리를 하면서 머리를 기르고 싶은데 가능한가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>네, 티 나지 않게 기르실 수 있어요</h2>
-        <p>앞서 말씀드렸듯 붙임머리를 하실 때는 끝머리 질감 처리를 하기 때문에, 처음에는 오히려 숱이 많아 보일 수 있습니다. 간혹 머리를 기르려고 붙임머리를 했는데 오히려 숱이 늘어나서 짧게 잘랐다고 아쉬워하시는 분들도 계세요. <b>사람 머리카락은 한 달에 약 1~1.5cm씩 자라기 때문에, 붙임머리를 2~3개월 유지하신 후 제거하시면 기장 변화가 자연스럽게 나타납니다.</b> 중간에 길이가 늘어도 티나지 않게, 처음 질감 처리했던 상태를 유지하며 꾸준히 리터치를 받으시거나 새로 붙임머리를 하실 분들은 매번 질감만 살짝 다듬으시면 됩니다. 그렇게 관리하시면 중간에 끊김 없이 고비를 잘 넘기고 예쁘게 기르실 수 있습니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">03</span><span class="t">숱 추가가 뭐예요? 꼭 해야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>완성도를 위해 필요한 경우가 많습니다</h2>
-        <p>한 팩(80가닥/1set) 기준으로 전체적인 완성이 어려운 경우, 숱 추가(볼륨 추가)가 필요합니다. <b>숱 추가는 머리숱이 많은 경우뿐 아니라, 모발 기장이 짧을수록·손상 정도가 심할수록·실제 기장과 원하시는 기장의 단차가 클수록 더 많은 양이 들어갑니다.</b> 단발 기장이신 분들도 대부분 숱 추가가 필요합니다. 숱 추가 양은 개인차가 있어 미리 정해진 금액이 아니라, 시술 전 개개인의 상태를 보고 먼저 예상 금액을 안내드리며 시술 후 실제 들어간 양에 따라 정확한 가격이 책정됩니다. 간혹 숱 추가 금액을 미리 물으시는 분들이 계신데, 금액은 양에 따라 달라지기 때문에 평균치는 있지만 개별로 정확히 예측하긴 어렵습니다. 가격표에 평균 숱 추가 금액이 함께 안내되어 있으니 참고해 주세요.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">04</span><span class="t">매직을 꼭 해야 하나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>파마·곱슬기·C컬이 있으시면 미리 매직을 권해드려요</h2>
-        <p>저희는 파마나 곱슬기, C컬이 있으신 경우 반드시 미리 매직 스트레이트를 하시길 추천해 드리고 있습니다. <b>매직 스트레이트를 권해드리는 이유는 곱슬기나 컬을 따로 관리하지 않아도 자연스럽게 유지될 수 있도록, 편안한 관리를 도와드리기 위해서입니다.</b> 짧은 모발은 볼륨감이 있어야 예뻐 보이기 때문에, 대부분 짧은 기장의 고객님들은 모발 끝에 힘이나 볼륨감을 가지고 계세요. 그런 상태에서 붙임머리를 하시면 긴 머리로 완성한 후에도 짧은 모발이 목 뒤쪽으로 삐져나오거나 모자 밑으로 삐죽삐죽 튀어나올 수 있습니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>뿌리 부분은 남기고, 끝부분만 하셔도 충분해요</h2>
-        <p>붙임머리로 자연스럽게 볼륨과 숱이 채워지기 때문에, 매직을 하실 때 뿌리 부분 5~6cm 정도는 남기고 끝부분만 하셔도 충분해서 부담이 크지 않습니다. <b>붙임머리 후에는 자연스러운 볼륨감이 더해지기 때문에, 오히려 미리 매직을 해두신 것을 만족스러워하시는 분들이 많습니다.</b> 붙임머리 모발도 끝에 C컬이 생기기 때문에 ★반드시 일자 매직을 진행해 드립니다. 매직 역시 붙임머리를 할 때마다 매번 해야 하는 것이 아니라, 처음 한 번만 해두시면 이후에는 리터치만 받으시면 됩니다.</p>
-      </div>
-      <div class="item caution">
-        <span class="cap"><span class="dot"></span>참고</span>
-        <h2>손상모(탈색모)라서 매직이 어려운 경우</h2>
-        <p>손상모(탈색모) 상태라서 매직이 어려우신 분들도 계신데, 그런 경우 상태에 맞춰 시술은 가능하지만 이후 매번 고데기 손질을 직접 해주셔야 합니다. <b>이 부분을 감안하시고 시술받으시는 분들도 계시지만, 관리 부담이 있을 수 있어 크게 추천해 드리지는 않습니다.</b></p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">05</span><span class="t">매직하고 바로 머리 붙여도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>뿌리를 남기고 처리하시면 당일 시술도 가능해요</h2>
-        <p>매직 스트레이트를 하실 때 뿌리 5~6cm 이상은 남기고 약 처리를 하시면, <b>당일에도 붙임머리 시술이 가능합니다.</b> 뿌리까지 전체를 매직하신 경우에는 모발이 약해질 수 있어 최소 3일 후에 시술을 받으실 수 있어요. 강한 천연 곱슬머리나 곱슬기 있는 웨이브를 푸신 경우에는 뿌리 쪽은 제외하고 끝부분만 매직하시길 권해드립니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">06</span><span class="t">붙임머리 하고 머리 묶을 수 있나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>네, 묶으실 수 있습니다!</h2>
-        <p>단, 시술 전 기존 모발 기장이 자유롭게 묶이는 기장이라면 붙인 후에도 제약 없이 묶으실 수 있습니다. <b>원래 기장이 짧아서 묶었을 때 흘러내리는 기장이라면, 붙인 후에는 이전보다는 덜 흘러내리지만 짧은 머리가 사이사이로 내려올 수 있어 실핀으로 고정해 주시면 됩니다.</b> 높이 묶는 경우도 마찬가지로, 기존에 높이 묶이던 기장이면 붙인 후에도 가능하고, 흘러내리던 기장이라면 붙임머리 이후에도 짧은 머리가 사이로 흘러내릴 수 있어요(핀으로 고정하시면 돼요!).</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">07</span><span class="t">붙임머리를 하면 두상이 커 보이지 않을까요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>1mm 슬림 땋기로 두상을 고려해 시술합니다</h2>
-        <p>저희 제이바비 붙임머리는 이음 부분이 1mm 정도로 얇은 슬림 땋기 붙임머리로 시술해 드리며, <b>오랜 헤어 경험의 노하우를 붙임머리에 접목해 개개인의 두상 모양을 고려하여 시술해 드리기 때문에 두상이 커 보이지 않습니다.</b> 단, 기존 모발의 뜨는 볼륨감은 미리 깨끗하게 매직하고 오셔야 합니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">08</span><span class="t">시술 초반에 한 가닥이 떨어졌어요. 계속 빠지는 건가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>본드 없이 땋아서 고정하는 방식입니다</h2>
-        <p>땋기 붙임머리는 접착력이 강한 본드나 금속 등의 이음 물질을 사용하지 않고, <b>오로지 하나하나 땋아서 고무실로 묶어 고정하는 방식입니다.</b> 오히려 녹는 본드보다 더 튼튼하게 유지되지만, 수작업으로 일일이 땋다 보니 간혹 한두 가닥이 빠지는 경우도 있습니다. 관리 상태에 따라서도 차이가 있어, 한 달 사이 5~6가닥이 빠지는 분도 있고 수개월 동안 한 가닥도 안 빠지는 경우도 있어요. 일주일 만에 한 가닥이 떨어졌다고 계속 빠지는 것은 아니니 안심하세요.</p>
-        <ul class="qaList">
-          <li>떨어진 가닥은 한 달 최대 5가닥씩, 2개월간 총 2회 무상 AS</li>
-          <li>버리지 말고 보관하셨다가 예약 후 가져오시면 다시 붙여드려요</li>
-          <li>관리를 소홀히 하면 이음 부분이 약해질 수 있어 100% 완전 건조는 꼭 지켜주세요</li>
-        </ul>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">09</span><span class="t">땋은 부분에 하얀 점 같은 게 보여요. 비듬인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>비듬이 아니라 자연스럽게 빠진 모발의 모근이에요</h2>
-        <p>사람의 모발은 모주기에 따라 하루 80~100가닥 정도가 자연스럽게 빠집니다. 평소에는 샴푸나 빗질을 할 때 함께 빠져나가지만, <b>붙임머리를 유지하시는 동안에는 빠지는 양은 같아도 수개월간 땋은 채로 묶여 있어 빠진 모발의 모근(하얀 뿌리 부분)이 눈에 보이게 되는 것입니다.</b> 제거하시거나 리터치 받으실 때 땋은 부분만 풀어서 빗질해 드리면 자연스럽게 다 탈락됩니다. 비정상적인 탈모나 비듬, 각질이 아니니 걱정하지 않으셔도 됩니다. 간혹 윗부분이나 헤어라인 쪽에서 눈에 띄면 뽑지 마시고, 눈썹가위 등으로 하얀 뿌리 부분만 살짝 잘라주세요. 습관적으로 뽑으시면 땋은 부분의 모량이 줄어 헐거워지면서 피스가 빠질 수 있어요. 이미 빠진 머리이니 잘라주셔도 전혀 상관없습니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">10</span><span class="t">붙임머리를 하면 탈모가 오지 않을까요?</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>1mm 슬림 땋기만 전문으로 진행합니다</h2>
-        <p>붙임머리는 종류가 다양합니다. 제이바비 붙임머리는 실리콘이나 링 붙임머리처럼 무겁고 부착력이 강한 방식은 취급하지 않으며, <b>붙임머리의 단점을 최소화한 "1mm 슬림 땋기" 시술만 전문적으로 진행합니다.</b> 가장 가볍고 안전하며 튼튼한 방식이라 탈모나 알레르기 등의 부작용 걱정 없이 세심하게 시술해 드립니다. 모발이식, 증모 시술, 탈모 이후 시술받으신 분들도 만족도가 높은 방식이니 안심하고 방문해 주세요 :)</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>제거 시 많이 빠지는 것도 정상적인 현상이에요</h2>
-        <p>모주기에 따라 정상적으로 빠진 머리들이 수개월 동안 땋은 채로 매달려 있다가, <b>제거할 때 한 번에 빠지는 것처럼 보일 수 있습니다.</b> 예를 들어 3개월을 유지하셨다면, 하루 50가닥씩만 매달렸다고 해도 50가닥×90일 = 4,500가닥, 거의 5,000가닥에 가까운 모발이 한 번에 떨어지는 셈이라 그 양에 놀라실 수 있지만 자연스러운 현상이니 걱정하지 않으셔도 됩니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">11</span><span class="t">붙임머리에 염색(탈색)·파마를 해도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>1호 피스를 제외하면 염색이 가능해요</h2>
-        <p>1호(어두운 검정) 피스를 제외하고는 염색 시술이 가능합니다. <b>특수 컬러 피스의 경우 탈색 2~3회와 염색 과정을 거치면서 모발에 손상도가 생길 수 있습니다.</b> 다만 펌이나 재염색 시에는 모발 손상, 엉킴, 탈락 등의 우려가 있어 권장해 드리지 않으며, 그 결과에 대해서는 책임지지 않으니 참고 부탁드립니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">12</span><span class="t">한 피스는 몇 가닥인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>한 피스(1팩) 기준 총 160가닥입니다</h2>
-        <p>한 피스는 80가닥(1set) 기준, 총 160가닥입니다. 간혹 200가닥으로 문의하시는 분들이 계신데, <b>가닥 개수만 다를 뿐 한 피스의 총량은 100g으로 동일합니다.</b> 쉽게 말해 160가닥인 피스가 한 가닥에 더 많은 모발이 달려 있다고 생각하시면 됩니다. 피스 자체로는 차이가 있지만, 숱 추가가 개수 단위로 들어갈 때는 같은 10가닥이라도 총량으로 보면 숱이 더 풍성해집니다!</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">13</span><span class="t">붙임머리 유지기간은 어느 정도인가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>평균 2~3개월, 리터치는 3개월 안에 추천드려요</h2>
-        <p>유지 기간은 평균 2~3개월입니다! 시술 후 시간이 지나면 머리카락이 자라는 속도에 따라 땋은 부분도 함께 내려오게 되는데, <b>자라난 빈 모발 부분에서 지저분해지고 생활하시면서 불편함이 생길 수 있어요.</b> 개인 관리에 따라 리터치 없이 6개월 이상 유지하시는 분들도 간혹 계십니다. 하지만 두피 건강을 위해 3개월 안에는 리터치 받으시는 걸 추천해 드립니다! 피스 자체는 관리에 따라 1년 정도 재사용이 가능합니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">14</span><span class="t">리터치, 궁금한 것 모음</span><span class="rule"></span></div>
-      <div class="item">
-        <span class="num">POINT 1</span>
-        <h2>리터치는 뭔가요?</h2>
-        <p>시간이 지나 머리카락이 자라면 시술 부위도 자연스럽게 아래로 내려옵니다. <b>리터치는 전체를 제거한 후, 처음 시술했을 때의 위치로 다시 올려 땋는 시술입니다.</b> 간혹 길이 변화를 원하시는 분들은 한 단씩 제거하고 다시 땋아드리기 때문에, 원하시는 길이 그대로 유지해 드립니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 2</span>
-        <h2>리터치 시기는 어떻게 느낄 수 있나요?</h2>
-        <p>샴푸하거나 모발 손질하실 때 새로 자란 모발이 손가락에 걸리며 불편하시거나, <b>떨어진 모근들이 지저분하게 보이기 시작할 때쯤 오시면 됩니다.</b> 평균적으로 2~3개월 전후이며, 모발이 자라는 속도에 따라 개인차가 있습니다.</p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 3</span>
-        <h2>리터치는 몇 번 할 수 있나요?</h2>
-        <p>보통 1~3번 정도는 무난하게 진행하십니다. 3번 이상도 가능하며, 처음 시술하신 모발로 1년까지 재사용하시는 분들도 계세요. <b>다만 리터치 특성상 고데기 사용이 잦고 피스 자체에서 모발이 빠지기도 하기 때문에, 오래 사용하시면 모발 손상이나 숱 감소가 있을 수 있어 적정 시기에는 새 모발로 교체하시길 추천드립니다.</b></p>
-      </div>
-      <div class="item">
-        <span class="num">POINT 4</span>
-        <h2>리터치 비용은 얼마인가요?</h2>
-        <p>리터치는 기존에 사용하셨던 모발을 다시 재사용함을 전제로 하며, <b>처음 시술하셨던 정상가에서 50% 할인이 적용됩니다(제거비 별도).</b></p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">15</span><span class="t">셀프 제거도 가능한가요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>가능하지만, 샵 방문을 가장 추천드려요</h2>
-        <p>제거하실 때 시간이나 거리상 방문이 어려우신 경우, 셀프 제거도 가능합니다. 방법은 유튜브 제이바비 채널을 참고해 주시거나 방문하셨을 때 문의해 주세요. <b>단, 가위질이 필요하기 때문에 도움을 받으실 분이 있어야 하며, 본인의 모발이 함께 잘리지 않도록 주의하셔야 합니다.</b> 한 손으로 땋인 부분을 잡고, 다른 손으로 가위로 묶음 부분만 잘라주시면 쉽게 제거하실 수 있습니다. 가장 안전한 방법은 역시 샵에 방문하셔서 제거하시는 것입니다.</p>
-      </div>
-    </section>
-    <section class="sect">
-      <div class="sect-h"><span class="idx">16</span><span class="t">샴푸는 서서 감아도 되나요? 매일 감아도 되나요?</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>일주일 정도만 서서 감아주세요</h2>
-        <p>샴푸는 평소처럼 숙여서 감으셔도 됩니다. 다만 시술 후 일주일 정도는 땋은 부분이 바짝 당겨져 있어 숙여서 감으시면 당길 수 있으니, <b>이 기간에는 서서 감으시고 이후에는 숙여서 감으셔도 무관합니다.</b> 매일 머리를 감으셔도 유지 기간에는 전혀 영향이 없으며, 단단히 땋아 시술했기 때문에 평소처럼 샴푸하시면 됩니다.</p>
-      </div>
-    </section>
-    <div class="closing">
+<div class="closing">
       <div class="q-mark">"</div>
       <p class="q">궁금한 점은 언제든 편하게 물어봐 주세요.</p>
       <p>시술 전후 관리 방법까지 꼼꼼하게 안내해 드리겠습니다.</p>
@@ -5257,13 +4961,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
@@ -5374,13 +5078,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
       </div>
     </div>
@@ -5397,7 +5101,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <div id="subPage10" aria-hidden="true" style="display:none;position:relative;z-index:1;min-height:100vh;background:#fff0f6;color:#1a2436;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;line-height:1.62;">
 <nav class="nav">
-  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">붙임머리 자주 묻는 BEST</a></div>
+  <div class="wrap"><a class="back" href="javascript:void(0)" data-home="1">붙임머리 자주 묻는 BEST Q&A</a></div>
 </nav>
 
 <header class="hero" data-home="1">
@@ -5577,10 +5281,10 @@ document.addEventListener('DOMContentLoaded', function(){
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
       </div>
     </div>
@@ -5683,13 +5387,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
     </div>
 
@@ -5718,61 +5422,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
-    <section class="sect">
-      <div class="sect-h"><span class="idx">01</span><span class="t">현실적인 기대치</span><span class="rule"></span></div>
-      <div class="item">
-        <p><b>자동차 본네트는 복원하면 흔적이 거의 안 나는데, 자동차 유리는 복원 후에도 흔적이 남을 수밖에 없는 이유를 설명 드려볼게요.</b><br><span style="display:block;margin-top:10px"></span>본네트가 찌그러지거나 찢어지면 판금과 용접으로 손상 부위를 복원한 뒤, 마지막으로 도색을 합니다. 이 페인트가 손상 부위를 완전히 덮어주기 때문에, 수리가 잘되면 어디를 고쳤는지 육안으로 구분하기 어려울 정도가 됩니다.<br><span style="display:block;margin-top:10px"></span>하지만 <b>자동차 유리는 녹일수도 없고 운전자의 시야를 확보해야 하는 투명한 재질이므로</b> 본네트처럼 페인트나 다른 재료로 손상 부위를 덮어 흔적을 감출 수 없답니다.</p>
-      </div>
-    </section>
-
-    <section class="sect">
-      <div class="sect-h"><span class="idx">02</span><span class="t">그럼 복원을 해도 흔적은 왜 남을까요.</span><span class="rule"></span></div>
-      <div class="item">
-        <p><b>자동차유리를 복원 수리하는 원리는 크게 두 단계입니다.</b> 먼저 유리복원 전용 장비로 깨진 틈 사이에 있는 공기를 빨아들여 빈 공간을 만들어 <b>그 자리에 유리와 굴절률이 거의 같은 특수 레진을 빈틈없이 침투시킵니다.</b><br><span style="display:block;margin-top:10px"></span>공기가 있던 자리를 레진을 채우면, 빛의 반사가 크게 줄어들기 때문에 하얗고 까맣게 보이던 부분이 눈에 띄게 옅어지게 됩니다.<br><span style="display:block;margin-top:10px"></span>돌빵 모양이 꽃모양처럼 크게 깨진 경우에는 레진이 꽃모양 빈틈을 채우면서 마치 물이 차 있는 것처럼 보일 수 있습니다. 이는 시공이 잘못된 것이 아니라 <b>레진이 빈 공간을 채운 정상적인 결과랍니다.</b> 반대로 돌빵을 오래 방치했다면 먼지와 이물질이 이미 균열 안에 굳어 있기 때문에 복원 후에도 흔적이 더 많이 남을 수 있으며, 손상이 큰 경우에는 크랙이 더 커지지 못하도록 드릴링 작업을 진행하기도 합니다. 이 경우 <b>약 1mm 정도의 작은 드릴 자국이 몇 개 남을 수 있는데요</b>, 이는 균열이 더 진행되지 않게 하기 위한 과정에서 생기는 흔적입니다.<br><span style="display:block;margin-top:10px"></span>유리복원은 유리를 녹여 용접하는 방식이 아니라, 레진으로 크랙을 접합시키는 시공입니다. 시간이 지나면서 메꾼 지점(충격 지점) 표면이 거칠어질 수 있는데, 이 역시 자연스러운 현상입니다.</p>
-      </div>
-      <div class="item">
-        <p><b>두번째 단계는 UV(자외선)로 빠르게 경화시켜</b> 단단하게 굳힙니다. 이렇게 빈 공간 없이 채우고 즉시 굳히는 과정까지 마쳐야 <b>강도도 함께 회복되고, 그 부위가 더 이상 커지지 않도록 예방할 수 있어요.</b><br><span style="display:block;margin-top:10px"></span>경화 후 마지막으로 메꾼 자국을 평탄화시킨 후 샌딩과 폴리싱 처리까지 하게 되면 정상적인 시공 완료 상태예요. 메꾼 자국은 살짝 묻은 것처럼 보여지는 현상은 유리복원 자체의 특성이지 작업이 덜 된 게 아닙니다. 이 흔적까지가 복원의 정상적인 결과물이라는 점, 참고해 주세요.</p>
-      </div>
-      <div class="item">
-        <p><b style="font-size:17px;">복원 후 남는 흔적은 기술이 부족해서가 아니라, 투명한 유리이기 때문에 비롯되는 자연스러운 결과입니다.</b><br><span style="display:block;margin-top:10px"></span>만약에 새 유리처럼 완벽하게 복원하는 기술이 있다면, 유리 교체 업체는 애초에 존재할 이유가 없었을 거예요.</p>
-      </div>
-    </section>
-
-    <section class="sect">
-      <div class="sect-h"><span class="idx">03</span><span class="t">돌빵이 발생되면 깨진 부분이 하얗고, 까맣고,반짝거리게 보이는 이유</span><span class="rule"></span></div>
-      <div class="item">
-        <p><b>돌빵이 생기면 손상 부위가 하얗거나 까맣게,</b> 때로는 반짝이는 것처럼 보입니다. 이건 충격을 받은 지점과 그 주변으로 뻗어나간 균열의 원리가 서로 다르기 때문이에요. 먼저 돌이 직접 맞은 충격 지점부터 살펴볼게요. 강한 충격을 받으면 그 부분의 유리 표면이 으스러지면서 아주 작은 유리 입자가 생깁니다. <b>이 하얀 유리 가루 때문에 충격 지점이 하얗게 보이는 거예요.</b><br><span style="display:block;margin-top:10px"></span>반면 크랙은 원리가 다릅니다. 유리가 갈라지면 틈 사이에 아주 얇은 공기층이 생기는데, 원래 유리를 곧게 통과하던 빛이 이 공기층과 깨진 단면을 만나면서 반사되고 굴절되어, 보는 방향과 각도에 따라 반짝이거나, 하얗게 또는 까맣게 보이기도 하는 거죠.<br><span style="display:block;margin-top:10px"></span>시간이 지날수록 크랙 틈으로 빗물과 먼지 등의 이물질이 들어가 굳으면서 손상이 더 뚜렷하게 보일 수 있으며, 여기에 여름철 뜨거운 뙤약볕, 겨울철 뜨거운 히터로 인해 유리는 팽창되고 <b>주행 중 진동까지 더해지면 크랙이 점점 더 커질 가능성도 높아집니다.</b><br><span style="display:block;margin-top:10px"></span>그래서 <b>돌빵은 발견 즉시 복원하는 것이 가장 좋은 결과를 얻는 방법입니다.</b></p>
-      </div>
-    </section>
-
-    <section class="sect">
-      <div class="sect-h"><span class="idx">04</span><span class="t">그래서 카글라스는 다릅니다</span><span class="rule"></span></div>
-      <div class="item">
-        <h2>그래서 카글라스는 다릅니다</h2>
-        <p>같은 유리복원이라도 결과는 시공자의 경험과 기술에 따라 달라집니다.<br><span style="display:block;margin-top:10px"></span>카글라스 기술팀은 <b>3만 대 이상의 시공 노하우</b>를 바탕으로 흔적을 최소화하는 데 집중하고 있으며, 시중 장비를 그대로 사용하는 것이 아니라 <b>직접 연구·개발 제작한 전문가용 장비와 엄선한 프리미엄 레진</b>을 사용해 손상 상태에 맞게 정밀하게 시공합니다.</p>
-      </div>
-    </section>
-
-    <section class="sect">
-      <div class="free" style="margin-top:8px;">
-        <div class="ic">🏆</div>
-        <div><b>3만대 이상 시공 경험과 노하우</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">축적된 노하우로 흔적을 최소화하는 정밀 시공</span></div>
-      </div>
-      <div class="free free2">
-        <div class="ic">🚗</div>
-        <div><b>출장비 무료</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">서울 전지역 · 경기 일부지역 무료 출장</span></div>
-      </div>
-      <div class="free">
-        <div class="ic">📱</div>
-        <div><b>평생보증서 발급</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">복원 후 '평생보증서'를 문자메시지로 발급해 드립니다</span></div>
-      </div>
-      <div class="free free2">
-        <div class="ic">🎯</div>
-        <div><b>흔적 최소화 노하우</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">축적된 경험을 바탕으로 흔적을 최소화하는 정밀 시공을 진행합니다</span></div>
-      </div>
-    </section>
-
-    <div class="closing">
+<div class="closing">
       <div class="q-mark">"</div>
       <p class="q">원리를 알면, 결과를 오해하지 않습니다.</p>
       <p>작은 흠집 하나까지 놓치지 않는 정밀한 복원 기술 축적된 기술력으로 최상의 결과를 제공합니다.</p>
@@ -5787,13 +5437,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">"</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
@@ -5896,11 +5546,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
       </div>
     </div>
@@ -5989,13 +5639,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       </div>
   </div>
 
@@ -6200,13 +5850,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">"</span><p class="baSub">궁금한 항목을 눌러보세요</p><h2>제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1">붙임머리 가격 안내</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
@@ -6385,11 +6035,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="qBtnRow">
       <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1">바비 원장 프로필</span><span class="qLine2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1">명품 1mm 슬림 땋기</span><span class="qLine2">무조건 좋은 건 아닙니다</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">자주 묻는 질문 BEST Q&A 01</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">자주 묻는 질문 BEST Q&A 02</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1">붙임머리 자주 묻는 BEST Q&A</span></button>
+      <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1">예비 페이지</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1">붙임머리 관리방법 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1">예약 문의 방법 안내</span></button>
-      <button type="button" class="qBtn qBtnPink" data-jump="1"><span class="qLine1">자주 묻는 질문 BEST Q&A 03</span></button>
+      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1">공지사항 꼭 읽어주세요!</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="13"><span class="qLine1">저렴한 가격이 무조건 좋을까?</span></button>
       </div>
     </div>
@@ -6697,10 +6347,10 @@ var __openFns={'1':openNotice,'2':openNotice2,'3':openNotice3,'4':openNotice4,'5
 var __closeFns={'1':closeNotice,'2':closeNotice2,'3':closeNotice3,'4':closeNotice4,'5':closeNotice5,'6':closeNotice6,'7':closeNotice7,'8':closeNotice8,'9':closeNotice9,'10':closeNotice10,'11':closeNotice11,'12':closeNotice12,'13':closeNotice13,'14':closeNotice14,'15':closeNotice15,'16':closeNotice16,'17':closeNotice17};
 function __closeAllSub(keepBody){
   var s0=document.getElementById('subPage');
-  if(s0 && s0.classList.contains('open')){
-    s0.classList.remove('open'); s0.setAttribute('aria-hidden','true');
+  if(s0 && (s0.classList.contains('open') || s0.style.display==='block')){
+    s0.classList.remove('open'); s0.style.display='none'; s0.setAttribute('aria-hidden','true');
   }
-  ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'].forEach(function(k){
+  ['2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'].forEach(function(k){
     var s=document.getElementById('subPage'+k);
     if(s && s.style.display==='block'){
       s.style.display='none'; s.setAttribute('aria-hidden','true');
@@ -6788,7 +6438,7 @@ function __showSubFromHash(){
     var id = (n==='1') ? 'subPage' : 'subPage'+n;
     var s = document.getElementById(id);
     if(s){
-      if(id==='subPage'){ s.classList.add('open'); s.setAttribute('aria-hidden','false'); }
+      if(id==='subPage'){ s.style.display='block'; s.setAttribute('aria-hidden','false'); }
       else { s.style.display='block'; s.setAttribute('aria-hidden','false'); }
       document.body.classList.add('subOpen');
     }
