@@ -67,8 +67,8 @@
 .jhPointCards{display:flex;flex-direction:column;gap:14px;margin:24px 0}
 .jhPointCard{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:16px;border:1.5px solid;transition:transform .15s ease;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.1)}
 .jhPointCard:active{transform:scale(1.12)}
-.jhPointCard.gold{background:linear-gradient(135deg,#f1e6fb,#e4cff7);border-color:#c896ec}
-.jhPointCard.blue{background:linear-gradient(135deg,#ffe6f0,#ffd0e3);border-color:#f5a9c8}
+.jhPointCard.gold{background:linear-gradient(135deg,#f7f0fc,#ecdcfa);border-color:#c896ec}
+.jhPointCard.blue{background:linear-gradient(135deg,#fff0f6,#ffe0ec);border-color:#f5a9c8}
 .jhPointCard .jhPointIcon{flex:none;width:52px;height:52px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 3px 8px rgba(0,0,0,.12);animation:jhPointIconShake 2.2s ease-in-out infinite}
 .jhPointCard .jhPointText h4{font-size:17px;font-weight:800;color:#1a2436;margin:0 0 6px;letter-spacing:-.3px}
 .jhPointCard .jhPointText p{font-size:15px;color:#4a5568;margin:0;line-height:1.5}
@@ -245,8 +245,10 @@ section.hero:after{display:none!important;content:none!important}
 .bottom a{text-decoration:none;color:#fff;height:55px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:15px}
 .bottom .bTel{background:#ec4899;animation:pulse 1.4s infinite}.bottom .bKakao{background:#fee500;color:#191600;border:1px solid rgba(0,0,0,.25)}.bottom .bBlog{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}.bottom .bLine{background:#06c755;color:#fff;border:1px solid rgba(0,0,0,.25)}
 .bottom .bKakao,.bottom .bLine,.subFoot3 .sKakao,.subFoot3 .sLine{font-size:22px!important}
+.subFoot3 .sKakao,.subFoot3 .sLine{letter-spacing:normal!important;}
+.subFoot3 .sKakao .jhTalkBadge{letter-spacing:-.2px!important;}
 .jhBottomLineWord{font-size:20px;letter-spacing:2px}
-.bottom .bKakao .jhTalkBadge,.subFoot3 .sKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:8px;animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bKakao .jhBtnIcon,.subFoot3 .sKakao .jhBtnIcon{width:20px;height:20px}.bottom .bLine .jhBtnIcon,.subFoot3 .sLine .jhBtnIcon{width:26px;height:26px}.bottom .bLine .jhBtnLineIcon,.subFoot3 .sLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bLine svg,.subFoot3 .sLine svg{width:18px;height:18px}
+.bottom .bKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:8px;animation:jhBlogIconShake 2.2s ease-in-out infinite}.subFoot3 .sKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:3px;animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bKakao .jhBtnIcon,.subFoot3 .sKakao .jhBtnIcon{width:20px;height:20px}.bottom .bLine .jhBtnIcon,.subFoot3 .sLine .jhBtnIcon{width:26px;height:26px}.bottom .bLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}.subFoot3 .sLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bLine svg,.subFoot3 .sLine svg{width:18px;height:18px}
 .stats div:nth-child(2){animation-delay:.18s}.stats div:nth-child(3){animation-delay:.36s}@keyframes softFloat{0%,100%{transform:translateY(0);box-shadow:0 10px 26px rgba(0,80,180,.18)}50%{transform:translateY(-7px);box-shadow:0 18px 34px rgba(0,105,232,.25)}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 
 @media(max-width:370px){
@@ -2676,7 +2678,7 @@ section.simpleSteps .sub{
 @keyframes jhInstaGlow{0%,100%{box-shadow:0 0 0 rgba(238,42,123,0)}50%{box-shadow:0 0 16px rgba(238,42,123,.6)}}
 @keyframes jhLineGlow{0%,100%{box-shadow:0 0 0 rgba(6,199,85,0)}50%{box-shadow:0 0 16px rgba(6,199,85,.65)}}
 @keyframes jhNaverGlow{0%,100%{box-shadow:0 0 0 rgba(63,174,79,0)}50%{box-shadow:0 0 16px rgba(63,174,79,.6)}}
-.bottom{grid-template-columns:1fr 1fr!important;}
+.bottom{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;}
 .bottom a{font-size:16px!important;font-weight:600!important;}
 
 /* === section vertical rhythm cleanup (final override) === */
@@ -2739,8 +2741,8 @@ section.simpleSteps .sub{
 #subPage2 .closing .q,#subPage3 .closing .q,#subPage4 .closing .q,#subPage5 .closing .q,#subPage6 .closing .q,#subPage16 .closing .q{margin:14px 0 10px;font-size:20px;font-weight:700;color:#1a2436;letter-spacing:-.5px}
 #subPage2 .closing p,#subPage3 .closing p,#subPage4 .closing p,#subPage5 .closing p,#subPage6 .closing p,#subPage16 .closing p{margin:0 auto;max-width:92%;color:#5a6577;font-size:17px;font-weight:400}
 #subPage2 .closing .sign,#subPage3 .closing .sign,#subPage4 .closing .sign,#subPage5 .closing .sign,#subPage6 .closing .sign,#subPage16 .closing .sign{margin-top:20px;font-size:12px;font-weight:800;letter-spacing:4px;color:#b08d4d;text-transform:uppercase}
-.subFoot3{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:100%!important;max-width:430px;background:rgba(255,225,240,.97)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:7px!important;padding:9px 9px calc(10px + env(safe-area-inset-bottom))!important;border:none!important;border-top:1px solid #ec4899!important;box-shadow:none!important;text-align:center!important;margin:0!important;z-index:10001!important;}
-.subFoot3 a{height:55px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;font-weight:600!important;font-size:16px!important;letter-spacing:-.2px!important;white-space:nowrap!important;padding:0 8px!important;transition:none!important;}
+.subFoot3{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:100%!important;max-width:430px;background:rgba(255,225,240,.97)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:7px!important;padding:9px 9px 10px!important;border:none!important;border-top:1px solid #ec4899!important;box-shadow:none!important;text-align:center!important;margin:0!important;z-index:10001!important;}
+.subFoot3 a{height:55px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;font-weight:600!important;font-size:16px!important;letter-spacing:normal!important;white-space:nowrap!important;overflow:hidden!important;transition:none!important;}
 .subFoot3 .sTel{background:#ec4899!important;color:#fff!important;animation:bTelGlow 1.6s ease-in-out infinite!important;transform:none!important;}
 .subFoot3 .sKakao{background:#fee500!important;color:#191600!important;border:1px solid rgba(0,0,0,.25)!important;transform:none!important;}
 .subFoot3 .sBlog{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)!important;color:#fff!important;animation:bBlogGlow 1.6s ease-in-out infinite!important;transform:none!important;}
@@ -2751,7 +2753,7 @@ section.simpleSteps .sub{
 body.subOpen main.mobile{display:none}
 #subPage,#subPage2,#subPage3,#subPage4,#subPage5,#subPage6{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -2764,7 +2766,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage7{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -2974,7 +2976,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage17{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3084,7 +3086,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage8{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3290,7 +3292,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage9{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3495,7 +3497,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage11{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3594,7 +3596,7 @@ body.subOpen main.mobile{display:none}
 #subPage11 .rate .num{font-size:40px}
 #subPage14{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3695,7 +3697,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage12{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3827,7 +3829,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage10{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3840,7 +3842,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage15{
   --sub-paper:#ffe3f0;
-  --sub-card:#ffffff;
+  --sub-card:#fff5f8;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -6220,11 +6222,10 @@ document.addEventListener('DOMContentLoaded', function(){
           <li style="font-size:15px;"><b>① 신논현역 3번 출구</b> — 도보 3분 (약 277m)</li>
           <li style="font-size:15px;"><b>② 논현역 2번 출구</b> — 도보 9분 (약 677m)</li>
         </ul>
-        <div class="item caution" style="margin-top:14px;">
-          <span class="cap" style="font-size:15px;"><span class="dot"></span>주차 안내</span>
-          <p style="font-size:15px;">주차가 어려우니 <b>대중교통</b> 이용을 부탁드립니다.</p>
-        </div>
-        <p style="margin-top:14px;font-size:15px;"><b>주소:</b> 서울 강남구 강남대로118길 17, 2층 (강남역 인근)<br><b>영업시간:</b> 24시간 영업 (예약 필수)<br><b>문의:</b> 카카오톡, LINE, 인스타그램 DM으로 편하게 연락주세요</p>
+        <p style="margin-top:14px;font-size:15px;"><b>주소:</b> 서울 강남구 강남대로118길 17, 2층</p>
+        <p style="margin-top:8px;font-size:15px;"><b>영업시간:</b> 24시간 영업 (예약 필수)</p>
+        <p style="margin-top:8px;font-size:15px;"><b>문의:</b> 전화, 카카오톡, LINE, 인스타그램 DM으로 편하게 연락주세요</p>
+        <p style="margin-top:8px;font-size:15px;"><b>주차 안내:</b> 주차가 어려우니 <b>대중교통</b> 이용을 부탁드립니다.</p>
       </div>
     </section>
 
