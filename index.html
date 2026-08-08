@@ -107,7 +107,7 @@
 <style>
 </style>
 <style>
-@media (orientation:landscape) and (max-width:1023px){
+@media (orientation:landscape) and (max-width:1023px) and (max-height:500px){
   .top{transition:transform .3s ease!important;}
   [id^="subPage"] .nav{transition:transform .3s ease!important;}
   .bottom{transition:transform .3s ease!important;}
@@ -7248,6 +7248,13 @@ document.addEventListener('click', function(e){
   opacity:1!important;
   -webkit-text-fill-color:#c2185b!important;
 }
+@media (min-width:600px) and (max-width:1400px){
+  .mobile{max-width:100%!important;box-shadow:none!important;}
+  .top{max-width:100%!important;left:0!important;transform:none!important;}
+  .bottom{max-width:100%!important;left:0!important;transform:none!important;}
+  .subFoot3{max-width:100%!important;left:0!important;transform:none!important;}
+  [id^="subPage"] .nav{max-width:100%!important;left:0!important;transform:none!important;}
+}
 </style>
 <div id="equipLightbox" onclick="closeEquipLightbox()">
   <button type="button" class="elClose" onclick="closeEquipLightbox()" aria-label="닫기">&times;</button>
@@ -7258,7 +7265,7 @@ document.addEventListener('click', function(e){
   var lastY = window.scrollY || 0;
   var ticking = false;
   function isLandscapeNarrow(){
-    return window.matchMedia('(orientation: landscape) and (max-width: 1023px)').matches;
+    return window.matchMedia('(orientation: landscape) and (max-width: 1023px) and (max-height: 500px)').matches;
   }
   function onScroll(){
     if(!isLandscapeNarrow()){
