@@ -96,7 +96,17 @@
 @keyframes jhTalkBadgeGlow{0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.25)}50%{box-shadow:0 0 14px 3px rgba(255,212,0,.85)}}
 .jhBtnSec .jhBtnIcon.jhBtnBlogIcon img{width:22px;height:22px;display:block;object-fit:contain;border-radius:5px}
 .jhBtnSec .jhBtnLineIcon svg{}
-.jhTalkBadge{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:24px;margin-right:8px;border-radius:999px;background:#191600;color:#ffd400;font-size:12px;font-weight:1000;letter-spacing:-.2px;vertical-align:middle;animation:jhTalkBadgeGlow 2.2s ease-in-out infinite}
+@media (min-width:600px) and (max-width:1400px){
+  .mobile{max-width:100%!important;box-shadow:none!important;}
+  .top{max-width:100%!important;}
+  .bottom{max-width:100%!important;left:0!important;transform:none!important;}
+  .subFoot3{max-width:100%!important;left:0!important;transform:none!important;}
+  [id^="subPage"] .nav{max-width:100%!important;left:0!important;transform:none!important;}
+}
+</style>
+<style>
+</style>
+<style>
 @media (orientation:landscape) and (max-width:1023px){
   .top{transition:transform .3s ease!important;}
   [id^="subPage"] .nav{transition:transform .3s ease!important;}
