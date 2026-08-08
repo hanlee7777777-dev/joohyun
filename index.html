@@ -4399,10 +4399,17 @@ body.subOpen main.mobile{display:none}
 
   var savedLang = null;
   try{ savedLang = localStorage.getItem('jhLang'); }catch(e){}
-  if(savedLang && flags[savedLang]){
-    curFlag.src = flags[savedLang];
-    if(savedLang === "vi" || savedLang === "th"){ curFlag.style.border = "0.7px solid #fff"; }
-    applyLang(savedLang);
+  function applySavedLangOnLoad(){
+    if(savedLang && flags[savedLang]){
+      curFlag.src = flags[savedLang];
+      if(savedLang === "vi" || savedLang === "th"){ curFlag.style.border = "0.7px solid #fff"; }
+      applyLang(savedLang);
+    }
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", applySavedLangOnLoad);
+  } else {
+    applySavedLangOnLoad();
   }
 
   document.querySelectorAll(".langOpt").forEach(function(opt){
