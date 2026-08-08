@@ -76,7 +76,7 @@
 .jhBtnSec a{display:flex;align-items:center;justify-content:center;height:58px;border-radius:16px;text-decoration:none;font-size:19px;font-weight:600;letter-spacing:-.3px;border:1px solid rgba(0,0,0,.25);box-shadow:0 3px 8px rgba(0,0,0,.15)}
 .jhBtnSec .jhBtnPhone{background:linear-gradient(180deg,#dfe7f0,#c3d0de);color:#0b2043!important}
 .jhBtnSec .jhBtnLine{background:#06c755;color:#fff!important}
-.jhBtnSec .jhBtnLineIcon{width:30px;height:30px;background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}
+.jhBtnSec .jhBtnLineIcon{width:30px;height:30px;background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShakeTop 2.2s linear infinite}
 .jhBtnSec .jhBtnKakao{background:#fee500;color:#191600!important}
 .jhBtnSec .jhBtnBlog{background:linear-gradient(135deg,#3fae4f,#2f9440);color:#fff!important}
 .jhBtnSec .jhBtnInsta{background:linear-gradient(135deg,#fbd76a,#f2478d,#7440dd);color:#fff!important}
@@ -89,8 +89,9 @@
 .jhBtnSec .jhBtnInstaIcon img{width:22px;height:22px;display:block;object-fit:contain}
 .jhBtnSec .jhBtnIcon{display:inline-flex;align-items:center;justify-content:center;margin-right:10px;vertical-align:middle}
 .jhBtnSec .jhBtnIcon.jhBtnPhoneIcon{font-size:24px;line-height:1}
-.jhBtnSec .jhBtnIcon.jhBtnBlogIcon{width:30px;height:30px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;padding:2px;animation:jhBlogIconShake 2.2s ease-in-out infinite}
-@keyframes jhBlogIconShake{0%,100%{filter:brightness(1)}50%{filter:brightness(1.5)}}
+.jhBtnSec .jhBtnIcon.jhBtnBlogIcon{width:30px;height:30px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;padding:2px;animation:jhBlogIconShakeTop 2.2s linear infinite}
+@keyframes jhBlogIconShakeTop{0%{filter:brightness(1)}12.5%{filter:brightness(1.18)}25%{filter:brightness(1.42)}37.5%{filter:brightness(1.6)}50%{filter:brightness(1.7)}62.5%{filter:brightness(1.6)}75%{filter:brightness(1.42)}87.5%{filter:brightness(1.18)}100%{filter:brightness(1)}}
+@keyframes jhBlogIconShakeBottom{0%{filter:brightness(1)}12.5%{filter:brightness(1.045)}25%{filter:brightness(1.1)}37.5%{filter:brightness(1.15)}50%{filter:brightness(1.18)}62.5%{filter:brightness(1.15)}75%{filter:brightness(1.1)}87.5%{filter:brightness(1.045)}100%{filter:brightness(1)}}
 @keyframes jhPointIconShake{0%,100%{transform:translateX(0)}25%{transform:translateX(3px)}50%{transform:translateX(0)}75%{transform:translateX(-3px)}}
 @keyframes jhInstaIconGlow{0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.15)}50%{box-shadow:0 0 14px 3px rgba(238,42,123,.8)}}
 @keyframes jhTalkBadgeGlow{0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.25)}50%{box-shadow:0 0 14px 3px rgba(255,212,0,.85)}}
@@ -248,7 +249,7 @@ section.hero:after{display:none!important;content:none!important}
 .subFoot3 .sKakao,.subFoot3 .sLine{letter-spacing:normal!important;}
 .subFoot3 .sKakao .jhTalkBadge{letter-spacing:-.2px!important;}
 .jhBottomLineWord{font-size:20px;letter-spacing:2px}
-.bottom .bKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:8px;animation:jhBlogIconShake 2.2s ease-in-out infinite}.subFoot3 .sKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:3px;animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bKakao .jhBtnIcon,.subFoot3 .sKakao .jhBtnIcon{width:20px;height:20px}.bottom .bLine .jhBtnIcon,.subFoot3 .sLine .jhBtnIcon{width:26px;height:26px}.bottom .bLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}.subFoot3 .sLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShake 2.2s ease-in-out infinite}.bottom .bLine svg,.subFoot3 .sLine svg{width:18px;height:18px}
+.bottom .bKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:8px;animation:jhBlogIconShakeBottom 2.2s linear infinite}.subFoot3 .sKakao .jhTalkBadge{height:22px;min-width:42px;font-size:13px;margin-right:3px;animation:jhBlogIconShakeBottom 2.2s linear infinite}.bottom .bKakao .jhBtnIcon,.subFoot3 .sKakao .jhBtnIcon{width:20px;height:20px}.bottom .bLine .jhBtnIcon,.subFoot3 .sLine .jhBtnIcon{width:26px;height:26px}.bottom .bLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShakeBottom 2.2s linear infinite}.subFoot3 .sLine .jhBtnLineIcon{background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px;box-shadow:0 2px 6px rgba(0,0,0,.15);animation:jhBlogIconShakeBottom 2.2s linear infinite}.bottom .bLine svg,.subFoot3 .sLine svg{width:18px;height:18px}
 .stats div:nth-child(2){animation-delay:.18s}.stats div:nth-child(3){animation-delay:.36s}@keyframes softFloat{0%,100%{transform:translateY(0);box-shadow:0 10px 26px rgba(0,80,180,.18)}50%{transform:translateY(-7px);box-shadow:0 18px 34px rgba(0,105,232,.25)}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 
 @media(max-width:370px){
@@ -2742,7 +2743,7 @@ section.simpleSteps .sub{
 #subPage2 .closing p,#subPage3 .closing p,#subPage4 .closing p,#subPage5 .closing p,#subPage6 .closing p,#subPage16 .closing p{margin:0 auto;max-width:92%;color:#5a6577;font-size:17px;font-weight:400}
 #subPage2 .closing .sign,#subPage3 .closing .sign,#subPage4 .closing .sign,#subPage5 .closing .sign,#subPage6 .closing .sign,#subPage16 .closing .sign{margin-top:20px;font-size:12px;font-weight:800;letter-spacing:4px;color:#b08d4d;text-transform:uppercase}
 .subFoot3{position:fixed!important;left:50%!important;bottom:0!important;transform:translateX(-50%)!important;width:100%!important;max-width:430px;background:rgba(255,225,240,.97)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:7px!important;padding:9px 9px 10px!important;border:none!important;border-top:1px solid #ec4899!important;box-shadow:none!important;text-align:center!important;margin:0!important;z-index:10001!important;}
-.subFoot3 a{height:55px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;font-weight:600!important;font-size:16px!important;letter-spacing:normal!important;white-space:nowrap!important;overflow:hidden!important;transition:none!important;}
+.subFoot3 a{height:55px!important;border-radius:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#fff!important;font-weight:1000!important;font-size:16px!important;letter-spacing:normal!important;white-space:nowrap!important;overflow:hidden!important;transition:none!important;}
 .subFoot3 .sTel{background:#ec4899!important;color:#fff!important;animation:bTelGlow 1.6s ease-in-out infinite!important;transform:none!important;}
 .subFoot3 .sKakao{background:#fee500!important;color:#191600!important;border:1px solid rgba(0,0,0,.25)!important;transform:none!important;}
 .subFoot3 .sBlog{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)!important;color:#fff!important;animation:bBlogGlow 1.6s ease-in-out infinite!important;transform:none!important;}
@@ -2753,7 +2754,7 @@ section.simpleSteps .sub{
 body.subOpen main.mobile{display:none}
 #subPage,#subPage2,#subPage3,#subPage4,#subPage5,#subPage6{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -2766,7 +2767,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage7{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -2976,7 +2977,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage17{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3086,7 +3087,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage8{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3224,6 +3225,7 @@ body.subOpen main.mobile{display:none}
 #subPage8 .item .num{font-size:12px;font-weight:800;color:var(--sub-gold);letter-spacing:2px;font-variant-numeric:tabular-nums;display:block;margin-bottom:11px}
 #subPage8 .item h2{margin:0 0 8px;font-size:17.5px;line-height:1.4;font-weight:650;letter-spacing:-.5px}
 #subPage8 .item p{margin:0;color:var(--sub-ink-2);font-size:17px;font-weight:400}
+#subPage8 .item p+p{margin-top:14px}
 #subPage8 .item h2{font-size:17px!important;}
 #subPage8 .qaList{margin:14px 0 0;padding:0;list-style:none;}
 #subPage8 .qaList li{position:relative;padding:9px 0 9px 22px;font-size:16px;color:var(--sub-ink-2);border-top:1px solid var(--sub-line);}
@@ -3292,7 +3294,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage9{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3497,7 +3499,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage11{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3596,7 +3598,7 @@ body.subOpen main.mobile{display:none}
 #subPage11 .rate .num{font-size:40px}
 #subPage14{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3634,6 +3636,7 @@ body.subOpen main.mobile{display:none}
 #subPage14 .item h2{margin:0 0 8px;font-size:17.5px;line-height:1.4;font-weight:650;letter-spacing:-.5px}
 #subPage14 .item h2{font-size:17px!important;}
 #subPage14 .item p{margin:0;color:var(--sub-ink-2);font-size:17px;font-weight:400}
+#subPage14 .item p+p{margin-top:14px}
 #subPage14 .qaList{margin:14px 0 0;padding:0;list-style:none;}
 #subPage14 .qaList li{position:relative;padding:9px 0 9px 22px;font-size:16px;color:var(--sub-ink-2);border-top:1px solid var(--sub-line);}
 #subPage14 .qaList li:first-child{border-top:0;}
@@ -3697,7 +3700,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage12{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3829,7 +3832,7 @@ body.subOpen main.mobile{display:none}
 
 #subPage10{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3842,7 +3845,7 @@ body.subOpen main.mobile{display:none}
 }
 #subPage15{
   --sub-paper:#ffe3f0;
-  --sub-card:#fff5f8;
+  --sub-card:#ffffff;
   --sub-ink:#1a2436;
   --sub-ink-2:#5a6577;
   --sub-line:#e6e1d7;
@@ -3982,6 +3985,7 @@ body.subOpen main.mobile{display:none}
 #subPage10 .item h2,#subPage15 .item h2{margin:0 0 8px;font-size:17.5px;line-height:1.4;font-weight:650;letter-spacing:-.5px}
 #subPage10 .item h2,#subPage15 .item h2{font-size:17px!important;}
 #subPage10 .item p,#subPage15 .item p{margin:0;color:var(--sub-ink-2);font-size:17px;font-weight:400}
+#subPage10 .item p+p{margin-top:14px}
 #subPage10 .item h2{font-size:17px!important;}
 #subPage10 .qaList,#subPage15 .qaList{margin:14px 0 0;padding:0;list-style:none;}
 #subPage10 .qaList li,#subPage15 .qaList li{position:relative;padding:9px 0 9px 22px;font-size:16px;color:var(--sub-ink-2);border-top:1px solid var(--sub-line);}
@@ -5147,7 +5151,9 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">01</span><span class="t">왜 제이주현일까요?</span><span class="rule"></span></div>
       <div class="item">
         <h2>붙임머리는 디자인 과정입니다</h2>
-        <p>붙임머리는 단순히 머리 길이를 늘리는 시술이 아닙니다. 헤어스타일 하나만 달라져도 사람의 분위기와 이미지가 크게 달라지는 만큼, 고객님께 가장 잘 어울리는 스타일을 완성하는 디자인 과정이라고 생각합니다. 유행하는 스타일을 그대로 따라 하기보다 <b>얼굴형, 모발의 길이와 숱, 컬러, 평소 스타일링 습관</b>까지 세심하게 고려하여 가장 자연스럽고 조화로운 디자인을 제안합니다.</p>
+        <p>붙임머리는 단순히 머리 길이를 늘리는 시술이 아닙니다.</p>
+        <p>헤어스타일 하나만 달라져도 사람의 분위기와 이미지가 크게 달라지는 만큼, 고객님께 가장 잘 어울리는 스타일을 완성하는 디자인 과정이라고 생각합니다.</p>
+        <p>유행하는 스타일을 그대로 따라 하기보다 <b>얼굴형, 모발의 길이와 숱, 컬러, 평소 스타일링 습관</b>까지 세심하게 고려하여 가장 자연스럽고 조화로운 디자인을 제안합니다.</p>
       </div>
     </section>
 
@@ -5155,7 +5161,9 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">02</span><span class="t">붙임머리처럼 보이지 않는 자연스러움</span><span class="rule"></span></div>
       <div class="item">
         <h2>연결부터 앞·옆라인까지</h2>
-        <p>무엇보다 중요한 것은 '붙임머리처럼 보이지 않는 자연스러움'입니다.<br>연결 부위의 완성도는 물론 얼굴을 감싸는 앞라인과 옆라인까지 꼼꼼하게 디자인하여, 머리를 풀었을 때는 풍성하고 자연스럽게 묶었을 때도 부담 없이 연출하실 수 있도록 세심하게 시술합니다. 고객님이 원하는 분위기에 맞춰 다양한 길이와 컬러를 조합해, 단순히 긴 머리가 아닌 <b>자신만의 스타일</b>을 완성하실 수 있도록 도와드립니다.</p>
+        <p>무엇보다 중요한 것은 '붙임머리처럼 보이지 않는 자연스러움'입니다.</p>
+        <p>연결 부위의 완성도는 물론 얼굴을 감싸는 앞라인과 옆라인까지 꼼꼼하게 디자인하여, 머리를 풀었을 때는 풍성하고 자연스럽게 묶었을 때도 부담 없이 연출하실 수 있도록 세심하게 시술합니다.</p>
+        <p>고객님이 원하는 분위기에 맞춰 다양한 길이와 컬러를 조합해, 단순히 긴 머리가 아닌 <b>자신만의 스타일</b>을 완성하실 수 있도록 도와드립니다.</p>
       </div>
     </section>
 
@@ -5163,7 +5171,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">03</span><span class="t">충분한 상담과 디테일</span><span class="rule"></span></div>
       <div class="item">
         <h2>서두르지 않는 상담</h2>
-        <p>아무리 유행하는 스타일이라도 내 얼굴형과 모발에 맞지 않으면 오래 만족하기 어렵습니다. 반대로 나에게 꼭 맞게 디자인된 스타일은 시간이 지날수록 편하고 자연스럽게 느껴집니다.<br>그래서 저희는 상담 단계에서부터 서두르지 않습니다. 평소 어떤 스타일을 좋아하시는지, 어떤 자리에서 어떤 모습이고 싶으신지, 손질하는 데 드는 시간까지 충분히 여쭤보고 그 안에서 가장 현실적이면서도 만족스러운 답을 함께 찾아갑니다. 같은 붙임머리라도 모발이 얇고 가는 분과 굵고 숱이 많은 분에게 필요한 시술 방식은 다르며, 가르마 방향과 목선의 각도, 원래 머리의 층 구조에 따라서도 자연스러움을 만드는 포인트가 달라지기 때문에 이런 디테일 하나하나를 놓치지 않고 살핍니다.</p>
+        <p>아무리 유행하는 스타일이라도 내 얼굴형과 모발에 맞지 않으면 오래 만족하기 어렵습니다.</p>
+        <p>반대로 나에게 꼭 맞게 디자인된 스타일은 시간이 지날수록 편하고 자연스럽게 느껴집니다.</p>
+        <p>그래서 저희는 상담 단계에서부터 서두르지 않습니다.</p>
+        <p>평소 어떤 스타일을 좋아하시는지, 어떤 자리에서 어떤 모습이고 싶으신지, 손질하는 데 드는 시간까지 충분히 여쭤보고 그 안에서 가장 현실적이면서도 만족스러운 답을 함께 찾아갑니다.</p>
+        <p>같은 붙임머리라도 모발이 얇고 가는 분과 굵고 숱이 많은 분에게 필요한 시술 방식은 다르며, 가르마 방향과 목선의 각도, 원래 머리의 층 구조에 따라서도 자연스러움을 만드는 포인트가 달라지기 때문에 <b>이런 디테일 하나하나를 놓치지 않고 살핍니다.</b></p>
       </div>
     </section>
 
@@ -5171,7 +5183,10 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">04</span><span class="t">완성 이후가 더 중요합니다</span><span class="rule"></span></div>
       <div class="item">
         <h2>시간이 지날수록 결정되는 만족도</h2>
-        <p>붙임머리는 시술하는 순간보다 시간이 지날수록 만족도가 더 중요합니다.<br>화려한 결과만 보여드리기보다 착용감, 유지력, 자연스러움까지 세심하게 신경 쓰며 시술합니다. 좋은 재료와 숙련된 기술은 기본이고, 고객님의 의견을 충분히 듣고 함께 완성하는 과정이 가장 좋은 결과를 만든다고 믿습니다. 그래서 자연스러운 연결감과 편안한 착용감은 물론, 오래 예쁜 스타일을 유지하실 수 있도록 관리 방법까지 함께 안내해 드리고 있습니다.</p>
+        <p>붙임머리는 시술하는 순간보다 시간이 지날수록 만족도가 더 중요합니다.</p>
+        <p>화려한 결과만 보여드리기보다 착용감, 유지력, 자연스러움까지 세심하게 신경 쓰며 시술합니다.</p>
+        <p>좋은 재료와 숙련된 기술은 기본이고, 고객님의 의견을 충분히 듣고 함께 완성하는 과정이 가장 좋은 결과를 만든다고 믿습니다.</p>
+        <p>그래서 자연스러운 연결감과 편안한 착용감은 물론, 오래 예쁜 스타일을 유지하실 수 있도록 <b>관리 방법까지 함께 안내</b>해 드리고 있습니다.</p>
       </div>
     </section>
 
@@ -5179,7 +5194,10 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">05</span><span class="t">신뢰를 만드는 배려</span><span class="rule"></span></div>
       <div class="item">
         <h2>작은 차이가 쌓여 만든 믿음</h2>
-        <p>처음 붙임머리를 하시는 분들도 부담 없이 일상생활을 하실 수 있도록 작은 부분까지 세심하게 신경 쓰는 것이 저희의 원칙입니다.<br>많은 고객님께서 소개와 재방문으로 찾아주시는 이유도 특별한 광고보다 이러한 작은 차이가 쌓여 만들어진 신뢰라고 생각합니다. 시술이 끝난 후에도 저희의 역할은 끝나지 않는다고 생각하여, 궁금한 점이 생기셨을 때 편하게 연락 주실 수 있도록 문을 열어두고 있습니다. 관리가 어려우시거나 스타일이 흐트러졌을 때도 언제든 찾아오셔서 다시 정돈받으실 수 있습니다.</p>
+        <p>처음 붙임머리를 하시는 분들도 부담 없이 일상생활을 하실 수 있도록 작은 부분까지 세심하게 신경 쓰는 것이 저희의 원칙입니다.</p>
+        <p>많은 고객님께서 소개와 재방문으로 찾아주시는 이유도 특별한 광고보다 <b>이러한 작은 차이가 쌓여 만들어진 신뢰</b>라고 생각합니다.</p>
+        <p>시술이 끝난 후에도 저희의 역할은 끝나지 않는다고 생각하여, 궁금한 점이 생기셨을 때 편하게 연락 주실 수 있도록 문을 열어두고 있습니다.</p>
+        <p>관리가 어려우시거나 스타일이 흐트러졌을 때도 언제든 찾아오셔서 다시 정돈받으실 수 있습니다.</p>
       </div>
     </section>
 
@@ -5187,7 +5205,10 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">06</span><span class="t">우리의 약속</span><span class="rule"></span></div>
       <div class="item">
         <h2>언제든 다시 찾고 싶은 전문샵</h2>
-        <p>한 번의 시술로 끝나는 인연이 아니라, 언제든 다시 찾고 싶은 붙임머리 전문샵.<br>제이주현 붙임머리는 고객님께 가장 잘 어울리는 스타일을 함께 고민하며, 자연스러운 아름다움을 오래 유지하실 수 있도록 늘 정성을 다하겠습니다. 붙임머리는 완성된 순간이 끝이 아니라 그 이후의 매일이 훨씬 더 중요한 시술이라고 생각합니다. 그 매일을 함께 책임진다는 마음으로, 앞으로도 한 분 한 분께 정성을 다하겠습니다.</p>
+        <p>한 번의 시술로 끝나는 인연이 아니라, 언제든 다시 찾고 싶은 붙임머리 전문샵.</p>
+        <p>제이주현 붙임머리는 고객님께 가장 잘 어울리는 스타일을 함께 고민하며, 자연스러운 아름다움을 오래 유지하실 수 있도록 늘 정성을 다하겠습니다.</p>
+        <p>붙임머리는 완성된 순간이 끝이 아니라 <b>그 이후의 매일이 훨씬 더 중요한 시술</b>이라고 생각합니다.</p>
+        <p>그 매일을 함께 책임진다는 마음으로, 앞으로도 한 분 한 분께 정성을 다하겠습니다.</p>
       </div>
     </section>
 
@@ -5422,179 +5443,288 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
+
+
     <section class="sect">
       <div class="sect-h"><span class="idx">01</span><span class="t">붙임머리 할 때 숱을 꼭 쳐야 하나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>경계선이 보이지 않도록 질감 처리를 합니다</h2>
-        <p>붙임머리 시술을 할 때는 기존 모발과의 경계선이 보이지 않도록, 모발 끝부분만 가볍게 쳐내는 느낌으로 질감 처리를 합니다. <b>층이 있는 무거운 머리 상태에서 붙임머리를 하시면 이어지는 부분에서 경계선이 보이고 부자연스러울 수 있기 때문에</b>(흔히 "붙임머리 티가 난다"고 하죠), 시술 전에 반드시 질감 처리를 하시길 권해드립니다. 매번 커트하는 것이 아니라, 한 번 가볍게 다듬으신 후에는 다시 무겁게 자르실 필요가 없어요. 이후 리터치나 재시술 시에도 커트할 일이 계속 줄어듭니다.</p>
+        <h2>경계선이 자연스럽게 연결될 수 있도록 가볍게 질감 처리를 합니다</h2>
+        <p>붙임머리를 자연스럽게 완성하려면 <b>기존 모발과 붙임머리가 만나는 부분의 경계선이 보이지 않는 것</b>이 중요합니다.</p>
+        <p>특히 층이 거의 없고 모발 끝이 무겁게 떨어지는 상태에서 붙임머리를 바로 연결하면 기존 모발과 붙임머리가 이어지는 부분에 선이 생기면서 흔히 말하는 '붙임머리 티'가 날 수 있습니다.</p>
+        <p>그래서 시술 전 기존 모발의 길이를 많이 자르는 것이 아니라, 모발 끝부분을 가볍게 쳐내는 정도의 질감 처리를 해드립니다.</p>
+        <p>질감 처리를 한 번 해두면 붙임머리를 할 때마다 계속 많은 양을 커트하는 것은 아닙니다. 이후 리터치나 재시술을 할 때는 현재 상태를 확인하면서 필요한 부분만 가볍게 정돈하기 때문에 <b>커트하는 양도 자연스럽게 줄어듭니다.</b></p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">02</span><span class="t">붙임머리를 하면서 머리를 기르고 싶은데 가능한가요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">02</span><span class="t">붙임머리를 하면서 제 머리도 같이 기르고 싶은데 가능한가요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>네, 티 나지 않게 기르실 수 있어요</h2>
-        <p>앞서 말씀드렸듯 붙임머리를 하실 때는 끝머리 질감 처리를 하기 때문에, 처음에는 오히려 숱이 많아 보일 수 있습니다. 간혹 머리를 기르려고 붙임머리를 했는데 오히려 숱이 늘어나서 짧게 잘랐다고 아쉬워하시는 분들도 계세요. <b>사람 머리카락은 한 달에 약 1~1.5cm씩 자라기 때문에, 붙임머리를 2~3개월 유지하신 후 제거하시면 기장 변화가 자연스럽게 나타납니다.</b> 중간에 길이가 늘어도 티나지 않게, 처음 질감 처리했던 상태를 유지하며 꾸준히 리터치를 받으시거나 새로 붙임머리를 하실 분들은 매번 질감만 살짝 다듬으시면 됩니다. 그렇게 관리하시면 중간에 끊김 없이 고비를 잘 넘기고 예쁘게 기르실 수 있습니다!</p>
+        <h2>네, 붙임머리를 유지하면서 자연스럽게 기르실 수 있어요</h2>
+        <p>붙임머리를 처음 시술할 때 기존 모발 끝부분을 가볍게 질감 처리하기 때문에, 머리를 많이 잘라내는 것은 아닙니다.</p>
+        <p>오히려 붙임머리를 연결한 후에는 전체적인 길이와 숱이 채워지기 때문에, <b>짧은 머리를 기르는 과정에서 가장 신경 쓰이는 애매한 기장을 자연스럽게 지나갈 수 있다</b>는 장점이 있습니다.</p>
+        <p>일반적으로 모발은 한 달에 약 1~1.5cm 정도 자라기 때문에, 붙임머리를 2~3개월 정도 유지한 후 제거하면 처음 시술했을 때보다 본인의 모발이 길어진 것을 확인할 수 있습니다.</p>
+        <p>특히 단발이나 중단발처럼 머리를 기르는 과정에서 스타일링이 어려운 시기에 붙임머리를 활용하시는 분들도 많습니다.</p>
+        <p>리터치나 재시술을 계속하시는 경우에도 매번 머리를 짧게 자르는 것이 아니라, 기존 모발과 붙임머리가 자연스럽게 연결될 수 있도록 필요한 부분만 가볍게 질감 처리해 드립니다.</p>
+        <p>꾸준히 관리해 주시면 중간에 짧게 자르지 않고도 <b>붙임머리를 유지하면서 본인의 머리를 자연스럽게 기르실 수 있습니다.</b></p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">03</span><span class="t">숱 추가가 뭐예요? 꼭 해야 하나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>완성도를 위해 필요한 경우가 많습니다</h2>
-        <p>한 팩(80가닥/1set) 기준으로 전체적인 완성이 어려운 경우, 숱 추가(볼륨 추가)가 필요합니다. <b>숱 추가는 머리숱이 많은 경우뿐 아니라, 모발 기장이 짧을수록·손상 정도가 심할수록·실제 기장과 원하시는 기장의 단차가 클수록 더 많은 양이 들어갑니다.</b> 단발 기장이신 분들도 대부분 숱 추가가 필요합니다. 숱 추가 양은 개인차가 있어 미리 정해진 금액이 아니라, 시술 전 개개인의 상태를 보고 먼저 예상 금액을 안내드리며 시술 후 실제 들어간 양에 따라 정확한 가격이 책정됩니다. 간혹 숱 추가 금액을 미리 물으시는 분들이 계신데, 금액은 양에 따라 달라지기 때문에 평균치는 있지만 개별로 정확히 예측하긴 어렵습니다. 가격표에 평균 숱 추가 금액이 함께 안내되어 있으니 참고해 주세요.</p>
+        <h2>모발 상태와 원하시는 스타일에 따라 완성도를 위해 숱 추가가 필요한 경우가 많습니다</h2>
+        <p>기본 한 팩인 <b>80가닥(1set)</b>만으로는 전체적인 연결이나 볼륨을 충분히 표현하기 어려운 경우가 있습니다. 이때 추가로 들어가는 붙임머리를 '숱 추가' 또는 '볼륨 추가'라고 합니다.</p>
+        <p>숱 추가는 단순히 본인의 머리숱이 많은 경우에만 필요한 것이 아닙니다.</p>
+        <p>기존 모발이 짧을수록, 모발 끝이 무거울수록, 손상으로 인해 모발의 길이가 고르지 않을수록, 그리고 현재 기장과 원하시는 완성 기장의 차이가 클수록 <b>자연스러운 연결을 위해 더 많은 양이 필요</b>할 수 있습니다.</p>
+        <p>특히 단발처럼 기존 모발과 붙임머리의 길이 차이가 큰 경우에는 경계선을 자연스럽게 연결하기 위해 숱 추가가 필요한 경우가 많습니다.</p>
+        <p>숱 추가량은 고객님마다 모발의 길이와 숱, 커트 상태, 원하시는 스타일이 모두 다르기 때문에 시술 전에 정확한 수량을 일률적으로 정하기는 어렵습니다.</p>
+        <p>방문하시면 먼저 모발 상태를 확인한 뒤 예상되는 추가량과 금액을 안내해 드리고, 실제 시술 후 사용된 양을 기준으로 정확한 비용이 결정됩니다.</p>
+        <p>가격표에는 평균적인 숱 추가 비용도 함께 안내되어 있으니 예약 전 참고해 주세요.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">04</span><span class="t">매직을 꼭 해야 하나요?</span><span class="rule"></span></div>
       <div class="item">
         <span class="num">POINT 1</span>
-        <h2>파마·곱슬기·C컬이 있으시면 미리 매직을 권해드려요</h2>
-        <p>저희는 파마나 곱슬기, C컬이 있으신 경우 반드시 미리 매직 스트레이트를 하시길 추천해 드리고 있습니다. <b>매직 스트레이트를 권해드리는 이유는 곱슬기나 컬을 따로 관리하지 않아도 자연스럽게 유지될 수 있도록, 편안한 관리를 도와드리기 위해서입니다.</b> 짧은 모발은 볼륨감이 있어야 예뻐 보이기 때문에, 대부분 짧은 기장의 고객님들은 모발 끝에 힘이나 볼륨감을 가지고 계세요. 그런 상태에서 붙임머리를 하시면 긴 머리로 완성한 후에도 짧은 모발이 목 뒤쪽으로 삐져나오거나 모자 밑으로 삐죽삐죽 튀어나올 수 있습니다.</p>
+        <h2>곱슬기·펌·C컬이 남아 있다면 미리 매직 스트레이트를 권해드립니다</h2>
+        <p>기존 모발에 곱슬기나 펌, C컬이 강하게 남아 있는 경우에는 붙임머리 시술 전에 매직 스트레이트를 권해드리고 있습니다.</p>
+        <p>그 이유는 붙임머리를 한 이후 매일 짧은 자연모의 컬이나 곱슬을 따로 펴야 하는 관리 부담을 줄이고, <b>긴 붙임머리와 기존 모발이 자연스럽게 연결될 수 있도록 하기 위해서</b>입니다.</p>
+        <p>특히 단발이나 짧은 기장의 모발은 볼륨감이나 C컬이 들어가 있는 경우가 많습니다.</p>
+        <p>이 상태에서 곧게 떨어지는 긴 붙임머리를 연결하면 기존의 짧은 모발이 목 뒤쪽이나 겉부분에서 밖으로 튀어나와 보일 수 있습니다. 머리를 묶거나 모자를 썼을 때도 짧은 모발 끝이 삐죽하게 보일 수 있습니다.</p>
+        <p>따라서 기존 모발의 끝부분을 미리 차분하게 정리해 두면 붙임머리를 한 뒤 훨씬 자연스럽게 관리하기 좋습니다.</p>
       </div>
       <div class="item">
         <span class="num">POINT 2</span>
-        <h2>뿌리 부분은 남기고, 끝부분만 하셔도 충분해요</h2>
-        <p>붙임머리로 자연스럽게 볼륨과 숱이 채워지기 때문에, 매직을 하실 때 뿌리 부분 5~6cm 정도는 남기고 끝부분만 하셔도 충분해서 부담이 크지 않습니다. <b>붙임머리 후에는 자연스러운 볼륨감이 더해지기 때문에, 오히려 미리 매직을 해두신 것을 만족스러워하시는 분들이 많습니다.</b> 붙임머리 모발도 끝에 C컬이 생기기 때문에 ★반드시 일자 매직을 진행해 드립니다. 매직 역시 붙임머리를 할 때마다 매번 해야 하는 것이 아니라, 처음 한 번만 해두시면 이후에는 리터치만 받으시면 됩니다.</p>
+        <h2>뿌리는 남기고 필요한 부분만 매직하셔도 충분합니다</h2>
+        <p>붙임머리를 하면 자연스럽게 전체적인 숱과 볼륨감이 더해지기 때문에 매직을 한다고 해서 머리 전체를 뿌리부터 완전히 눌러야 하는 것은 아닙니다.</p>
+        <p>보통 뿌리에서 약 5~6cm 정도는 남겨두고, <b>붙임머리와 연결되어야 하는 중간 부분부터 모발 끝 위주로 매직</b>을 해주셔도 충분합니다.</p>
+        <p>이렇게 하면 뿌리의 자연스러운 볼륨은 살리면서 기존 모발의 끝부분만 차분하게 정돈할 수 있습니다.</p>
+        <p>또한 붙임머리 모발 역시 생활하면서 끝부분에 자연스럽게 C컬이나 굴곡이 생길 수 있기 때문에, 기존 모발을 정리할 때는 C컬 매직보다는 일자로 떨어지는 스트레이트 매직을 권해드립니다.</p>
+        <p>매직 역시 붙임머리를 할 때마다 매번 전체적으로 반복해야 하는 것은 아닙니다. 처음 시술 전 모발 상태를 충분히 정돈해 두셨다면 이후에는 자라난 부분이나 필요한 부분만 상태에 맞춰 관리하시면 됩니다.</p>
       </div>
       <div class="item caution">
-        <span class="cap"><span class="dot"></span>참고</span>
-        <h2>손상모(탈색모)라서 매직이 어려운 경우</h2>
-        <p>손상모(탈색모) 상태라서 매직이 어려우신 분들도 계신데, 그런 경우 상태에 맞춰 시술은 가능하지만 이후 매번 고데기 손질을 직접 해주셔야 합니다. <b>이 부분을 감안하시고 시술받으시는 분들도 계시지만, 관리 부담이 있을 수 있어 크게 추천해 드리지는 않습니다.</b></p>
+        <span class="cap"><span class="dot"></span>참고 · 손상모·탈색모라 매직이 어려운 경우</span>
+        <p>탈색이나 잦은 시술로 모발이 많이 손상된 경우에는 매직 시술 자체가 부담이 될 수 있습니다.</p>
+        <p>이런 경우에도 붙임머리 시술은 가능할 수 있지만, 기존 모발에 남아 있는 곱슬기나 C컬을 붙임머리와 자연스럽게 연결하기 위해 평소 고데기로 직접 손질해 주셔야 할 수 있습니다.</p>
+        <p>시술은 가능하더라도 매일 손질해야 하는 번거로움이 생길 수 있기 때문에 관리가 어려우신 분들께는 크게 권해드리지 않습니다.</p>
+        <p>모발 손상 정도가 심한 경우에는 매직 가능 여부를 먼저 담당 디자이너와 상담해 주세요.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">05</span><span class="t">매직하고 바로 머리 붙여도 되나요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">05</span><span class="t">매직하고 바로 붙임머리를 해도 되나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>뿌리를 남기고 처리하시면 당일 시술도 가능해요</h2>
-        <p>매직 스트레이트를 하실 때 뿌리 5~6cm 이상은 남기고 약 처리를 하시면, <b>당일에도 붙임머리 시술이 가능합니다.</b> 뿌리까지 전체를 매직하신 경우에는 모발이 약해질 수 있어 최소 3일 후에 시술을 받으실 수 있어요. 강한 천연 곱슬머리나 곱슬기 있는 웨이브를 푸신 경우에는 뿌리 쪽은 제외하고 끝부분만 매직하시길 권해드립니다.</p>
+        <h2>뿌리를 충분히 남기고 매직하셨다면 당일 붙임머리 시술도 가능합니다</h2>
+        <p>매직 스트레이트를 하실 때 뿌리에서 약 5~6cm 이상을 남기고 중간부터 끝부분 위주로 약 처리를 하셨다면 당일에도 붙임머리 시술이 가능합니다.</p>
+        <p>반대로 뿌리 가까이까지 전체적으로 매직 시술을 하신 경우에는 모발과 두피 가까운 부분에 부담이 있을 수 있기 때문에 바로 붙임머리를 연결하기보다는 일정 기간 쉬어주는 것을 권해드립니다.</p>
+        <p>저희는 이러한 경우 <b>최소 3일 정도 지난 후 붙임머리 시술을 권해드리고</b> 있습니다.</p>
+        <p>강한 천연 곱슬이나 기존 웨이브를 펴기 위해 매직하시는 경우에도 가능하면 뿌리 부분은 제외하고, 붙임머리와 직접 연결되어 보이는 중간부터 끝부분 위주로 정돈해 주세요.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">06</span><span class="t">붙임머리 하고 머리 묶을 수 있나요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">06</span><span class="t">붙임머리를 하고 머리를 묶을 수 있나요?</span><span class="rule"></span></div>
       <div class="item">
         <h2>네, 묶으실 수 있습니다!</h2>
-        <p>단, 시술 전 기존 모발 기장이 자유롭게 묶이는 기장이라면 붙인 후에도 제약 없이 묶으실 수 있습니다. <b>원래 기장이 짧아서 묶었을 때 흘러내리는 기장이라면, 붙인 후에는 이전보다는 덜 흘러내리지만 짧은 머리가 사이사이로 내려올 수 있어 실핀으로 고정해 주시면 됩니다.</b> 높이 묶는 경우도 마찬가지로, 기존에 높이 묶이던 기장이면 붙인 후에도 가능하고, 흘러내리던 기장이라면 붙임머리 이후에도 짧은 머리가 사이로 흘러내릴 수 있어요(핀으로 고정하시면 돼요!).</p>
+        <p>다만 붙임머리를 했다고 해서 기존의 짧은 머리까지 모두 길어지는 것은 아니기 때문에, 시술 전 본인의 모발 길이가 어느 정도였는지에 따라 차이가 있습니다.</p>
+        <p>붙임머리 시술 전에도 본인의 머리가 자연스럽게 묶일 정도의 길이였다면 시술 후에도 큰 제약 없이 머리를 묶으실 수 있습니다.</p>
+        <p>반대로 원래 모발이 짧아 묶었을 때 옆머리나 뒷머리가 흘러내리던 기장이었다면 붙임머리를 한 후에도 그 짧은 자연모가 사이사이로 내려올 수 있습니다.</p>
+        <p><b>이 경우에는 실핀이나 헤어핀으로 짧은 부분만 가볍게 고정</b>해 주시면 됩니다.</p>
+        <p>높게 묶는 포니테일도 마찬가지입니다.</p>
+        <p>기존 모발이 높게 묶이는 기장이었다면 붙임머리 후에도 자연스럽게 연출할 수 있고, 원래 짧아서 흘러내리던 모발은 붙임머리 후에도 일부 내려올 수 있으므로 핀으로 정리해 주시면 됩니다.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">07</span><span class="t">붙임머리를 하면 두상이 커 보이지 않을까요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>1mm 슬림 땋기로 두상을 고려해 시술합니다</h2>
-        <p>저희 제이주현 붙임머리는 이음 부분이 1mm 정도로 얇은 슬림 땋기 붙임머리로 시술해 드리며, <b>오랜 헤어 경험의 노하우를 붙임머리에 접목해 개개인의 두상 모양을 고려하여 시술해 드리기 때문에 두상이 커 보이지 않습니다.</b> 단, 기존 모발의 뜨는 볼륨감은 미리 깨끗하게 매직하고 오셔야 합니다.</p>
+        <h2>약 1mm의 슬림한 땋기 방식으로 두상과 모발의 흐름을 고려해 시술합니다</h2>
+        <p>제이주현 붙임머리는 연결 부위를 최대한 슬림하게 표현하는 <b>1mm 슬림 땋기 방식</b>으로 시술합니다.</p>
+        <p>단순히 많은 양의 피스를 붙이는 것이 아니라 고객님의 두상 모양, 기존 모발의 숱과 흐름, 정수리 볼륨과 헤어라인 등을 확인하면서 연결 위치와 수량을 조절합니다.</p>
+        <p>따라서 붙임머리 때문에 연결 부위가 한곳에 몰려 두상이 부해 보이지 않도록 전체적인 밸런스를 고려해 시술합니다.</p>
+        <p>다만 기존 모발 자체가 강하게 뜨거나 곱슬기와 C컬로 인해 부피가 큰 경우에는 붙임머리만으로 해당 볼륨을 완전히 정리하기 어렵습니다.</p>
+        <p>이런 경우에는 시술 전 기존 모발을 매직으로 차분하게 정돈하고 오시면 보다 깔끔하고 자연스러운 실루엣을 만들 수 있습니다.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">08</span><span class="t">시술 초반에 한 가닥이 떨어졌어요. 계속 빠지는 건가요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>본드 없이 땋아서 고정하는 방식입니다</h2>
-        <p>땋기 붙임머리는 접착력이 강한 본드나 금속 등의 이음 물질을 사용하지 않고, <b>오로지 하나하나 땋아서 고무실로 묶어 고정하는 방식입니다.</b> 오히려 녹는 본드보다 더 튼튼하게 유지되지만, 수작업으로 일일이 땋다 보니 간혹 한두 가닥이 빠지는 경우도 있습니다. 관리 상태에 따라서도 차이가 있어, 한 달 사이 5~6가닥이 빠지는 분도 있고 수개월 동안 한 가닥도 안 빠지는 경우도 있어요. 일주일 만에 한 가닥이 떨어졌다고 계속 빠지는 것은 아니니 안심하세요.</p>
-        <ul class="qaList">
-          <li>떨어진 가닥은 한 달 최대 5가닥씩, 2개월간 총 2회 무상 AS</li>
-          <li>버리지 말고 보관하셨다가 예약 후 가져오시면 다시 붙여드려요</li>
-          <li>관리를 소홀히 하면 이음 부분이 약해질 수 있어 100% 완전 건조는 꼭 지켜주세요</li>
-        </ul>
+        <h2>한두 가닥이 빠졌다고 해서 이후에도 계속 빠지는 것은 아닙니다</h2>
+        <p>땋기 붙임머리는 녹는 본드나 금속 링 등 별도의 접착 물질을 사용하는 방식이 아니라, <b>모발을 하나하나 직접 땋은 뒤 고무실로 묶어 고정하는 방식</b>입니다.</p>
+        <p>튼튼하게 유지되는 방식이지만 사람이 직접 하나씩 땋는 수작업 시술이고, 고객님의 자연모 굵기와 생활 습관, 샴푸 및 건조 방법 등에 따라서도 유지력에 차이가 생길 수 있습니다.</p>
+        <p>따라서 시술 후 간혹 한두 가닥 정도가 자연스럽게 느슨해지거나 빠지는 경우가 있습니다.</p>
+        <p>개인차가 커서 한 달 동안 몇 가닥이 빠지는 분도 있는 반면, 수개월 동안 한 가닥도 빠지지 않는 분도 있습니다.</p>
+        <p>시술 후 일주일 만에 한 가닥이 떨어졌다고 해서 나머지 피스도 계속 떨어지는 것은 아니니 너무 걱정하지 않으셔도 됩니다.</p>
+        <p>빠진 피스는 버리지 마시고 그대로 보관하셨다가 A/S 예약 후 가져오시면 상태를 확인하여 다시 연결해 드립니다.</p>
+        <p>특히 붙임머리는 두피와 연결 부위를 완전히 건조하는 것이 중요합니다.<br>수분이 오랫동안 남아 있으면 땋은 부분이 느슨해지거나 엉키면서 유지력에 영향을 줄 수 있으므로 샴푸 후에는 연결 부위까지 꼼꼼하게 말려주세요.</p>
+      </div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>무상 A/S 안내</span>
+        <p>떨어진 피스의 무상 A/S는 매장 운영 기준에 따라 적용되며, 고객님의 부주의로 제거되거나 손상된 피스는 무상 A/S 대상에서 제외될 수 있습니다.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">09</span><span class="t">땋은 부분에 하얀 점 같은 게 보여요. 비듬인가요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>비듬이 아니라 자연스럽게 빠진 모발의 모근이에요</h2>
-        <p>사람의 모발은 모주기에 따라 하루 80~100가닥 정도가 자연스럽게 빠집니다. 평소에는 샴푸나 빗질을 할 때 함께 빠져나가지만, <b>붙임머리를 유지하시는 동안에는 빠지는 양은 같아도 수개월간 땋은 채로 묶여 있어 빠진 모발의 모근(하얀 뿌리 부분)이 눈에 보이게 되는 것입니다.</b> 제거하시거나 리터치 받으실 때 땋은 부분만 풀어서 빗질해 드리면 자연스럽게 다 탈락됩니다. 비정상적인 탈모나 비듬, 각질이 아니니 걱정하지 않으셔도 됩니다. 간혹 윗부분이나 헤어라인 쪽에서 눈에 띄면 뽑지 마시고, 눈썹가위 등으로 하얀 뿌리 부분만 살짝 잘라주세요. 습관적으로 뽑으시면 땋은 부분의 모량이 줄어 헐거워지면서 피스가 빠질 수 있어요. 이미 빠진 머리이니 잘라주셔도 전혀 상관없습니다!</p>
+        <h2>대부분 비듬이 아니라 자연스럽게 빠진 모발 끝부분이 땋은 부분에 남아 보이는 현상입니다</h2>
+        <p>사람의 모발은 성장과 휴지기를 반복하는 모주기에 따라 매일 일정량이 자연스럽게 탈락합니다.</p>
+        <p>평소에는 샴푸나 빗질을 하면서 빠진 모발이 그대로 떨어져 나가기 때문에 크게 눈에 띄지 않습니다.</p>
+        <p>하지만 붙임머리를 하고 있는 동안에는 자연스럽게 탈락한 본인의 모발 일부가 땋은 연결 부위에 묶여 있기 때문에 바로 떨어지지 못하고 그대로 남아 있을 수 있습니다.</p>
+        <p>시간이 지나면서 이 모발의 뿌리 쪽에 있는 <b>하얀 부분이 땋은 곳 주변에서 점처럼 보이기도 합니다.</b></p>
+        <p>리터치나 제거 시 땋은 부분을 풀어준 뒤 빗질하면 그동안 자연스럽게 탈락했던 모발이 함께 빠져나옵니다.</p>
+        <p>따라서 이러한 현상만으로 비듬이나 각질, 탈모라고 판단할 필요는 없습니다.</p>
+        <p>간혹 정수리나 헤어라인처럼 눈에 잘 띄는 위치에 하얀 부분이 보인다면 <b>억지로 잡아당겨 뽑지 마세요.</b></p>
+        <p>이미 탈락한 모발이라도 땋은 부분에 함께 고정되어 있기 때문에 반복적으로 잡아당기면 연결되어 있는 자연모의 양이 줄어들어 땋은 부분이 헐거워질 수 있습니다.</p>
+        <p>신경 쓰이는 경우에는 연결 부위를 건드리지 않도록 주의하면서 눈에 보이는 부분만 정리하시거나, 방문하셔서 확인받으시는 것을 권해드립니다.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">10</span><span class="t">붙임머리를 하면 탈모가 오지 않을까요?</span><span class="rule"></span></div>
       <div class="item">
         <span class="num">POINT 1</span>
-        <h2>1mm 슬림 땋기만 전문으로 진행합니다</h2>
-        <p>붙임머리는 종류가 다양합니다. 제이주현 붙임머리는 실리콘이나 링 붙임머리처럼 무겁고 부착력이 강한 방식은 취급하지 않으며, <b>붙임머리의 단점을 최소화한 "1mm 슬림 땋기" 시술만 전문적으로 진행합니다.</b> 가장 가볍고 안전하며 튼튼한 방식이라 탈모나 알레르기 등의 부작용 걱정 없이 세심하게 시술해 드립니다. 모발이식, 증모 시술, 탈모 이후 시술받으신 분들도 만족도가 높은 방식이니 안심하고 방문해 주세요 :)</p>
+        <h2>제이주현은 약 1mm 슬림 땋기 방식으로 모발과 두피의 부담을 줄이는 방향으로 시술합니다</h2>
+        <p>붙임머리는 실리콘, 링, 접착 방식, 땋기 방식 등 여러 종류가 있습니다.</p>
+        <p>제이주현에서는 별도의 본드나 금속 링을 사용하는 방식이 아닌 <b>1mm 슬림 땋기 방식</b>을 중심으로 시술하고 있습니다.</p>
+        <p>연결 부위를 최대한 작고 가볍게 만들어 일상생활에서 느껴지는 이물감과 부담을 줄이고, 고객님의 기존 모발 굵기와 두피 상태에 맞춰 연결되는 모발량과 위치를 세심하게 조절합니다.</p>
+        <p>다만 붙임머리 역시 본인의 모발에 추가 모발을 연결하는 시술이기 때문에 유지 기간, 시술량, 두피와 모발 상태, 관리 방법에 따라 느끼는 부담에는 개인차가 있을 수 있습니다.</p>
+        <p>두피가 민감하거나 탈모가 진행 중이거나 모발이 매우 가늘고 약한 경우에는 시술 전 충분한 상담을 받아보시는 것을 권해드립니다.</p>
       </div>
       <div class="item">
         <span class="num">POINT 2</span>
-        <h2>제거 시 많이 빠지는 것도 정상적인 현상이에요</h2>
-        <p>모주기에 따라 정상적으로 빠진 머리들이 수개월 동안 땋은 채로 매달려 있다가, <b>제거할 때 한 번에 빠지는 것처럼 보일 수 있습니다.</b> 예를 들어 3개월을 유지하셨다면, 하루 50가닥씩만 매달렸다고 해도 50가닥×90일 = 4,500가닥, 거의 5,000가닥에 가까운 모발이 한 번에 떨어지는 셈이라 그 양에 놀라실 수 있지만 자연스러운 현상이니 걱정하지 않으셔도 됩니다.</p>
+        <h2>제거할 때 머리가 많이 빠져 보이는 것은 자연 탈락한 모발이 한꺼번에 보이기 때문일 수 있습니다</h2>
+        <p>사람의 머리카락은 모주기에 따라 매일 자연스럽게 빠집니다.</p>
+        <p>평소에는 샴푸하거나 머리를 빗을 때 조금씩 빠져나가기 때문에 그 양을 크게 느끼지 못합니다.</p>
+        <p>하지만 붙임머리를 하고 있으면 이미 자연스럽게 탈락한 일부 모발이 땋은 연결 부위에 묶여 있어 바로 떨어지지 못합니다.</p>
+        <p>이 상태로 2~3개월을 유지한 뒤 붙임머리를 제거하면 그동안 조금씩 빠졌어야 할 모발이 한 번에 떨어져 나오기 때문에 <b>실제보다 훨씬 많은 머리가 갑자기 빠진 것처럼 느껴질 수 있습니다.</b></p>
+        <p>따라서 제거할 때 많은 모발이 보인다는 이유만으로 붙임머리 때문에 모두 빠진 것이라고 판단하기는 어렵습니다.</p>
+        <p>다만 평소보다 눈에 띄는 탈모가 지속되거나 두피에 통증·붉어짐 등의 이상이 있다면 붙임머리 여부와 관계없이 전문적인 진료를 받아보시는 것을 권해드립니다.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">11</span><span class="t">붙임머리에 염색(탈색)·파마를 해도 되나요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">11</span><span class="t">붙임머리에 염색·탈색·파마를 해도 되나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>1호 피스를 제외하면 염색이 가능해요</h2>
-        <p>1호(어두운 검정) 피스를 제외하고는 염색 시술이 가능합니다. <b>특수 컬러 피스의 경우 탈색 2~3회와 염색 과정을 거치면서 모발에 손상도가 생길 수 있습니다.</b> 다만 펌이나 재염색 시에는 모발 손상, 엉킴, 탈락 등의 우려가 있어 권장해 드리지 않으며, 그 결과에 대해서는 책임지지 않으니 참고 부탁드립니다.</p>
+        <h2>일부 컬러는 염색이 가능하지만, 추가적인 화학 시술은 신중하게 결정해 주세요</h2>
+        <p>제이주현에서 사용하는 붙임머리는 컬러와 모발 상태에 따라 염색이 가능한 경우가 있습니다.</p>
+        <p>다만 1호와 같은 매우 어두운 컬러의 피스는 밝게 만드는 염색에 제한이 있을 수 있으며, 원하는 색상에 따라 결과가 달라질 수 있습니다.</p>
+        <p>특히 특수 컬러 피스는 제작 과정에서 이미 여러 차례 탈색과 염색 과정을 거친 모발일 수 있기 때문에 추가 탈색이나 반복 염색을 하면 손상도가 더 높아질 수 있습니다.</p>
+        <p>붙임머리 피스에 다시 펌이나 강한 화학 시술을 할 경우에도 <b>건조함, 손상, 엉킴, 모발 빠짐 등이 생길 가능성이 커질 수 있어 권장해 드리지 않습니다.</b></p>
+        <p>추가적인 염색이나 펌을 원하신다면 먼저 현재 피스의 상태와 컬러를 확인한 후 상담받으시는 것을 추천드립니다.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">12</span><span class="t">한 피스는 몇 가닥인가요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">12</span><span class="t">한 팩에는 몇 가닥이 들어가나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>한 피스(1팩) 기준 총 160가닥입니다</h2>
-        <p>한 피스는 80가닥(1set) 기준, 총 160가닥입니다. 간혹 200가닥으로 문의하시는 분들이 계신데, <b>가닥 개수만 다를 뿐 한 피스의 총량은 100g으로 동일합니다.</b> 쉽게 말해 160가닥인 피스가 한 가닥에 더 많은 모발이 달려 있다고 생각하시면 됩니다. 피스 자체로는 차이가 있지만, 숱 추가가 개수 단위로 들어갈 때는 같은 10가닥이라도 총량으로 보면 숱이 더 풍성해집니다!</p>
+        <h2>제이주현의 기본 구성은 사용하는 제품 규격에 따라 가닥 수와 세트 구성을 안내해 드립니다</h2>
+        <p>붙임머리는 업체마다 한 가닥에 들어가는 모발량과 피스의 굵기가 다르기 때문에 단순히 '몇 가닥이냐'만으로 전체 숱을 비교하기는 어렵습니다.</p>
+        <p>예를 들어 같은 100g의 붙임머리라고 하더라도 한 가닥을 가늘게 만들어 200가닥으로 나눌 수도 있고, 한 가닥에 더 많은 모발을 넣어 160가닥으로 구성할 수도 있습니다.</p>
+        <p>따라서 가닥 수가 많다고 해서 반드시 전체 숱이 더 많은 것은 아닙니다.</p>
+        <p>한 가닥에 들어가는 모발의 양이 많으면 동일한 10가닥을 추가하더라도 <b>실제 추가되는 모발량은 더 풍성할 수 있습니다.</b></p>
+        <p>제이주현의 기본 시술 수량과 세트 구성은 예약 및 상담 시 정확하게 안내해 드리고 있으며, 고객님의 모발 상태에 따라 필요한 기본량과 숱 추가량을 함께 확인해 드립니다.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">13</span><span class="t">붙임머리 유지기간은 어느 정도인가요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">13</span><span class="t">붙임머리 유지 기간은 어느 정도인가요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>평균 2~3개월, 리터치는 3개월 안에 추천드려요</h2>
-        <p>유지 기간은 평균 2~3개월입니다! 시술 후 시간이 지나면 머리카락이 자라는 속도에 따라 땋은 부분도 함께 내려오게 되는데, <b>자라난 빈 모발 부분에서 지저분해지고 생활하시면서 불편함이 생길 수 있어요.</b> 개인 관리에 따라 리터치 없이 6개월 이상 유지하시는 분들도 간혹 계십니다. 하지만 두피 건강을 위해 3개월 안에는 리터치 받으시는 걸 추천해 드립니다! 피스 자체는 관리에 따라 1년 정도 재사용이 가능합니다.</p>
+        <h2>평균적인 리터치 시기는 약 2~3개월 전후를 권해드립니다</h2>
+        <p>붙임머리를 시술한 후 시간이 지나면 본인의 머리카락이 자라면서 처음 두피 가까이에 있던 땋은 연결 부위도 자연스럽게 아래로 내려오게 됩니다.</p>
+        <p>모발이 길게 자랄수록 땋은 부분과 두피 사이에 빈 공간이 생기고, 샴푸나 빗질을 할 때 새로 자란 자연모가 손가락에 걸리거나 엉키면서 생활에 불편함을 느낄 수 있습니다.</p>
+        <p>개인의 모발이 자라는 속도와 관리 방법에 따라 차이가 있기 때문에 정확히 몇 개월이라고 정해져 있는 것은 아닙니다.</p>
+        <p>관리가 잘된 경우 리터치 없이 더 오래 유지하시는 분도 있지만, 연결 부위가 너무 많이 내려오기 전에 <b>평균적으로 2~3개월 정도를 기준으로 상태를 확인하고 리터치 받으시는 것</b>을 권해드립니다.</p>
+        <p>붙임머리 피스 자체는 관리 상태가 좋다면 리터치를 통해 여러 번 재사용할 수 있으며, 경우에 따라 약 1년 정도 사용하는 분들도 있습니다.</p>
+        <p>다만 고데기 사용 빈도, 샴푸와 관리 방법, 피스의 모발 빠짐과 손상 정도 등에 따라 실제 사용 기간에는 차이가 있습니다.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">14</span><span class="t">리터치, 궁금한 것 모음</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">14</span><span class="t">리터치에 대해 궁금해요</span><span class="rule"></span></div>
       <div class="item">
         <span class="num">POINT 1</span>
-        <h2>리터치는 뭔가요?</h2>
-        <p>시간이 지나 머리카락이 자라면 시술 부위도 자연스럽게 아래로 내려옵니다. <b>리터치는 전체를 제거한 후, 처음 시술했을 때의 위치로 다시 올려 땋는 시술입니다.</b> 간혹 길이 변화를 원하시는 분들은 한 단씩 제거하고 다시 땋아드리기 때문에, 원하시는 길이 그대로 유지해 드립니다.</p>
+        <h2>리터치가 뭔가요?</h2>
+        <p>붙임머리를 하고 시간이 지나면 본인의 머리카락이 자라면서 처음 두피 가까이에 있던 연결 부위도 점점 아래로 내려옵니다.</p>
+        <p>리터치는 기존에 붙어 있던 피스를 전체적으로 제거한 후, 사용할 수 있는 피스를 다시 정돈하여 <b>처음 시술했을 때와 비슷한 위치로 올려 다시 땋아주는 시술</b>입니다.</p>
+        <p>기존 붙임머리의 길이를 그대로 유지하고 싶으신 경우에는 현재 길이에 맞춰 다시 연결해 드립니다.</p>
+        <p>길이를 조금 줄이거나 스타일 변화를 원하시는 경우에는 상담 후 필요한 부분을 조절하여 시술할 수 있습니다.</p>
       </div>
       <div class="item">
         <span class="num">POINT 2</span>
-        <h2>리터치 시기는 어떻게 느낄 수 있나요?</h2>
-        <p>샴푸하거나 모발 손질하실 때 새로 자란 모발이 손가락에 걸리며 불편하시거나, <b>떨어진 모근들이 지저분하게 보이기 시작할 때쯤 오시면 됩니다.</b> 평균적으로 2~3개월 전후이며, 모발이 자라는 속도에 따라 개인차가 있습니다.</p>
+        <h2>리터치 시기는 어떻게 알 수 있나요?</h2>
+        <p>샴푸를 하거나 머리를 손질할 때 새로 자란 자연모가 손가락에 걸리기 시작하거나, 연결 부위가 처음보다 많이 내려와 움직임이 커졌다고 느껴질 때가 리터치를 고려할 시기입니다.</p>
+        <p>또한 자연스럽게 탈락한 모발이 땋은 부분 주변에서 눈에 띄기 시작하거나 연결 부위가 지저분하게 느껴지는 경우에도 리터치를 권해드립니다.</p>
+        <p>평균적으로 약 2~3개월 전후가 많지만 머리카락이 자라는 속도와 관리 방법에 따라 개인차가 있습니다.</p>
       </div>
       <div class="item">
         <span class="num">POINT 3</span>
-        <h2>리터치는 몇 번 할 수 있나요?</h2>
-        <p>보통 1~3번 정도는 무난하게 진행하십니다. 3번 이상도 가능하며, 처음 시술하신 모발로 1년까지 재사용하시는 분들도 계세요. <b>다만 리터치 특성상 고데기 사용이 잦고 피스 자체에서 모발이 빠지기도 하기 때문에, 오래 사용하시면 모발 손상이나 숱 감소가 있을 수 있어 적정 시기에는 새 모발로 교체하시길 추천드립니다.</b></p>
+        <h2>리터치는 몇 번까지 할 수 있나요?</h2>
+        <p>피스 상태가 좋다면 보통 1~3회 정도 리터치를 진행하시는 경우가 많습니다.</p>
+        <p>관리 상태에 따라 그 이상 재사용하는 것도 가능하며, 처음 시술한 피스를 여러 차례 리터치하면서 약 1년 정도 사용하는 분들도 있습니다.</p>
+        <p>다만 붙임머리 피스도 계속 사용하는 동안 고데기와 드라이 열에 노출되고, 샴푸와 빗질을 반복하면서 조금씩 모발이 빠지거나 손상될 수 있습니다.</p>
+        <p>처음보다 피스의 숱이 많이 줄거나 모발 끝이 심하게 손상되고 엉킴이 잦아졌다면 <b>계속 리터치하기보다는 새로운 모발로 교체하시는 것을 권해드립니다.</b></p>
       </div>
       <div class="item">
         <span class="num">POINT 4</span>
         <h2>리터치 비용은 얼마인가요?</h2>
-        <p>리터치는 기존에 사용하셨던 모발을 다시 재사용함을 전제로 하며, <b>처음 시술하셨던 정상가에서 50% 할인이 적용됩니다(제거비 별도).</b></p>
+        <p>리터치는 기존에 사용하셨던 붙임머리 피스를 다시 사용하는 것을 전제로 진행합니다.</p>
+        <p>제이주현의 리터치 비용은 처음 시술 정상가를 기준으로 <b>50% 할인된 금액이 적용</b>되며, 제거 비용은 별도입니다.</p>
+        <p>다만 기존 피스의 손상 정도나 숱 감소로 인해 새 피스를 추가해야 하는 경우에는 추가되는 모발량에 따라 별도의 비용이 발생할 수 있습니다.</p>
       </div>
     </section>
+
     <section class="sect">
       <div class="sect-h"><span class="idx">15</span><span class="t">셀프 제거도 가능한가요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>가능하지만, 샵 방문을 가장 추천드려요</h2>
-        <p>제거하실 때 시간이나 거리상 방문이 어려우신 경우, 셀프 제거도 가능합니다. 방법은 유튜브 제이주현 채널을 참고해 주시거나 방문하셨을 때 문의해 주세요. <b>단, 가위질이 필요하기 때문에 도움을 받으실 분이 있어야 하며, 본인의 모발이 함께 잘리지 않도록 주의하셔야 합니다.</b> 한 손으로 땋인 부분을 잡고, 다른 손으로 가위로 묶음 부분만 잘라주시면 쉽게 제거하실 수 있습니다. 가장 안전한 방법은 역시 샵에 방문하셔서 제거하시는 것입니다.</p>
+        <h2>가능하지만, 가장 안전한 방법은 샵에서 제거하는 것입니다</h2>
+        <p>시간이나 거리 등의 이유로 매장 방문이 어려운 경우에는 셀프 제거를 하시는 분들도 있습니다.</p>
+        <p>제거 방법은 제이주현 유튜브 채널의 안내 영상을 참고하시거나 방문하셨을 때 미리 문의해 주세요.</p>
+        <p>땋기 붙임머리는 묶여 있는 연결 부분을 풀어 제거해야 하기 때문에 셀프로 하실 경우 가위를 사용해야 할 수 있습니다.</p>
+        <p>이때 본인의 자연모와 묶인 실을 정확하게 구분하지 못하고 자르면 <b>자연모까지 함께 잘릴 수 있으므로 반드시 주의</b>하셔야 합니다.</p>
+        <p>가능하면 혼자 제거하기보다는 다른 사람의 도움을 받으시는 것을 권해드립니다.</p>
+        <p>제거할 때는 한 손으로 땋은 연결 부분을 정확히 확인하고 고정한 뒤, 묶여 있는 실 부분만 조심스럽게 잘라 풀어주어야 합니다.</p>
+        <p>특히 연결 부위가 잘 보이지 않거나 본인의 자연모와 구분하기 어렵다면 무리하게 제거하지 마세요.</p>
+        <p>가장 안전하고 깔끔한 방법은 매장에 방문하여 전문가에게 제거받는 것입니다.</p>
       </div>
     </section>
+
     <section class="sect">
-      <div class="sect-h"><span class="idx">16</span><span class="t">샴푸는 서서 감아도 되나요? 매일 감아도 되나요?</span><span class="rule"></span></div>
+      <div class="sect-h"><span class="idx">16</span><span class="t">샴푸는 서서 감아야 하나요? 매일 감아도 되나요?</span><span class="rule"></span></div>
       <div class="item">
-        <h2>일주일 정도만 서서 감아주세요</h2>
-        <p>샴푸는 평소처럼 숙여서 감으셔도 됩니다. 다만 시술 후 일주일 정도는 땋은 부분이 바짝 당겨져 있어 숙여서 감으시면 당길 수 있으니, <b>이 기간에는 서서 감으시고 이후에는 숙여서 감으셔도 무관합니다.</b> 매일 머리를 감으셔도 유지 기간에는 전혀 영향이 없으며, 단단히 땋아 시술했기 때문에 평소처럼 샴푸하시면 됩니다.</p>
+        <h2>시술 초기 약 일주일 동안은 샤워하듯 서서 감는 것을 권해드립니다</h2>
+        <p>붙임머리를 했다고 해서 계속 서서만 머리를 감아야 하는 것은 아닙니다.</p>
+        <p>시술 직후에는 땋은 연결 부위가 두피 가까이에 위치하고 있기 때문에 고개를 많이 숙여 샴푸하면 당김이 느껴질 수 있고, 반복적으로 힘이 가해질 경우 연결 부위가 조금 더 빨리 내려올 수 있습니다.</p>
+        <p>따라서 시술 후 약 일주일 정도는 샤워하듯 서 있는 상태에서 머리를 감으시는 것을 권해드립니다.</p>
+        <p>어느 정도 시간이 지나 연결 부위가 자연스럽게 자리 잡은 뒤에는 평소처럼 숙여서 샴푸하셔도 괜찮습니다.</p>
+        <p><b>매일 머리를 감으셔도 됩니다.</b></p>
+        <p>머리를 자주 감는 것 자체보다 샴푸 후 두피와 땋은 연결 부위를 완전히 말리는 것이 훨씬 중요합니다.</p>
+        <p>젖은 상태로 오래 두거나 연결 부위에 수분이 남아 있는 상태로 잠들면 엉킴이나 냄새가 생길 수 있고, 땋은 부분이 느슨해져 피스 유지력에도 영향을 줄 수 있습니다.</p>
+        <p>샴푸 횟수를 지나치게 신경 쓰기보다는 평소처럼 청결하게 관리하시고, 샴푸 후에는 두피와 연결 부위까지 100% 완전히 건조해 주세요.</p>
       </div>
     </section>
-        <div class="jhPointCards">
+
+            <div class="jhPointCards">
       <div class="jhPointCard gold">
-        <div class="jhPointIcon">❓</div>
-        <div class="jhPointText"><h4>자주 묻는 질문 모음</h4><p>붙임머리 관련 궁금증을 한눈에 확인하세요.</p></div>
-      </div>
-      <div class="jhPointCard blue">
         <div class="jhPointIcon">🧵</div>
-        <div class="jhPointText"><h4>경계선 걱정 없이</h4><p>질감 처리로 자연스러운 경계선을 만들어 드려요.</p></div>
-      </div>
-      <div class="jhPointCard gold">
-        <div class="jhPointIcon">💇</div>
-        <div class="jhPointText"><h4>매직 병행 안내</h4><p>곱슬기나 C컬이 있다면 매직을 함께 권해드려요.</p></div>
+        <div class="jhPointText"><h4>경계선 걱정 없이</h4><p>기존 모발의 길이와 숱을 확인하고 필요한 부분만 가볍게 질감 처리하여 붙임머리와 자연스럽게 연결해 드립니다.</p></div>
       </div>
       <div class="jhPointCard blue">
+        <div class="jhPointIcon">💇</div>
+        <div class="jhPointText"><h4>매직 병행 안내</h4><p>곱슬기나 펌, C컬이 남아 있어 붙임머리와 자연스럽게 연결되기 어려운 경우에는 모발 상태에 맞춰 매직 스트레이트를 권해드립니다.</p></div>
+      </div>
+      <div class="jhPointCard gold">
         <div class="jhPointIcon">✅</div>
-        <div class="jhPointText"><h4>완성도 높은 시술</h4><p>꼼꼼한 상담으로 완성도 높은 결과를 약속드려요.</p></div>
+        <div class="jhPointText"><h4>나에게 맞는 붙임머리</h4><p>같은 길이의 붙임머리라도 현재 모발의 길이와 숱, 두상, 손상 정도에 따라 필요한 시술 방법과 모발량은 달라집니다. 충분한 상담 후 고객님께 가장 잘 어울리는 방향으로 시술해 드립니다.</p></div>
       </div>
     </div>
 
 <div class="closing">
-      <div class="q-mark">“</div>
+      <div class="q-mark">"</div>
       <p class="q">궁금한 점은 언제든 편하게 물어봐 주세요.</p>
-      <p>사진 한 장만 보내주시면 모발 상태에 맞는 정확한 안내를 도와드립니다.</p>
+      <p>현재 모발 상태가 잘 보이는 사진을 보내주시면 길이와 숱, 필요한 시술 방향을 확인하여 보다 자세하게 안내해 드립니다.</p>
       <div class="sign" style="display:flex;flex-direction:column;align-items:center;"><span class="signTrail"><span class="stLetter">J</span><span class="stLetter">.</span><span class="stLetter">J</span><span class="stLetter">O</span><span class="stLetter">O</span><span class="stLetter">H</span><span class="stLetter">Y</span><span class="stLetter">U</span><span class="stLetter">N</span></span><span class="signTrail2"><span class="stLetter">L</span><span class="stLetter">U</span><span class="stLetter">X</span><span class="stLetter">U</span><span class="stLetter">R</span><span class="stLetter">Y</span><span class="stLetter" style="margin-left:8px;">E</span><span class="stLetter">X</span><span class="stLetter">T</span><span class="stLetter">E</span><span class="stLetter">N</span><span class="stLetter">S</span><span class="stLetter">I</span><span class="stLetter">O</span><span class="stLetter">N</span><span class="stLetter">S</span></span></div>
     </div>
 
@@ -5778,29 +5908,36 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
+
     <section class="sect">
       <div class="sect-h"><span class="idx">01</span><span class="t">STEP 1 · 샴푸</span><span class="rule"></span></div>
       <div class="item">
-        <ul class="qaList">
-          <li>샴푸는 샤워하듯 서서 한다(붙이고 일주일 정도). 엎드려 샴푸해도 무관하지만 엎드려 할 경우 <b>땋은 부분이 빨리 내려올 수 있습니다.</b> 머리 전체에 미온수를 충분히 적셔주고 린스로 엉킨 모발을 가지런히 정리, <b>모발을 비비면 엉켜요!</b></li>
-          <li>린스를 붙임머리 피스에 도포한 후 샴푸를 적당량 짜낸 후 두피를 마사지하듯 문지르며 감아줍니다.</li>
-          <li>샴푸를 꼼꼼히 헹궈주고 트리트먼트를 사용해 모발에 윤기와 영양을 줍니다.</li>
-        </ul>
+        <p>시술 후 약 일주일 동안은 고개를 숙이기보다 <b>샤워하듯 서서 샴푸</b>하는 것을 권장드립니다.</p>
+        <p>이후에는 평소처럼 샴푸하셔도 괜찮지만, 고개를 숙여 감는 습관이 반복되면 땋은 부분에 힘이 가해져 <b>연결 부위가 조금 더 빨리 내려올 수 있습니다.</b></p>
+        <p>먼저 머리 전체에 미온수를 충분히 적셔주세요.</p>
+        <p>모발이 엉켜 있다면 샴푸 전에 린스나 컨디셔너를 붙임머리 모발 위주로 가볍게 사용하여 엉킨 부분을 먼저 정리해 주세요.</p>
+        <p>이때 <b>모발끼리 비비거나 거칠게 문지르면 엉킬 수 있으니</b> 손가락으로 결을 따라 부드럽게 정돈해 주는 것이 좋습니다.</p>
+        <p>이후 샴푸를 적당량 덜어 두피를 마사지하듯 부드럽게 세정해 주세요.</p>
+        <p>연결 부위를 손톱으로 긁거나 세게 비비지 않는 것이 중요합니다.</p>
+        <p>샴푸가 남지 않도록 충분히 헹군 후 트리트먼트 또는 컨디셔너를 모발 위주로 사용해 주세요.</p>
+        <p>붙임머리도 자연모와 마찬가지로 꾸준히 수분과 영양을 공급해 주면 더욱 부드럽고 윤기 있게 유지할 수 있습니다.</p>
       </div>
     </section>
 
     <section class="sect">
       <div class="sect-h"><span class="idx">02</span><span class="t">STEP 2 · 건조</span><span class="rule"></span></div>
       <div class="item">
-        <ul class="qaList">
-          <li>마른 수건으로 모발을 꼭꼭 눌러서 물기를 최대한 없앤다 (수건 2장이면 속도는 2배).</li>
-          <li>물기가 떨어지지 않게 되면 에센스를 모발의 결에 따라서 양을 충분히 발라준다.</li>
-          <li>드라이기를 위쪽으로 하여 위에서 아래 방향으로 말린다. 냉풍 위주가 좋으나 오래 걸리므로 냉/온풍 교대로 하여도 좋다.</li>
-        </ul>
+        <p>샴푸 후에는 마른 수건으로 모발을 비비지 말고 <b>꼭꼭 눌러주듯</b> 물기를 충분히 제거해 주세요.</p>
+        <p>수건을 두 장 정도 사용하면 건조 시간을 줄이는 데 도움이 됩니다.</p>
+        <p>물이 뚝뚝 떨어지지 않을 정도로 수분을 제거한 뒤, 에센스를 모발의 중간부터 끝부분을 중심으로 결을 따라 충분히 발라주세요.</p>
+        <p>드라이기는 모발 위쪽에서 아래 방향으로 사용하면 모발 결을 보다 차분하게 정돈할 수 있습니다.</p>
+        <p>냉풍 위주로 건조하는 것이 좋지만 시간이 오래 걸릴 경우에는 냉풍과 온풍을 번갈아 사용하셔도 괜찮습니다.</p>
+        <p>다만 지나치게 뜨거운 바람을 연결 부위에 오랫동안 직접 사용하는 것은 피해 주세요.</p>
       </div>
       <div class="item caution">
-        <span class="cap"><span class="dot"></span>주의사항</span>
-        <p>두피&모발은 꼭 <b>100% 건조</b>해야 합니다! 100% 건조하지 않을 시 땋은 부분이 엉키거나 피스가 빠질 수도 있어요!</p>
+        <span class="cap"><span class="dot"></span>꼭 기억해 주세요</span>
+        <p>두피와 붙임머리 연결 부위까지 <b>완전히 건조</b>해 주는 것이 중요합니다.</p>
+        <p>수분이 남은 상태로 오래 방치하거나 잠들 경우 땋은 부분이 엉키거나 냄새가 날 수 있으며, 연결 부위가 느슨해져 피스가 빠지는 원인이 될 수 있습니다.</p>
       </div>
     </section>
 
@@ -5808,47 +5945,74 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">03</span><span class="t">STEP 3 · 스타일링</span><span class="rule"></span></div>
       <div class="item">
         <h2>1. 스트레이트</h2>
-        <p>붙임머리가 붙어있지 않은 정수리 부분의 모발을 단정하게 펴주고 난 후 붙임머리와 같이 잡고 펴줍니다. 붙임머리는 평소 하던 것보다 <b>천천히 고데기</b> 해야 잘됩니다.</p>
+        <p>먼저 붙임머리가 연결되지 않은 정수리와 겉부분의 자연모를 차분하게 펴주세요.</p>
+        <p>그다음 자연모와 붙임머리를 함께 잡고 전체적인 결을 맞춰주면 훨씬 자연스럽게 연결됩니다.</p>
+        <p>붙임머리는 한 번에 많은 양을 잡기보다 적당량씩 나누어 <b>평소보다 천천히</b> 고데기해 주면 더욱 깔끔하게 펴집니다.</p>
+        <p>고데기가 연결 부위에 직접 닿지 않도록 주의해 주세요.</p>
       </div>
       <div class="item">
         <h2>2. 웨이브</h2>
-        <p>먼저 전체 머리를 매직기로 펴주고 모발을 조금씩 잡아 아이롱으로 웨이브를 만들어줍니다. (<b>꼭 붙임머리 피스에만 웨이브를 넣을 것!</b> 겉단과 같이 웨이브를 넣을 시 큰일 납니다!! 한번 해보시면 알 거예요..)<br><span style="display:block;margin-top:10px"></span>웨이브가 걸린 모발이 식을 때까지 모양을 잡아주면 컬이 오래갑니다. 겉단은 꼭 매직기로 손질해서 피스와 같이 잡고 연결시켜줘야 자연스럽습니다.</p>
+        <p>웨이브를 넣기 전 전체 모발의 결을 먼저 정돈해 주세요.</p>
+        <p>붙임머리 부분은 모발을 조금씩 나누어 아이롱으로 웨이브를 만들어주는 것이 좋습니다.</p>
+        <p>특히 붙임머리와 자연모를 처음부터 한 번에 많은 양씩 잡아 컬을 만들면 연결선이 부자연스럽게 보일 수 있으므로, <b>붙임머리 부분의 웨이브를 먼저 잡은 후</b> 겉단의 자연모를 따로 손질하여 마지막에 자연스럽게 연결해 주세요.</p>
+        <p>웨이브를 만든 후에는 모발이 충분히 식을 때까지 컬의 모양을 유지해 주면 웨이브가 더욱 오래갑니다.</p>
+        <p>마지막으로 겉단의 자연모와 붙임머리의 결을 함께 정돈해 주면 한층 자연스러운 스타일을 연출할 수 있습니다.</p>
       </div>
       <div class="item">
         <h2>3. 마무리</h2>
-        <p>고데기를 사용하기 전에 열 전용 에센스를 사용하면 모발 손상을 막아줍니다. 에센스를 사용하면 정전기를 예방하여 스타일링을 오래 유지할 수 있습니다.</p>
+        <p>고데기나 아이롱을 사용하기 전에는 열 보호 기능이 있는 에센스나 헤어 제품을 사용하는 것을 권장드립니다.</p>
+        <p>열에 의한 모발 손상을 줄이는 데 도움이 되며, 스타일링 후 에센스를 소량 사용하면 건조함과 정전기를 줄이고 모발의 윤기를 유지하는 데 도움이 됩니다.</p>
       </div>
     </section>
 
     <section class="sect">
       <div class="sect-h"><span class="idx">04</span><span class="t">알아두면 좋은 안내</span><span class="rule"></span></div>
       <div class="item">
-        <p>제이주현 제품은 붙임머리 코팅으로 인한 인위적인 광택감을 배제하기 위해 <b>코팅을 최소화하여 실제 머리에 가까운 천연모</b>로 제작되었습니다. 첫날엔 모발이 포장된 상태에서 바로 시술이 들어가기 때문에 매직한 듯 인위적인 생머리지만, 한번 샴푸 후에 자연모발의 느낌으로 더욱 자연스러워집니다. 제품 특성상 모발 큐티클이 눈에 보일 수 있으며, 이는 자연스러운 현상입니다.</p>
-      </div>
-      <div class="item caution">
-        <span class="cap"><span class="dot"></span>땋기 방식 안내</span>
-        <p>땋기 붙임머리는 튼튼하지만, 본드나 이음물질 없이 오로지 사람 손으로 땋는 방식이기 때문에 시술 기간과 상관없이 간혹 피스가 빠질 수 있습니다. 당황하시지 마시고, 피스는 버리지 말고 꼭 보관해 주셨다가 무상 A/S 받으러 오세요.</p>
-      </div>
-      <div class="item">
-        <h2>무상 A/S 안내</h2>
-        <p>시술 후 <b>14일 이내 10가닥까지 가능</b>합니다 (자연스럽게 빠진 피스만 무상, 그 이후에는 추가 금액이 발생합니다). 다만 고객님의 부주의로 인해 제거되거나 손상된 피스는 무상 A/S가 불가합니다.</p>
+        <p>제이주현 붙임머리는 인위적으로 반짝이는 광택감을 줄이고 실제 모발과 가까운 자연스러운 질감을 표현하기 위해 <b>과도한 코팅을 최소화한 천연모</b> 제품을 사용합니다.</p>
+        <p>처음 시술 직후에는 포장되어 있던 모발을 바로 사용하기 때문에 매직한 것처럼 곧고 매끄럽게 느껴질 수 있습니다.</p>
+        <p>하지만 한두 번 샴푸한 이후에는 모발 본연의 결이 살아나면서 실제 자연모처럼 한층 자연스러운 질감으로 자리 잡게 됩니다.</p>
+        <p>천연모의 특성상 모발마다 결이나 굵기, 큐티클의 느낌에 약간의 차이가 있을 수 있으며, 이는 제품 불량이 아닌 자연모에서 나타날 수 있는 자연스러운 특성입니다.</p>
       </div>
     </section>
 
-    
+    <section class="sect">
+      <div class="sect-h"><span class="idx">05</span><span class="t">땋기 붙임머리 안내</span><span class="rule"></span></div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>피스가 빠졌다면</span>
+        <p>땋기 붙임머리는 본드나 접착제, 별도의 이음 물질을 사용하지 않고 사람의 손으로 직접 모발을 연결하는 방식입니다.</p>
+        <p>비교적 튼튼하게 유지되는 방식이지만 자연모의 굵기, 두피 상태, 생활 습관 및 관리 방법 등에 따라 시술 후 간혹 일부 피스가 느슨해지거나 빠질 수 있습니다.</p>
+        <p>피스가 빠졌다고 해서 너무 걱정하지 않으셔도 됩니다.</p>
+        <p><b>빠진 피스는 버리지 마시고 그대로 보관</b>해 주세요.</p>
+        <p>A/S 방문 시 상태를 확인한 후 다시 연결해 드립니다.</p>
+      </div>
+    </section>
 
-        <div class="jhPointCards">
+    <section class="sect">
+      <div class="sect-h"><span class="idx">06</span><span class="t">무상 A/S 안내</span><span class="rule"></span></div>
+      <div class="item">
+        <p>시술 후 <b>14일 이내, 최대 10가닥까지</b> 무상 A/S가 가능합니다.</p>
+        <p>정상적인 생활과 관리 과정에서 자연스럽게 느슨해지거나 빠진 피스에 한하여 무상 A/S가 적용됩니다.</p>
+      </div>
+      <div class="item caution">
+        <span class="cap"><span class="dot"></span>주의사항</span>
+        <p>무리하게 잡아당기거나 빗질 및 고데기 사용 중 연결 부위를 손상한 경우, 임의로 피스를 제거한 경우 등 고객님의 부주의로 인해 손상되거나 빠진 피스는 무상 A/S 대상에서 제외될 수 있습니다.</p>
+        <p>무상 A/S 기간 또는 기준을 초과한 경우에는 상태와 수량에 따라 추가 비용이 발생할 수 있습니다.</p>
+        <p><b>빠진 피스는 버리지 마시고 꼭 보관</b>해 주세요.</p>
+      </div>
+    </section>
+
+            <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🧴</div>
-        <div class="jhPointText"><h4>STEP 1 스트레이트</h4><p>모발 결에 맞는 스트레이트 관리 방법을 안내해요.</p></div>
+        <div class="jhPointText"><h4>STEP 1 샴푸</h4><p>붙임머리를 오래 유지하는 올바른 샴푸 방법을 안내해요.</p></div>
       </div>
       <div class="jhPointCard blue">
-        <div class="jhPointIcon">🌊</div>
-        <div class="jhPointText"><h4>STEP 2 웨이브</h4><p>웨이브 스타일 유지를 위한 관리법을 알려드려요.</p></div>
+        <div class="jhPointIcon">💨</div>
+        <div class="jhPointText"><h4>STEP 2 건조</h4><p>연결 부위까지 완전히 건조하는 방법을 알려드려요.</p></div>
       </div>
       <div class="jhPointCard gold">
         <div class="jhPointIcon">✨</div>
-        <div class="jhPointText"><h4>STEP 3 마무리</h4><p>마무리 손질까지 꼼꼼하게 안내해 드립니다.</p></div>
+        <div class="jhPointText"><h4>STEP 3 스타일링</h4><p>스트레이트·웨이브 손질법을 꼼꼼하게 안내해 드립니다.</p></div>
       </div>
       <div class="jhPointCard blue">
         <div class="jhPointIcon">📞</div>
@@ -6252,7 +6416,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <div class="closing">
       <div class="q-mark">“</div>
-      <p class="q">신중한 예약 하나가 더 좋은 시술로 이어집니다.</p>
+      <p class="q">좋은 시술은 여유 있는 예약에서 시작됩니다.</p>
       <p>궁금하신 점은 언제든 편하게 카톡으로 문의해 주세요.</p>
       <div class="sign" style="display:flex;flex-direction:column;align-items:center;"><span class="signTrail"><span class="stLetter">J</span><span class="stLetter">.</span><span class="stLetter">J</span><span class="stLetter">O</span><span class="stLetter">O</span><span class="stLetter">H</span><span class="stLetter">Y</span><span class="stLetter">U</span><span class="stLetter">N</span></span><span class="signTrail2"><span class="stLetter">L</span><span class="stLetter">U</span><span class="stLetter">X</span><span class="stLetter">U</span><span class="stLetter">R</span><span class="stLetter">Y</span><span class="stLetter" style="margin-left:8px;">E</span><span class="stLetter">X</span><span class="stLetter">T</span><span class="stLetter">E</span><span class="stLetter">N</span><span class="stLetter">S</span><span class="stLetter">I</span><span class="stLetter">O</span><span class="stLetter">N</span><span class="stLetter">S</span></span></div>
     </div>
