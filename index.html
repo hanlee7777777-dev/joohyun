@@ -66,7 +66,9 @@
 /* IMPORTANT POINT CARDS */
 .jhPointCards{display:flex;flex-direction:column;gap:14px;margin:24px 0}
 .jhPointCard{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:16px;border:1.5px solid;transition:transform .15s ease;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-.jhPointCard:active{transform:scale(1.12)}
+.jhPointCard:active{transform:scale(1.2)}
+.closing{transition:transform .15s ease;cursor:pointer}
+.closing:active{transform:scale(1.2)}
 .jhPointCard.gold{background:linear-gradient(135deg,#f7f0fc,#ecdcfa);border-color:#c896ec}
 .jhPointCard.blue{background:linear-gradient(135deg,#fff0f6,#ffe0ec);border-color:#f5a9c8}
 .jhPointCard .jhPointIcon{flex:none;width:52px;height:52px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 3px 8px rgba(0,0,0,.12);animation:jhPointIconShake 2.2s ease-in-out infinite}
@@ -180,7 +182,8 @@ section.hero:after{display:none!important;content:none!important}
 .hero h1{font-size:48px;letter-spacing:-2.4px;line-height:1.04;margin:24px 0 14px;font-weight:1000;text-shadow:0 4px 14px rgba(0,0,0,.45)}
 .hero h1 span{display:block;color:#4ec0ff}
 .hero .slogan{font-size:24px;font-weight:1000;line-height:1.25;margin:0 0 12px;letter-spacing:-1.2px}
-.hero .desc{font-size:15.5px;line-height:1.6;color:#eaf4ff;margin:0 0 20px;font-weight:750}
+.hero .desc{font-size:15.5px;line-height:1.6;color:#eaf4ff;margin:0 0 20px;font-weight:750;transition:transform .15s ease;cursor:pointer}
+.hero .desc:active{transform:scale(1.2)}
 .heroBtns{display:grid;gap:10px;margin-top:18px;position:relative;z-index:2}
 .heroBtns a{height:56px;border-radius:14px;text-decoration:none;display:flex;align-items:center;justify-content:center;font-weight:1000;font-size:18px}
 .heroBtns .primary{background:#fff;color:#082243}
@@ -4120,6 +4123,9 @@ body.subOpen main.mobile{display:none}
   box-shadow:0 10px 26px rgba(21,39,68,.28)!important;
   position:relative;
   z-index:5;
+}
+#subPage7.equip-photo:active,#subPage7 .equip-photo:active{
+  transform:scale(1.2)!important;
 }
 [id^="subPage"] figure.ba-photo:active img{
   transform:scale(1.12)!important;
