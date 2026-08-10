@@ -4608,7 +4608,7 @@ body.subOpen main.mobile{display:none}
       sp17_form_note:"For KakaoTalk, the chat window will open — please paste the copied inquiry text.",
       sp17_ph_name:"Name",
       sp17_ph_phone:"Contact (e.g. 010-1234-5678)",
-      sp17_ph_color:"Current hair color (e.g. black, brown, etc.)",
+      sp17_ph_color:"Current hair color (e.g. black, brown, retouch, removal, etc.)",
       sp17_opt_length0:"Select current hair length",
       sp17_opt_length1:"Short cut",
       sp17_opt_length2:"Chin-length",
@@ -4640,6 +4640,12 @@ body.subOpen main.mobile{display:none}
       sp17_date_later:"I'll decide the date after consultation",
       sp17_opt_style3:"Retouch",
       sp17_opt_style4:"Removal",
+      sp17_opt_length5:"Retouch",
+      sp17_opt_length6:"Removal",
+      sp17_opt_vol4:"Retouch",
+      sp17_opt_vol5:"Removal",
+      sp17_opt_dlen5:"Retouch",
+      sp17_opt_dlen6:"Removal",
     },
     vi:{
       heroTop:"Volume tự nhiên,",
@@ -5038,7 +5044,7 @@ body.subOpen main.mobile{display:none}
       sp17_form_note:"Với KakaoTalk, cửa sổ chat sẽ mở ra — vui lòng dán nội dung liên hệ đã sao chép.",
       sp17_ph_name:"Họ tên",
       sp17_ph_phone:"Số điện thoại (VD: 010-1234-5678)",
-      sp17_ph_color:"Màu tóc hiện tại (VD: đen, nâu, v.v.)",
+      sp17_ph_color:"Màu tóc hiện tại (VD: đen, nâu, chỉnh sửa lại, tháo gỡ, v.v.)",
       sp17_opt_length0:"Chọn độ dài tóc hiện tại",
       sp17_opt_length1:"Cắt ngắn",
       sp17_opt_length2:"Ngang cằm",
@@ -5070,6 +5076,12 @@ body.subOpen main.mobile{display:none}
       sp17_date_later:"Sẽ quyết định ngày sau khi tư vấn",
       sp17_opt_style3:"Chỉnh sửa lại",
       sp17_opt_style4:"Tháo gỡ",
+      sp17_opt_length5:"Chỉnh sửa lại",
+      sp17_opt_length6:"Tháo gỡ",
+      sp17_opt_vol4:"Chỉnh sửa lại",
+      sp17_opt_vol5:"Tháo gỡ",
+      sp17_opt_dlen5:"Chỉnh sửa lại",
+      sp17_opt_dlen6:"Tháo gỡ",
     },
     ja:{
       heroTop:"自然なボリューム、",
@@ -5468,7 +5480,7 @@ body.subOpen main.mobile{display:none}
       sp17_form_note:"カカオトークの場合、チャット画面が開きますので、コピーされた問い合わせ内容を貼り付けてください。",
       sp17_ph_name:"お名前",
       sp17_ph_phone:"ご連絡先（例: 010-1234-5678）",
-      sp17_ph_color:"現在の髪色（例: 黒、茶色など）",
+      sp17_ph_color:"現在の髪色（例: 黒、茶色、リタッチ、撤去など）",
       sp17_opt_length0:"現在の髪の長さを選択",
       sp17_opt_length1:"ショート",
       sp17_opt_length2:"顎ライン",
@@ -5500,6 +5512,12 @@ body.subOpen main.mobile{display:none}
       sp17_date_later:"相談後に予約日を決めます",
       sp17_opt_style3:"リタッチ",
       sp17_opt_style4:"撤去",
+      sp17_opt_length5:"リタッチ",
+      sp17_opt_length6:"撤去",
+      sp17_opt_vol4:"リタッチ",
+      sp17_opt_vol5:"撤去",
+      sp17_opt_dlen5:"リタッチ",
+      sp17_opt_dlen6:"撤去",
     },
     th:{
       heroTop:"วอลลุ่มธรรมชาติ,",
@@ -5898,7 +5916,7 @@ body.subOpen main.mobile{display:none}
       sp17_form_note:"สำหรับ KakaoTalk หน้าต่างแชทจะเปิดขึ้น — โปรดวางข้อความที่คัดลอกไว้",
       sp17_ph_name:"ชื่อ",
       sp17_ph_phone:"เบอร์ติดต่อ (เช่น 010-1234-5678)",
-      sp17_ph_color:"สีผมปัจจุบัน (เช่น ดำ, น้ำตาล ฯลฯ)",
+      sp17_ph_color:"สีผมปัจจุบัน (เช่น ดำ, น้ำตาล, รีทัช, ถอดออก ฯลฯ)",
       sp17_opt_length0:"เลือกความยาวผมปัจจุบัน",
       sp17_opt_length1:"สั้น",
       sp17_opt_length2:"ระดับคาง",
@@ -5930,6 +5948,12 @@ body.subOpen main.mobile{display:none}
       sp17_date_later:"จะกำหนดวันหลังปรึกษา",
       sp17_opt_style3:"รีทัช",
       sp17_opt_style4:"ถอดออก",
+      sp17_opt_length5:"รีทัช",
+      sp17_opt_length6:"ถอดออก",
+      sp17_opt_vol4:"รีทัช",
+      sp17_opt_vol5:"ถอดออก",
+      sp17_opt_dlen5:"รีทัช",
+      sp17_opt_dlen6:"ถอดออก",
     }
   };
 
@@ -7376,20 +7400,26 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_length2">턱단발</option>
             <option data-i18n="sp17_opt_length3">쇄골기장</option>
             <option data-i18n="sp17_opt_length4">가슴기장</option>
+            <option data-i18n="sp17_opt_length5">리터치</option>
+            <option data-i18n="sp17_opt_length6">제거</option>
           </select>
           <select id="jhInqVolume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:15px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
             <option data-i18n="sp17_opt_vol1">적음</option>
             <option data-i18n="sp17_opt_vol2">보통</option>
             <option data-i18n="sp17_opt_vol3">많음</option>
+            <option data-i18n="sp17_opt_vol4">리터치</option>
+            <option data-i18n="sp17_opt_vol5">제거</option>
           </select>
-          <input type="text" id="jhInqColor" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:15px;background:#f2f2f2;">
+          <input type="text" id="jhInqColor" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:15px;background:#f2f2f2;">
           <select id="jhInqDesiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:15px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
             <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
             <option data-i18n="sp17_opt_dlen2">허리선</option>
             <option data-i18n="sp17_opt_dlen3">배꼽선</option>
             <option data-i18n="sp17_opt_dlen4">골반선</option>
+            <option data-i18n="sp17_opt_dlen5">리터치</option>
+            <option data-i18n="sp17_opt_dlen6">제거</option>
           </select>
           <select id="jhInqStyle" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:15px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
