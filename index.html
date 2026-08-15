@@ -6243,6 +6243,78 @@ document.addEventListener('DOMContentLoaded', function(){
 <main>
   <div class="wrap">
 
+        <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">💇‍♀️</div>
@@ -6366,7 +6438,79 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="ic">🔧</div>
       <div><b>숙련된 전문 기술진</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">다양한 차종의 시공 경험을 갖춘 전문가가 직접 시공합니다</span></div>
     </div>
-        <div class="jhPointCards">
+            <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🚗</div>
         <div class="jhPointText"><h4>무료 출장 복원</h4><p>차량이 있는 곳으로 직접 출장하여 복원해 드립니다.</p></div>
@@ -6497,7 +6641,79 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="ic">🚙</div>
       <div><b>모든 부위 복원 가능</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">앞유리뿐 아니라 트렁크·사이드 유리까지 복원해 드립니다</span></div>
     </div>
-        <div class="jhPointCards">
+            <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🔧</div>
         <div class="jhPointText"><h4>정밀 손상 진단</h4><p>트렁크 유압 실린더 손상 원인을 정확히 파악합니다.</p></div>
@@ -6604,7 +6820,79 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
 
-        <div class="jhPointCards">
+            <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🪡</div>
         <div class="jhPointText"><h4 data-i18n="p7Pc1T">베김 없는 편안함</h4><p data-i18n="p7Pc1D">도구를 쓰지 않아 두피에 이물감이나 당김이 거의 없습니다.</p></div>
@@ -6759,6 +7047,78 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </section>
 
+        <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">👑</div>
@@ -6902,7 +7262,79 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
 
-        <div class="jhPointCards">
+            <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🎓</div>
         <div class="jhPointText"><h4>정화예술대학교 외래교수</h4><p>현직 교수로 후학 양성에도 힘쓰고 있습니다.</p></div>
@@ -7239,7 +7671,79 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </section>
 
-            <div class="jhPointCards">
+                <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🧵</div>
         <div class="jhPointText"><h4 data-i18n="p10Pc1T">경계선 걱정 없이</h4><p data-i18n="p10Pc1D">기존 모발의 길이와 숱을 확인하고 필요한 부분만 가볍게 질감 처리하여 붙임머리와 자연스럽게 연결해 드립니다.</p></div>
@@ -7402,7 +7906,79 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </section>
 
-            <div class="jhPointCards">
+                <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🧴</div>
         <div class="jhPointText"><h4 data-i18n="sp14_step1_short">STEP 1 샴푸</h4><p data-i18n-html="sp14_pc_p1">붙임머리를 오래 유지하는 올바른 샴푸 방법을 안내해요.</p></div>
@@ -7481,24 +8057,27 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="sect-h"><span class="idx">01</span><span class="t" data-i18n="sp17_s1_t">문의 양식</span><span class="rule"></span></div>
       <div class="item">
         <h2 data-i18n="sp17_s1_h2">아래 순서대로 남겨주시면 더욱 빠르게 확인할 수 있어요</h2>
-        <p style="margin-top:12px;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 <b>더 정확하고 빠른 상담이 가능합니다.</b></p>
       </div>
-      <style>#jhInqName:focus::placeholder,#jhInqPhone:focus::placeholder,#jhInqColor:focus::placeholder,#jhInqNote:focus::placeholder{color:transparent;}
-      #jhInqName,#jhInqPhone,#jhInqDate,#jhInqTime,#jhInqLength,#jhInqVolume,#jhInqColor,#jhInqDesiredLength,#jhInqStyle,#jhInqNote,#jhInqRoute{touch-action:manipulation;}</style>
-      <div class="item" style="margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <style>.jhInqFormPanel [data-role]:focus::placeholder{color:transparent;}
+      .jhInqFormPanel input,.jhInqFormPanel select,.jhInqFormPanel textarea{touch-action:manipulation;}
+      .jhFormNoZoom.item,.jhFormNoZoom.item:active{transform:none!important;box-shadow:0 4px 14px rgba(236,72,153,0.10)!important;}
+      .jhInqToggleBtn{width:100%;margin-top:14px;padding:16px 8px;border:1.5px solid #ec4899;border-radius:14px;background:#ec4899;color:#fff;font-weight:800;font-size:16px;box-shadow:0 4px 12px rgba(236,72,153,0.28);cursor:pointer;}
+      .jhInqToggleBtn[data-open="true"]{background:#fff;color:#ec4899;}</style>
+      <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+      <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
         <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <input type="text" id="jhInqName" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
-          <input type="tel" id="jhInqPhone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+          <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+          <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
           <div style="display:flex;gap:8px;">
-            <input type="date" id="jhInqDate" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-            <input type="time" id="jhInqTime" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+            <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+            <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
           </div>
           <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
-            <input type="checkbox" id="jhInqDateLater" onchange="jhToggleDateLater()" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+            <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
             <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
           </label>
-          <select id="jhInqLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
             <option data-i18n="sp17_opt_length1">숏컷</option>
             <option data-i18n="sp17_opt_length2">턱단발</option>
@@ -7507,7 +8086,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_length5">리터치</option>
             <option data-i18n="sp17_opt_length6">제거</option>
           </select>
-          <select id="jhInqVolume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
             <option data-i18n="sp17_opt_vol1">적음</option>
             <option data-i18n="sp17_opt_vol2">보통</option>
@@ -7515,8 +8094,8 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_vol4">리터치</option>
             <option data-i18n="sp17_opt_vol5">제거</option>
           </select>
-          <input type="text" id="jhInqColor" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
-          <select id="jhInqDesiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+          <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
             <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
             <option data-i18n="sp17_opt_dlen2">허리선</option>
@@ -7525,19 +8104,19 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_dlen5">리터치</option>
             <option data-i18n="sp17_opt_dlen6">제거</option>
           </select>
-          <select id="jhInqStyle" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
             <option data-i18n="sp17_opt_style1">전체</option>
             <option data-i18n="sp17_opt_style2">포인트</option>
             <option data-i18n="sp17_opt_style3">리터치</option>
             <option data-i18n="sp17_opt_style4">제거</option>
           </select>
-          <textarea id="jhInqNote" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+          <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
           <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
-            <input type="checkbox" id="jhInqNoteNone" onchange="jhToggleNoteNone()" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+            <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
             <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
           </label>
-          <select id="jhInqRoute" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
             <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
             <option data-i18n="sp17_opt_route1">인스타그램</option>
             <option data-i18n="sp17_opt_route2">블로그</option>
@@ -7546,14 +8125,15 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_route5">없음</option>
           </select>
         </div>
-        <button type="button" onclick="jhResetInquiry()" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+        <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
         <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
-          <button type="button" onclick="jhSendInquiry('line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
-          <button type="button" onclick="jhSendInquiry('kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
-          <button type="button" onclick="jhSendInquiry('share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+          <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+          <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+          <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
         </div>
-        <p style="margin-top:10px;font-size:13px;color:#8a8a8a;" data-i18n="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
-        <p style="margin-top:6px;font-size:13px;color:#8a8a8a;" data-i18n="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+        <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+        <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+        <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
       </div>
     </section>
 
@@ -7681,28 +8261,82 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 
 <script>
-function jhResetInquiry(){
-  var ids = ['jhInqName','jhInqPhone','jhInqDate','jhInqTime','jhInqLength','jhInqVolume','jhInqColor','jhInqDesiredLength','jhInqStyle','jhInqNote','jhInqRoute'];
-  ids.forEach(function(id){
-    var el = document.getElementById(id);
+var jhScrollCancelled = true;
+var jhScrollRAF = null;
+function jhCancelAutoScroll(){
+  jhScrollCancelled = true;
+  if(jhScrollRAF){ cancelAnimationFrame(jhScrollRAF); jhScrollRAF = null; }
+}
+['wheel','touchstart','touchmove','pointerdown','keydown'].forEach(function(evt){
+  window.addEventListener(evt, jhCancelAutoScroll, {passive:true});
+});
+function jhSmoothScrollTo(targetY, duration){
+  jhCancelAutoScroll();
+  jhScrollCancelled = false;
+  var startY = window.pageYOffset;
+  var diff = targetY - startY;
+  var startTime = null;
+  function step(ts){
+    if(jhScrollCancelled) return;
+    if(!startTime) startTime = ts;
+    var progress = Math.min((ts - startTime) / duration, 1);
+    var ease = progress < 0.5 ? 2*progress*progress : 1 - Math.pow(-2*progress+2, 2) / 2;
+    window.scrollTo(0, startY + diff * ease);
+    if(progress < 1){
+      jhScrollRAF = requestAnimationFrame(step);
+    } else {
+      jhScrollCancelled = true;
+    }
+  }
+  jhScrollRAF = requestAnimationFrame(step);
+}
+function jhToggleInquiryForm(btn){
+  var panel = btn.nextElementSibling;
+  if(!panel) return;
+  var opening = panel.style.display !== 'block';
+  if(opening){
+    panel.style.display = 'block';
+    btn.textContent = '간편 문의하기 - 닫기';
+    btn.setAttribute('data-open', 'true');
+    requestAnimationFrame(function(){
+      var sub = btn.closest('[id^="subPage"]');
+      var navEl = sub ? sub.querySelector('.nav') : null;
+      var offset = navEl ? navEl.offsetHeight : 0;
+      var rect = btn.getBoundingClientRect();
+      var targetY = Math.max(window.pageYOffset + rect.top - offset, 0);
+      jhSmoothScrollTo(targetY, 450);
+    });
+  } else {
+    panel.style.display = 'none';
+    btn.textContent = '간편 문의하기 펼치기';
+    btn.setAttribute('data-open', 'false');
+  }
+}
+function jhResetInquiry(btn){
+  var panel = btn.closest('.jhInqFormPanel');
+  if(!panel) return;
+  var roles = ['name','phone','date','time','length','volume','color','desiredLength','style','note','route'];
+  roles.forEach(function(role){
+    var el = panel.querySelector('[data-role="' + role + '"]');
     if(el) el.value = '';
   });
-  ['jhInqDateLater','jhInqNoteNone'].forEach(function(id){
-    var el = document.getElementById(id);
+  ['dateLater','noteNone'].forEach(function(role){
+    var el = panel.querySelector('[data-role="' + role + '"]');
     if(el) el.checked = false;
   });
-  var d = document.getElementById('jhInqDate');
-  var t = document.getElementById('jhInqTime');
+  var d = panel.querySelector('[data-role="date"]');
+  var t = panel.querySelector('[data-role="time"]');
   if(d){ d.disabled = false; d.style.opacity = '1'; }
   if(t){ t.disabled = false; t.style.opacity = '1'; }
-  var ta = document.getElementById('jhInqNote');
+  var ta = panel.querySelector('[data-role="note"]');
   if(ta){ ta.disabled = false; ta.style.opacity = '1'; }
 }
-function jhToggleDateLater(){
-  var cb = document.getElementById('jhInqDateLater');
-  var d = document.getElementById('jhInqDate');
-  var t = document.getElementById('jhInqTime');
-  if(!cb || !d || !t) return;
+function jhToggleDateLater(cb){
+  var panel = cb.closest('.jhInqFormPanel');
+  if(!panel) return;
+  var d = panel.querySelector('[data-role="date"]');
+  var t = panel.querySelector('[data-role="time"]');
+  if(!d || !t) return;
   if(cb.checked){
     d.value = '';
     t.value = '';
@@ -7717,10 +8351,11 @@ function jhToggleDateLater(){
     t.style.opacity = '1';
   }
 }
-function jhToggleNoteNone(){
-  var cb = document.getElementById('jhInqNoteNone');
-  var ta = document.getElementById('jhInqNote');
-  if(!cb || !ta) return;
+function jhToggleNoteNone(cb){
+  var panel = cb.closest('.jhInqFormPanel');
+  if(!panel) return;
+  var ta = panel.querySelector('[data-role="note"]');
+  if(!ta) return;
   if(cb.checked){
     ta.value = '';
     ta.disabled = true;
@@ -7730,27 +8365,29 @@ function jhToggleNoteNone(){
     ta.style.opacity = '1';
   }
 }
-function jhSendInquiry(type){
-  var g = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-  var name = g('jhInqName');
-  var phone = g('jhInqPhone');
-  var dateLater = document.getElementById('jhInqDateLater');
+function jhSendInquiry(btn, type){
+  var panel = btn.closest('.jhInqFormPanel');
+  if(!panel) return;
+  var g = function(role){ var el = panel.querySelector('[data-role="' + role + '"]'); return el ? el.value.trim() : ''; };
+  var name = g('name');
+  var phone = g('phone');
+  var dateLater = panel.querySelector('[data-role="dateLater"]');
   var date, time;
   if(dateLater && dateLater.checked){
     date = '상담 후 예약 날짜 정할게요';
     time = '';
   } else {
-    date = g('jhInqDate');
-    time = g('jhInqTime');
+    date = g('date');
+    time = g('time');
   }
-  var length = g('jhInqLength');
-  var volume = g('jhInqVolume');
-  var color = g('jhInqColor');
-  var desiredLength = g('jhInqDesiredLength');
-  var style = g('jhInqStyle');
-  var noteNone = document.getElementById('jhInqNoteNone');
-  var note = (noteNone && noteNone.checked) ? '없음' : g('jhInqNote');
-  var route = g('jhInqRoute');
+  var length = g('length');
+  var volume = g('volume');
+  var color = g('color');
+  var desiredLength = g('desiredLength');
+  var style = g('style');
+  var noteNone = panel.querySelector('[data-role="noteNone"]');
+  var note = (noteNone && noteNone.checked) ? '없음' : g('note');
+  var route = g('route');
 
   if(!name || !phone){
     alert('성함과 연락처는 꼭 입력해 주세요!');
@@ -8010,7 +8647,79 @@ function jhDoSend(type, text){
 
     
 
-        <div class="jhPointCards">
+            <button type="button" class="jhInqToggleBtn" data-open="false" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:0 0 14px;font-size:17px;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option data-i18n="sp17_opt_length1">숏컷</option>
+          <option data-i18n="sp17_opt_length2">턱단발</option>
+          <option data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option data-i18n="sp17_opt_length4">가슴기장</option>
+          <option data-i18n="sp17_opt_length5">리터치</option>
+          <option data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option data-i18n="sp17_opt_vol1">적음</option>
+          <option data-i18n="sp17_opt_vol2">보통</option>
+          <option data-i18n="sp17_opt_vol3">많음</option>
+          <option data-i18n="sp17_opt_vol4">리터치</option>
+          <option data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option data-i18n="sp17_opt_dlen2">허리선</option>
+          <option data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option data-i18n="sp17_opt_dlen4">골반선</option>
+          <option data-i18n="sp17_opt_dlen5">리터치</option>
+          <option data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option data-i18n="sp17_opt_style1">전체</option>
+          <option data-i18n="sp17_opt_style2">포인트</option>
+          <option data-i18n="sp17_opt_style3">리터치</option>
+          <option data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option data-i18n="sp17_opt_route1">인스타그램</option>
+          <option data-i18n="sp17_opt_route2">블로그</option>
+          <option data-i18n="sp17_opt_route3">지인 소개</option>
+          <option data-i18n="sp17_opt_route4">기타</option>
+          <option data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #c93478;border-radius:12px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(236,72,153,0.30);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">카카오톡은 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div>
+    <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">🌙</div>
         <div class="jhPointText"><h4>24시간 야간 시술 가능</h4><p>늦은 시간에도 편하게 시술받으실 수 있어요.</p></div>
