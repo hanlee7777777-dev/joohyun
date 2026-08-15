@@ -8627,7 +8627,19 @@ function jhShowAccountModal(type, text){
 
 function jhDoSend(type, text){
   if(type === 'line'){
-    window.open('https://line.me/R/msg/text/?' + encodeURIComponent(text), '_blank');
+    var openLine = function(){ window.open('https://line.me/ti/p/Wb_-Ubr2Pr', '_blank'); };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        alert('문의 내용이 복사되었습니다! LINE 채팅창이 열리면 붙여넣기 해주세요.');
+        openLine();
+      }).catch(function(){
+        window.prompt('아래 내용을 복사한 뒤 LINE에 붙여넣어 주세요:', text);
+        openLine();
+      });
+    } else {
+      window.prompt('아래 내용을 복사한 뒤 LINE에 붙여넣어 주세요:', text);
+      openLine();
+    }
   } else if(type === 'kakao'){
     var openKakao = function(){ window.open('https://pf.kakao.com/_DQYZT/chat', '_blank'); };
     if(navigator.clipboard && navigator.clipboard.writeText){
