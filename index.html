@@ -9204,8 +9204,7 @@ function jhDoSend(type, text){
     var openLine = function(){ window.open('https://line.me/ti/p/Wb_-Ubr2Pr', '_blank'); };
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(text).then(function(){
-        alert('문의 내용이 복사되었습니다! LINE 채팅창이 열리면 붙여넣기 해주세요.');
-        openLine();
+        jhShowCopiedConfirm('line', openLine);
       }).catch(function(){
         window.prompt('아래 내용을 복사한 뒤 LINE에 붙여넣어 주세요:', text);
         openLine();
@@ -9218,8 +9217,7 @@ function jhDoSend(type, text){
     var openKakao = function(){ window.open('https://pf.kakao.com/_DQYZT/chat', '_blank'); };
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(text).then(function(){
-        alert('문의 내용이 복사되었습니다! 카카오톡 채팅창이 열리면 붙여넣기 해주세요.');
-        openKakao();
+        jhShowCopiedConfirm('kakao', openKakao);
       }).catch(function(){
         window.prompt('아래 내용을 복사한 뒤 카카오톡에 붙여넣어 주세요:', text);
         openKakao();
@@ -10529,6 +10527,49 @@ document.addEventListener('click', function(e){
     document.getElementById('jhConfirmOverlay').style.display = 'none';
     if(pendingBtn && window.jhResetInquiry) jhResetInquiry(pendingBtn);
     pendingBtn = null;
+  };
+})();
+</script>
+<div id="jhCopiedOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:99999;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:18px;width:min(320px,90vw);padding:26px 22px 20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.25);">
+    <p id="jhCopiedMsg" style="margin:0 0 22px;font-size:16px;font-weight:700;color:#1a2436;line-height:1.5;"></p>
+    <div style="display:flex;gap:10px;">
+      <button type="button" id="jhCopiedCancelBtn" onclick="jhCopiedCancel()" style="flex:1;padding:13px 8px;border:1.5px solid #ccc;border-radius:12px;background:#f5f5f5;color:#555;font-weight:700;font-size:15px;cursor:pointer;"></button>
+      <button type="button" id="jhCopiedOkBtn" onclick="jhCopiedOk()" style="flex:1;padding:13px 8px;border:none;border-radius:12px;background:#ec4899;color:#fff;font-weight:700;font-size:15px;cursor:pointer;"></button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var jhCopiedLocale = {
+    ko:{line:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', kakao:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', ok:'확인', cancel:'취소'},
+    en:{line:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', kakao:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', ok:'OK', cancel:'Cancel'},
+    vi:{line:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', kakao:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', ok:'Xác nhận', cancel:'Hủy'},
+    ja:{line:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', kakao:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', ok:'確認', cancel:'キャンセル'},
+    th:{line:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', kakao:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', ok:'ยืนยัน', cancel:'ยกเลิก'}
+  };
+  function jhCurLang(){
+    var l = null;
+    try{ l = localStorage.getItem('jhLang'); }catch(e){}
+    return (l && jhCopiedLocale[l]) ? l : 'ko';
+  }
+  var pendingAction = null;
+  window.jhShowCopiedConfirm = function(kind, onConfirm){
+    pendingAction = onConfirm;
+    var loc = jhCopiedLocale[jhCurLang()];
+    document.getElementById('jhCopiedMsg').textContent = loc[kind] || loc.line;
+    document.getElementById('jhCopiedOkBtn').textContent = loc.ok;
+    document.getElementById('jhCopiedCancelBtn').textContent = loc.cancel;
+    document.getElementById('jhCopiedOverlay').style.display = 'flex';
+  };
+  window.jhCopiedCancel = function(){
+    document.getElementById('jhCopiedOverlay').style.display = 'none';
+    pendingAction = null;
+  };
+  window.jhCopiedOk = function(){
+    document.getElementById('jhCopiedOverlay').style.display = 'none';
+    if(pendingAction) pendingAction();
+    pendingAction = null;
   };
 })();
 </script>
