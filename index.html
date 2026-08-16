@@ -4345,7 +4345,7 @@ document.addEventListener('touchend', function(e){
       sp17b_b17:"Parking Info:",
       sp17b_b18:"Public Transit",
       sp17b_bank:"Shinhan Bank",
-      sp17b_holder:"Account Holder: Han Ju-hyun",
+      sp17b_holder:"Account Holder: 한주현",
       sp14_b1:"Shampoo while standing, like showering",
       sp14_b2:"The connection point may loosen and come down a bit faster.",
       sp14_b3:"Rubbing or scrubbing hair strands together can cause tangling, so",
@@ -5003,7 +5003,7 @@ document.addEventListener('touchend', function(e){
       sp17b_b17:"Hướng dẫn đỗ xe:",
       sp17b_b18:"Phương tiện công cộng",
       sp17b_bank:"Ngân hàng Shinhan",
-      sp17b_holder:"Chủ tài khoản: Han Ju-hyun",
+      sp17b_holder:"Chủ tài khoản: 한주현",
       sp14_b1:"Gội đầu trong tư thế đứng như khi tắm vòi sen",
       sp14_b2:"Điểm nối có thể lỏng ra và tụt xuống nhanh hơn một chút.",
       sp14_b3:"Chà xát hoặc cọ mạnh các sợi tóc với nhau có thể gây rối, vì vậy",
@@ -5661,7 +5661,7 @@ document.addEventListener('touchend', function(e){
       sp17b_b17:"駐車案内：",
       sp17b_b18:"公共交通機関",
       sp17b_bank:"新韓銀行",
-      sp17b_holder:"口座名義：ハン・ジュヒョン",
+      sp17b_holder:"口座名義：한주현",
       sp14_b1:"シャワーのように立ってシャンプー",
       sp14_b2:"連結部分が少し早く緩んで下がってくることがあります。",
       sp14_b3:"髪同士をこすったり強くこすると絡まる可能性があるため",
@@ -6319,7 +6319,7 @@ document.addEventListener('touchend', function(e){
       sp17b_b17:"ข้อมูลที่จอดรถ:",
       sp17b_b18:"ขนส่งสาธารณะ",
       sp17b_bank:"ธนาคารชินฮัน",
-      sp17b_holder:"ชื่อบัญชี: ฮันจูฮยอน",
+      sp17b_holder:"ชื่อบัญชี: 한주현",
       sp14_b1:"สระผมในท่ายืนเหมือนอาบน้ำฝักบัว",
       sp14_b2:"จุดเชื่อมต่ออาจหลวมและหลุดลงมาเร็วขึ้นเล็กน้อย",
       sp14_b3:"การถูหรือขยี้ผมแรงๆ อาจทำให้พันกันได้ ดังนั้น",
@@ -9119,6 +9119,19 @@ function jhSendInquiry(btn, type){
   jhShowAccountModal(type, text);
 }
 
+var jhAcctMsgs = {
+  ko:{title:'예약금 입금 계좌 안내',desc:'문의 확인 후 예약금 10만원 입금해 주시면 예약이 최종 확정됩니다.',copy:'계좌번호 복사',copied:'복사되었습니다!',confirm:'확인, 문의 보내기',close:'닫기'},
+  en:{title:'Deposit Account Info',desc:"After confirming your inquiry, please deposit an $80 reservation deposit to finalize your booking.",copy:'Copy Account Number',copied:'Copied!',confirm:'Confirm & Send Inquiry',close:'Close'},
+  vi:{title:'Thông Tin Tài Khoản Đặt Cọc',desc:'Sau khi xác nhận yêu cầu, vui lòng đặt cọc 2 triệu để hoàn tất đặt lịch.',copy:'Sao Chép Số Tài Khoản',copied:'Đã sao chép!',confirm:'Xác Nhận & Gửi Yêu Cầu',close:'Đóng'},
+  ja:{title:'デポジット振込口座のご案内',desc:'お問い合わせ確認後、デポジット1万円をお振込みいただくと予約が最終確定します。',copy:'口座番号をコピー',copied:'コピーしました！',confirm:'確認・問い合わせ送信',close:'閉じる'},
+  th:{title:'ข้อมูลบัญชีสำหรับมัดจำ',desc:'หลังจากยืนยันการสอบถามแล้ว กรุณาโอนเงินมัดจำ 2,600 บาทเพื่อยืนยันการจองขั้นสุดท้าย',copy:'คัดลอกเลขบัญชี',copied:'คัดลอกแล้ว!',confirm:'ยืนยันและส่งคำถาม',close:'ปิด'}
+};
+function jhAcctMsg(key){
+  var lang = null;
+  try{ lang = localStorage.getItem('jhLang'); }catch(e){}
+  var dict = (lang && jhAcctMsgs[lang]) ? jhAcctMsgs[lang] : jhAcctMsgs.ko;
+  return dict[key] || jhAcctMsgs.ko[key];
+}
 function jhShowAccountModal(type, text){
   var overlay = document.createElement('div');
   overlay.id = 'jhAccountOverlay';
@@ -9130,44 +9143,44 @@ function jhShowAccountModal(type, text){
   var closeBtn = document.createElement('button');
   closeBtn.type = 'button';
   closeBtn.innerHTML = '&times;';
-  closeBtn.setAttribute('aria-label', '닫기');
+  closeBtn.setAttribute('aria-label', jhAcctMsg('close'));
   closeBtn.style.cssText = 'position:absolute;top:10px;right:12px;width:30px;height:30px;border:0;background:transparent;color:#999;font-size:24px;line-height:1;cursor:pointer;';
   closeBtn.onclick = function(){
     document.body.removeChild(overlay);
   };
 
   var title = document.createElement('p');
-  title.textContent = '예약금 입금 계좌 안내';
+  title.textContent = jhAcctMsg('title');
   title.style.cssText = 'font-size:17px;font-weight:800;color:#ec4899;margin:0 0 14px;';
 
   var accBox = document.createElement('div');
   accBox.style.cssText = 'background:#fff5f9;border:1.5px solid #ec4899;border-radius:12px;padding:16px;margin-bottom:16px;';
-  accBox.innerHTML = '<p style="margin:0 0 6px;font-size:15px;color:#555;" data-i18n="sp17b_bank">신한은행</p>'
+  accBox.innerHTML = '<p style="margin:0 0 6px;font-size:15px;color:#555;">' + jhInqBtnText('sp17b_bank', '신한은행') + '</p>'
     + '<p style="margin:0 0 6px;font-size:19px;font-weight:800;color:#1a2436;letter-spacing:0.5px;">110-385-002203</p>'
-    + '<p style="margin:0;font-size:15px;color:#555;" data-i18n="sp17b_holder">예금주: 한주현</p>';
+    + '<p style="margin:0;font-size:15px;color:#555;">' + jhInqBtnText('sp17b_holder', '예금주: 한주현') + '</p>';
 
   var desc = document.createElement('p');
-  desc.textContent = '문의 확인 후 예약금 10만원 입금해 주시면 예약이 최종 확정됩니다.';
-  desc.style.cssText = 'font-size:13px;color:#8a8a8a;margin:0 0 18px;line-height:1.5;';
+  desc.textContent = jhAcctMsg('desc');
+  desc.style.cssText = 'font-size:15px;color:#8a8a8a;margin:0 0 18px;line-height:1.5;';
 
   var btnRow = document.createElement('div');
   btnRow.style.cssText = 'display:flex;gap:8px;';
 
   var copyBtn = document.createElement('button');
-  copyBtn.textContent = '계좌번호 복사';
+  copyBtn.textContent = jhAcctMsg('copy');
   copyBtn.type = 'button';
   copyBtn.style.cssText = 'flex:1;padding:12px;border:1px solid #ddd;border-radius:10px;background:#f7f7f7;color:#333;font-weight:700;font-size:14px;';
   copyBtn.onclick = function(){
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText('110-385-002203').then(function(){
-        copyBtn.textContent = '복사되었습니다!';
-        setTimeout(function(){ copyBtn.textContent = '계좌번호 복사'; }, 1500);
+        copyBtn.textContent = jhAcctMsg('copied');
+        setTimeout(function(){ copyBtn.textContent = jhAcctMsg('copy'); }, 1500);
       });
     }
   };
 
   var confirmBtn = document.createElement('button');
-  confirmBtn.textContent = '확인, 문의 보내기';
+  confirmBtn.textContent = jhAcctMsg('confirm');
   confirmBtn.type = 'button';
   confirmBtn.style.cssText = 'flex:1;padding:12px;border:0;border-radius:10px;background:#ec4899;color:#fff;font-weight:800;font-size:14px;';
   confirmBtn.onclick = function(){
