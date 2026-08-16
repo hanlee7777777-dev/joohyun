@@ -8007,6 +8007,54 @@ function jhInqBtnText(key, koFallback){
   var dict = (lang && window.jhI18N) ? window.jhI18N[lang] : null;
   return (dict && dict[key]) ? dict[key] : koFallback;
 }
+function jhInqStoreKey(){ return 'jhInqFormData'; }
+function jhInqSaveAll(panel){
+  if(!panel) return;
+  var data = {};
+  try{
+    var raw = localStorage.getItem(jhInqStoreKey());
+    if(raw) data = JSON.parse(raw);
+  }catch(e){}
+  panel.querySelectorAll('[data-role]').forEach(function(el){
+    var role = el.getAttribute('data-role');
+    if(!role) return;
+    if(el.type === 'checkbox'){
+      data[role] = el.checked;
+    } else {
+      data[role] = el.value;
+    }
+  });
+  try{ localStorage.setItem(jhInqStoreKey(), JSON.stringify(data)); }catch(e){}
+}
+function jhInqRestoreAll(panel){
+  if(!panel) return;
+  var data = {};
+  try{
+    var raw = localStorage.getItem(jhInqStoreKey());
+    if(raw) data = JSON.parse(raw);
+  }catch(e){}
+  panel.querySelectorAll('[data-role]').forEach(function(el){
+    var role = el.getAttribute('data-role');
+    if(!role || !(role in data)) return;
+    if(el.type === 'checkbox'){
+      el.checked = !!data[role];
+    } else {
+      el.value = data[role];
+    }
+  });
+  var dateLater = panel.querySelector('[data-role="dateLater"]');
+  if(dateLater) jhToggleDateLater(dateLater);
+  var noteNone = panel.querySelector('[data-role="noteNone"]');
+  if(noteNone) jhToggleNoteNone(noteNone);
+}
+document.addEventListener('input', function(e){
+  var panel = e.target.closest ? e.target.closest('.jhInqFormPanel') : null;
+  if(panel && e.target.hasAttribute('data-role')) jhInqSaveAll(panel);
+});
+document.addEventListener('change', function(e){
+  var panel = e.target.closest ? e.target.closest('.jhInqFormPanel') : null;
+  if(panel && e.target.hasAttribute('data-role')) jhInqSaveAll(panel);
+});
 function jhToggleInquiryForm(btn){
   var panel = btn.nextElementSibling;
   if(!panel) return;
@@ -8016,6 +8064,7 @@ function jhToggleInquiryForm(btn){
     btn.setAttribute('data-i18n', 'sp17_inq_close');
     btn.textContent = jhInqBtnText('sp17_inq_close', '간편 문의하기 - 닫기');
     btn.setAttribute('data-open', 'true');
+    jhInqRestoreAll(panel);
   } else {
     panel.style.display = 'none';
     btn.setAttribute('data-i18n', 'sp17_inq_open');
@@ -8024,24 +8073,27 @@ function jhToggleInquiryForm(btn){
   }
 }
 function jhResetInquiry(btn){
-  var panel = btn.closest('.jhInqFormPanel');
-  if(!panel) return;
-  jhClearInqError(panel);
-  var roles = ['name','phone','date','time','length','volume','color','desiredLength','style','note','route'];
-  roles.forEach(function(role){
-    var el = panel.querySelector('[data-role="' + role + '"]');
-    if(el) el.value = '';
+  var current = btn.closest('.jhInqFormPanel');
+  if(!current) return;
+  jhClearInqError(current);
+  document.querySelectorAll('.jhInqFormPanel').forEach(function(panel){
+    var roles = ['name','phone','date','time','length','volume','color','desiredLength','style','note','route'];
+    roles.forEach(function(role){
+      var el = panel.querySelector('[data-role="' + role + '"]');
+      if(el) el.value = '';
+    });
+    ['dateLater','noteNone'].forEach(function(role){
+      var el = panel.querySelector('[data-role="' + role + '"]');
+      if(el) el.checked = false;
+    });
+    var d = panel.querySelector('[data-role="date"]');
+    var t = panel.querySelector('[data-role="time"]');
+    if(d){ d.disabled = false; d.style.opacity = '1'; }
+    if(t){ t.disabled = false; t.style.opacity = '1'; }
+    var ta = panel.querySelector('[data-role="note"]');
+    if(ta){ ta.disabled = false; ta.style.opacity = '1'; }
   });
-  ['dateLater','noteNone'].forEach(function(role){
-    var el = panel.querySelector('[data-role="' + role + '"]');
-    if(el) el.checked = false;
-  });
-  var d = panel.querySelector('[data-role="date"]');
-  var t = panel.querySelector('[data-role="time"]');
-  if(d){ d.disabled = false; d.style.opacity = '1'; }
-  if(t){ t.disabled = false; t.style.opacity = '1'; }
-  var ta = panel.querySelector('[data-role="note"]');
-  if(ta){ ta.disabled = false; ta.style.opacity = '1'; }
+  try{ localStorage.removeItem(jhInqStoreKey()); }catch(e){}
 }
 function jhToggleDateLater(cb){
   var panel = cb.closest('.jhInqFormPanel');
