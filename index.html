@@ -8120,7 +8120,7 @@ function jhSendInquiry(btn, type){
   var route = g('route');
 
   if(!name || !phone){
-    jhShowInqError(panel, '성함과 연락처는 꼭 입력해 주세요!');
+    jhShowInqError(panel, '모든 항목을 입력해 주세요.');
     return;
   }
   if(!(dateLater && dateLater.checked) && (!date || !time)){
