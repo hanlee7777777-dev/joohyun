@@ -8016,14 +8016,6 @@ function jhToggleInquiryForm(btn){
     btn.setAttribute('data-i18n', 'sp17_inq_close');
     btn.textContent = jhInqBtnText('sp17_inq_close', '간편 문의하기 - 닫기');
     btn.setAttribute('data-open', 'true');
-    requestAnimationFrame(function(){
-      var sub = btn.closest('[id^="subPage"]');
-      var navEl = sub ? sub.querySelector('.nav') : null;
-      var offset = (navEl ? navEl.offsetHeight : 0) + 80;
-      var rect = btn.getBoundingClientRect();
-      var targetY = Math.max(window.pageYOffset + rect.top - offset, 0);
-      jhSmoothScrollTo(targetY, 450);
-    });
   } else {
     panel.style.display = 'none';
     btn.setAttribute('data-i18n', 'sp17_inq_open');
