@@ -8142,6 +8142,19 @@ function jhToggleNoteNone(cb){
     ta.style.opacity = '1';
   }
 }
+var jhValMsgs = {
+  ko:{name:'성함을 입력해주세요.',phone:'연락처를 입력해주세요.',dateTime:'희망 날짜와 시간을 입력하시거나, "상담 후 예약 날짜 정할게요"에 체크해주세요!',length:'현재 머리 기장을 선택해 주세요!',volume:'현재 머리숱을 선택해 주세요!',color:'현재 머리 컬러를 입력해 주세요!',desiredLength:'원하시는 기장을 선택해 주세요!',style:'원하시는 스타일을 선택해 주세요!',note:'추가로 남기실 말을 입력하시거나, "추가로 전달할 사항 없어요"에 체크해주세요!',route:'방문 경로를 선택해 주세요!'},
+  en:{name:'Please enter your name.',phone:'Please enter your phone number.',dateTime:"Please enter your preferred date and time, or check \"I'll decide the date after consultation.\"",length:'Please select your current hair length.',volume:'Please select your current hair volume.',color:'Please enter your current hair color.',desiredLength:'Please select your desired length.',style:'Please select your desired style.',note:'Please enter any additional notes, or check "No additional notes."',route:'Please select how you found us.'},
+  vi:{name:'Vui lòng nhập họ tên.',phone:'Vui lòng nhập số điện thoại.',dateTime:'Vui lòng nhập ngày giờ mong muốn, hoặc chọn "Quyết định ngày hẹn sau khi tư vấn."',length:'Vui lòng chọn độ dài tóc hiện tại.',volume:'Vui lòng chọn độ dày tóc hiện tại.',color:'Vui lòng nhập màu tóc hiện tại.',desiredLength:'Vui lòng chọn độ dài mong muốn.',style:'Vui lòng chọn kiểu tóc mong muốn.',note:'Vui lòng nhập nội dung bổ sung, hoặc chọn "Không có nội dung bổ sung."',route:'Vui lòng chọn kênh bạn biết đến chúng tôi.'},
+  ja:{name:'お名前を入力してください。',phone:'連絡先を入力してください。',dateTime:'ご希望の日時を入力するか、「相談後に予約日を決めます」にチェックしてください。',length:'現在の髪の長さを選択してください。',volume:'現在の髪の量を選択してください。',color:'現在の髪の色を入力してください。',desiredLength:'ご希望の長さを選択してください。',style:'ご希望のスタイルを選択してください。',note:'追加のご要望を入力するか、「追加の伝達事項はありません」にチェックしてください。',route:'ご来店のきっかけを選択してください。'},
+  th:{name:'กรุณากรอกชื่อ',phone:'กรุณากรอกเบอร์ติดต่อ',dateTime:'กรุณาระบุวันที่และเวลาที่ต้องการ หรือเลือก "จะตัดสินใจวันที่หลังปรึกษา"',length:'กรุณาเลือกความยาวผมปัจจุบัน',volume:'กรุณาเลือกปริมาณผมปัจจุบัน',color:'กรุณากรอกสีผมปัจจุบัน',desiredLength:'กรุณาเลือกความยาวที่ต้องการ',style:'กรุณาเลือกสไตล์ที่ต้องการ',note:'กรุณากรอกข้อความเพิ่มเติม หรือเลือก "ไม่มีข้อความเพิ่มเติม"',route:'กรุณาเลือกช่องทางที่ทราบข้อมูลร้าน'}
+};
+function jhValMsg(key){
+  var lang = null;
+  try{ lang = localStorage.getItem('jhLang'); }catch(e){}
+  var dict = (lang && jhValMsgs[lang]) ? jhValMsgs[lang] : jhValMsgs.ko;
+  return dict[key] || jhValMsgs.ko[key];
+}
 function jhShowInqError(panel, msg){
   var box = panel.querySelector('.jhInqErr');
   if(box){
@@ -8185,43 +8198,43 @@ function jhSendInquiry(btn, type){
   var route = g('route');
 
   if(!name){
-    jhShowInqError(panel, '성함을 입력해주세요.');
+    jhShowInqError(panel, jhValMsg('name'));
     return;
   }
   if(!phone){
-    jhShowInqError(panel, '연락처를 입력해주세요.');
+    jhShowInqError(panel, jhValMsg('phone'));
     return;
   }
   if(!(dateLater && dateLater.checked) && (!date || !time)){
-    jhShowInqError(panel, '희망 날짜와 시간을 입력하시거나, "상담 후 예약 날짜 정할게요"에 체크해주세요!');
+    jhShowInqError(panel, jhValMsg('dateTime'));
     return;
   }
   if(!length){
-    jhShowInqError(panel, '현재 머리 기장을 선택해 주세요!');
+    jhShowInqError(panel, jhValMsg('length'));
     return;
   }
   if(!volume){
-    jhShowInqError(panel, '현재 머리숱을 선택해 주세요!');
+    jhShowInqError(panel, jhValMsg('volume'));
     return;
   }
   if(!color){
-    jhShowInqError(panel, '현재 머리 컬러를 입력해 주세요!');
+    jhShowInqError(panel, jhValMsg('color'));
     return;
   }
   if(!desiredLength){
-    jhShowInqError(panel, '원하시는 기장을 선택해 주세요!');
+    jhShowInqError(panel, jhValMsg('desiredLength'));
     return;
   }
   if(!style){
-    jhShowInqError(panel, '원하시는 스타일을 선택해 주세요!');
+    jhShowInqError(panel, jhValMsg('style'));
     return;
   }
   if(!(noteNone && noteNone.checked) && !note){
-    jhShowInqError(panel, '추가로 남기실 말을 입력하시거나, "추가로 전달할 사항 없어요"에 체크해주세요!');
+    jhShowInqError(panel, jhValMsg('note'));
     return;
   }
   if(!route){
-    jhShowInqError(panel, '방문 경로를 선택해 주세요!');
+    jhShowInqError(panel, jhValMsg('route'));
     return;
   }
 
@@ -9349,7 +9362,6 @@ document.addEventListener('click', function(e){
     </div>
     <div style="display:flex;justify-content:flex-end;gap:18px;padding:12px 18px 16px;">
       <button type="button" id="jhCalConfirmBtn" onclick="jhCalConfirm()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
-      <button type="button" id="jhCalCancelBtn" onclick="jhCalCancel()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
     </div>
   </div>
 </div>
@@ -9395,7 +9407,6 @@ document.addEventListener('click', function(e){
     }
     var loc = jhCalLocale[jhCurLang()];
     document.getElementById('jhCalConfirmBtn').textContent = loc.confirm;
-    document.getElementById('jhCalCancelBtn').textContent = loc.cancel;
     jhRenderCalendar();
     document.getElementById('jhCalOverlay').style.display = 'flex';
   };
