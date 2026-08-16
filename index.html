@@ -8119,8 +8119,12 @@ function jhSendInquiry(btn, type){
   var note = (noteNone && noteNone.checked) ? '없음' : g('note');
   var route = g('route');
 
-  if(!name || !phone){
-    jhShowInqError(panel, '모든 항목을 입력해 주세요.');
+  if(!name){
+    jhShowInqError(panel, '성함을 입력해주세요.');
+    return;
+  }
+  if(!phone){
+    jhShowInqError(panel, '연락처를 입력해주세요.');
     return;
   }
   if(!(dateLater && dateLater.checked) && (!date || !time)){
