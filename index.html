@@ -9333,21 +9333,22 @@ document.addEventListener('click', function(e){
 </script>
 <div id="jhCalOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99999;align-items:center;justify-content:center;">
   <div id="jhCalBox" style="background:#fff;border-radius:18px;width:min(340px,90vw);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.25);">
-    <div style="background:#4285f4;color:#fff;padding:18px 20px;">
+    <div style="background:#4285f4;color:#fff;padding:18px 20px;position:relative;">
+      <button type="button" onclick="jhCalCancel()" style="position:absolute;top:14px;right:14px;background:none;border:none;color:#fff;font-size:22px;line-height:1;cursor:pointer;padding:4px;">&times;</button>
       <div id="jhCalYear" style="font-size:15px;opacity:0.9;"></div>
       <div id="jhCalDateLabel" style="font-size:26px;font-weight:800;margin-top:4px;"></div>
     </div>
     <div style="padding:16px 18px 8px;">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-        <button type="button" onclick="jhCalPrevMonth()" style="border:none;background:none;font-size:20px;padding:6px 10px;cursor:pointer;">&#8249;</button>
-        <div id="jhCalMonthLabel" style="font-weight:700;font-size:16px;"></div>
-        <button type="button" onclick="jhCalNextMonth()" style="border:none;background:none;font-size:20px;padding:6px 10px;cursor:pointer;">&#8250;</button>
+        <button type="button" onclick="jhCalPrevMonth()" style="border:none;background:none;font-size:40px;padding:6px 12px;cursor:pointer;line-height:1;">&#8249;</button>
+        <div id="jhCalMonthLabel" style="font-weight:800;font-size:20px;"></div>
+        <button type="button" onclick="jhCalNextMonth()" style="border:none;background:none;font-size:40px;padding:6px 12px;cursor:pointer;line-height:1;">&#8250;</button>
       </div>
       <div id="jhCalWeekdays" style="display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:13px;color:#666;margin-bottom:4px;"></div>
       <div id="jhCalDays" style="display:grid;grid-template-columns:repeat(7,1fr);text-align:center;gap:2px;"></div>
     </div>
     <div style="display:flex;justify-content:flex-end;gap:18px;padding:12px 18px 16px;">
-      <button type="button" id="jhCalClearBtn" onclick="jhCalClear()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+      <button type="button" id="jhCalConfirmBtn" onclick="jhCalConfirm()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
       <button type="button" id="jhCalCancelBtn" onclick="jhCalCancel()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
     </div>
   </div>
@@ -9355,11 +9356,11 @@ document.addEventListener('click', function(e){
 <script>
 (function(){
   var jhCalLocale = {
-    ko:{weekdays:['일','월','화','수','목','금','토'],months:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],clear:'삭제',cancel:'취소',placeholder:'날짜 선택',yearSuffix:'년'},
-    en:{weekdays:['Su','Mo','Tu','We','Th','Fr','Sa'],months:['January','February','March','April','May','June','July','August','September','October','November','December'],clear:'Clear',cancel:'Cancel',placeholder:'Select Date',yearSuffix:''},
-    vi:{weekdays:['CN','T2','T3','T4','T5','T6','T7'],months:['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'],clear:'Xóa',cancel:'Hủy',placeholder:'Chọn Ngày',yearSuffix:''},
-    ja:{weekdays:['日','月','火','水','木','金','土'],months:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],clear:'削除',cancel:'キャンセル',placeholder:'日付を選択',yearSuffix:'年'},
-    th:{weekdays:['อา','จ','อ','พ','พฤ','ศ','ส'],months:['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],clear:'ลบ',cancel:'ยกเลิก',placeholder:'เลือกวันที่',yearSuffix:''}
+    ko:{weekdays:['일','월','화','수','목','금','토'],months:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],confirm:'선택',cancel:'취소',placeholder:'날짜 선택',yearSuffix:'년'},
+    en:{weekdays:['Su','Mo','Tu','We','Th','Fr','Sa'],months:['January','February','March','April','May','June','July','August','September','October','November','December'],confirm:'Select',cancel:'Cancel',placeholder:'Select Date',yearSuffix:''},
+    vi:{weekdays:['CN','T2','T3','T4','T5','T6','T7'],months:['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'],confirm:'Chọn',cancel:'Hủy',placeholder:'Chọn Ngày',yearSuffix:''},
+    ja:{weekdays:['日','月','火','水','木','金','土'],months:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],confirm:'選択',cancel:'キャンセル',placeholder:'日付を選択',yearSuffix:'年'},
+    th:{weekdays:['อา','จ','อ','พ','พฤ','ศ','ส'],months:['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],confirm:'เลือก',cancel:'ยกเลิก',placeholder:'เลือกวันที่',yearSuffix:''}
   };
   function jhCurLang(){
     var l = null;
@@ -9377,11 +9378,12 @@ document.addEventListener('click', function(e){
     el.textContent = el.value ? el.value : loc.placeholder;
   };
 
-  var state = { field:null, year:0, month:0 };
+  var state = { field:null, year:0, month:0, pending:'' };
 
   window.jhOpenDatePicker = function(fieldEl){
     if(fieldEl.disabled) return;
     state.field = fieldEl;
+    state.pending = fieldEl.value || '';
     var today = new Date();
     if(fieldEl.value){
       var parts = fieldEl.value.split('-');
@@ -9392,7 +9394,7 @@ document.addEventListener('click', function(e){
       state.month = today.getMonth();
     }
     var loc = jhCalLocale[jhCurLang()];
-    document.getElementById('jhCalClearBtn').textContent = loc.clear;
+    document.getElementById('jhCalConfirmBtn').textContent = loc.confirm;
     document.getElementById('jhCalCancelBtn').textContent = loc.cancel;
     jhRenderCalendar();
     document.getElementById('jhCalOverlay').style.display = 'flex';
@@ -9403,9 +9405,9 @@ document.addEventListener('click', function(e){
     state.field = null;
   };
 
-  window.jhCalClear = function(){
+  window.jhCalConfirm = function(){
     if(state.field){
-      state.field.value = '';
+      state.field.value = state.pending;
       jhUpdateDateFieldDisplay(state.field);
       if(state.field.dispatchEvent) state.field.dispatchEvent(new Event('change', {bubbles:true}));
     }
@@ -9428,13 +9430,11 @@ document.addEventListener('click', function(e){
     var mm = String(state.month + 1).padStart(2,'0');
     var dd = String(day).padStart(2,'0');
     var val = state.year + '-' + mm + '-' + dd;
-    if(state.field){
-      state.field.value = val;
-      jhUpdateDateFieldDisplay(state.field);
-      if(state.field.dispatchEvent) state.field.dispatchEvent(new Event('change', {bubbles:true}));
-    }
-    document.getElementById('jhCalOverlay').style.display = 'none';
-    state.field = null;
+    var todayObj = new Date();
+    var todayVal = todayObj.getFullYear() + '-' + String(todayObj.getMonth()+1).padStart(2,'0') + '-' + String(todayObj.getDate()).padStart(2,'0');
+    if(val < todayVal) return;
+    state.pending = val;
+    jhRenderCalendar();
   };
 
   function jhRenderCalendar(){
@@ -9447,7 +9447,9 @@ document.addEventListener('click', function(e){
     var daysEl = document.getElementById('jhCalDays');
     var firstDay = new Date(state.year, state.month, 1).getDay();
     var numDays = new Date(state.year, state.month + 1, 0).getDate();
-    var selectedVal = state.field ? state.field.value : '';
+    var selectedVal = state.pending;
+    var todayObj = new Date();
+    var todayVal = todayObj.getFullYear() + '-' + String(todayObj.getMonth()+1).padStart(2,'0') + '-' + String(todayObj.getDate()).padStart(2,'0');
     var html = '';
     for(var i=0;i<firstDay;i++){ html += '<div></div>'; }
     for(var d=1; d<=numDays; d++){
@@ -9455,8 +9457,19 @@ document.addEventListener('click', function(e){
       var dd = String(d).padStart(2,'0');
       var thisVal = state.year + '-' + mm + '-' + dd;
       var isSel = (thisVal === selectedVal);
-      var style = 'padding:8px 0;border-radius:50%;cursor:pointer;font-size:15px;';
-      style += isSel ? 'background:#4285f4;color:#fff;font-weight:700;' : 'color:#222;';
+      var isToday = (thisVal === todayVal);
+      var isPast = (thisVal < todayVal);
+      var fontSize = isToday ? '19px' : '16px';
+      var style = 'padding:8px 0;border-radius:50%;font-size:' + fontSize + ';font-weight:700;';
+      if(isPast){
+        style += 'color:#ccc;cursor:default;';
+        html += '<div style="'+style+'">'+d+'</div>';
+        continue;
+      }
+      style += 'cursor:pointer;';
+      if(isSel){ style += 'background:#4285f4;color:#fff;'; }
+      else if(isToday){ style += 'color:#4285f4;font-weight:900;'; }
+      else{ style += 'color:#222;'; }
       html += '<div onclick="jhCalSelectDay('+d+')" style="'+style+'">'+d+'</div>';
     }
     daysEl.innerHTML = html;
@@ -9469,7 +9482,8 @@ document.addEventListener('click', function(e){
 </script>
 <div id="jhTimeOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99999;align-items:center;justify-content:center;">
   <div id="jhTimeBox" style="background:#fff;border-radius:18px;width:min(340px,90vw);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.25);">
-    <div style="background:#4285f4;color:#fff;padding:20px 22px;">
+    <div style="background:#4285f4;color:#fff;padding:20px 22px;position:relative;">
+      <button type="button" onclick="jhTimeCancel()" style="position:absolute;top:14px;right:14px;background:none;border:none;color:#fff;font-size:22px;line-height:1;cursor:pointer;padding:4px;">&times;</button>
       <div id="jhTimeTitle" style="font-size:26px;font-weight:800;"></div>
     </div>
     <div style="padding:20px 22px 8px;">
@@ -9493,8 +9507,6 @@ document.addEventListener('click', function(e){
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px 18px;">
       <span style="font-size:20px;color:#555;">&#128337;</span>
       <div style="display:flex;gap:18px;">
-        <button type="button" id="jhTimeClearBtn" onclick="jhTimeClear()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
-        <button type="button" id="jhTimeCancelBtn" onclick="jhTimeCancel()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
         <button type="button" id="jhTimeConfirmBtn" onclick="jhTimeConfirm()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
       </div>
     </div>
@@ -9503,11 +9515,11 @@ document.addEventListener('click', function(e){
 <script>
 (function(){
   var jhTimeLocale = {
-    ko:{title:'시간 설정',label:'시간 입력',hourLbl:'시',minLbl:'분',am:'오전',pm:'오후',clear:'삭제',cancel:'취소',confirm:'설정',placeholder:'시간 선택',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+' '+h+':'+m; }},
-    en:{title:'Set Time',label:'Enter Time',hourLbl:'Hour',minLbl:'Min',am:'AM',pm:'PM',clear:'Clear',cancel:'Cancel',confirm:'OK',placeholder:'Select Time',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
-    vi:{title:'Đặt Giờ',label:'Nhập Giờ',hourLbl:'Giờ',minLbl:'Phút',am:'SA',pm:'CH',clear:'Xóa',cancel:'Hủy',confirm:'OK',placeholder:'Chọn Giờ',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
-    ja:{title:'時間設定',label:'時間入力',hourLbl:'時',minLbl:'分',am:'午前',pm:'午後',clear:'削除',cancel:'キャンセル',confirm:'設定',placeholder:'時間を選択',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+h+':'+m; }},
-    th:{title:'ตั้งเวลา',label:'ป้อนเวลา',hourLbl:'ชม.',minLbl:'นาที',am:'AM',pm:'PM',clear:'ลบ',cancel:'ยกเลิก',confirm:'ตกลง',placeholder:'เลือกเวลา',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }}
+    ko:{title:'시간 설정',label:'시간 입력',hourLbl:'시',minLbl:'분',am:'오전',pm:'오후',confirm:'선택',placeholder:'시간 선택',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+' '+h+':'+m; }},
+    en:{title:'Set Time',label:'Enter Time',hourLbl:'Hour',minLbl:'Min',am:'AM',pm:'PM',confirm:'Select',placeholder:'Select Time',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
+    vi:{title:'Đặt Giờ',label:'Nhập Giờ',hourLbl:'Giờ',minLbl:'Phút',am:'SA',pm:'CH',confirm:'Chọn',placeholder:'Chọn Giờ',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
+    ja:{title:'時間設定',label:'時間入力',hourLbl:'時',minLbl:'分',am:'午前',pm:'午後',confirm:'選択',placeholder:'時間を選択',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+h+':'+m; }},
+    th:{title:'ตั้งเวลา',label:'ป้อนเวลา',hourLbl:'ชม.',minLbl:'นาที',am:'AM',pm:'PM',confirm:'เลือก',placeholder:'เลือกเวลา',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }}
   };
   function jhCurLang(){
     var l = null;
@@ -9555,24 +9567,11 @@ document.addEventListener('click', function(e){
     sel.options[0].value = 'AM'; sel.options[0].textContent = loc.am;
     sel.options[1].value = 'PM'; sel.options[1].textContent = loc.pm;
     sel.value = isPM ? 'PM' : 'AM';
-    document.getElementById('jhTimeClearBtn').textContent = loc.clear;
-    document.getElementById('jhTimeCancelBtn').textContent = loc.cancel;
     document.getElementById('jhTimeConfirmBtn').textContent = loc.confirm;
     document.getElementById('jhTimeOverlay').style.display = 'flex';
   };
 
   window.jhTimeCancel = function(){
-    document.getElementById('jhTimeOverlay').style.display = 'none';
-    tState.field = null;
-  };
-
-  window.jhTimeClear = function(){
-    if(tState.field){
-      tState.field.value = '';
-      tState.field.dataset.value24 = '';
-      jhUpdateTimeFieldDisplay(tState.field);
-      if(tState.field.dispatchEvent) tState.field.dispatchEvent(new Event('change', {bubbles:true}));
-    }
     document.getElementById('jhTimeOverlay').style.display = 'none';
     tState.field = null;
   };
