@@ -4613,6 +4613,7 @@ document.addEventListener('touchend', function(e){
       connectTag:"CONNECT",
       sp17_inq_open:"Open Simple Inquiry Form",
       sp17_inq_close:"Simple Inquiry Form - Close",
+      sp17_inq_reset:"Reset Inquiry",
       sp17_form_h:"Fill Out Inquiry Form",
       sp17_form_note:"For KakaoTalk, the chat window will open — please paste the copied inquiry text.",
       sp17_ph_name:"Name",
@@ -5054,6 +5055,7 @@ document.addEventListener('touchend', function(e){
       connectTag:"KẾT NỐI",
       sp17_inq_open:"Mở Mẫu Liên Hệ Nhanh",
       sp17_inq_close:"Mẫu Liên Hệ Nhanh - Đóng",
+      sp17_inq_reset:"Đặt Lại Nội Dung",
       sp17_form_h:"Điền Mẫu Liên Hệ",
       sp17_form_note:"Với KakaoTalk, cửa sổ chat sẽ mở ra — vui lòng dán nội dung liên hệ đã sao chép.",
       sp17_ph_name:"Họ tên",
@@ -5495,6 +5497,7 @@ document.addEventListener('touchend', function(e){
       connectTag:"CONNECT",
       sp17_inq_open:"簡単お問い合わせを開く",
       sp17_inq_close:"簡単お問い合わせ - 閉じる",
+      sp17_inq_reset:"入力内容をリセット",
       sp17_form_h:"お問い合わせフォームに記入",
       sp17_form_note:"カカオトークの場合、チャット画面が開きますので、コピーされた問い合わせ内容を貼り付けてください。",
       sp17_ph_name:"お名前",
@@ -5936,6 +5939,7 @@ document.addEventListener('touchend', function(e){
       connectTag:"CONNECT",
       sp17_inq_open:"เปิดแบบฟอร์มติดต่อด่วน",
       sp17_inq_close:"แบบฟอร์มติดต่อด่วน - ปิด",
+      sp17_inq_reset:"รีเซ็ตข้อมูล",
       sp17_form_h:"กรอกแบบฟอร์มติดต่อสอบถาม",
       sp17_form_note:"สำหรับ KakaoTalk หน้าต่างแชทจะเปิดขึ้น — โปรดวางข้อความที่คัดลอกไว้",
       sp17_ph_name:"ชื่อ",
@@ -6029,6 +6033,8 @@ document.addEventListener('touchend', function(e){
         curFlag.style.border = "none";
       }
       applyLang(this.dataset.lang);
+      if(window.jhRefreshDatePlaceholders) window.jhRefreshDatePlaceholders();
+      if(window.jhRefreshTimePlaceholders) window.jhRefreshTimePlaceholders();
       menu.style.display="none";
     });
   });
@@ -6082,8 +6088,8 @@ document.addEventListener('touchend', function(e){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -6137,7 +6143,7 @@ document.addEventListener('touchend', function(e){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -6350,8 +6356,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -6405,7 +6411,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -6533,8 +6539,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -6588,7 +6594,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -6761,8 +6767,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -6816,7 +6822,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -6977,8 +6983,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -7032,7 +7038,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -7387,8 +7393,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -7442,7 +7448,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -7623,8 +7629,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -7678,7 +7684,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -7781,8 +7787,8 @@ document.addEventListener('DOMContentLoaded', function(){
           <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
           <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
           <div style="display:flex;gap:8px;">
-            <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-            <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+            <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+            <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
           </div>
           <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
             <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -7836,7 +7842,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <option data-i18n="sp17_opt_route5">없음</option>
           </select>
         </div>
-        <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+        <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
         <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
           <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
           <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -8046,6 +8052,10 @@ function jhInqRestoreAll(panel){
   if(dateLater) jhToggleDateLater(dateLater);
   var noteNone = panel.querySelector('[data-role="noteNone"]');
   if(noteNone) jhToggleNoteNone(noteNone);
+  var dateField = panel.querySelector('[data-role="date"]');
+  if(dateField && window.jhUpdateDateFieldDisplay) jhUpdateDateFieldDisplay(dateField);
+  var timeField = panel.querySelector('[data-role="time"]');
+  if(timeField && window.jhUpdateTimeFieldDisplay) jhUpdateTimeFieldDisplay(timeField);
 }
 document.addEventListener('input', function(e){
   var panel = e.target.closest ? e.target.closest('.jhInqFormPanel') : null;
@@ -8088,8 +8098,8 @@ function jhResetInquiry(btn){
     });
     var d = panel.querySelector('[data-role="date"]');
     var t = panel.querySelector('[data-role="time"]');
-    if(d){ d.disabled = false; d.style.opacity = '1'; }
-    if(t){ t.disabled = false; t.style.opacity = '1'; }
+    if(d){ d.disabled = false; d.style.opacity = '1'; if(window.jhUpdateDateFieldDisplay) jhUpdateDateFieldDisplay(d); }
+    if(t){ t.disabled = false; t.style.opacity = '1'; t.dataset.value24 = ''; if(window.jhUpdateTimeFieldDisplay) jhUpdateTimeFieldDisplay(t); }
     var ta = panel.querySelector('[data-role="note"]');
     if(ta){ ta.disabled = false; ta.style.opacity = '1'; }
   });
@@ -8104,10 +8114,13 @@ function jhToggleDateLater(cb){
   if(cb.checked){
     d.value = '';
     t.value = '';
+    t.dataset.value24 = '';
     d.disabled = true;
     t.disabled = true;
     d.style.opacity = '0.5';
     t.style.opacity = '0.5';
+    if(window.jhUpdateDateFieldDisplay) jhUpdateDateFieldDisplay(d);
+    if(window.jhUpdateTimeFieldDisplay) jhUpdateTimeFieldDisplay(t);
   } else {
     d.disabled = false;
     t.disabled = false;
@@ -8495,8 +8508,8 @@ function jhDoSend(type, text){
         <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
         <div style="display:flex;gap:8px;">
-          <input type="date" data-role="date" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
-          <input type="time" data-role="time" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;-webkit-appearance:none;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
         </div>
         <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
           <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -8550,7 +8563,7 @@ function jhDoSend(type, text){
           <option data-i18n="sp17_opt_route5">없음</option>
         </select>
       </div>
-      <button type="button" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhResetInquiry(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
         <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">LINE으로 보내기</span></button>
         <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #e0c200;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡으로 보내기</span></button>
@@ -9315,6 +9328,277 @@ document.addEventListener('click', function(e){
     if(!isLandscapeNarrow()){
       document.documentElement.classList.remove('barsAutoHide');
     }
+  });
+})();
+</script>
+<div id="jhCalOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99999;align-items:center;justify-content:center;">
+  <div id="jhCalBox" style="background:#fff;border-radius:18px;width:min(340px,90vw);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.25);">
+    <div style="background:#4285f4;color:#fff;padding:18px 20px;">
+      <div id="jhCalYear" style="font-size:15px;opacity:0.9;"></div>
+      <div id="jhCalDateLabel" style="font-size:26px;font-weight:800;margin-top:4px;"></div>
+    </div>
+    <div style="padding:16px 18px 8px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <button type="button" onclick="jhCalPrevMonth()" style="border:none;background:none;font-size:20px;padding:6px 10px;cursor:pointer;">&#8249;</button>
+        <div id="jhCalMonthLabel" style="font-weight:700;font-size:16px;"></div>
+        <button type="button" onclick="jhCalNextMonth()" style="border:none;background:none;font-size:20px;padding:6px 10px;cursor:pointer;">&#8250;</button>
+      </div>
+      <div id="jhCalWeekdays" style="display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:13px;color:#666;margin-bottom:4px;"></div>
+      <div id="jhCalDays" style="display:grid;grid-template-columns:repeat(7,1fr);text-align:center;gap:2px;"></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:18px;padding:12px 18px 16px;">
+      <button type="button" id="jhCalClearBtn" onclick="jhCalClear()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+      <button type="button" id="jhCalCancelBtn" onclick="jhCalCancel()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var jhCalLocale = {
+    ko:{weekdays:['일','월','화','수','목','금','토'],months:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],clear:'삭제',cancel:'취소',placeholder:'날짜 선택',yearSuffix:'년'},
+    en:{weekdays:['Su','Mo','Tu','We','Th','Fr','Sa'],months:['January','February','March','April','May','June','July','August','September','October','November','December'],clear:'Clear',cancel:'Cancel',placeholder:'Select Date',yearSuffix:''},
+    vi:{weekdays:['CN','T2','T3','T4','T5','T6','T7'],months:['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'],clear:'Xóa',cancel:'Hủy',placeholder:'Chọn Ngày',yearSuffix:''},
+    ja:{weekdays:['日','月','火','水','木','金','土'],months:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],clear:'削除',cancel:'キャンセル',placeholder:'日付を選択',yearSuffix:'年'},
+    th:{weekdays:['อา','จ','อ','พ','พฤ','ศ','ส'],months:['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],clear:'ลบ',cancel:'ยกเลิก',placeholder:'เลือกวันที่',yearSuffix:''}
+  };
+  function jhCurLang(){
+    var l = null;
+    try{ l = localStorage.getItem('jhLang'); }catch(e){}
+    return (l && jhCalLocale[l]) ? l : 'ko';
+  }
+  window.jhRefreshDatePlaceholders = function(){
+    var loc = jhCalLocale[jhCurLang()];
+    document.querySelectorAll('.jhDateField').forEach(function(el){
+      if(!el.value){ el.textContent = loc.placeholder; }
+    });
+  };
+  window.jhUpdateDateFieldDisplay = function(el){
+    var loc = jhCalLocale[jhCurLang()];
+    el.textContent = el.value ? el.value : loc.placeholder;
+  };
+
+  var state = { field:null, year:0, month:0 };
+
+  window.jhOpenDatePicker = function(fieldEl){
+    if(fieldEl.disabled) return;
+    state.field = fieldEl;
+    var today = new Date();
+    if(fieldEl.value){
+      var parts = fieldEl.value.split('-');
+      state.year = parseInt(parts[0],10);
+      state.month = parseInt(parts[1],10) - 1;
+    } else {
+      state.year = today.getFullYear();
+      state.month = today.getMonth();
+    }
+    var loc = jhCalLocale[jhCurLang()];
+    document.getElementById('jhCalClearBtn').textContent = loc.clear;
+    document.getElementById('jhCalCancelBtn').textContent = loc.cancel;
+    jhRenderCalendar();
+    document.getElementById('jhCalOverlay').style.display = 'flex';
+  };
+
+  window.jhCalCancel = function(){
+    document.getElementById('jhCalOverlay').style.display = 'none';
+    state.field = null;
+  };
+
+  window.jhCalClear = function(){
+    if(state.field){
+      state.field.value = '';
+      jhUpdateDateFieldDisplay(state.field);
+      if(state.field.dispatchEvent) state.field.dispatchEvent(new Event('change', {bubbles:true}));
+    }
+    document.getElementById('jhCalOverlay').style.display = 'none';
+    state.field = null;
+  };
+
+  window.jhCalPrevMonth = function(){
+    state.month--;
+    if(state.month < 0){ state.month = 11; state.year--; }
+    jhRenderCalendar();
+  };
+  window.jhCalNextMonth = function(){
+    state.month++;
+    if(state.month > 11){ state.month = 0; state.year++; }
+    jhRenderCalendar();
+  };
+
+  window.jhCalSelectDay = function(day){
+    var mm = String(state.month + 1).padStart(2,'0');
+    var dd = String(day).padStart(2,'0');
+    var val = state.year + '-' + mm + '-' + dd;
+    if(state.field){
+      state.field.value = val;
+      jhUpdateDateFieldDisplay(state.field);
+      if(state.field.dispatchEvent) state.field.dispatchEvent(new Event('change', {bubbles:true}));
+    }
+    document.getElementById('jhCalOverlay').style.display = 'none';
+    state.field = null;
+  };
+
+  function jhRenderCalendar(){
+    var loc = jhCalLocale[jhCurLang()];
+    document.getElementById('jhCalYear').textContent = state.year + loc.yearSuffix;
+    document.getElementById('jhCalDateLabel').textContent = loc.months[state.month] + ' ' + state.year;
+    document.getElementById('jhCalMonthLabel').textContent = loc.months[state.month] + ' ' + state.year;
+    var wkEl = document.getElementById('jhCalWeekdays');
+    wkEl.innerHTML = loc.weekdays.map(function(w){ return '<div>'+w+'</div>'; }).join('');
+    var daysEl = document.getElementById('jhCalDays');
+    var firstDay = new Date(state.year, state.month, 1).getDay();
+    var numDays = new Date(state.year, state.month + 1, 0).getDate();
+    var selectedVal = state.field ? state.field.value : '';
+    var html = '';
+    for(var i=0;i<firstDay;i++){ html += '<div></div>'; }
+    for(var d=1; d<=numDays; d++){
+      var mm = String(state.month + 1).padStart(2,'0');
+      var dd = String(d).padStart(2,'0');
+      var thisVal = state.year + '-' + mm + '-' + dd;
+      var isSel = (thisVal === selectedVal);
+      var style = 'padding:8px 0;border-radius:50%;cursor:pointer;font-size:15px;';
+      style += isSel ? 'background:#4285f4;color:#fff;font-weight:700;' : 'color:#222;';
+      html += '<div onclick="jhCalSelectDay('+d+')" style="'+style+'">'+d+'</div>';
+    }
+    daysEl.innerHTML = html;
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    jhRefreshDatePlaceholders();
+  });
+})();
+</script>
+<div id="jhTimeOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99999;align-items:center;justify-content:center;">
+  <div id="jhTimeBox" style="background:#fff;border-radius:18px;width:min(340px,90vw);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.25);">
+    <div style="background:#4285f4;color:#fff;padding:20px 22px;">
+      <div id="jhTimeTitle" style="font-size:26px;font-weight:800;"></div>
+    </div>
+    <div style="padding:20px 22px 8px;">
+      <div id="jhTimeInputLabel" style="font-size:14px;color:#555;margin-bottom:10px;"></div>
+      <div style="display:flex;align-items:flex-end;gap:14px;">
+        <div style="text-align:center;">
+          <input id="jhTimeHourInput" type="number" min="1" max="12" style="width:64px;font-size:34px;text-align:center;border:none;border-bottom:2px solid #333;padding:4px 0;-moz-appearance:textfield;">
+          <div id="jhTimeHourLbl" style="font-size:13px;color:#666;margin-top:4px;"></div>
+        </div>
+        <div style="font-size:34px;padding-bottom:26px;">:</div>
+        <div style="text-align:center;">
+          <input id="jhTimeMinInput" type="number" min="0" max="59" style="width:64px;font-size:34px;text-align:center;border:none;border-bottom:2px solid #333;padding:4px 0;-moz-appearance:textfield;">
+          <div id="jhTimeMinLbl" style="font-size:13px;color:#666;margin-top:4px;"></div>
+        </div>
+        <select id="jhTimeAmPm" style="margin-left:auto;font-size:16px;padding:10px 8px;border:1px solid #ddd;border-radius:8px;background:#fff;">
+          <option value="AM"></option>
+          <option value="PM"></option>
+        </select>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px 18px;">
+      <span style="font-size:20px;color:#555;">&#128337;</span>
+      <div style="display:flex;gap:18px;">
+        <button type="button" id="jhTimeClearBtn" onclick="jhTimeClear()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+        <button type="button" id="jhTimeCancelBtn" onclick="jhTimeCancel()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+        <button type="button" id="jhTimeConfirmBtn" onclick="jhTimeConfirm()" style="border:none;background:none;color:#4285f4;font-weight:700;font-size:15px;cursor:pointer;"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var jhTimeLocale = {
+    ko:{title:'시간 설정',label:'시간 입력',hourLbl:'시',minLbl:'분',am:'오전',pm:'오후',clear:'삭제',cancel:'취소',confirm:'설정',placeholder:'시간 선택',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+' '+h+':'+m; }},
+    en:{title:'Set Time',label:'Enter Time',hourLbl:'Hour',minLbl:'Min',am:'AM',pm:'PM',clear:'Clear',cancel:'Cancel',confirm:'OK',placeholder:'Select Time',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
+    vi:{title:'Đặt Giờ',label:'Nhập Giờ',hourLbl:'Giờ',minLbl:'Phút',am:'SA',pm:'CH',clear:'Xóa',cancel:'Hủy',confirm:'OK',placeholder:'Chọn Giờ',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }},
+    ja:{title:'時間設定',label:'時間入力',hourLbl:'時',minLbl:'分',am:'午前',pm:'午後',clear:'削除',cancel:'キャンセル',confirm:'設定',placeholder:'時間を選択',fmt:function(h,m,pm,loc){ return (pm?loc.pm:loc.am)+h+':'+m; }},
+    th:{title:'ตั้งเวลา',label:'ป้อนเวลา',hourLbl:'ชม.',minLbl:'นาที',am:'AM',pm:'PM',clear:'ลบ',cancel:'ยกเลิก',confirm:'ตกลง',placeholder:'เลือกเวลา',fmt:function(h,m,pm,loc){ return h+':'+m+' '+(pm?loc.pm:loc.am); }}
+  };
+  function jhCurLang(){
+    var l = null;
+    try{ l = localStorage.getItem('jhLang'); }catch(e){}
+    return (l && jhTimeLocale[l]) ? l : 'ko';
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  window.jhRefreshTimePlaceholders = function(){
+    var loc = jhTimeLocale[jhCurLang()];
+    document.querySelectorAll('.jhTimeField').forEach(function(el){
+      if(!el.value){ el.textContent = loc.placeholder; }
+    });
+  };
+  window.jhUpdateTimeFieldDisplay = function(el){
+    var loc = jhTimeLocale[jhCurLang()];
+    el.textContent = el.value ? el.value : loc.placeholder;
+  };
+
+  var tState = { field:null };
+
+  window.jhOpenTimePicker = function(fieldEl){
+    if(fieldEl.disabled) return;
+    tState.field = fieldEl;
+    var loc = jhTimeLocale[jhCurLang()];
+    var h24, m;
+    if(fieldEl.dataset.value24){
+      var parts = fieldEl.dataset.value24.split(':');
+      h24 = parseInt(parts[0],10);
+      m = parseInt(parts[1],10);
+    } else {
+      var now = new Date();
+      h24 = now.getHours();
+      m = now.getMinutes();
+    }
+    var isPM = h24 >= 12;
+    var h12 = h24 % 12; if(h12 === 0) h12 = 12;
+    document.getElementById('jhTimeTitle').textContent = loc.title;
+    document.getElementById('jhTimeInputLabel').textContent = loc.label;
+    document.getElementById('jhTimeHourLbl').textContent = loc.hourLbl;
+    document.getElementById('jhTimeMinLbl').textContent = loc.minLbl;
+    document.getElementById('jhTimeHourInput').value = h12;
+    document.getElementById('jhTimeMinInput').value = pad(m);
+    var sel = document.getElementById('jhTimeAmPm');
+    sel.options[0].value = 'AM'; sel.options[0].textContent = loc.am;
+    sel.options[1].value = 'PM'; sel.options[1].textContent = loc.pm;
+    sel.value = isPM ? 'PM' : 'AM';
+    document.getElementById('jhTimeClearBtn').textContent = loc.clear;
+    document.getElementById('jhTimeCancelBtn').textContent = loc.cancel;
+    document.getElementById('jhTimeConfirmBtn').textContent = loc.confirm;
+    document.getElementById('jhTimeOverlay').style.display = 'flex';
+  };
+
+  window.jhTimeCancel = function(){
+    document.getElementById('jhTimeOverlay').style.display = 'none';
+    tState.field = null;
+  };
+
+  window.jhTimeClear = function(){
+    if(tState.field){
+      tState.field.value = '';
+      tState.field.dataset.value24 = '';
+      jhUpdateTimeFieldDisplay(tState.field);
+      if(tState.field.dispatchEvent) tState.field.dispatchEvent(new Event('change', {bubbles:true}));
+    }
+    document.getElementById('jhTimeOverlay').style.display = 'none';
+    tState.field = null;
+  };
+
+  window.jhTimeConfirm = function(){
+    var loc = jhTimeLocale[jhCurLang()];
+    var h12 = parseInt(document.getElementById('jhTimeHourInput').value, 10);
+    var m = parseInt(document.getElementById('jhTimeMinInput').value, 10);
+    if(isNaN(h12) || h12 < 1) h12 = 1;
+    if(h12 > 12) h12 = 12;
+    if(isNaN(m) || m < 0) m = 0;
+    if(m > 59) m = 59;
+    var isPM = document.getElementById('jhTimeAmPm').value === 'PM';
+    var h24 = h12 % 12; if(isPM) h24 += 12;
+    if(tState.field){
+      tState.field.dataset.value24 = pad(h24) + ':' + pad(m);
+      tState.field.value = loc.fmt(h12, pad(m), isPM, loc);
+      jhUpdateTimeFieldDisplay(tState.field);
+      if(tState.field.dispatchEvent) tState.field.dispatchEvent(new Event('change', {bubbles:true}));
+    }
+    document.getElementById('jhTimeOverlay').style.display = 'none';
+    tState.field = null;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    jhRefreshTimePlaceholders();
   });
 })();
 </script>
