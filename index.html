@@ -7683,7 +7683,6 @@ function jhPortfolioScrollHandler(){
   jhPortfolioLoopTimer = setTimeout(jhPortfolioLoopCheck, 50);
 }
 function jhPortfolioPcClick(e){
-  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
   var track = document.getElementById('jhPortfolioTrack');
   if(!track) return;
   var imgs = track.querySelectorAll('.jhPortfolioImg');
