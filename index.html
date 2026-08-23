@@ -5091,6 +5091,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"Inquire via LINE",
       sp17_btn_kakao:"Inquire via KakaoTalk",
       sp17_btn_sms:"Inquire via SMS",
+      sp17_btn_insta:"Inquire via Instagram DM",
       sp17_btn_share:"Share",
       sp17_quick_consult:"Skip the form, consult now",
       sp17_ph_note:"Anything else you'd like to share - feel free to add questions or requests.",
@@ -5874,6 +5875,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"Liên hệ qua LINE",
       sp17_btn_kakao:"Liên hệ qua KakaoTalk",
       sp17_btn_sms:"Liên hệ qua Tin nhắn",
+      sp17_btn_insta:"Liên hệ qua Instagram DM",
       sp17_btn_share:"Chia sẻ",
       sp17_quick_consult:"Tư vấn ngay, không cần điền form",
       sp17_ph_note:"Điều bạn muốn nhắn thêm - vui lòng để lại câu hỏi hoặc yêu cầu.",
@@ -6657,6 +6659,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"LINEで問い合わせ",
       sp17_btn_kakao:"カカオトークで問い合わせ",
       sp17_btn_sms:"SMSで問い合わせ",
+      sp17_btn_insta:"Instagram DMで問い合わせ",
       sp17_btn_share:"共有する",
       sp17_quick_consult:"フォーム入力なしですぐ相談",
       sp17_ph_note:"その他ご要望など - ご質問やご要望があれば自由にご記入ください。",
@@ -7440,6 +7443,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"สอบถามผ่าน LINE",
       sp17_btn_kakao:"สอบถามผ่าน KakaoTalk",
       sp17_btn_sms:"สอบถามผ่าน SMS",
+      sp17_btn_insta:"สอบถามผ่าน Instagram DM",
       sp17_btn_share:"แชร์",
       sp17_quick_consult:"ปรึกษาทันทีไม่ต้องกรอกฟอร์ม",
       sp17_ph_note:"ข้อความเพิ่มเติม - โปรดฝากคำถามหรือคำขอได้ตามสะดวก",
@@ -8223,6 +8227,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"通过LINE咨询",
       sp17_btn_kakao:"通过KakaoTalk咨询",
       sp17_btn_sms:"通过短信咨询",
+      sp17_btn_insta:"通过Instagram DM咨询",
       sp17_btn_share:"分享",
       sp17_quick_consult:"跳过表单，直接咨询",
       sp17_ph_note:"如有其他想说明的内容，欢迎补充问题或需求。",
@@ -9006,6 +9011,7 @@ document.addEventListener('touchend', function(e){
       sp17_btn_line:"透過LINE諮詢",
       sp17_btn_kakao:"透過KakaoTalk諮詢",
       sp17_btn_sms:"透過簡訊諮詢",
+      sp17_btn_insta:"透過Instagram DM諮詢",
       sp17_btn_share:"分享",
       sp17_quick_consult:"跳過表單，直接諮詢",
       sp17_ph_note:"如有其他想說明的內容，歡迎補充問題或需求。",
@@ -11823,6 +11829,19 @@ function jhDoSend(type, text, skipConfirm){
       if(!skipConfirm) window.prompt('아래 내용을 복사한 뒤 카카오톡에 붙여넣어 주세요:', text);
       openKakao();
     }
+  } else if(type === 'instagram'){
+    var openInsta = function(){ window.open('https://ig.me/m/j._.joohyun', '_blank'); };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        if(skipConfirm){ openInsta(); } else { jhShowCopiedConfirm('instagram', openInsta); }
+      }).catch(function(){
+        if(!skipConfirm) window.prompt('아래 내용을 복사한 뒤 인스타그램 DM에 붙여넣어 주세요:', text);
+        openInsta();
+      });
+    } else {
+      if(!skipConfirm) window.prompt('아래 내용을 복사한 뒤 인스타그램 DM에 붙여넣어 주세요:', text);
+      openInsta();
+    }
   } else if(type === 'sms'){
     var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     var sep = isIOS ? '&' : '?';
@@ -13176,13 +13195,13 @@ document.addEventListener('click', function(e){
 <script>
 (function(){
   var jhCopiedLocale = {
-    ko:{line:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', kakao:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', ok:'확인', cancel:'취소'},
-    en:{line:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', kakao:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', ok:'OK', cancel:'Cancel'},
-    vi:{line:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', kakao:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', ok:'Xác nhận', cancel:'Hủy'},
-    ja:{line:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', kakao:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', ok:'確認', cancel:'キャンセル'},
-    th:{line:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', kakao:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', ok:'ยืนยัน', cancel:'ยกเลิก'},
-    zh:{line:"咨询内容已复制。请在KakaoTalk或LINE聊天窗口打开后粘贴。", kakao:"咨询内容已复制。请在KakaoTalk或LINE聊天窗口打开后粘贴。", ok:"确定", cancel:"取消"},
-    "zh-TW":{line:"諮詢內容已複製。請在KakaoTalk或LINE聊天窗口打開後粘貼。", kakao:"諮詢內容已複製。請在KakaoTalk或LINE聊天窗口打開後粘貼。", ok:"確定", cancel:"取消"},
+    ko:{line:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', kakao:'문의 내용이 복사되었습니다. 카카오톡 또는 라인 채팅창이 열리면 붙여넣기 해주세요.', instagram:'문의 내용이 복사되었습니다. 인스타그램 DM 창이 열리면 붙여넣기 해주세요.', ok:'확인', cancel:'취소'},
+    en:{line:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', kakao:'Inquiry copied. Please paste it once the KakaoTalk or LINE chat window opens.', instagram:'Inquiry copied. Please paste it once the Instagram DM window opens.', ok:'OK', cancel:'Cancel'},
+    vi:{line:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', kakao:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ chat KakaoTalk hoặc LINE mở ra.', instagram:'Đã sao chép nội dung liên hệ. Vui lòng dán khi cửa sổ DM Instagram mở ra.', ok:'Xác nhận', cancel:'Hủy'},
+    ja:{line:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', kakao:'お問い合わせ内容がコピーされました。カカオトークまたはLINEのチャット画面が開いたら貼り付けてください。', instagram:'お問い合わせ内容がコピーされました。Instagram DMの画面が開いたら貼り付けてください。', ok:'確認', cancel:'キャンセル'},
+    th:{line:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', kakao:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่างแชท KakaoTalk หรือ LINE เปิดขึ้น', instagram:'คัดลอกข้อความสอบถามแล้ว กรุณาวางเมื่อหน้าต่าง DM ของ Instagram เปิดขึ้น', ok:'ยืนยัน', cancel:'ยกเลิก'},
+    zh:{line:"咨询内容已复制。请在KakaoTalk或LINE聊天窗口打开后粘贴。", kakao:"咨询内容已复制。请在KakaoTalk或LINE聊天窗口打开后粘贴。", instagram:"咨询内容已复制。请在Instagram DM窗口打开后粘贴。", ok:"确定", cancel:"取消"},
+    "zh-TW":{line:"諮詢內容已複製。請在KakaoTalk或LINE聊天窗口打開後粘貼。", kakao:"諮詢內容已複製。請在KakaoTalk或LINE聊天窗口打開後粘貼。", instagram:"諮詢內容已複製。請在Instagram DM視窗打開後貼上。", ok:"確定", cancel:"取消"},
   };
   function jhCurLang(){
     var l = null;
