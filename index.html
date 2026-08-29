@@ -4262,8 +4262,16 @@ body.subOpen main.mobile{display:none}
 .qBtn,.qBtn *{animation:none!important;}
 </style>
 
+<style>
+.jhDisabledBtn{opacity:.45!important;filter:grayscale(70%);cursor:not-allowed!important;pointer-events:none!important;animation:none!important;}
+html,body{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;}
+input,textarea,[contenteditable="true"]{-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;}
+img{-webkit-user-drag:none;user-drag:none;}
+</style>
 </head>
+
 <body ontouchstart="">
+
 <script>
 var jhLastTouchEnd = 0;
 document.addEventListener('touchend', function(e){
@@ -9182,13 +9190,13 @@ document.addEventListener('touchend', function(e){
     <div class="baHeadBox qHeadBox qHeadBoxMain"><span class="qMark" style="font-size:48px;">“</span><p class="baSub" style="font-size:18px;" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
     <span class="qTag">QUESTION</span>
     <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-open="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-open="10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-open="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-open="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
-      <button type="button" class="qBtn qBtnGold" data-open="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button>      <button type="button" class="qBtn qBtnBlue" data-open="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen" data-open="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
+      <button type="button" class="qBtn qBtnGold" data-open="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button>      <button type="button" class="qBtn qBtnBlue" data-open="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
     </div>
 <button type="button" class="jhInqToggleBtn" data-open="false" data-i18n="sp17_inq_open" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
     <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
@@ -9615,7 +9623,7 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
@@ -9813,8 +9821,8 @@ document.addEventListener('DOMContentLoaded', function(){
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
+      <button type="button" class="qBtn qBtnBlue jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
 
@@ -10078,8 +10086,8 @@ document.addEventListener('DOMContentLoaded', function(){
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
+      <button type="button" class="qBtn qBtnBlue jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
 
@@ -10307,7 +10315,7 @@ document.addEventListener('DOMContentLoaded', function(){
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       
-      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
+      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
     </div>
 
   </div>
@@ -10724,14 +10732,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       
-      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
+      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
     </div>
 
   </div>
@@ -10975,14 +10983,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">"</span><p class="baSub" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>
-      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
+      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
     </div>
 
   </div>
@@ -11206,14 +11214,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="baHeadBox qHeadBox"><span class="qMark">"</span><p class="baSub" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>
-      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
+      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
     </div>
 
   </div>
@@ -11470,8 +11478,8 @@ document.addEventListener('DOMContentLoaded', function(){
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
-      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
-      <button type="button" class="qBtn qBtnBlue" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
+      <button type="button" class="qBtn qBtnBlue jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       </div>
     </div>
 
@@ -12213,14 +12221,14 @@ function jhDoSend(type, text, skipConfirm){
       <div class="baHeadBox qHeadBox"><span class="qMark">“</span><p class="baSub" data-i18n="qSub">궁금한 항목을 눌러보세요</p><h2 data-i18n="qTitle">제이주현 붙임머리 궁금증, 여기서 다 풀립니다.</h2></div>
       <span class="qTag">QUESTION</span>
       <div class="qBtnRow">
-      <button type="button" class="qBtn qBtnGold" data-jump="9"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
+      <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span><span class="qLine2" data-i18n="btn1Line2">언제 롱크랙으로 커질까?</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span><span class="qLine2" data-i18n="btn2Line2">무조건 좋은 건 아닙니다</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></button>
       <button type="button" class="qBtn qBtnGold" data-jump="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button><button type="button" class="qBtn qBtnBlue" data-jump="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>
       <button type="button" class="qBtn qBtnBlue" data-jump="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       
-      <button type="button" class="qBtn qBtnGreen" data-jump="1"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
+      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>      </div>
     </div>
 
   </div>
@@ -13350,6 +13358,16 @@ document.addEventListener('click', function(e){
     if(alwaysOpenPanel && window.jhInqRestoreAll) jhInqRestoreAll(alwaysOpenPanel);
   });
 })();
+</script>
+<script>
+document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+document.addEventListener('copy', function(e){ e.preventDefault(); });
+document.addEventListener('cut', function(e){ e.preventDefault(); });
+document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+document.addEventListener('selectstart', function(e){
+  var tag = e.target.tagName;
+  if(tag !== 'INPUT' && tag !== 'TEXTAREA'){ e.preventDefault(); }
+});
 </script>
 </body>
 </html>
