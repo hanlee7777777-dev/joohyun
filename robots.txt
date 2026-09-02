@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.joo92.com/sitemap.xml
+Sitemap: https://joo92.com/sitemap.xml
