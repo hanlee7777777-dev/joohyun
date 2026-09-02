@@ -4316,7 +4316,7 @@ document.addEventListener('touchend', function(e){
 }, {passive:false});
 </script>
 <main class="mobile">
-<header class="top">
+<header class="top" onclick="if(!event.target.closest('.langSwitch')){window.scrollTo({top:0,behavior:'smooth'});}" style="cursor:pointer;">
   <div class="logo">
   
   <div class="logoText">
