@@ -9233,8 +9233,8 @@ document.addEventListener('touchend', function(e){
       <button type="button" class="qBtn qBtnBlue" data-open="17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></button>
       <button type="button" class="qBtn qBtnGold" data-open="14"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></button>      <button type="button" class="qBtn qBtnBlue" data-open="18"><span class="qLine1" data-i18n="btn9Line1">제이주현 붙임머리 수강 안내</span></button>      <button type="button" class="qBtn qBtnGreen jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn8Line1">공지사항</span></button>
     </div>
-<button type="button" class="jhInqToggleBtn" data-open="false" data-i18n="sp17_inq_open" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
-    <div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+<button type="button" class="jhInqToggleBtn" data-open="true" data-i18n="sp17_inq_close" onclick="jhToggleInquiryForm(this)">간편 문의하기 - 닫기</button>
+    <div class="item jhFormNoZoom jhInqFormPanel" style="display:block;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
       <h2 style="margin:8px 0 14px;font-size:22px;text-align:center;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
       <label style="display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:17px;font-weight:700;color:#3b0a5c;cursor:pointer;">
         <input type="checkbox" data-role="quickConsult" onchange="jhToggleQuickConsult(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
@@ -9463,8 +9463,8 @@ window.addEventListener('load', jhPortfolioInit);
 </div>
 
 <nav class="bottom">
-  <a class="bKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-  <a class="bLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+  <a class="bKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+  <a class="bLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
 </nav>
 
 </main>
@@ -9679,8 +9679,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -9873,8 +9873,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -10111,8 +10111,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -10338,8 +10338,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -10762,8 +10762,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -11013,8 +11013,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -11245,8 +11245,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -11504,8 +11504,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
@@ -11597,6 +11597,18 @@ document.addEventListener('change', function(e){
   var panel = e.target.closest ? e.target.closest('.jhInqFormPanel') : null;
   if(panel && e.target.hasAttribute('data-role')) jhInqSaveAll(panel);
 });
+function jhGoToInquiry(el){
+  var scope = el.closest('[id^="subPage"]') || document;
+  var btn = scope.querySelector('.jhInqToggleBtn');
+  if(!btn) return true;
+  if(btn.getAttribute('data-open') !== 'true'){ jhToggleInquiryForm(btn); }
+  setTimeout(function(){
+    var rect = btn.getBoundingClientRect();
+    var targetY = window.scrollY + rect.top - 70;
+    window.scrollTo({top: targetY, behavior:'smooth'});
+  }, 60);
+  return false;
+}
 function jhToggleInquiryForm(btn){
   var next = btn.nextElementSibling;
   var guide = null, panel = null;
@@ -12252,8 +12264,8 @@ function jhDoSend(type, text, skipConfirm){
 </div>
 <p style="text-align:center;color:#ec4899;font-size:12px;padding:16px 20px 20px;"><span style="color:#ef8fbf;">제이주현 붙임머리<br>대표자: 한주현 | 사업자등록번호: 583-08-01344</span><br><br>Copyrightⓒ J.JOOHYUN HAIR<br>All Right Reserved.</p>
   <div class="foot subFoot3">
-    <a class="sKakao" href="https://pf.kakao.com/_DQYZT"><span class="jhTalkBadge">TALK</span>Kakao</a>
-    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
+    <a class="sKakao" href="https://pf.kakao.com/_DQYZT" onclick="return jhGoToInquiry(this)"><span class="jhTalkBadge">TALK</span>Kakao</a>
+    <a class="sLine" href="https://line.me/ti/p/Wb_-Ubr2Pr" target="_blank" onclick="return jhGoToInquiry(this)"><span class="jhBtnIcon jhBtnLineIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.3.9.6.1.3.1.7 0 1l-.1 1c0 .3-.2 1.1 1 .6 1.1-.5 6.1-3.6 8.3-6.2C21.9 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z" fill="#06c755"/></svg></span><span class="jhBottomLineWord">LINE</span></a>
   </div>
 </div>
 
