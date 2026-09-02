@@ -13377,6 +13377,12 @@ document.addEventListener('click', function(e){
     jhCloneHairGuide();
     var alwaysOpenPanel = document.querySelector('#jhHairGuideMaster + .jhInqFormPanel');
     if(alwaysOpenPanel && window.jhInqRestoreAll) jhInqRestoreAll(alwaysOpenPanel);
+    document.querySelectorAll('.jhInqToggleBtn[data-open="true"]').forEach(function(btn){
+      var next = btn.nextElementSibling;
+      if(next && next.classList && next.classList.contains('jhHairGuideClone')){
+        next.style.display = 'block';
+      }
+    });
   });
 })();
 </script>
