@@ -2824,7 +2824,7 @@ section.simpleSteps .sub{
 #subPage,#subPage2,#subPage3,#subPage4,#subPage5,#subPage6,#subPage7,#subPage8,#subPage9,#subPage10,#subPage11,#subPage12,#subPage14,#subPage15,#subPage18{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important;}
 #subPage.open{display:block}
 body.subOpen main.mobile{display:none!important;}
-body.subOpen .top{position:relative!important;}
+body.subOpen .top{position:relative!important;box-shadow:0 8px 20px rgba(6,26,51,.045)!important;}
 #subPage,#subPage2,#subPage3,#subPage4,#subPage5,#subPage6{
   --sub-paper:#ffe3f0;
   --sub-card:#ffffff;
@@ -4338,7 +4338,7 @@ document.addEventListener('touchend', function(e){
   jhLastTouchEnd = now;
 }, {passive:false});
 </script>
-<header class="top" onclick="if(!event.target.closest('.langSwitch')){window.scrollTo({top:0,behavior:'smooth'});}" style="cursor:pointer;">
+<header class="top" onclick="if(!event.target.closest('.langSwitch')){ if(document.body.classList.contains('subOpen') && window.__goHome){ window.__goHome(); } else { window.scrollTo({top:0,behavior:'smooth'}); } }" style="cursor:pointer;">
   <div class="logo">
   
   <div class="logoText">
