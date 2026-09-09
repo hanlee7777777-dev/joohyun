@@ -13232,8 +13232,11 @@ document.addEventListener('selectstart', function(e){
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  if (window.openNotice18) { openNotice18(); }
   window.__goHome = function(){ window.location.href = 'https://www.joo92.com/'; };
+  if (!location.hash || location.hash.indexOf('#sub') !== 0) {
+    if (window.__closeAllSub) { __closeAllSub(); }
+    if (window.openNotice18) { openNotice18(); }
+  }
 });
 </script>
 </body>
