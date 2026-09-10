@@ -13,22 +13,22 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joo92.com/course.html</loc>
+    <loc>https://www.joo92.com/course</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joo92.com/care.html</loc>
+    <loc>https://www.joo92.com/care</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.joo92.com/price.html</loc>
+    <loc>https://www.joo92.com/price</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.joo92.com/suggestion.html</loc>
+    <loc>https://www.joo92.com/suggestion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
