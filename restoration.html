@@ -101,7 +101,8 @@ b{color:var(--pinkDark);}
 .jhPointCard .jhPointText h4{font-size:17px;font-weight:800;color:#1a2436;margin:0 0 6px;letter-spacing:-.3px}
 .jhPointCard .jhPointText p{font-size:15px;color:#4a5568;margin:0;line-height:1.5}
 @keyframes jhPointIconShake{0%,100%{transform:translateX(0)}25%{transform:translateX(3px)}50%{transform:translateX(0)}75%{transform:translateX(-3px)}}
-.closing{text-align:center;background:#fff;border-radius:22px;padding:32px 24px 28px;margin:24px 0;box-shadow:0 10px 28px rgba(236,72,153,.14);}
+.closing{text-align:center;background:#fff;border-radius:22px;padding:32px 24px 28px;margin:24px 0;box-shadow:0 10px 28px rgba(236,72,153,.14);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .3s ease,box-shadow .3s ease;}
+.closing:active{transform:scale(1.25);box-shadow:0 14px 34px rgba(21,39,68,.32);position:relative;z-index:5;}
 .closing .closingMark{display:block;font-size:44px;line-height:1;color:var(--gold);font-weight:700;margin-bottom:6px;animation:closingMarkFloat 2.6s ease-in-out infinite;}
 @keyframes closingMarkFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
 @keyframes closingBrandGlow{0%,100%{opacity:1;}50%{opacity:.55;}}
