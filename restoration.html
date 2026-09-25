@@ -861,10 +861,22 @@ var jhQuickMsgs = {
   ja:'[J.JOOHYUNヘアエクステンション] 相談のお問い合わせです。',
   th:'[J.JOOHYUN Hair Extensions] ขอสอบถามเพื่อปรึกษา'
 };
+var jhInqLangNames = {en:'영어',vi:'베트남어',ja:'일본어',th:'태국어',zh:'중국어(간체)','zh-TW':'중국어(번체)'};
+function jhInqLangLine(){
+  var l = null; try{ l = localStorage.getItem('jhLang'); }catch(e){}
+  return (l && jhInqLangNames[l]) ? '문의 언어: ' + jhInqLangNames[l] + '\n' : '';
+}
+function jhTimeToKo(v){
+  if(!v) return v;
+  var m = String(v).match(/(\d{1,2})\s*:\s*(\d{2})/);
+  if(!m) return v;
+  var pm = /오후|PM|CH|午後|下午/i.test(v);
+  return (pm ? '오후 ' : '오전 ') + parseInt(m[1],10) + ':' + m[2];
+}
 function jhQuickConsultMsg(){
   var lang = null;
   try{ lang = localStorage.getItem('jhLang'); }catch(e){}
-  return (lang && jhQuickMsgs[lang]) ? jhQuickMsgs[lang] : jhQuickMsgs.ko;
+  return jhQuickMsgs.ko + (jhInqLangLine() ? '\n' + jhInqLangLine().replace(/\n$/,'') : '');
 }
 function jhSendInquiry(btn, type){
   var panel = btn.closest('.jhInqFormPanel');
@@ -885,7 +897,7 @@ function jhSendInquiry(btn, type){
     time = '';
   } else {
     date = g('date');
-    time = g('time');
+    time = jhTimeToKo(g('time'));
   }
   var length = g('length');
   var volume = g('volume');
@@ -908,17 +920,17 @@ function jhSendInquiry(btn, type){
   if(!route){ jhShowInqError(panel, jhValMsg('route')); return; }
 
   var na = function(v){ return v || '미입력'; };
-  var text = '[제이주현 붙임머리 예약 문의]\\n'
-    + '성함: ' + name + '\\n'
-    + '연락처: ' + phone + '\\n'
-    + '희망 날짜: ' + na(date) + '\\n'
-    + ((dateLater && dateLater.checked) ? '' : '희망 시간: ' + na(time) + '\\n')
-    + '현재 머리 기장: ' + na(length) + '\\n'
-    + '현재 머리숱: ' + na(volume) + '\\n'
-    + '현재 머리 컬러: ' + na(color) + '\\n'
-    + '원하시는 기장: ' + na(desiredLength) + '\\n'
-    + '원하시는 스타일: ' + na(style) + '\\n'
-    + '방문 경로: ' + na(route) + '\\n'
+  var text = '[제이주현 붙임머리 예약 문의]\n' + jhInqLangLine()
+    + '성함: ' + name + '\n'
+    + '연락처: ' + phone + '\n'
+    + '희망 날짜: ' + na(date) + '\n'
+    + ((dateLater && dateLater.checked) ? '' : '희망 시간: ' + na(time) + '\n')
+    + '현재 머리 기장: ' + na(length) + '\n'
+    + '현재 머리숱: ' + na(volume) + '\n'
+    + '현재 머리 컬러: ' + na(color) + '\n'
+    + '원하시는 기장: ' + na(desiredLength) + '\n'
+    + '원하시는 스타일: ' + na(style) + '\n'
+    + '방문 경로: ' + na(route) + '\n'
     + '추가로 남기실 말: ' + na(note);
 
   jhShowAccountModal(type, text);
