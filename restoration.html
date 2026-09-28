@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<script>(function(){var M={'8':'/suggestion','12':'/price','18':'/course'};var c=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';var m=location.hash.match(/^#sub(\d+)$/);if(m&&M[m[1]]&&M[m[1]]!==c){location.replace(M[m[1]]);}
+<script>(function(){var M={'8':'/suggestion','12':'/price','18':'/course','14':'/care'};var c=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';var m=location.hash.match(/^#sub(\d+)$/);if(m&&M[m[1]]&&M[m[1]]!==c){location.replace(M[m[1]]);}
 document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('[data-open],[data-jump]');if(!el)return;var n=el.getAttribute('data-open')||el.getAttribute('data-jump');if(M[n]&&M[n]!==c){e.preventDefault();e.stopImmediatePropagation();location.href=M[n];}},true);})();</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -372,8 +372,8 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom));}
       <button type="button" class="qBtn qBtnGold jhDisabledBtn" disabled aria-disabled="true"><span class="qLine1" data-i18n="btn1Line1">주현 원장 프로필</span></button>
       <a class="qBtn qBtnBlue" href="https://www.joo92.com/#sub7"><span class="qLine1" data-i18n="btn2Line1">명품 1mm 슬림 땋기</span></a>
       <a class="qBtn qBtnGold" href="https://www.joo92.com/#sub10"><span class="qLine1" data-i18n="btn3Line1">자주 묻는 BEST Q&A</span></a>
-      <a class="qBtn qBtnBlue" href="https://www.joo92.com/#sub8"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></a>
-      <a class="qBtn qBtnGold" href="https://www.joo92.com/#sub12"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 안내</span></a>
+      <a class="qBtn qBtnBlue" href="https://www.joo92.com/suggestion"><span class="qLine1" data-i18n="btn4Line1">주현 원장의 제안</span></a>
+      <a class="qBtn qBtnGold" href="https://www.joo92.com/price"><span class="qLine1" data-i18n="btn5Line1">붙임머리 가격 비용안내</span></a>
       <a class="qBtn qBtnBlue" href="https://www.joo92.com/#sub17"><span class="qLine1" data-i18n="btn6Line1">예약 문의 방법, 오시는 길 안내</span></a>
       <a class="qBtn qBtnGold" href="https://www.joo92.com/care"><span class="qLine1" data-i18n="btn7Line1">붙임머리 관리 방법 안내</span></a>
       <a class="qBtn qBtnBlue" href="https://www.joo92.com/course"><span class="qLine1" data-i18n="btn9Line1">붙임머리 수강 교육 안내</span></a>
