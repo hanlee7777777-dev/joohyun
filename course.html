@@ -4142,6 +4142,7 @@ img{-webkit-user-drag:none;user-drag:none;}
 <style>#subPage18 .jhCourseGuide p{margin:0 0 12px;}#subPage18 .jhCourseGuide p:last-child{margin-bottom:0;}#subPage18 main .wrap b{color:#c2185b;}</style>
 <style id="jhPinkSubs">#subPage9 main .r-in h2{color:#c2185b!important;}#subPage9 main .wrap .item b,#subPage9 main .r-in b,#subPage9 main .r-in h2,#subPage10 main .wrap .item b,#subPage17 main .wrap .item:not(.jhInqFormPanel) b,#subPage9 main .wrap .item h2,#subPage10 main .wrap .item h2,#subPage17 main .wrap .item:not(.jhInqFormPanel) h2{color:#c2185b;}</style>
 <style id="jhPinkClosing">.closing .q,.jhPointCard .jhPointText h4{color:#c2185b!important;-webkit-text-fill-color:#c2185b!important;}</style>
+<style id="jhHeroLeft">html[data-jhlang]:not([data-jhlang="ko"]) .hero .sub,html[data-jhlang]:not([data-jhlang="ko"]) .heroSection .sub{text-align:left!important;}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -4265,7 +4266,7 @@ document.addEventListener('touchend', function(e){
     }
     __jhApplyLangNow(lang);
   }
-  function __jhApplyLangNow(lang){
+  function __jhApplyLangNow(lang){try{document.documentElement.setAttribute('data-jhlang',lang||'ko');}catch(e){}
     var dict = I18N[lang];
     document.querySelectorAll('[data-i18n]').forEach(function(el){
         var key = el.getAttribute('data-i18n');

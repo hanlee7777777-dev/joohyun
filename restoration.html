@@ -243,6 +243,7 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom));}
 }
 </style>
 <style id="jhPinkClosing">.closing .q,.jhPointCard .jhPointText h4{color:#c2185b!important;-webkit-text-fill-color:#c2185b!important;}</style>
+<style id="jhHeroLeft">html[data-jhlang]:not([data-jhlang="ko"]) .hero .sub,html[data-jhlang]:not([data-jhlang="ko"]) .heroSection .sub{text-align:left!important;}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 <body>
@@ -607,7 +608,7 @@ document.addEventListener('selectstart', function(e){ e.preventDefault(); });
     }
     __jhApplyLangNow(lang);
   }
-  function __jhApplyLangNow(lang){
+  function __jhApplyLangNow(lang){try{document.documentElement.setAttribute('data-jhlang',lang||'ko');}catch(e){}
     var dict = I18N[lang];
     document.querySelectorAll('[data-i18n]').forEach(function(el){
         var key = el.getAttribute('data-i18n');
