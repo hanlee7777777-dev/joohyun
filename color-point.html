@@ -4156,7 +4156,9 @@ img{-webkit-user-drag:none;user-drag:none;}
 @keyframes jhEvtPop{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(236,72,153,0))}50%{transform:scale(1.27);filter:drop-shadow(0 0 10px rgba(236,72,153,.55))}}
 @keyframes jhEvtTwinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}40%{opacity:1;transform:scale(1.2) rotate(30deg)}70%{opacity:0;transform:scale(.5) rotate(60deg)}}
 @keyframes jhEvtGlow{0%,100%{box-shadow:0 8px 20px rgba(194,24,91,.18)}50%{box-shadow:0 8px 36px rgba(236,72,153,.6)}}
-@media (prefers-reduced-motion:reduce){.jhEvt,.jhEvtTitle,.jhEvtSpark{animation:none!important}}
+.jhEvtPoint{position:absolute;left:39.53%;top:51.79%;width:50.58%;height:auto;pointer-events:none;z-index:1;transform-origin:28% 55%;-webkit-mask-image:radial-gradient(ellipse 52% 60% at 50% 50%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 52% 60% at 50% 50%,#000 70%,transparent 100%);animation:jhEvtPop2 3.6s ease-in-out infinite;animation-delay:1.8s;}
+@keyframes jhEvtPop2{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(236,72,153,0))}50%{transform:scale(1.27);filter:drop-shadow(0 0 10px rgba(236,72,153,.55))}}
+@media (prefers-reduced-motion:reduce){.jhEvt,.jhEvtTitle,.jhEvtPoint,.jhEvtSpark{animation:none!important}}
 </style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
@@ -5752,6 +5754,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="wrap">
     <div class="jhEvt" style="margin:16px 0 0;">
       <img src="/images/site/cp-event.webp" alt="제이주현 포인트 붙임머리 이벤트 가격 안내" width="800" height="1421" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
+      <img class="jhEvtPoint" src="/images/site/cp-event-point.webp" alt="" aria-hidden="true" decoding="async">
       <img class="jhEvtTitle" src="/images/site/cp-event-title.webp" alt="" aria-hidden="true" decoding="async">
       <span class="jhEvtSpark s1" aria-hidden="true">✦</span><span class="jhEvtSpark s2" aria-hidden="true">✦</span><span class="jhEvtSpark s3" aria-hidden="true">✦</span>
     </div>
