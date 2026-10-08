@@ -4160,6 +4160,11 @@ img{-webkit-user-drag:none;user-drag:none;}
 @keyframes jhEvtPop2{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(236,72,153,0))}50%{transform:scale(1.27);filter:drop-shadow(0 0 10px rgba(236,72,153,.55))}}
 @media (prefers-reduced-motion:reduce){.jhEvt,.jhEvtTitle,.jhEvtPoint,.jhEvtSpark{animation:none!important}}
 </style>
+<style id="jhZoomCss">
+main img:not(.jhEvt img):not(.equip-photo img),img[src*="/images/og/"],.equip-photo,.jhEvt{position:relative;transition:transform .25s ease;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;}
+main img:not(.jhEvt img):not(.equip-photo img):active,img[src*="/images/og/"]:active,.equip-photo:active,.jhEvt:active{transform:scale(1.25);z-index:5;}
+</style>
+<script>document.addEventListener('touchstart',function(){},{passive:true});</script>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -5752,7 +5757,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <main>
   <div class="wrap">
-    <div class="jhEvt" style="margin:16px 0 0;">
+    <div class="jhEvt" ontouchstart="" style="margin:16px 0 0;">
       <img src="/images/site/cp-event.webp?v=3" alt="제이주현 포인트 붙임머리 이벤트 가격 안내" width="800" height="1421" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
       <img class="jhEvtPoint" src="/images/site/cp-event-point.webp?v=4" alt="" aria-hidden="true" decoding="async">
       <img class="jhEvtTitle" src="/images/site/cp-event-title.webp" alt="" aria-hidden="true" decoding="async">
