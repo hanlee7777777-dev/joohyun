@@ -42,7 +42,7 @@ document.addEventListener('click',function(e){var el=e.target.closest&&e.target.
   "description": "망친 커트, 어긋난 레이어드, 손상된 붙임머리까지 정확한 진단과 디자인 재설계로 자연스럽게 복구해 드립니다. 제이주현 붙임머리 전문샵"
 }
 </script>
-<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/restoration.js?v=20261008"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
+<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/restoration.js?v=20261009"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 @font-face{
@@ -249,6 +249,148 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPortfolioImg):not(#jhPortfolioTrack img):active,img[src*="/images/og/"]:active,.equip-photo:active,.jhEvt:active{transform:scale(1.25);z-index:5;}
 </style>
 <script>document.addEventListener('touchstart',function(){},{passive:true});</script>
+<style id="jhWelcomeCss">.welcomeWrap{margin:28px 4px 4px;padding:11px 20px 60px;position:relative;text-align:center;}
+.welcomeWrap::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:44px;height:1px;background:linear-gradient(90deg,transparent,#c9a862,transparent);}
+.welcomeQMark{display:block;font-size:42px;font-weight:800;color:#b08d4d;line-height:1;margin-bottom:2px;font-family:Georgia,serif;opacity:.85;}
+.welcomeBrand{display:block;font-size:20px;font-weight:800;letter-spacing:4px;color:#ec4899;margin-bottom:8px;text-transform:uppercase;}
+.welcomeText{margin:0;font-size:22px;font-weight:600;color:#ec4899;letter-spacing:-.3px;line-height:1.5;}
+.welcomeWrap{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.item,.closing,.rate,.carTypes>div,.fleetLogoImageWrap,.fleetHero,.baNote2,.free,.stepCard,.stepItem,.welcomeWrap,.premiumWarrantyBox{
+  transition:transform .15s ease,box-shadow .15s ease!important;
+}
+.welcomeWrap:active{
+  transform:scale(1.2)!important;
+}
+.welcomeWrap{position:relative;overflow:visible;clip-path:inset(-4px -24px -110px -24px);}
+.welcomeBrand,.welcomeQMark{position:relative;z-index:1;animation:welcomeColorShift 3.5s ease-in-out infinite;}
+@keyframes welcomeColorShift{
+  0%,10%{color:#ec4899;}
+  25%{color:#c2185b;}
+  40%,100%{color:#ec4899;}
+}
+.welcomeWrap::after{
+  content:"";
+  position:absolute;
+  top:-5%;left:0;right:0;height:14%;
+  background:radial-gradient(ellipse at center, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 60%, transparent 100%);
+  animation:welcomeShine 3.5s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  pointer-events:none;
+  opacity:0;
+}
+@keyframes welcomeShine{
+  0%,100%{opacity:0;}
+  50%{opacity:1;}
+}
+.runningDogWrap{position:relative;height:34px;margin-top:55px;overflow:visible;}
+.runningDogWrap::after{content:"";position:absolute;left:-24px;right:-24px;bottom:-120px;width:auto;height:26px;background:linear-gradient(to bottom, rgba(236,72,153,.15) 0%, rgba(236,72,153,0) 100%);pointer-events:none;}
+.carTrailSvg{position:absolute;left:0;bottom:4px;width:100%;height:14px;overflow:visible;}
+.carTrailWrap{position:absolute;left:0;bottom:0;width:100%;white-space:nowrap;}
+.carTrailSvg path{stroke-dasharray:100;stroke-dashoffset:100;animation:trailDraw 24s linear infinite;}
+.carTrailSvg path{
+  stroke-dasharray:100;
+  stroke-dashoffset:100;
+  animation:roadTrail 24s linear infinite;
+  opacity:.55;
+}
+.carClip{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.runningDog{
+  position:absolute;
+  left:-15%;
+  top:0;
+  font-size:26px;
+  animation:dogRun 24s linear infinite;
+  display:inline-block;
+}
+.carLetter{position:static;display:inline-block;font-size:18px;font-weight:800;color:#c2185b;letter-spacing:2px;opacity:0;white-space:nowrap;}
+.carLetterRow{position:relative;padding-bottom:10px;white-space:nowrap;display:block;text-align:center;}
+.carLetter1{animation:letterFade1 24s linear infinite;}
+.carLetter2{animation:letterFade2 24s linear infinite;}
+.carLetter3{animation:letterFade3 24s linear infinite;}
+.carLetter4{animation:letterFade4 24s linear infinite;}
+.carLetter5{animation:letterFade5 24s linear infinite;}
+.carLetter6{animation:letterFade6 24s linear infinite;}
+.carLetter7{animation:letterFade7 24s linear infinite;}
+.carLetter8{animation:letterFade8 24s linear infinite;}
+.carLetter9{animation:letterFade9 24s linear infinite;}
+.carLetter10{animation:letterFade10 24s linear infinite;}
+.carLetter11{animation:letterFade11 24s linear infinite;}
+.carLetter12{animation:letterFade12 24s linear infinite;}
+.carLetter13{animation:letterFade13 24s linear infinite;}
+.carLetter14{animation:letterFade14 24s linear infinite;}
+.wLetter{position:static;font-size:17px;font-weight:800;color:#c2185b;letter-spacing:0;opacity:0;white-space:nowrap;}
+.wLetter1{animation:wLetterFade1 24s linear infinite;}
+@keyframes wLetterFade1{0%,10.00%{opacity:0;}11.00%,100%{opacity:1;}}
+.wLetter2{animation:wLetterFade2 24s linear infinite;}
+@keyframes wLetterFade2{0%,12.62%{opacity:0;}13.62%,100%{opacity:1;}}
+.wLetter3{animation:wLetterFade3 24s linear infinite;}
+@keyframes wLetterFade3{0%,15.24%{opacity:0;}16.24%,100%{opacity:1;}}
+.wLetter4{animation:wLetterFade4 24s linear infinite;}
+@keyframes wLetterFade4{0%,17.86%{opacity:0;}18.86%,100%{opacity:1;}}
+.wLetter5{animation:wLetterFade5 24s linear infinite;}
+@keyframes wLetterFade5{0%,20.48%{opacity:0;}21.48%,100%{opacity:1;}}
+.wLetter6{animation:wLetterFade6 24s linear infinite;}
+@keyframes wLetterFade6{0%,23.10%{opacity:0;}24.10%,100%{opacity:1;}}
+.wLetter7{animation:wLetterFade7 24s linear infinite;}
+@keyframes wLetterFade7{0%,25.71%{opacity:0;}26.71%,100%{opacity:1;}}
+.wLetter8{animation:wLetterFade8 24s linear infinite;}
+@keyframes wLetterFade8{0%,28.33%{opacity:0;}29.33%,100%{opacity:1;}}
+.wLetter9{animation:wLetterFade9 24s linear infinite;}
+@keyframes wLetterFade9{0%,30.95%{opacity:0;}31.95%,100%{opacity:1;}}
+.wLetter10{animation:wLetterFade10 24s linear infinite;}
+@keyframes wLetterFade10{0%,33.57%{opacity:0;}34.57%,100%{opacity:1;}}
+.wLetter11{animation:wLetterFade11 24s linear infinite;}
+@keyframes wLetterFade11{0%,36.19%{opacity:0;}37.19%,100%{opacity:1;}}
+.wLetter12{animation:wLetterFade12 24s linear infinite;}
+@keyframes wLetterFade12{0%,38.81%{opacity:0;}39.81%,100%{opacity:1;}}
+.wLetter13{animation:wLetterFade13 24s linear infinite;}
+@keyframes wLetterFade13{0%,41.43%{opacity:0;}42.43%,100%{opacity:1;}}
+.wLetter14{animation:wLetterFade14 24s linear infinite;}
+@keyframes wLetterFade14{0%,44.05%{opacity:0;}45.05%,100%{opacity:1;}}
+.wLetter15{animation:wLetterFade15 24s linear infinite;}
+@keyframes wLetterFade15{0%,46.67%{opacity:0;}47.67%,100%{opacity:1;}}
+.wLetter16{animation:wLetterFade16 24s linear infinite;}
+@keyframes wLetterFade16{0%,49.29%{opacity:0;}50.29%,100%{opacity:1;}}
+.wLetter17{animation:wLetterFade17 24s linear infinite;}
+@keyframes wLetterFade17{0%,51.90%{opacity:0;}52.90%,100%{opacity:1;}}
+.wLetter18{animation:wLetterFade18 24s linear infinite;}
+@keyframes wLetterFade18{0%,54.52%{opacity:0;}55.52%,100%{opacity:1;}}
+.wLetter19{animation:wLetterFade19 24s linear infinite;}
+@keyframes wLetterFade19{0%,57.14%{opacity:0;}58.14%,100%{opacity:1;}}
+.wLetter20{animation:wLetterFade20 24s linear infinite;}
+@keyframes wLetterFade20{0%,59.76%{opacity:0;}60.76%,100%{opacity:1;}}
+.wLetter21{animation:wLetterFade21 24s linear infinite;}
+@keyframes wLetterFade21{0%,62.38%{opacity:0;}63.38%,100%{opacity:1;}}
+.wLetter22{animation:wLetterFade22 24s linear infinite;}
+@keyframes wLetterFade22{0%,65.00%{opacity:0;}66.00%,100%{opacity:1;}}
+.warrantyTrailWrap{position:relative;min-height:30px;margin-top:30px;overflow:visible;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px;row-gap:4px;}
+@keyframes trailDraw{0%,22%{stroke-dashoffset:100;}53%,100%{stroke-dashoffset:0;}}
+@keyframes roadTrail{
+  0%{stroke-dashoffset:100;}
+  69.6%{stroke-dashoffset:0;}
+  100%{stroke-dashoffset:0;}
+}
+@keyframes dogRun{
+  0%{left:-15%;transform:scaleX(-1) translateY(0);}
+  35%{transform:scaleX(-1) translateY(-0.4px);}
+  69.6%{left:105%;transform:scaleX(-1) translateY(0);}
+  100%{left:105%;transform:scaleX(-1) translateY(0);}
+}
+@keyframes letterFade1{0%,22.00%{opacity:0;}23.00%,100%{opacity:1;}}
+@keyframes letterFade2{0%,24.38%{opacity:0;}25.38%,100%{opacity:1;}}
+@keyframes letterFade3{0%,26.77%{opacity:0;}27.77%,100%{opacity:1;}}
+@keyframes letterFade4{0%,29.15%{opacity:0;}30.15%,100%{opacity:1;}}
+@keyframes letterFade5{0%,31.54%{opacity:0;}32.54%,100%{opacity:1;}}
+@keyframes letterFade6{0%,33.92%{opacity:0;}34.92%,100%{opacity:1;}}
+@keyframes letterFade7{0%,36.31%{opacity:0;}37.31%,100%{opacity:1;}}
+@keyframes letterFade8{0%,38.69%{opacity:0;}39.69%,100%{opacity:1;}}
+@keyframes letterFade9{0%,41.08%{opacity:0;}42.08%,100%{opacity:1;}}
+@keyframes letterFade10{0%,43.46%{opacity:0;}44.46%,100%{opacity:1;}}
+@keyframes letterFade11{0%,45.85%{opacity:0;}46.85%,100%{opacity:1;}}
+@keyframes letterFade12{0%,48.23%{opacity:0;}49.23%,100%{opacity:1;}}
+@keyframes letterFade13{0%,50.62%{opacity:0;}51.62%,100%{opacity:1;}}
+@keyframes letterFade14{0%,53.00%{opacity:0;}54.00%,100%{opacity:1;}}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 <body>
@@ -265,6 +407,26 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 <header class="heroSection" onclick="window.location.href='https://www.joo92.com/';" style="cursor:pointer;">
   <div class="wrap"><p class="sub" data-i18n="rst_hero_sub">잘못된 커트, 손상된 붙임머리, 티 나는 경계선을 원래의 자연스러움으로 되돌려 드립니다.</p></div>
 </header>
+<div class="jhWelcomeSub" style="padding:6px 16px 0;">
+<div class="welcomeWrap">
+    <span class="welcomeQMark">“</span>
+    <span class="welcomeBrand">제이주현헤어<br><span style="display:block;font-size:21px;letter-spacing:2px;color:#f4a6c7;margin-top:2px;text-transform:none;">제이바비</span></span>
+    <p class="welcomeText" data-i18n-html="welcomeText">붙임머리에 오신 것을<br>환영합니다.</p>
+    
+    <div class="runningDogWrap">
+      <div class="carTrailWrap">
+        <svg class="carTrailSvg" viewBox="0 0 300 14" preserveAspectRatio="none">
+          <path pathLength="100" d="M0,7 L22,6.3 L44,7.4 L66,6.6 L88,7.2 L110,6.4 L132,7.3 L154,6.5 L176,7.1 L198,6.3 L220,7.4 L242,6.6 L264,7.2 L286,6.4 L300,6.8" stroke="#c2185b" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="carLetterRow"><span class="carLetter carLetter1">J</span><span class="carLetter carLetter2">.</span><span class="carLetter carLetter3">J</span><span class="carLetter carLetter4">O</span><span class="carLetter carLetter5">O</span><span class="carLetter carLetter6">H</span><span class="carLetter carLetter7">Y</span><span class="carLetter carLetter8">U</span><span class="carLetter carLetter9">N</span><span class="carLetter carLetter10">&nbsp;</span><span class="carLetter carLetter11">H</span><span class="carLetter carLetter12">A</span><span class="carLetter carLetter13">I</span><span class="carLetter carLetter14">R</span></div>
+      </div>
+      <div class="carClip"><span class="runningDog"><svg width="34" height="20" viewBox="0 0 60 34" xmlns="http://www.w3.org/2000/svg"><path d="M6 20 L11 9 Q13 6 18 6 L38 6 Q43 6 45 9 L50 20 Q56 20 56 26 L56 28 Q56 30 54 30 L4 30 Q2 30 2 28 L2 26 Q2 20 6 20 Z" fill="#ec4899"/><path d="M15 9 L38 9 Q40 9 41 11 L44 18 L13 18 L16 11 Q16.5 9 15 9 Z" fill="#ffd6ea"/><circle cx="14" cy="30" r="5" fill="#3a2233"/><circle cx="46" cy="30" r="5" fill="#3a2233"/></svg></span></div>
+      
+    </div>
+    <div class="warrantyTrailWrap"><span class="wLetter wLetter1">L</span><span class="wLetter wLetter2">U</span><span class="wLetter wLetter3">X</span><span class="wLetter wLetter4">U</span><span class="wLetter wLetter5">R</span><span class="wLetter wLetter6">Y</span><span class="wLetter wLetter7">&nbsp;</span><span class="wLetter wLetter8">H</span><span class="wLetter wLetter9">A</span><span class="wLetter wLetter10">I</span><span class="wLetter wLetter11">R</span><span class="wLetter wLetter12">&nbsp;</span><span class="wLetter wLetter13">E</span><span class="wLetter wLetter14">X</span><span class="wLetter wLetter15">T</span><span class="wLetter wLetter16">E</span><span class="wLetter wLetter17">N</span><span class="wLetter wLetter18">S</span><span class="wLetter wLetter19">I</span><span class="wLetter wLetter20">O</span><span class="wLetter wLetter21">N</span><span class="wLetter wLetter22">S</span></div>
+  </div>
+</div>
+
 
 <main class="wrap">
 
@@ -586,7 +748,7 @@ document.addEventListener('selectstart', function(e){ e.preventDefault(); });
   document.addEventListener("click",function(){ menu.style.display="none"; });
 
   var I18N = {};
-  var __jhI18nFiles = ["/i18n/restoration.js?v=20261008"];
+  var __jhI18nFiles = ["/i18n/restoration.js?v=20261009"];
   var __jhI18nState = 0, __jhI18nCbs = [];
   function __jhLoadI18n(cb){
     if(__jhI18nState===2){ cb(); return; }
