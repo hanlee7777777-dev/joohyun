@@ -8386,7 +8386,7 @@ document.addEventListener('DOMContentLoaded', function(){
   window.__goHome = function(){ window.location.href = 'https://www.joo92.com/'; };
   if (!location.hash || location.hash.indexOf('#sub') !== 0) {
     if (window.__closeAllSub) { __closeAllSub(); }
-    if (window.openNotice14) { openNotice14(); }
+    if (window.openNotice14) { var __jhP=__pushSubState; __pushSubState=function(n){try{history.replaceState({sub:n},'','#sub'+n);}catch(e){}}; try{ openNotice14(); }finally{ __pushSubState=__jhP; } }
   }
 });
 </script>
