@@ -78,7 +78,7 @@ document.addEventListener('click',function(e){var el=e.target.closest&&e.target.
   ]
 }
 </script>
-<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261008","/i18n/slim-braid.js?v=20261008"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
+<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261008","/i18n/slim-braid.js?v=20261011"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
 <!-- Vercel Web Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -4153,6 +4153,7 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 <style id="jhWelcomeFix">.jhWelcomeSub{background:linear-gradient(rgb(255,245,250),rgb(255,234,243))!important;}.jhWelcomeSub .runningDog{line-height:0!important;font-size:0!important;top:3.5px!important;bottom:auto!important;height:20px!important;}.jhWelcomeSub .runningDog svg{display:block!important;}.jhWelcomeSub .runningDogWrap,.jhWelcomeSub .runningDogWrap *,.jhWelcomeSub .warrantyTrailWrap{line-height:normal!important;}</style>
 <style id="jhHeroShadow">[id^="subPage"] header.hero,.heroSection{position:relative;z-index:2;box-shadow:0 10px 18px -6px rgba(194,24,91,.38)!important;}</style>
 <style id="jhCpTrailCss">.jhCpTrailEn{display:none!important;}html[data-jhlang]:not([data-jhlang="ko"]) .jhCpTrail{display:none!important;}html[data-jhlang]:not([data-jhlang="ko"]) .jhCpTrailEn{display:flex!important;}.jhCpTrail{gap:0!important;flex-wrap:nowrap!important;}.jhCpTrail .wLetter{color:#ec4899!important;font-size:19px!important;letter-spacing:1px!important;}</style>
+<style id="jhPillCss">.jhCapWrap{position:relative;margin:0 0 16px;transition:transform .25s ease;-webkit-tap-highlight-color:transparent;container-type:inline-size;}.jhCapWrap img{transform:none!important;}.jhCapWrap>img:first-child{margin:0!important;}.jhCapWrap:active{transform:scale(1.25);z-index:5;}.jhPill{display:none;}html[data-jhlang]:not([data-jhlang="ko"]) .jhPill{display:flex;align-items:center;justify-content:center;position:absolute;transform:translate(-50%,-50%) rotate(var(--r,0deg));box-sizing:border-box;width:max-content;max-width:97cqw;padding:.2em .75em;background:#050505;color:#fff;border-radius:999px;font-weight:600;line-height:1.25;text-align:center;white-space:pre-line;pointer-events:none;}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -4240,7 +4241,7 @@ document.addEventListener('touchend', function(e){
   document.addEventListener("click",function(){ menu.style.display="none"; });
 
   var I18N = {};
-  var __jhI18nFiles = ["/i18n/common.js?v=20261008","/i18n/slim-braid.js?v=20261008"];
+  var __jhI18nFiles = ["/i18n/common.js?v=20261008","/i18n/slim-braid.js?v=20261011"];
   var __jhI18nState = 0, __jhI18nCbs = [];
   function __jhLoadI18n(cb){
     if(__jhI18nState===2){ cb(); return; }
@@ -4921,7 +4922,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
       </div>
       <div style="margin:18px 0 0;">
-      <img src="/images/site/slim-1.webp" alt="1mm 슬림 땋기 붙임머리 시술 모습" width="900" height="1182" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
+      <div class="jhCapWrap jhPillWrap"><img src="/images/site/slim-1.webp" alt="1mm 슬림 땋기 붙임머리 시술 모습" width="900" height="1182" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;"><span class="jhPill" data-i18n="sb_p_slim" style="left:64.89%;top:40.19%;min-width:22.67cqw;min-height:5.56cqw;font-size:3.33cqw;--r:14deg"></span></div>
       <img src="/images/site/slim-2.webp" alt="슬림땋기 붙임머리 매듭 클로즈업" width="900" height="885" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
       <img src="/images/site/slim-3.webp" alt="티 안 나는 슬림 땋기 붙임머리 연결" width="900" height="882" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
     </div>
@@ -4939,8 +4940,8 @@ document.addEventListener('DOMContentLoaded', function(){
         </ul>
               </div>
       <div style="margin:18px 0 0;">
-      <img src="/images/site/slim-4.webp" alt="타샵과 제이주현 1mm 슬림 땋기 비교" width="720" height="1280" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
-      <img src="/images/site/slim-5.webp" alt="잘못된 붙임머리 두피 손상 복구 슬림 땋기 비교" width="720" height="1280" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;">
+      <div class="jhCapWrap jhPillWrap"><img src="/images/site/slim-4.webp" alt="타샵과 제이주현 1mm 슬림 땋기 비교" width="720" height="1280" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;"><span class="jhPill" data-i18n="sb_p_other" style="left:19.44%;top:31.84%;min-width:25.56cqw;min-height:10.97cqw;font-size:4.72cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_same" style="left:53.47%;top:55.47%;min-width:92.50cqw;min-height:11.11cqw;font-size:4.17cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_jj" style="left:82.29%;top:69.02%;min-width:27.08cqw;min-height:9.86cqw;font-size:4.44cqw;--r:0deg"></span></div>
+      <div class="jhCapWrap jhPillWrap"><img src="/images/site/slim-5.webp" alt="잘못된 붙임머리 두피 손상 복구 슬림 땋기 비교" width="720" height="1280" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;border:0.7px solid #f48fb1;box-sizing:border-box;margin:0 0 16px;box-shadow:0 8px 20px rgba(194,24,91,.18);background:#fff;"><span class="jhPill" data-i18n="sb_p_other" style="left:12.85%;top:24.10%;min-width:10.42cqw;min-height:5.14cqw;font-size:2.36cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_knot" style="left:49.72%;top:47.46%;min-width:75.56cqw;min-height:12.64cqw;font-size:3.19cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_scalp" style="left:50.90%;top:54.06%;min-width:58.47cqw;min-height:6.11cqw;font-size:3.06cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_red" style="left:53.47%;top:67.27%;min-width:85.83cqw;min-height:8.61cqw;font-size:2.78cqw;--r:0deg"></span><span class="jhPill" data-i18n="sb_p_jj" style="left:17.50%;top:82.30%;min-width:15.56cqw;min-height:5.69cqw;font-size:2.50cqw;--r:0deg"></span></div>
         </div>
     </section>
 
