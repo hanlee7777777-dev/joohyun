@@ -4279,16 +4279,16 @@ document.addEventListener('touchend', function(e){
   }
   function __jhApplyLangNow(lang){try{document.documentElement.setAttribute('data-jhlang',lang||'ko');}catch(e){}
     var dict = I18N[lang];
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-        var key = el.getAttribute('data-i18n');
-        if(!dict){ if(el.dataset.koOrig) el.textContent = el.dataset.koOrig; return; }
-        if(!el.dataset.koOrig) el.dataset.koOrig = el.textContent;
-        el.textContent = dict[key] || el.dataset.koOrig;
-    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){ if(el.dataset.koOrigHtml === undefined) el.dataset.koOrigHtml = el.innerHTML; });
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ if(el.dataset.koOrig === undefined) el.dataset.koOrig = el.textContent; });
     document.querySelectorAll('[data-i18n-html]').forEach(function(el){
         var key = el.getAttribute('data-i18n-html');
-        if(!el.dataset.koOrigHtml) el.dataset.koOrigHtml = el.innerHTML;
         el.innerHTML = (dict && dict[key]) ? dict[key] : el.dataset.koOrigHtml;
+    });
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+        var key = el.getAttribute('data-i18n');
+        if(el.dataset.koOrig === undefined) el.dataset.koOrig = el.textContent;
+        el.textContent = (dict && dict[key]) ? dict[key] : el.dataset.koOrig;
     });
     document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
         var key = el.getAttribute('data-i18n-ph');
