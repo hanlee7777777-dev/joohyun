@@ -8382,7 +8382,7 @@ document.addEventListener('selectstart', function(e){
   function itemOf(img){
     if(!img||img.tagName!=='IMG')return null;
     if(img.closest('.eduTrainPhoto')||(img.closest('figure.equip-photo')&&!img.closest('#subPage15')))return img;
-    var fb=img.closest('.jhFeatBox');if(fb&&fb.closest('main'))return fb;
+    var fb=img.closest('.jhFeatBox');if(fb&&fb.closest('main')&&fb.closest('[id^="subPage"]'))return fb;
     if(img.closest(EXCL)&&!img.closest('.jhEvt'))return null;
     if(img.closest('.jhEvt'))return img.closest('.jhEvt');
     var w=img.closest('.jhCapWrap');if(w)return w;
