@@ -1886,5 +1886,44 @@ function jhDoSend(type, text, skipConfirm){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
+<script>
+(function(){
+  window.jhRefreshHairGuideImg = function(){
+    var lang = null;
+    try{ lang = localStorage.getItem('jhLang'); }catch(e){}
+    if(!lang) lang = 'ko';
+    document.querySelectorAll('.jhHairGuideImg').forEach(function(img){
+      img.style.display = (img.dataset.lang === lang) ? 'block' : 'none';
+    });
+  };
+  window.jhCloneHairGuide = function(){
+    var master = document.getElementById('jhHairGuideMaster');
+    if(!master) return;
+    var buttons = document.querySelectorAll('.jhInqToggleBtn');
+    buttons.forEach(function(btn){
+      var next = btn.nextElementSibling;
+      if(next && next.id === 'jhHairGuideMaster') return;
+      if(next && next.classList && next.classList.contains('jhHairGuideClone')) return;
+      var clone = master.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.classList.add('jhHairGuideClone');
+      clone.style.display = 'none';
+      btn.parentNode.insertBefore(clone, next);
+    });
+    if(window.jhRefreshHairGuideImg) jhRefreshHairGuideImg();
+  };
+  document.addEventListener('DOMContentLoaded', function(){
+    jhCloneHairGuide();
+    var alwaysOpenPanel = document.querySelector('#jhHairGuideMaster + .jhInqFormPanel');
+    if(alwaysOpenPanel && window.jhInqRestoreAll) jhInqRestoreAll(alwaysOpenPanel);
+    document.querySelectorAll('.jhInqToggleBtn[data-open="true"]').forEach(function(btn){
+      var next = btn.nextElementSibling;
+      if(next && next.classList && next.classList.contains('jhHairGuideClone')){
+        next.style.display = 'block';
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
