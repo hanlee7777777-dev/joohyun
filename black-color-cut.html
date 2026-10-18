@@ -8472,10 +8472,10 @@ document.addEventListener('DOMContentLoaded', function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
-<script id="jhPortBarHideJs">(function(){var h=document.documentElement,last=window.scrollY||0,tk=false;
+<script id="jhPortBarHideJs" data-v="3">(function(){var h=document.documentElement,last=window.scrollY||0,tk=false;
 function ok(){return window.matchMedia('(orientation: portrait) and (max-width: 1023px)').matches;}
 function run(){tk=false;var y=window.scrollY||0;if(!ok()){h.classList.remove('barsAutoHideP');last=y;return;}
-if(y<=40)h.classList.remove('barsAutoHideP');else if(y<last-4)h.classList.add('barsAutoHideP');else if(y>last+4)h.classList.remove('barsAutoHideP');
+if(y<=40)h.classList.remove('barsAutoHideP');else if(y>last+4)h.classList.add('barsAutoHideP');else if(y<last-4)h.classList.remove('barsAutoHideP');
 var d=document.scrollingElement||h;if(y+window.innerHeight>=d.scrollHeight-20)h.classList.remove('barsAutoHideP');last=y;}
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(run);}},{passive:true});
 window.addEventListener('resize',function(){h.classList.remove('barsAutoHideP');last=window.scrollY||0;});})();</script>
