@@ -4157,6 +4157,7 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 <style id="jhIbacCss">html[data-jhlang]:not([data-jhlang="ko"]) .jhIbT.jhIbName{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif!important;font-weight:700;}.jhIbT{display:none;}html[data-jhlang]:not([data-jhlang="ko"]) .jhIbT{display:block;position:absolute;left:47%;width:44%;transform:translateY(-50%);text-align:center;font-family:"Noto Serif","Noto Serif KR","Noto Serif JP","Noto Serif SC","Noto Serif Thai",serif!important;font-weight:700;line-height:1.15;color:#f2cfc6;background:linear-gradient(#fbe3dc,#d9a59a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;pointer-events:none;white-space:nowrap;}</style>
 <style id="jhCapActiveFix">.jhCapWrap img:active,.jhCapWrap>img:first-child:active{z-index:auto!important;transform:none!important;}.jhCapWrap .jhCapClean{z-index:1;}.jhCapWrap>p,.jhCapWrap>span,.jhCapWrap>div{z-index:2;}.jhCapWrap img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}</style>
 <style id="jhOgActiveFix">.jhOgWrap{transition:transform .25s ease;-webkit-tap-highlight-color:transparent;}.jhOgWrap:active{transform:scale(1.25);z-index:5;}.jhOgWrap img:active{transform:none!important;z-index:auto!important;}.jhOgWrap .jhOgClean{z-index:1;}.jhOgWrap .jhOgTxt{z-index:2;}.jhOgWrap img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}</style>
+<style id="jhPortBarHide">.bottom,.subFoot3{transition:transform .3s ease,translate .3s ease!important;}html.barsAutoHideP .bottom,html.barsAutoHideP .subFoot3{translate:0 115%;}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -8548,5 +8549,12 @@ document.addEventListener('DOMContentLoaded', function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
+<script id="jhPortBarHideJs">(function(){var h=document.documentElement,last=window.scrollY||0,tk=false;
+function ok(){return window.matchMedia('(orientation: portrait) and (max-width: 1023px)').matches;}
+function run(){tk=false;var y=window.scrollY||0;if(!ok()){h.classList.remove('barsAutoHideP');last=y;return;}
+if(y<=40)h.classList.remove('barsAutoHideP');else if(y<last-4)h.classList.add('barsAutoHideP');else if(y>last+4)h.classList.remove('barsAutoHideP');
+var d=document.scrollingElement||h;if(y+window.innerHeight>=d.scrollHeight-20)h.classList.remove('barsAutoHideP');last=y;}
+window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(run);}},{passive:true});
+window.addEventListener('resize',function(){h.classList.remove('barsAutoHideP');last=window.scrollY||0;});})();</script>
 </body>
 </html>
