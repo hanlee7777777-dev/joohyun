@@ -519,6 +519,91 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
     <p data-i18n="rst_s9_p1">잘못된 커트 때문에 머리가 자라기만을 기다리지 않아도 됩니다.</p>
     <p data-i18n-html="rst_s9_p2">제이주현은 <b>어색한 상태를 자연스러운 스타일로 복구 디자인</b>해 드립니다.</p>
   </section>
+  <div class="jhRstInq" style="margin:18px 0 22px;text-align:center;"><button type="button" class="jhInqToggleBtn" data-open="false" data-i18n="sp17_inq_open" onclick="jhToggleInquiryForm(this)">간편 문의하기 펼치기</button>
+<div class="item jhFormNoZoom jhInqFormPanel" style="display:none;margin-top:14px;background:#fff;border-radius:16px;padding:18px;border:1.5px solid #ec4899;box-shadow:0 4px 14px rgba(236,72,153,0.10);">
+      <h2 style="margin:8px 0 14px;font-size:22px;text-align:center;" data-i18n="sp17_form_h">문의 양식 작성하기</h2>
+      <label style="display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:17px;font-weight:700;color:#3b0a5c;cursor:pointer;">
+        <input type="checkbox" data-role="quickConsult" onchange="jhToggleQuickConsult(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+        <span data-i18n="sp17_quick_consult">문의 양식 작성없이 바로 상담하기</span>
+      </label>
+      <div class="jhInqFieldsWrap">
+      <div class="jhInqErr" style="display:none;margin:0 0 14px;padding:12px 14px;background:#fff0f5;border:1.5px solid #ec4899;border-radius:12px;color:#c2185b;font-size:15px;font-weight:700;line-height:1.5;"></div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input type="text" data-role="name" data-i18n-ph="sp17_ph_name" placeholder="성함" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <input type="tel" data-role="phone" data-i18n-ph="sp17_ph_phone" placeholder="연락처 (예: 010-1234-5678)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="jhDateField" data-role="date" onclick="jhOpenDatePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">날짜 선택</button>
+          <button type="button" class="jhTimeField" data-role="time" onclick="jhOpenTimePicker(this)" style="flex:1;padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;text-align:left;color:#1a2436;">시간 선택</button>
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="dateLater" onchange="jhToggleDateLater(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_date_later">상담 후 예약 날짜 정할게요</span>
+        </label>
+        <select data-role="length" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_length0">현재 머리 기장 선택</option>
+          <option value="숏컷" data-i18n="sp17_opt_length1">숏컷</option>
+          <option value="턱단발" data-i18n="sp17_opt_length2">턱단발</option>
+          <option value="쇄골기장" data-i18n="sp17_opt_length3">쇄골기장</option>
+          <option value="가슴기장" data-i18n="sp17_opt_length4">가슴기장</option>
+          <option value="리터치" data-i18n="sp17_opt_length5">리터치</option>
+          <option value="제거" data-i18n="sp17_opt_length6">제거</option>
+        </select>
+        <select data-role="volume" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_vol0">현재 머리숱 선택</option>
+          <option value="적음" data-i18n="sp17_opt_vol1">적음</option>
+          <option value="보통" data-i18n="sp17_opt_vol2">보통</option>
+          <option value="많음" data-i18n="sp17_opt_vol3">많음</option>
+          <option value="리터치" data-i18n="sp17_opt_vol4">리터치</option>
+          <option value="제거" data-i18n="sp17_opt_vol5">제거</option>
+        </select>
+        <input type="text" data-role="color" data-i18n-ph="sp17_ph_color" placeholder="현재 머리 컬러 (예: 검정, 갈색, 리터치, 제거 등)" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;">
+        <select data-role="desiredLength" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_dlen0">원하시는 기장 선택</option>
+          <option value="가슴 밑" data-i18n="sp17_opt_dlen1">가슴 밑</option>
+          <option value="허리선" data-i18n="sp17_opt_dlen2">허리선</option>
+          <option value="배꼽선" data-i18n="sp17_opt_dlen3">배꼽선</option>
+          <option value="골반선" data-i18n="sp17_opt_dlen4">골반선</option>
+          <option value="힙 아래" data-i18n="sp17_opt_dlen_hip">힙 아래</option>
+          <option value="리터치" data-i18n="sp17_opt_dlen5">리터치</option>
+          <option value="제거" data-i18n="sp17_opt_dlen6">제거</option>
+        </select>
+        <select data-role="style" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_style0">원하시는 스타일 선택</option>
+          <option value="전체" data-i18n="sp17_opt_style1">전체</option>
+          <option value="포인트" data-i18n="sp17_opt_style2">포인트</option>
+          <option value="리터치" data-i18n="sp17_opt_style3">리터치</option>
+          <option value="제거" data-i18n="sp17_opt_style4">제거</option>
+        </select>
+        <textarea data-role="note" data-i18n-ph="sp17_ph_note" placeholder="추가로 남기실 말 - 궁금하신 점이나 요청사항을 자유롭게 남겨주세요." rows="3" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;font-family:inherit;resize:vertical;"></textarea>
+        <label style="display:flex;align-items:center;gap:8px;margin-top:-4px;font-size:14px;color:#5a6577;cursor:pointer;">
+          <input type="checkbox" data-role="noteNone" onchange="jhToggleNoteNone(this)" style="width:17px;height:17px;accent-color:#ec4899;cursor:pointer;">
+          <span data-i18n="sp17_note_none">추가로 전달할 사항 없어요</span>
+        </label>
+        <select data-role="route" style="padding:12px;border:1px solid #eee;border-radius:10px;font-size:16px;background:#f2f2f2;color:#1a2436;">
+          <option value="" data-i18n="sp17_opt_route0">방문 경로 선택</option>
+          <option value="인스타그램" data-i18n="sp17_opt_route1">인스타그램</option>
+          <option value="네이버 검색" data-i18n="sp17_opt_route6">네이버 검색</option>
+          <option value="구글 검색" data-i18n="sp17_opt_route7">구글 검색</option>
+          <option value="블로그" data-i18n="sp17_opt_route2">블로그</option>
+          <option value="지인 소개" data-i18n="sp17_opt_route3">지인 소개</option>
+          <option value="기타" data-i18n="sp17_opt_route4">기타</option>
+          <option value="없음" data-i18n="sp17_opt_route5">없음</option>
+        </select>
+      </div>
+      <button type="button" data-i18n="sp17_inq_reset" onclick="jhShowResetConfirm(this)" style="width:100%;margin-top:16px;padding:16px 8px;border:1.5px solid #999;border-radius:12px;background:#f5f5f5;color:#555;font-weight:800;font-size:16px;">문의 내용 초기화</button>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+        <button type="button" onclick="jhSendInquiry(this,'line')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #05a648;border-radius:12px;background:#06c755;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(6,199,85,0.28);"><span data-i18n="sp17_btn_line">라인으로 문의하기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'kakao')" style="flex:1;min-width:100px;padding:14px 8px;border:1.5px solid #b89400;border-radius:12px;background:#fee500;color:#1a1a1a;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(254,229,0,0.35);"><span data-i18n="sp17_btn_kakao">카카오톡 문의하기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'sms')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #4a7fd6;border-radius:12px;background:#5b8def;color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(91,141,239,0.30);"><span data-i18n="sp17_btn_sms">문자로 문의하기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'instagram')" style="flex:1;min-width:100px;padding:14px 8px;border:1px solid #b0288a;border-radius:12px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(238,42,123,0.30);"><span data-i18n="sp17_btn_insta">인스타 DM 문의하기</span></button>
+        <button type="button" onclick="jhSendInquiry(this,'share')" style="flex:1;min-width:100px;padding:14px 8px;border:1.5px solid #ec4899;border-radius:12px;background:#fde3ee;color:#c2185b;font-weight:800;font-size:16px;box-shadow:0 3px 8px rgba(236,72,153,0.15);"><span data-i18n="sp17_btn_share">공유하기</span></button>
+      </div>
+      <p style="margin-top:24px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note">채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다)</p>
+      <p style="margin-top:6px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
+      <p style="margin-top:10px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
+    </div></div>
+
 
   <div class="jhPointCards">
     <div class="jhPointCard gold">
@@ -1677,7 +1762,7 @@ function jhDoSend(type, text, skipConfirm){
 #jhLb .jhLbStage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 #jhLb .jhLbSlide{position:relative;transition:transform .28s ease,opacity .28s ease;transform-origin:0 0;will-change:transform;}#jhLb .jhLbSlide.nt{transition:none;}
 #jhLb .jhLbSlide>*{margin:0!important;transform:none!important;box-shadow:none!important;}
-#jhLb .jhLbSlide img{display:block;width:100%!important;height:auto!important;border-radius:10px!important;border:0!important;}
+#jhLb .jhLbSlide>img,#jhLb .jhLbSlide>*>img:first-child{display:block;width:100%!important;height:auto!important;border-radius:10px!important;border:0!important;}#jhLb .jhLbSlide .jhEvt{border-radius:10px;}#jhLb .jhLbSlide .jhEvtTr{display:block!important;box-shadow:none!important;}.jhEvtTr{cursor:zoom-in;}
 #jhLb .jhLbSlide .jhCapClean,#jhLb .jhLbSlide .jhOgClean{position:absolute!important;}
 #jhLb button{position:absolute;border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:999px;width:44px;height:44px;font-size:24px;line-height:44px;padding:0;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;}
 #jhLb .jhLbClose{top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;font-size:28px;}
@@ -1696,6 +1781,7 @@ function jhDoSend(type, text, skipConfirm){
   }
   function itemOf(img){
     if(!img||img.tagName!=='IMG')return null;
+    if(img.closest('.eduTrainPhoto'))return img;
     if(img.closest(EXCL)&&!img.closest('.jhEvt'))return null;
     if(img.closest('.jhEvt'))return img.closest('.jhEvt');
     var w=img.closest('.jhCapWrap');if(w)return w;
@@ -1705,6 +1791,7 @@ function jhDoSend(type, text, skipConfirm){
   }
   function items(rt){
     var out=[];rt.querySelectorAll('main img').forEach(function(im){var it=itemOf(im);if(it&&out.indexOf(it)<0&&it.offsetParent!==null)out.push(it);});
+    rt.querySelectorAll('.jhEvtTr').forEach(function(tr){if(tr.offsetParent===null)return;var ev=tr.previousElementSibling;var i=ev?out.indexOf(ev):-1;if(i>=0)out.splice(i+1,0,tr);else out.push(tr);});
     return out;
   }
   function mark(){items(document).forEach(function(it){it.classList.add('jhLbItem');});}
@@ -1789,7 +1876,8 @@ function jhDoSend(type, text, skipConfirm){
     stage.addEventListener('wheel',function(e){e.preventDefault();var c=sp(e);zoomAt(Z*(e.deltaY<0?1.15:1/1.15),c[0],c[1]);apply(false);},{passive:false});
     document.addEventListener('keydown',function(e){if(!open)return;if(e.key==='ArrowRight')go(1);else if(e.key==='ArrowLeft')go(-1);else if(e.key==='Escape')close();});
     document.addEventListener('click',function(e){
-      if(open)return;var img=e.target.closest&&e.target.closest('img');
+      if(open)return;var tr=e.target.closest&&e.target.closest('.jhEvtTr');if(tr){e.preventDefault();e.stopPropagation();openAt(tr);return;}
+      var img=e.target.closest&&e.target.closest('img');
       if(!img){var w=e.target.closest&&e.target.closest('.jhCapWrap,.jhEvt');if(w)img=w.querySelector('img');}
       var it=itemOf(img);if(!it)return;e.preventDefault();e.stopPropagation();openAt(it);
     },true);
