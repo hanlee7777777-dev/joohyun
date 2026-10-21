@@ -4160,6 +4160,7 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 <style id="jhOgActiveFix">.jhOgWrap{transition:transform .25s ease;-webkit-tap-highlight-color:transparent;}.jhOgWrap:active{transform:scale(1.25);z-index:5;}.jhOgWrap img:active{transform:none!important;z-index:auto!important;}.jhOgWrap .jhOgClean{z-index:1;}.jhOgWrap .jhOgTxt{z-index:2;}.jhOgWrap img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;}</style>
 <style id="jhPortBarHide">.bottom,.subFoot3{transition:transform .3s ease,translate .3s ease!important;}html.barsAutoHideP .bottom,html.barsAutoHideP .subFoot3{translate:0 115%;}</style>
 <style id="jhQEvtCss">.qEvtLine{display:block;font-size:.82em;font-weight:800;color:#e11d74;margin-top:3px;letter-spacing:-.2px;}</style>
+<style id="jhToTopCss">.jhToTop{position:fixed;right:max(14px,calc((100vw - 650px) / 2 + 14px));bottom:calc(92px + env(safe-area-inset-bottom));z-index:10002;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#ec4899;box-shadow:0 4px 14px rgba(194,24,91,.18);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s,bottom .3s ease;-webkit-tap-highlight-color:transparent;padding:0;}.jhToTop svg{width:22px;height:22px}.jhToTop.show{opacity:1;pointer-events:auto}html.barsAutoHideP .jhToTop,html.barsAutoHide .jhToTop{bottom:calc(18px + env(safe-area-inset-bottom))}html.jhLbOpen .jhToTop{display:none}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -8836,5 +8837,7 @@ window.addEventListener('resize',function(){h.classList.remove('barsAutoHideP');
 function later(){setTimeout(fit,60);setTimeout(fit,400);}
 new MutationObserver(later).observe(document.documentElement,{attributes:true,attributeFilter:['data-jhlang']});
 window.addEventListener('resize',later);window.addEventListener('load',later);later();})();</script>
+<button type="button" class="jhToTop" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script id="jhToTopJs">(function(){var b=document.querySelector('.jhToTop'),t=false;function u(){t=false;b.classList.toggle('show',(window.scrollY||0)>300);}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();})();</script>
 </body>
 </html>
