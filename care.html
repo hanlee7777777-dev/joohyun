@@ -78,7 +78,7 @@ document.addEventListener('click',function(e){var el=e.target.closest&&e.target.
   ]
 }
 </script>
-<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261022","/i18n/care.js?v=20261013"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
+<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261023","/i18n/care.js?v=20261013"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
 <!-- Vercel Web Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -4172,6 +4172,10 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 #subPage10 .faqAns h2{font-size:17px!important;margin:0 0 8px!important;}
 #subPage10 .faqAns p,#subPage10 .faqAns li{font-size:16px;}
 #subPage10 .faqList{margin-top:22px;}
+#subPage10 .faqAllBtn{display:block;width:100%;margin:0 0 12px;padding:13px 10px;border:1.5px solid #ec4899;border-radius:14px;background:#fde3ee;color:#c2185b;font-size:16px;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+#subPage10 .faqAllBtn .c{display:none;}
+#subPage10 .faqAllBtn[data-open-all="1"] .o{display:none;}
+#subPage10 .faqAllBtn[data-open-all="1"] .c{display:inline;}
 </style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
@@ -4260,7 +4264,7 @@ document.addEventListener('touchend', function(e){
   document.addEventListener("click",function(){ menu.style.display="none"; });
 
   var I18N = {};
-  var __jhI18nFiles = ["/i18n/common.js?v=20261022","/i18n/care.js?v=20261013"];
+  var __jhI18nFiles = ["/i18n/common.js?v=20261023","/i18n/care.js?v=20261013"];
   var __jhI18nState = 0, __jhI18nCbs = [];
   function __jhLoadI18n(cb){
     if(__jhI18nState===2){ cb(); return; }
@@ -5382,6 +5386,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     <div class="faqList">
+    <button type="button" class="faqAllBtn" data-open-all="0" onclick="jhFaqToggleAll(this)"><span class="o" data-i18n="faq_all_open">전체 펼쳐서 보기</span><span class="c" data-i18n="faq_all_close">전체 접기</span></button>
     <details class="faqItem"><summary><span class="faqQ" data-i18n="p10Q0T">제이바비랑 같은 곳인가요?</span></summary><div class="faqAns">
       <div class="item">
         <h2 data-i18n="p10Q0H2" style="font-weight:400;">네, 제이바비가 제이주현으로 상호가 변경되었습니다.</h2>
@@ -8544,5 +8549,6 @@ new MutationObserver(later).observe(document.documentElement,{attributes:true,at
 window.addEventListener('resize',later);window.addEventListener('load',later);later();})();</script>
 <button type="button" class="jhToTop" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script id="jhToTopJs">(function(){var b=document.querySelector('.jhToTop'),t=false;function u(){t=false;b.classList.toggle('show',(window.scrollY||0)>300);}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();})();</script>
+<script id="jhFaqAllJs">function jhFaqToggleAll(b){var on=b.getAttribute('data-open-all')!=='1';var box=b.closest('#subPage10')||document;box.querySelectorAll('.faqItem').forEach(function(d){d.open=on;});b.setAttribute('data-open-all',on?'1':'0');}</script>
 </body>
 </html>
