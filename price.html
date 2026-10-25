@@ -8610,5 +8610,10 @@ window.addEventListener('resize',later);window.addEventListener('load',later);la
 <button type="button" class="jhToTop" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script id="jhToTopJs">(function(){var b=document.querySelector('.jhToTop'),t=false;function u(){t=false;b.classList.toggle('show',(window.scrollY||0)>300);}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();})();</script>
 <script id="jhFaqAllJs">function jhFaqToggleAll(b){var on=b.getAttribute('data-open-all')!=='1';var box=b.closest('#subPage10')||document;box.querySelectorAll('.faqItem').forEach(function(d){d.open=on;});b.setAttribute('data-open-all',on?'1':'0');}</script>
+<script id="jhCleanHash">(function(){var N='12',P=location.pathname+location.search;
+function clean(){if(location.hash==='#sub'+N){try{history.replaceState({sub:N},'',P);}catch(e){}}}
+function reopen(){if(!location.hash&&history.state&&history.state.sub==N){var s=document.getElementById('subPage'+N);if(s){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}}
+document.addEventListener('DOMContentLoaded',function(){setTimeout(clean,0);});window.addEventListener('load',clean);
+window.addEventListener('popstate',function(){setTimeout(reopen,0);});})();</script>
 </body>
 </html>
