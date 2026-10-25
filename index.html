@@ -1,11 +1,19 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<script id="jhKeepScrollHead">(function(){try{var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(n.type!=='reload')return;var d=JSON.parse(sessionStorage.getItem('jhScroll:'+location.pathname)||'null');if(!d||!d.y)return;var Y=d.y;var st=document.createElement('style');st.id='jhKSHide';st.textContent='html{visibility:hidden!important}';document.head.appendChild(st);
-var t0=Date.now(),ok=0,stop=false;
-['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){stop=true;},{passive:true,once:true});});
+<script id="jhKeepScrollHead">(function(){try{var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(n.type!=='reload')return;var d=JSON.parse(sessionStorage.getItem('jhScroll:'+location.pathname)||'null');if(!d||!d.y)return;var Y=d.y,stop=false,t0=Date.now();
+var st=document.createElement('style');st.id='jhKSHide';st.textContent='html{visibility:hidden!important}';document.head.appendChild(st);
 function show(){var e=document.getElementById('jhKSHide');if(e)e.remove();}
-(function tick(){if(stop){show();return;}if(document.body){window.scrollTo(0,Y);}var at=Math.abs((window.scrollY||0)-Y)<5;ok=at?ok+1:0;if(ok>=8)show();if(Date.now()-t0<3000)requestAnimationFrame(tick);else show();})();
+var oTo=window.scrollTo.bind(window),oS=window.scroll.bind(window);
+function topCall(a){var t=(a[0]&&typeof a[0]==='object')?a[0].top:a[1];return !stop&&(Date.now()-t0<4000)&&(t===0||t===undefined&&a[0]&&a[0].top===undefined);}
+window.scrollTo=function(){if(topCall(arguments))return;return oTo.apply(null,arguments);};
+window.scroll=function(){if(topCall(arguments))return;return oS.apply(null,arguments);};
+function go(){if(!stop)oTo({top:Y,left:0,behavior:'instant'});}
+['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){stop=true;show();},{passive:true,once:true});});
+document.addEventListener('DOMContentLoaded',function(){setTimeout(function(){go();requestAnimationFrame(function(){go();show();});},0);});
+window.addEventListener('load',function(){go();setTimeout(go,300);});
+var c=0;(function tick(){go();if(++c<90)requestAnimationFrame(tick);})();
+setTimeout(show,1200);
 }catch(e){}})();</script>
 
 <meta charset="utf-8">
