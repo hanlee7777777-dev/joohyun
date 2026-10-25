@@ -78,7 +78,7 @@ document.addEventListener('click',function(e){var el=e.target.closest&&e.target.
   ]
 }
 </script>
-<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261025c","/i18n/care.js?v=20261013"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
+<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261025d","/i18n/care.js?v=20261013"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
 <!-- Vercel Web Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -4188,6 +4188,7 @@ main img:not(.jhEvt img):not(.equip-photo img):not(.heroSignatureImg):not(.jhPor
 <style id="jhSubPadB">#subPage9,#subPage10,#subPage17,#subPage7,#subPage8,#subPage12,#subPage14,#subPage18{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important;}</style>
 <style id="jhRateCss">.jhRate{position:relative;container-type:inline-size;margin:16px 0 18px;border-radius:16px;overflow:hidden;border:0.7px solid #f48fb1;box-shadow:0 8px 20px rgba(194,24,91,.14);background:#fff;}.jhRate img{display:block;width:100%;height:auto;margin:0!important;border:0!important;box-shadow:none!important;border-radius:0!important;}.jhRate .jhRateClean{display:none!important;}html[data-jhlang]:not([data-jhlang="ko"]) .jhRate .jhRateClean{display:block!important;position:absolute!important;left:0!important;top:0!important;width:100%!important;z-index:1;pointer-events:none;}.jhRateT{display:none;}html[data-jhlang]:not([data-jhlang="ko"]) .jhRateT{display:block;position:absolute;transform:translateY(-50%);z-index:2;white-space:nowrap;pointer-events:none;}.jhRateT.a{left:14.6%;top:17%;font-size:4cqw;font-weight:800;color:#2a2a2a;}.jhRateT.b{left:68.6%;top:17%;transform:translate(-50%,-50%);font-size:3.4cqw;font-weight:800;color:#0aa25b;}.jhRateT.c{left:49.9%;top:48.2%;transform:translate(-50%,-50%);font-size:3.9cqw;color:#8a8a8a;}</style>
 <style id="jhFaqGap2">#subPage10 .faqList{margin-top:22px!important;}#subPage10 .faqAllBtn{margin-bottom:22px!important;}</style>
+<style id="jhRateTxtCss">.jhRateTxt{margin-top:22px!important;background:#fff!important;border:1px solid #f3dbe6!important;border-radius:16px!important;padding:18px 20px!important;box-shadow:0 1px 2px rgba(21,39,68,.03)!important;}.jhRateTxt h2{font-size:17px!important;font-weight:700!important;color:#c2185b!important;margin:0 0 8px!important;line-height:1.5!important;}.jhRateTxt p{color:#5a6577!important;font-weight:400!important;margin:0 0 10px!important;}.jhRateTxt p:last-child{margin-bottom:0!important;}.jhRateTxt+.jhRate{margin-top:12px!important;}</style>
 <style id="jhQBtnCenter">.qBtn{align-items:center!important;justify-content:center!important;text-align:center!important;-webkit-appearance:none;}.qBtn .qLine1,.qBtn .qLine2{width:100%;text-align:center!important;}</style>
 </head>
 
@@ -4275,7 +4276,7 @@ document.addEventListener('touchend', function(e){
   document.addEventListener("click",function(){ menu.style.display="none"; });
 
   var I18N = {};
-  var __jhI18nFiles = ["/i18n/common.js?v=20261025c","/i18n/care.js?v=20261013"];
+  var __jhI18nFiles = ["/i18n/common.js?v=20261025d","/i18n/care.js?v=20261013"];
   var __jhI18nState = 0, __jhI18nCbs = [];
   function __jhLoadI18n(cb){
     if(__jhI18nState===2){ cb(); return; }
@@ -5289,6 +5290,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <p style="margin-top:6px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
       <p style="margin-top:10px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
     </div>
+    <div class="item jhRateTxt">
+        <h2 data-i18n="gl_s3n_h">네이버 플레이스 평점 5.00, 만점을 받았습니다</h2>
+        <p data-i18n="gl_s3n_p1">제이주현을 다녀가신 고객님 38분 모두가 별 다섯 개를 남겨주셨습니다.</p>
+        <p data-i18n="gl_s3n_p2">한 분 한 분 정성껏 완성한 결과가 만점 평점으로 이어졌습니다. 사진으로 보신 스타일, 직접 경험해 보세요.</p>
+      </div>
     <div class="jhRate"><img src="/images/site/place-rating.webp" alt="네이버 플레이스 평점 5.00 / 5, 38명 참여" width="720" height="668" loading="lazy" decoding="async"></div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
@@ -5727,6 +5733,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <p style="margin-top:6px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
       <p style="margin-top:10px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
     </div>
+    <div class="item jhRateTxt">
+        <h2 data-i18n="gl_s3n_h">네이버 플레이스 평점 5.00, 만점을 받았습니다</h2>
+        <p data-i18n="gl_s3n_p1">제이주현을 다녀가신 고객님 38분 모두가 별 다섯 개를 남겨주셨습니다.</p>
+        <p data-i18n="gl_s3n_p2">한 분 한 분 정성껏 완성한 결과가 만점 평점으로 이어졌습니다. 사진으로 보신 스타일, 직접 경험해 보세요.</p>
+      </div>
     <div class="jhRate"><img src="/images/site/place-rating.webp" alt="네이버 플레이스 평점 5.00 / 5, 38명 참여" width="720" height="668" loading="lazy" decoding="async"></div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
@@ -6014,6 +6025,11 @@ document.addEventListener('DOMContentLoaded', function(){
       <p style="margin-top:6px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_form_note2">문의 양식을 작성하시면 계좌번호를 받아 보실 수 있습니다.</p>
       <p style="margin-top:10px;font-size:15px;font-weight:600;color:#8a8a8a;text-align:left;" data-i18n-html="sp17_s1_p1">현재 모발 상태와 원하시는 스타일을 자세히 남겨주실수록 더 정확하고 빠른 상담이 가능합니다.</p>
     </div>
+    <div class="item jhRateTxt">
+        <h2 data-i18n="gl_s3n_h">네이버 플레이스 평점 5.00, 만점을 받았습니다</h2>
+        <p data-i18n="gl_s3n_p1">제이주현을 다녀가신 고객님 38분 모두가 별 다섯 개를 남겨주셨습니다.</p>
+        <p data-i18n="gl_s3n_p2">한 분 한 분 정성껏 완성한 결과가 만점 평점으로 이어졌습니다. 사진으로 보신 스타일, 직접 경험해 보세요.</p>
+      </div>
     <div class="jhRate"><img src="/images/site/place-rating.webp" alt="네이버 플레이스 평점 5.00 / 5, 38명 참여" width="720" height="668" loading="lazy" decoding="async"></div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
@@ -6559,7 +6575,12 @@ document.addEventListener('DOMContentLoaded', function(){
         <a href="tel:01045563027" data-i18n="sp17b_call" style="display:flex;align-items:center;justify-content:center;width:50%;margin-left:auto;margin-right:auto;background:#ec4899;color:#fff;font-weight:800;font-size:17px;text-decoration:none;padding:15px 20px;border-radius:14px;margin-top:20px;margin-bottom:16px;box-shadow:0 8px 22px rgba(236,72,153,.24);">전화 문의하기</a>
 
         <div class="equip-photo jhFeatBox" style="position:relative;margin:28px 0 18px;background:#fff;border:1.5px solid #f48fb1;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(236,72,153,0.2);"><img src="/images/site/7b21c8c8a1.webp?v=2" alt="제이주현 슬림 땋기 스타일" style="width:100%;border-radius:16px;display:block;filter:none;transform:translateX(14px);" loading="lazy" decoding="async"><div class="jhBrandLabel">제이주현</div><div data-i18n-html="jh_ext_note" style="position:absolute;left:10%;top:30%;font-size:19px;font-weight:550;color:#f48fb1;line-height:1.5;"><span class="jhExtTop">붙임머리는<br>단순히 길이를 더하는<br>시술이 아닙니다.</span><div style="margin-top:18px;font-size:19px;color:#e05a94;font-weight:550;">나에게 어울리는 컬러와<br>스타일을 완성하는 헤어 디자인입니다.</div></div></div>
-<div class="jhRate"><img src="/images/site/place-rating.webp" alt="네이버 플레이스 평점 5.00 / 5, 38명 참여" width="720" height="668" loading="lazy" decoding="async"></div>
+<div class="item jhRateTxt">
+        <h2 data-i18n="gl_s3n_h">네이버 플레이스 평점 5.00, 만점을 받았습니다</h2>
+        <p data-i18n="gl_s3n_p1">제이주현을 다녀가신 고객님 38분 모두가 별 다섯 개를 남겨주셨습니다.</p>
+        <p data-i18n="gl_s3n_p2">한 분 한 분 정성껏 완성한 결과가 만점 평점으로 이어졌습니다. 사진으로 보신 스타일, 직접 경험해 보세요.</p>
+      </div>
+    <div class="jhRate"><img src="/images/site/place-rating.webp" alt="네이버 플레이스 평점 5.00 / 5, 38명 참여" width="720" height="668" loading="lazy" decoding="async"></div>
     <div class="jhPointCards">
       <div class="jhPointCard gold">
         <div class="jhPointIcon">⭐</div>
