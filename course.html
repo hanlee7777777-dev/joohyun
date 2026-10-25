@@ -4374,8 +4374,8 @@ document.addEventListener('touchend', function(e){
 
 <section class="hero">
   <img src="/images/site/c645d17492.webp" class="heroSignatureImg" alt="한주현">
-  <div class="heroTopLine" data-i18n="heroTop">티 나지 않는 자연스러움,</div>
-  <p class="slogan" style="margin:0;"><span style="display:block;font-size:13px;letter-spacing:.14em;color:#ffffff;font-weight:400;margin-bottom:8px;" data-i18n="heroLocal">강남 신논현 논현동 붙임머리</span><span class="sloganGold" data-i18n="heroSlogan">제이주현 붙임머리</span></p>
+  <div class="heroTopLine" data-i18n="heroTop2">아름다움을 창조하는,</div>
+  <h1 class="slogan" style="margin:0;"><span class="sloganGold" data-i18n="heroSlogan">제이주현 붙임머리</span></h1>
   <p class="desc" data-i18n="heroDesc">좋은 결과는 타협하지 않는 기술에서 시작됩니다. 최상의 재료와 섬세한 시술로 가장 자연스럽고 아름다운 스타일을 선사하며, 늘 믿고 찾아주시는 마음에 최선의 결과로 보답하겠습니다.</p>
 </section>
 <div style="height:0.5px;background:linear-gradient(90deg,transparent,#c9a862,transparent);box-shadow:0 3px 6px -1px rgba(0,0,0,.25);margin:0 auto;max-width:430px;"></div>
@@ -8637,7 +8637,7 @@ window.addEventListener('resize',later);window.addEventListener('load',later);la
 <script id="jhFaqAllJs">function jhFaqToggleAll(b){var on=b.getAttribute('data-open-all')!=='1';var box=b.closest('#subPage10')||document;box.querySelectorAll('.faqItem').forEach(function(d){d.open=on;});b.setAttribute('data-open-all',on?'1':'0');}</script>
 <script id="jhCleanHash">(function(){var N='18',P=location.pathname+location.search;
 function clean(){if(location.hash==='#sub'+N){try{history.replaceState({sub:N},'',P);}catch(e){}}}
-function reopen(){if(!location.hash&&history.state&&history.state.sub==N){var s=document.getElementById('subPage'+N);if(s){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}}
+function reopen(){var any=[].some.call(document.querySelectorAll('[id^=subPage]'),function(e){return e.style.display==='block'});if(!location.hash&&!any){var s=document.getElementById('subPage'+N);if(s){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}}
 document.addEventListener('DOMContentLoaded',function(){setTimeout(clean,0);});window.addEventListener('load',clean);
 window.addEventListener('popstate',function(){setTimeout(reopen,0);});})();</script>
 </body>
