@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="ko">
 <head>
+<script id="jhKeepScrollHead">(function(){try{var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(n.type!=='reload')return;var d=JSON.parse(sessionStorage.getItem('jhScroll:'+location.pathname)||'null');if(!d||!d.y)return;var Y=d.y;var st=document.createElement('style');st.id='jhKSHide';st.textContent='html{visibility:hidden!important}';document.head.appendChild(st);
+var t0=Date.now(),ok=0,stop=false;
+['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){stop=true;},{passive:true,once:true});});
+function show(){var e=document.getElementById('jhKSHide');if(e)e.remove();}
+(function tick(){if(stop){show();return;}if(document.body){window.scrollTo(0,Y);}var at=Math.abs((window.scrollY||0)-Y)<5;ok=at?ok+1:0;if(ok>=8)show();if(Date.now()-t0<3000)requestAnimationFrame(tick);else show();})();
+}catch(e){}})();</script>
+
 <meta charset="utf-8">
 <script>(function(){var M={'7':'/slim-braid','8':'/suggestion','12':'/price','18':'/course','14':'/retouch'};var c=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';var m=location.hash.match(/^#sub(\d+)$/);if(m&&M[m[1]]&&M[m[1]]!==c){location.replace(M[m[1]]);}
 document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('[data-open],[data-jump]');if(!el)return;var n=el.getAttribute('data-open')||el.getAttribute('data-jump');if(M[n]&&M[n]!==c){e.preventDefault();e.stopImmediatePropagation();location.href=M[n];}},true);})();</script>
