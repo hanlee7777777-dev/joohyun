@@ -93,7 +93,7 @@ document.addEventListener('click',function(e){var el=e.target.closest&&e.target.
   ]
 }
 </script>
-<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261025g","/i18n/slim-braid.js?v=20261019"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
+<script>try{var __l=localStorage.getItem('jhLang');if(__l&&__l!=='ko'){["/i18n/common.js?v=20261029g","/i18n/slim-braid.js?v=20261029"].forEach(function(u){var k=document.createElement('link');k.rel='preload';k.as='script';k.href=u;document.head.appendChild(k);});}}catch(e){}</script>
 <!-- Vercel Web Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -4294,7 +4294,7 @@ document.addEventListener('touchend', function(e){
   document.addEventListener("click",function(){ menu.style.display="none"; });
 
   var I18N = {};
-  var __jhI18nFiles = ["/i18n/common.js?v=20261025g","/i18n/slim-braid.js?v=20261019"];
+  var __jhI18nFiles = ["/i18n/common.js?v=20261029g","/i18n/slim-braid.js?v=20261029"];
   var __jhI18nState = 0, __jhI18nCbs = [];
   function __jhLoadI18n(cb){
     if(__jhI18nState===2){ cb(); return; }
@@ -5894,7 +5894,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <header class="hero" data-home="1">
   <div class="wrap">
-    <p class="sub" data-i18n-html="sp18_hero">기술을 배우는 것에서 끝나지 않고<br>실제 고객에게 적용할 수 있는 실무까지, 제이주현 1:1 맞춤 교육입니다.</p>
+    <p class="sub" data-i18n-html="sp18_hero">기술을 배우는 것에서 끝나지 않고<br>실제 고객에게 적용할 수 있는 실무까지, 제이주현 1:1 맞춤 붙임머리 수강 교육입니다.</p>
   </div>
 </header>
 
@@ -8310,9 +8310,10 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   function close(fromPop){
     if(!open)return;open=false;lb.classList.remove('open');lb.setAttribute('aria-hidden','true');stage.innerHTML='';document.documentElement.style.overflow='';
-    if(!fromPop){try{if(history.state&&history.state.jhLb)history.back();}catch(e){}}
+    if(!fromPop){try{if(history.state&&history.state.jhLb){backing=true;history.back();setTimeout(function(){backing=false;},1500);}}catch(e){}}
   }
-  window.addEventListener('popstate',function(e){if(open){e.stopImmediatePropagation();close(true);}},true);
+  var backing=false;window.addEventListener('popstate',function(e){if(open||backing){e.stopImmediatePropagation();if(open)close(true);backing=false;}},true);
+  (function(){var o=window.__showSubFromHash;if(typeof o==='function'){window.__showSubFromHash=function(){if(open||backing)return;return o.apply(this,arguments);};}})();
   function init(){
     lb=document.getElementById('jhLb');stage=lb.querySelector('.jhLbStage');count=lb.querySelector('.jhLbCount');
     lb.querySelector('.jhLbClose').addEventListener('click',function(){close();});
