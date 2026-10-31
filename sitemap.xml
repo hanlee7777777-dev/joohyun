@@ -1,75 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.joo92.com/</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.joo92.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.joo92.com/restoration</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/course</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/care</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/price</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/suggestion</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/retouch</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/color-point</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/black-color-cut</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.joo92.com/en/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.joo92.com/slim-braid</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/review</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.joo92.com/gallery</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/en/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
