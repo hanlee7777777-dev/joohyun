@@ -4,6 +4,11 @@
     <loc>https://www.joo92.com/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
     <lastmod>2026-10-31</lastmod>
     <priority>1.0</priority>
@@ -12,6 +17,76 @@
     <loc>https://www.joo92.com/en</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -20,6 +95,11 @@
     <loc>https://www.joo92.com/restoration</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
@@ -28,6 +108,76 @@
     <loc>https://www.joo92.com/en/restoration</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/restoration</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/restoration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/restoration"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/restoration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/restoration"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/restoration"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/restoration"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/restoration"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -36,6 +186,11 @@
     <loc>https://www.joo92.com/course</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
@@ -44,6 +199,76 @@
     <loc>https://www.joo92.com/en/course</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/course</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/course"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/course"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/course"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/course"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/course"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/course"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/course"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -52,6 +277,11 @@
     <loc>https://www.joo92.com/care</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -60,6 +290,76 @@
     <loc>https://www.joo92.com/en/care</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/care</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/care"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/care"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/care"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/care"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/care"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -68,6 +368,11 @@
     <loc>https://www.joo92.com/price</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
@@ -76,6 +381,76 @@
     <loc>https://www.joo92.com/en/price</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/price</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/price"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/price"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/price"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/price"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/price"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/price"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/price"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -84,6 +459,11 @@
     <loc>https://www.joo92.com/suggestion</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -92,6 +472,76 @@
     <loc>https://www.joo92.com/en/suggestion</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/suggestion</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/suggestion"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/suggestion"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/suggestion"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -100,6 +550,11 @@
     <loc>https://www.joo92.com/retouch</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -108,6 +563,76 @@
     <loc>https://www.joo92.com/en/retouch</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/retouch</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/retouch"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/retouch"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/retouch"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/retouch"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/retouch"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/retouch"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/retouch"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -116,6 +641,11 @@
     <loc>https://www.joo92.com/color-point</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -124,6 +654,76 @@
     <loc>https://www.joo92.com/en/color-point</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/color-point</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/color-point"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/color-point"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/color-point"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/color-point"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/color-point"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/color-point"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/color-point"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -132,6 +732,11 @@
     <loc>https://www.joo92.com/black-color-cut</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -140,6 +745,76 @@
     <loc>https://www.joo92.com/en/black-color-cut</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/black-color-cut</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/black-color-cut"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/black-color-cut"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/black-color-cut"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -148,6 +823,11 @@
     <loc>https://www.joo92.com/slim-braid</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -156,6 +836,76 @@
     <loc>https://www.joo92.com/en/slim-braid</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/slim-braid</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/slim-braid"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/slim-braid"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/slim-braid"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -164,6 +914,11 @@
     <loc>https://www.joo92.com/review</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -172,6 +927,76 @@
     <loc>https://www.joo92.com/en/review</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/review</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/review"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/review"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/review"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/review"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/review"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/review"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/review"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
@@ -180,6 +1005,11 @@
     <loc>https://www.joo92.com/gallery</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.7</priority>
@@ -188,6 +1018,76 @@
     <loc>https://www.joo92.com/en/gallery</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/ja/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/zh-tw/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/vi/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.joo92.com/th/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.joo92.com/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.joo92.com/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.joo92.com/ja/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.joo92.com/zh/gallery"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.joo92.com/zh-tw/gallery"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.joo92.com/vi/gallery"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.joo92.com/th/gallery"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.joo92.com/gallery"/>
     <lastmod>2026-10-31</lastmod>
     <priority>0.6</priority>
