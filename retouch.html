@@ -8637,13 +8637,21 @@ function reopen(){var any=[].some.call(document.querySelectorAll('[id^=subPage]'
 document.addEventListener('DOMContentLoaded',function(){setTimeout(clean,0);});window.addEventListener('load',clean);
 window.addEventListener('popstate',function(){setTimeout(reopen,0);});})();</script>
 <script id="jhKeepScroll">(function(){var K='jhScroll:'+location.pathname;
-function save(){try{sessionStorage.setItem(K,JSON.stringify({y:window.scrollY||0,h:location.hash,t:Date.now()}));}catch(e){}}
+function curSub(){var a=document.querySelectorAll('[id^="subPage"]');for(var i=0;i<a.length;i++){if(a[i].style.display==='block')return a[i];}return null;}
+function save(){try{var s=curSub(),f=[];if(s){var dt=s.querySelectorAll('details');for(var i=0;i<dt.length;i++)if(dt[i].open)f.push(i);}sessionStorage.setItem(K,JSON.stringify({y:window.scrollY||0,sub:s?s.id:'',open:f,t:Date.now()}));}catch(e){}}
 window.addEventListener('pagehide',save);window.addEventListener('beforeunload',save);
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')save();});
 var nav=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};
 if(nav.type!=='reload')return;
 var d;try{d=JSON.parse(sessionStorage.getItem(K)||'null');}catch(e){}
-if(!d||!d.y)return;
+if(!d)return;
+function reopen(){if(!d.sub)return;var s=document.getElementById(d.sub);if(!s)return;
+if(s.style.display!=='block'){var a=document.querySelectorAll('[id^="subPage"]');for(var i=0;i<a.length;i++){if(a[i]!==s&&a[i].style.display==='block'){a[i].style.display='none';a[i].setAttribute('aria-hidden','true');}}
+var fn=window['openNotice'+d.sub.replace('subPage','')];if(typeof fn==='function'){try{fn();}catch(e){}}
+if(s.style.display!=='block'){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}
+var dt=s.querySelectorAll('details');(d.open||[]).forEach(function(i){if(dt[i])dt[i].open=true;});}
+reopen();window.addEventListener('load',function(){setTimeout(reopen,30);});
+if(!d.y)return;
 var y=d.y,done=false,n=0;
 function go(){if(done)return;window.scrollTo(0,y);if(Math.abs((window.scrollY||0)-y)<4&&n>3)done=true;}
 var iv=setInterval(function(){n++;go();if(n>25)clearInterval(iv);},120);
