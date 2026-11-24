@@ -1,20 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<script id="jhKeepScrollHead">(function(){try{var n=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};if(n.type!=='reload')return;var d=JSON.parse(sessionStorage.getItem('jhScroll:'+location.pathname)||'null');if(!d||!d.y)return;var Y=d.y,stop=false,t0=Date.now();
-var st=document.createElement('style');st.id='jhKSHide';st.textContent='html{visibility:hidden!important}';document.head.appendChild(st);
-function show(){var e=document.getElementById('jhKSHide');if(e)e.remove();}
-var oTo=window.scrollTo.bind(window),oS=window.scroll.bind(window);
-function topCall(a){var t=(a[0]&&typeof a[0]==='object')?a[0].top:a[1];return !stop&&(Date.now()-t0<4000)&&(t===0||t===undefined&&a[0]&&a[0].top===undefined);}
-window.scrollTo=function(){if(topCall(arguments))return;return oTo.apply(null,arguments);};
-window.scroll=function(){if(topCall(arguments))return;return oS.apply(null,arguments);};
-function go(){if(!stop)oTo({top:Y,left:0,behavior:'instant'});}
-['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){stop=true;show();},{passive:true,once:true});});
-document.addEventListener('DOMContentLoaded',function(){setTimeout(function(){go();requestAnimationFrame(function(){go();show();});},0);});
-window.addEventListener('load',function(){go();setTimeout(go,300);});
-var c=0;(function tick(){go();if(++c<90)requestAnimationFrame(tick);})();
-setTimeout(show,1200);
-}catch(e){}})();</script>
+<script src="/js/jh-head.js"></script>
 
 <meta charset="utf-8">
 <script>(function(){var M={'7':'/slim-braid','8':'/suggestion','12':'/price','18':'/course'};var c=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';var m=location.hash.match(/^#sub(\d+)$/);if(m&&M[m[1]]&&M[m[1]]!==c){location.replace(M[m[1]]);}
@@ -8628,46 +8615,14 @@ document.addEventListener('DOMContentLoaded', function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
-<script id="jhPortBarHideJs" data-v="3">(function(){var h=document.documentElement,last=window.scrollY||0,tk=false;
-function ok(){return window.matchMedia('(orientation: portrait) and (max-width: 1023px)').matches;}
-function run(){tk=false;var y=window.scrollY||0;if(!ok()){h.classList.remove('barsAutoHideP');last=y;return;}
-if(y<=40)h.classList.remove('barsAutoHideP');else if(y>last+4)h.classList.add('barsAutoHideP');else if(y<last-4)h.classList.remove('barsAutoHideP');
-var d=document.scrollingElement||h;if(y+window.innerHeight>=d.scrollHeight-20)h.classList.remove('barsAutoHideP');last=y;}
-window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(run);}},{passive:true});
-window.addEventListener('resize',function(){h.classList.remove('barsAutoHideP');last=window.scrollY||0;});})();</script>
-<script id="jhOgFitJs">(function(){function fit(){document.querySelectorAll('.jhOgWrap').forEach(function(w){var t=w.querySelector('.jhOgTxt');if(!t||!t.offsetHeight)return;var k=1;t.style.setProperty('--ogk',1);var H=w.offsetHeight*0.9;function ch(){var c=t.children;if(!c.length)return 0;return c[c.length-1].getBoundingClientRect().bottom-c[0].getBoundingClientRect().top;}while(ch()>H&&k>0.7){k-=0.04;t.style.setProperty('--ogk',k);}});}
-function later(){setTimeout(fit,60);setTimeout(fit,400);}
-new MutationObserver(later).observe(document.documentElement,{attributes:true,attributeFilter:['data-jhlang']});
-window.addEventListener('resize',later);window.addEventListener('load',later);later();})();</script>
 <button type="button" class="jhToTop" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-<script id="jhToTopJs">(function(){var b=document.querySelector('.jhToTop'),t=false;function u(){t=false;b.classList.toggle('show',(window.scrollY||0)>300);}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();})();</script>
 <script id="jhFaqAllJs">function jhFaqToggleAll(b){var on=b.getAttribute('data-open-all')!=='1';var box=b.closest('#subPage10')||document;box.querySelectorAll('.faqItem').forEach(function(d){d.open=on;});b.setAttribute('data-open-all',on?'1':'0');}</script>
 <script id="jhCleanHash">(function(){var N='14',P=location.pathname+location.search;
 function clean(){if(location.hash==='#sub'+N){try{history.replaceState({sub:N},'',P);}catch(e){}}}
 function reopen(){var any=[].some.call(document.querySelectorAll('[id^=subPage]'),function(e){return e.style.display==='block'});if(!location.hash&&!any){var s=document.getElementById('subPage'+N);if(s){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}}
 document.addEventListener('DOMContentLoaded',function(){setTimeout(clean,0);});window.addEventListener('load',clean);
 window.addEventListener('popstate',function(){setTimeout(reopen,0);});})();</script>
-<script id="jhKeepScroll">(function(){var K='jhScroll:'+location.pathname;
-function curSub(){var a=document.querySelectorAll('[id^="subPage"]');for(var i=0;i<a.length;i++){if(a[i].style.display==='block')return a[i];}return null;}
-function save(){try{var s=curSub(),f=[];if(s){var dt=s.querySelectorAll('details');for(var i=0;i<dt.length;i++)if(dt[i].open)f.push(i);}sessionStorage.setItem(K,JSON.stringify({y:window.scrollY||0,sub:s?s.id:'',open:f,t:Date.now()}));}catch(e){}}
-window.addEventListener('pagehide',save);window.addEventListener('beforeunload',save);
-document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')save();});
-var nav=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};
-if(nav.type!=='reload')return;
-var d;try{d=JSON.parse(sessionStorage.getItem(K)||'null');}catch(e){}
-if(!d)return;
-function reopen(){if(!d.sub)return;var s=document.getElementById(d.sub);if(!s)return;
-if(s.style.display!=='block'){var a=document.querySelectorAll('[id^="subPage"]');for(var i=0;i<a.length;i++){if(a[i]!==s&&a[i].style.display==='block'){a[i].style.display='none';a[i].setAttribute('aria-hidden','true');}}
-var fn=window['openNotice'+d.sub.replace('subPage','')];if(typeof fn==='function'){try{fn();}catch(e){}}
-if(s.style.display!=='block'){s.style.display='block';s.setAttribute('aria-hidden','false');document.body.classList.add('subOpen');}}
-var dt=s.querySelectorAll('details');(d.open||[]).forEach(function(i){if(dt[i])dt[i].open=true;});}
-reopen();window.addEventListener('load',function(){setTimeout(reopen,30);});
-if(!d.y)return;
-var y=d.y,done=false,n=0;
-function go(){if(done)return;window.scrollTo(0,y);if(Math.abs((window.scrollY||0)-y)<4&&n>3)done=true;}
-var iv=setInterval(function(){n++;go();if(n>25)clearInterval(iv);},120);
-window.addEventListener('load',function(){setTimeout(go,50);setTimeout(go,400);});
-['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){done=true;clearInterval(iv);},{passive:true,once:true});});
-})();</script>
+<link rel="stylesheet" href="/css/jh-common.css">
+<script src="/js/jh-common.js"></script>
 </body>
 </html>
