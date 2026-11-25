@@ -1,8 +1,7 @@
 /* 제이주현 공통 스타일 — 모든 페이지에 적용. 전체 사이트에 한 번에 넣을 스타일은 여기에 추가 */
 
 /* 홍보 사진 번역 박스 — 외국어일 때만 사진 아래에 표시 */
-.jhPromoTr{display:none;}
-html[data-jhlang]:not([data-jhlang="ko"]) .jhPromoTr{display:block;margin:12px 0 0;padding:16px 18px 14px;background:#fff;border:1px solid #f48fb1;border-radius:14px;box-shadow:0 6px 16px rgba(194,24,91,.12);color:#444;font-size:15px;line-height:1.6;text-align:left;}
+.jhPromoTr{display:block;margin:12px 0 0;padding:16px 18px 14px;background:#fff;border:1px solid #f48fb1;border-radius:14px;box-shadow:0 6px 16px rgba(194,24,91,.12);color:#444;font-size:15px;line-height:1.6;text-align:left;}
 .jhPromoTr .jhPtT{display:block;color:#c2185b;font-size:18px;font-weight:800;line-height:1.35;}
 .jhPromoTr .jhPtS{display:block;margin-top:4px;color:#ad1457;font-size:14px;font-weight:600;}
 .jhPromoTr p{margin:8px 0 6px;}
