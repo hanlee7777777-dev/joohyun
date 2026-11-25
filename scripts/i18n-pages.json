@@ -1,0 +1,370 @@
+{
+ "langs": [
+  {
+   "code": "en",
+   "folder": "en",
+   "htmlLang": "en",
+   "hreflang": "en",
+   "locale": "en_US"
+  },
+  {
+   "code": "ja",
+   "folder": "ja",
+   "htmlLang": "ja",
+   "hreflang": "ja",
+   "locale": "ja_JP"
+  },
+  {
+   "code": "zh",
+   "folder": "zh",
+   "htmlLang": "zh-CN",
+   "hreflang": "zh-Hans",
+   "locale": "zh_CN"
+  },
+  {
+   "code": "zh-TW",
+   "folder": "zh-tw",
+   "htmlLang": "zh-TW",
+   "hreflang": "zh-Hant",
+   "locale": "zh_TW"
+  },
+  {
+   "code": "vi",
+   "folder": "vi",
+   "htmlLang": "vi",
+   "hreflang": "vi",
+   "locale": "vi_VN"
+  },
+  {
+   "code": "th",
+   "folder": "th",
+   "htmlLang": "th",
+   "hreflang": "th",
+   "locale": "th_TH"
+  }
+ ],
+ "pages": [
+  "index",
+  "course",
+  "price",
+  "restoration",
+  "slim-braid",
+  "black-color-cut",
+  "color-point",
+  "retouch",
+  "care",
+  "suggestion",
+  "review",
+  "gallery"
+ ],
+ "meta": {
+  "en": {
+   "index": [
+    "Hair Extensions in Gangnam, Seoul | J.JOOHYUN",
+    "Undetectable hair extensions in Gangnam, Seoul. 1:1 service by director Joohyun, custom-matched to your face shape and hair. 24/7 consultation."
+   ],
+   "course": [
+    "Hair Extension Course in Seoul | J.JOOHYUN",
+    "1:1 hair extension training in Gangnam, Seoul — from technique to real client practice, taught by gold-medal director Joohyun."
+   ],
+   "price": [
+    "Hair Extension Prices in Seoul | J.JOOHYUN",
+    "Hair extension prices by length at J.JOOHYUN in Gangnam, Seoul. See the full price guide before you book."
+   ],
+   "restoration": [
+    "Hair Extension Repair & Restoration | Seoul",
+    "Botched cut, damaged extensions or visible seams? We diagnose and redesign to bring back a natural look. J.JOOHYUN, Gangnam, Seoul."
+   ],
+   "slim-braid": [
+    "1mm Slim Braid Extensions & Short Hair | Seoul",
+    "Hand-woven 1mm slim braid extensions with no pressure or pulling — undetectable, even for short and bob hair. J.JOOHYUN, Gangnam, Seoul."
+   ],
+   "black-color-cut": [
+    "Black Removal, Bleach, Color & Cut | Seoul",
+    "From black dye removal to bleaching, coloring and extension cuts, director Joohyun checks your hair and scalp and does it all herself."
+   ],
+   "color-point": [
+    "Color & Rainbow Point Hair Extensions | Seoul",
+    "Basic, special and point color extensions designed by director Joohyun, who first introduced rainbow color extensions. Gangnam, Seoul."
+   ],
+   "retouch": [
+    "Hair Extension Retouch & Removal | Gangnam",
+    "Retouch, removal and volume add-ons for your existing hair extensions at J.JOOHYUN in Sinnonhyeon, Gangnam, Seoul."
+   ],
+   "care": [
+    "How to Care for Hair Extensions | J.JOOHYUN",
+    "Washing, brushing and sleeping tips to keep your hair extensions natural and beautiful for longer."
+   ],
+   "suggestion": [
+    "Best Hair Extensions in Gangnam | J.JOOHYUN",
+    "Looking for the best hair extension salon in Gangnam? Director Joohyun's 1:1 custom design for your face shape and hair, near Sinsa and Cheongdam."
+   ],
+   "review": [
+    "Hair Extension Reviews | J.JOOHYUN Gangnam",
+    "Real reviews and before & after photos from J.JOOHYUN hair extension clients in Gangnam, Seoul."
+   ],
+   "gallery": [
+    "Hair Extension Photo Gallery | J.JOOHYUN",
+    "Recent work by director Joohyun: color and point, 1mm slim braid, black removal and bleach hair extensions in Gangnam, Seoul."
+   ]
+  },
+  "ja": {
+   "index": [
+    "ソウル江南のエクステ専門店 | J.JOOHYUN",
+    "ソウル江南のバレないエクステ専門店。顔型と髪質に合わせてジュヒョン院長が1:1で施術。24時間相談受付。"
+   ],
+   "course": [
+    "ソウルのエクステ講習 | J.JOOHYUN",
+    "技術習得から実際のお客様への施術まで。金メダリストのジュヒョン院長による1:1エクステ講習（ソウル江南）。"
+   ],
+   "price": [
+    "ソウルのエクステ料金 | J.JOOHYUN",
+    "ソウル江南J.JOOHYUNの長さ別エクステ料金のご案内。ご予約前にご確認ください。"
+   ],
+   "restoration": [
+    "エクステ修正・復元 | J.JOOHYUN ソウル",
+    "失敗したカット、傷んだエクステ、目立つ境目を、診断とデザインの再設計で自然な姿に戻します。"
+   ],
+   "slim-braid": [
+    "1mmスリム編み込みエクステ・ショートボブ | ソウル",
+    "手で編む1mmスリム編み込みエクステ。圧迫や引っ張りがなく、ショートやボブでもバレません。"
+   ],
+   "black-color-cut": [
+    "黒染め落とし・ブリーチ・カラー・カット | ソウル",
+    "黒染め落としからブリーチ・カラー、エクステカットまで、ジュヒョン院長が髪と頭皮を見て直接施術します。"
+   ],
+   "color-point": [
+    "カラー・レインボーポイントエクステ | ソウル",
+    "ベーシック・特殊・ポイントカラーのエクステを、レインボーカラーを初めて手がけたジュヒョン院長がデザイン。"
+   ],
+   "retouch": [
+    "エクステのリタッチ・除去 | ソウル江南",
+    "既存エクステのリタッチ、除去、ボリューム追加まで。ソウル江南・新論峴のJ.JOOHYUN。"
+   ],
+   "care": [
+    "エクステのお手入れ方法 | J.JOOHYUN",
+    "シャンプー、ブラッシング、寝るときの注意まで。エクステを長くきれいに保つ方法をご紹介します。"
+   ],
+   "suggestion": [
+    "江南で人気のエクステ | J.JOOHYUN",
+    "江南でエクステを探すならJ.JOOHYUN。顔型と髪の状態に合わせたジュヒョン院長の1:1デザイン。"
+   ],
+   "review": [
+    "エクステ口コミ | J.JOOHYUN ソウル江南",
+    "ソウル江南J.JOOHYUNでエクステをされたお客様の口コミとビフォーアフター写真。"
+   ],
+   "gallery": [
+    "エクステ施術ギャラリー | J.JOOHYUN",
+    "カラー・ポイント、1mmスリム編み込み、黒染め落とし・ブリーチなど、ジュヒョン院長の最新施術写真。"
+   ]
+  },
+  "zh": {
+   "index": [
+    "首尔江南接发专门店 | J.JOOHYUN",
+    "首尔江南看不出痕迹的接发专门店。根据脸型与发质，由院长1对1亲自施术。24小时咨询。"
+   ],
+   "course": [
+    "首尔接发课程 | J.JOOHYUN",
+    "从技术学习到真实顾客实操，由金牌院长亲自1对1授课的首尔江南接发课程。"
+   ],
+   "price": [
+    "首尔接发价格 | J.JOOHYUN",
+    "首尔江南J.JOOHYUN按长度划分的接发价格说明，预约前请先查看。"
+   ],
+   "restoration": [
+    "接发修复与复原 | J.JOOHYUN 首尔",
+    "失败的剪裁、受损的接发、明显的接缝，通过诊断与重新设计恢复自然状态。"
+   ],
+   "slim-braid": [
+    "1mm纤细编织接发·短发波波头 | 首尔",
+    "全手工编织的1mm纤细编织接发，无压迫无拉扯，短发和波波头也看不出痕迹。"
+   ],
+   "black-color-cut": [
+    "去黑·漂发·染发·剪发 | 首尔江南",
+    "从去黑、漂发、染发到接发剪裁，院长亲自检查头发与头皮后施术。"
+   ],
+   "color-point": [
+    "彩色·彩虹挑染接发 | 首尔",
+    "基础色、特殊色、挑染接发，由首创彩虹色接发的院长为您设计。"
+   ],
+   "retouch": [
+    "接发补接·拆除 | 首尔江南",
+    "现有接发的补接、拆除及发量增加，首尔江南新论岘J.JOOHYUN。"
+   ],
+   "care": [
+    "接发护理方法 | J.JOOHYUN",
+    "洗发、梳理、睡觉注意事项，教您长时间保持自然美丽接发的方法。"
+   ],
+   "suggestion": [
+    "江南接发推荐 | J.JOOHYUN",
+    "在江南找接发店就选J.JOOHYUN。院长根据脸型与发质1对1定制设计。"
+   ],
+   "review": [
+    "接发顾客评价 | J.JOOHYUN 首尔江南",
+    "首尔江南J.JOOHYUN接发顾客的真实评价与前后对比照片。"
+   ],
+   "gallery": [
+    "接发作品集 | J.JOOHYUN",
+    "院长最新作品：彩色挑染、1mm纤细编织、去黑漂发接发照片。"
+   ]
+  },
+  "zh-TW": {
+   "index": [
+    "首爾江南接髮專門店 | J.JOOHYUN",
+    "首爾江南看不出痕跡的接髮專門店。依臉型與髮質，由院長1對1親自施術。24小時諮詢。"
+   ],
+   "course": [
+    "首爾接髮課程 | J.JOOHYUN",
+    "從技術學習到真實顧客實作，由金牌院長親自1對1授課的首爾江南接髮課程。"
+   ],
+   "price": [
+    "首爾接髮價格 | J.JOOHYUN",
+    "首爾江南J.JOOHYUN依長度區分的接髮價格說明，預約前請先查看。"
+   ],
+   "restoration": [
+    "接髮修復與復原 | J.JOOHYUN 首爾",
+    "失敗的剪裁、受損的接髮、明顯的接縫，透過診斷與重新設計恢復自然狀態。"
+   ],
+   "slim-braid": [
+    "1mm纖細編織接髮·短髮鮑伯頭 | 首爾",
+    "全手工編織的1mm纖細編織接髮，無壓迫無拉扯，短髮和鮑伯頭也看不出痕跡。"
+   ],
+   "black-color-cut": [
+    "去黑·漂髮·染髮·剪髮 | 首爾江南",
+    "從去黑、漂髮、染髮到接髮修剪，院長親自檢查頭髮與頭皮後施術。"
+   ],
+   "color-point": [
+    "彩色·彩虹挑染接髮 | 首爾",
+    "基礎色、特殊色、挑染接髮，由首創彩虹色接髮的院長為您設計。"
+   ],
+   "retouch": [
+    "接髮補接·拆除 | 首爾江南",
+    "現有接髮的補接、拆除及髮量增加，首爾江南新論峴J.JOOHYUN。"
+   ],
+   "care": [
+    "接髮保養方法 | J.JOOHYUN",
+    "洗髮、梳理、睡覺注意事項，教您長時間維持自然美麗接髮的方法。"
+   ],
+   "suggestion": [
+    "江南接髮推薦 | J.JOOHYUN",
+    "在江南找接髮店就選J.JOOHYUN。院長依臉型與髮質1對1客製設計。"
+   ],
+   "review": [
+    "接髮顧客評價 | J.JOOHYUN 首爾江南",
+    "首爾江南J.JOOHYUN接髮顧客的真實評價與前後對比照片。"
+   ],
+   "gallery": [
+    "接髮作品集 | J.JOOHYUN",
+    "院長最新作品：彩色挑染、1mm纖細編織、去黑漂髮接髮照片。"
+   ]
+  },
+  "vi": {
+   "index": [
+    "Nối tóc tại Gangnam, Seoul | J.JOOHYUN",
+    "Nối tóc tự nhiên không lộ dấu tại Gangnam, Seoul. Giám đốc Joohyun thực hiện 1:1 theo khuôn mặt và chất tóc. Tư vấn 24/7."
+   ],
+   "course": [
+    "Khóa học nối tóc tại Seoul | J.JOOHYUN",
+    "Khóa học nối tóc 1:1 tại Gangnam, Seoul — từ kỹ thuật đến thực hành với khách thật, do Giám đốc Joohyun huy chương vàng giảng dạy."
+   ],
+   "price": [
+    "Bảng giá nối tóc tại Seoul | J.JOOHYUN",
+    "Bảng giá nối tóc theo độ dài tại J.JOOHYUN, Gangnam, Seoul. Xem trước khi đặt lịch."
+   ],
+   "restoration": [
+    "Sửa chữa & phục hồi tóc nối | Seoul",
+    "Tóc cắt hỏng, tóc nối hư hoặc lộ đường nối? Chúng tôi chẩn đoán và thiết kế lại để tóc trở về vẻ tự nhiên."
+   ],
+   "slim-braid": [
+    "Nối tóc tết mảnh 1mm & tóc ngắn | Seoul",
+    "Nối tóc tết mảnh 1mm đan bằng tay, không cộm, không kéo căng — không lộ dấu kể cả với tóc ngắn, tóc bob."
+   ],
+   "black-color-cut": [
+    "Tẩy đen, tẩy tóc, nhuộm & cắt | Seoul",
+    "Từ tẩy màu đen, tẩy tóc, nhuộm đến cắt tóc nối — Giám đốc Joohyun kiểm tra tóc và da đầu rồi trực tiếp thực hiện."
+   ],
+   "color-point": [
+    "Nối tóc màu & highlight cầu vồng | Seoul",
+    "Nối tóc màu cơ bản, màu đặc biệt và highlight, thiết kế bởi Giám đốc Joohyun — người đầu tiên giới thiệu màu cầu vồng."
+   ],
+   "retouch": [
+    "Dặm & tháo tóc nối | Gangnam Seoul",
+    "Dặm lại, tháo và thêm độ dày cho tóc nối hiện có tại J.JOOHYUN, Sinnonhyeon, Gangnam, Seoul."
+   ],
+   "care": [
+    "Cách chăm sóc tóc nối | J.JOOHYUN",
+    "Cách gội, chải và ngủ để giữ tóc nối tự nhiên, đẹp lâu hơn."
+   ],
+   "suggestion": [
+    "Nối tóc đẹp nhất Gangnam | J.JOOHYUN",
+    "Tìm tiệm nối tóc đẹp ở Gangnam? Giám đốc Joohyun thiết kế 1:1 theo khuôn mặt và tình trạng tóc của bạn."
+   ],
+   "review": [
+    "Đánh giá nối tóc | J.JOOHYUN Gangnam",
+    "Đánh giá thật và ảnh trước & sau của khách nối tóc tại J.JOOHYUN, Gangnam, Seoul."
+   ],
+   "gallery": [
+    "Bộ sưu tập nối tóc | J.JOOHYUN",
+    "Tác phẩm mới của Giám đốc Joohyun: màu & highlight, tết mảnh 1mm, tẩy đen và tẩy tóc nối."
+   ]
+  },
+  "th": {
+   "index": [
+    "ต่อผมย่านกังนัม โซล | J.JOOHYUN",
+    "ร้านต่อผมเนียนจนไม่มีใครรู้ที่กังนัม โซล ผู้อำนวยการจูฮยอนทำให้แบบ 1:1 ตามรูปหน้าและสภาพผม ปรึกษาได้ 24 ชม."
+   ],
+   "course": [
+    "คอร์สเรียนต่อผมในโซล | J.JOOHYUN",
+    "คอร์สต่อผมแบบ 1:1 ที่กังนัม โซล ตั้งแต่เทคนิคจนถึงการทำจริงกับลูกค้า สอนโดยผู้อำนวยการจูฮยอน เจ้าของเหรียญทอง"
+   ],
+   "price": [
+    "ราคาต่อผมในโซล | J.JOOHYUN",
+    "ราคาต่อผมตามความยาวของ J.JOOHYUN กังนัม โซล ดูก่อนจองคิวได้เลย"
+   ],
+   "restoration": [
+    "แก้ไขและฟื้นฟูผมต่อ | J.JOOHYUN โซล",
+    "ตัดผมพลาด ผมต่อเสียหาย หรือรอยต่อชัด เราวิเคราะห์และออกแบบใหม่ให้กลับมาเป็นธรรมชาติ"
+   ],
+   "slim-braid": [
+    "ต่อผมถักสลิม 1 มม. ผมสั้น ผมบ็อบ | โซล",
+    "ต่อผมถักสลิม 1 มม. ถักด้วยมือ ไม่กดทับ ไม่ดึงรั้ง เนียนแม้ผมสั้นและผมบ็อบ"
+   ],
+   "black-color-cut": [
+    "ล้างสีดำ ฟอก ทำสี ตัดผม | โซล",
+    "ตั้งแต่ล้างสีดำ ฟอกสี ทำสี ไปจนถึงตัดผมต่อ ผู้อำนวยการจูฮยอนตรวจผมและหนังศีรษะแล้วทำเอง"
+   ],
+   "color-point": [
+    "ต่อผมสีและไฮไลต์สีรุ้ง | โซล",
+    "ต่อผมสีพื้นฐาน สีพิเศษ และไฮไลต์ ออกแบบโดยผู้อำนวยการจูฮยอน ผู้ริเริ่มต่อผมสีรุ้ง"
+   ],
+   "retouch": [
+    "รีทัชและถอดผมต่อ | กังนัม โซล",
+    "รีทัช ถอด และเพิ่มวอลุ่มให้ผมต่อเดิม ที่ J.JOOHYUN ซินนนฮยอน กังนัม โซล"
+   ],
+   "care": [
+    "วิธีดูแลผมต่อ | J.JOOHYUN",
+    "วิธีสระ หวี และการนอน เพื่อให้ผมต่อเป็นธรรมชาติและสวยได้นานขึ้น"
+   ],
+   "suggestion": [
+    "ร้านต่อผมแนะนำในกังนัม | J.JOOHYUN",
+    "หาร้านต่อผมในกังนัมต้อง J.JOOHYUN ผู้อำนวยการจูฮยอนออกแบบ 1:1 ตามรูปหน้าและสภาพผม"
+   ],
+   "review": [
+    "รีวิวต่อผม | J.JOOHYUN กังนัม",
+    "รีวิวจริงและรูปก่อน-หลังจากลูกค้าต่อผมที่ J.JOOHYUN กังนัม โซล"
+   ],
+   "gallery": [
+    "แกลเลอรีผลงานต่อผม | J.JOOHYUN",
+    "ผลงานล่าสุดของผู้อำนวยการจูฮยอน: ต่อผมสี ไฮไลต์ ถักสลิม 1 มม. ล้างสีดำและฟอกสี"
+   ]
+  }
+ },
+ "keywords": {
+  "en": "Seoul hair extensions, Gangnam hair extensions, Korean hair extensions, hair extensions Seoul, 1mm slim braid extensions, J.JOOHYUN",
+  "ja": "ソウル エクステ, 江南 エクステ, 韓国 エクステ, 編み込みエクステ, J.JOOHYUN",
+  "zh": "首尔接发, 江南接发, 韩国接发, 编织接发, J.JOOHYUN",
+  "zh-TW": "首爾接髮, 江南接髮, 韓國接髮, 編織接髮, J.JOOHYUN",
+  "vi": "nối tóc Seoul, nối tóc Gangnam, nối tóc Hàn Quốc, nối tóc tết, J.JOOHYUN",
+  "th": "ต่อผม โซล, ต่อผม กังนัม, ต่อผม เกาหลี, ต่อผมถัก, J.JOOHYUN"
+ }
+}
