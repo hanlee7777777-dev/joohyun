@@ -1,4 +1,6 @@
 {
+  "buildCommand": "node scripts/build-i18n.js",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
