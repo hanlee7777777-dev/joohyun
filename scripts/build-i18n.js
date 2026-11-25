@@ -3,7 +3,7 @@
  * - 저장소 전체를 dist/ 로 복사한 뒤, 한국어 html + i18n 번역 파일로
  *   /en /ja /zh /zh-tw /vi /th 페이지를 새로 만들어 덮어씁니다.
  * - 페이지별 외국어 제목·설명: scripts/i18n-pages.json
- * - 외국어 페이지에서 빼고 싶은 부분: class 에 jhKoOnly (또는 jhPromo) 를 붙이면 됩니다.
+ * - 외국어 페이지에서 빼고 싶은 부분: class 에 jhKoOnly 를 붙이면 됩니다.
  */
 'use strict';
 const fs = require('fs');
@@ -15,7 +15,7 @@ const CFG = JSON.parse(fs.readFileSync(path.join(__dirname, 'i18n-pages.json'), 
 const BASE = 'https://www.joo92.com';
 const PAGES = CFG.pages;
 const SLUGS = PAGES.filter(p => p !== 'index');
-const KO_ONLY = ['jhKoOnly', 'jhPromo'];
+const KO_ONLY = ['jhKoOnly'];
 const VOID = new Set(['img', 'input', 'br', 'meta', 'link', 'hr', 'source']);
 const SKIP = new Set(['.git', 'dist', 'node_modules', 'scripts', '.vercel', '.github']);
 
