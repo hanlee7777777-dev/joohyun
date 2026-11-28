@@ -13,3 +13,11 @@
 .jhPromoTr ul.jhChk{list-style:none;padding-left:0;}
 .jhPromoTr ul.jhChk li::before{content:"✔ ";color:#c2185b;font-weight:800;}
 .jhPromoTr b{color:#c2185b;}
+
+/* 갤러리: 글자 박스 누르는 동안 확대 */
+body[data-jhpage="gallery"] .sect .item,body[data-jhpage="gallery"] .jhPromoTr{transition:transform .18s ease;transform-origin:center;-webkit-tap-highlight-color:transparent;position:relative;}
+body[data-jhpage="gallery"] .sect .item:active,body[data-jhpage="gallery"] .jhPromoTr:active{transform:scale(1.08);z-index:5;}
+
+/* 글자 박스 누르는 동안 확대 (손 떼면 원래대로) */
+.jhPromoTr,.jhZoomTxt{transition:transform .2s ease;-webkit-tap-highlight-color:transparent;cursor:pointer;}
+.jhPromoTr:active,.jhZoomTxt:active{transform:scale(1.12);position:relative;z-index:5;}
