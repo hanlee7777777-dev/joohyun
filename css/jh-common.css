@@ -7,3 +7,9 @@
 .jhPromoTr p{margin:8px 0 6px;}
 .jhPromoTr ul{margin:0;padding-left:18px;}
 .jhPromoTr li{margin:2px 0;}
+
+/* 갤러리 시술 설명 박스 */
+.jhGalDesc{margin:0 0 18px!important;break-inside:avoid;}
+.jhPromoTr ul.jhChk{list-style:none;padding-left:0;}
+.jhPromoTr ul.jhChk li::before{content:"✔ ";color:#c2185b;font-weight:800;}
+.jhPromoTr b{color:#c2185b;}
