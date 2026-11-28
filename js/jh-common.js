@@ -37,3 +37,6 @@ var iv=setInterval(function(){n++;go();if(n>25)clearInterval(iv);},120);
 window.addEventListener('load',function(){setTimeout(go,50);setTimeout(go,400);});
 ['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,function(){done=true;clearInterval(iv);},{passive:true,once:true});});
 })();
+
+/* 아이폰에서도 누르는 동안 확대(:active)가 작동하도록 */
+/* jhActiveTouch */document.addEventListener("touchstart",function(){},{passive:true});
